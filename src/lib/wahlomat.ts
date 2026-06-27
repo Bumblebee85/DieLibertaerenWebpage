@@ -11,6 +11,15 @@ export interface These {
   category: string;
 }
 
+export type MatchStatus = "match" | "partial" | "differ";
+
+export interface TheseComparison {
+  these: These;
+  userAnswer: UserAnswer;
+  matchScore: number;
+  matchStatus: MatchStatus;
+}
+
 export interface QuizResult {
   percentage: number;
   matches: number;
@@ -18,6 +27,8 @@ export interface QuizResult {
   total: number;
   headline: string;
   summary: string;
+  agreements: TheseComparison[];
+  differences: TheseComparison[];
 }
 
 export const QUIZ_QUESTION_COUNT = 20;
@@ -55,6 +66,85 @@ export function calculateMatchScore(
   return 0;
 }
 
+export function getMatchStatus(matchScore: number): MatchStatus {
+  if (matchScore === 1) return "match";
+  if (matchScore === 0.5) return "partial";
+  return "differ";
+}
+
+export function getUserAnswerLabel(answer: UserAnswer): string {
+  switch (answer) {
+    case "zustimmen":
+      return "Zustimmen";
+    case "ablehnen":
+      return "Ablehnen";
+    case "neutral":
+      return "Neutral";
+  }
+}
+
+export function getMatchStatusLabel(status: MatchStatus): string {
+  switch (status) {
+    case "match":
+      return "Übereinstimmung";
+    case "partial":
+      return "Teilweise / Neutral";
+    case "differ":
+      return "Abweichung";
+  }
+}
+
+export function getMatchStatusStyles(status: MatchStatus): {
+  border: string;
+  badge: string;
+  icon: string;
+} {
+  switch (status) {
+    case "match":
+      return {
+        border: "border-l-accent",
+        badge: "bg-accent/15 text-accent border-accent/30",
+        icon: "text-accent",
+      };
+    case "partial":
+      return {
+        border: "border-l-primary",
+        badge: "bg-primary/15 text-foreground border-primary/30",
+        icon: "text-primary",
+      };
+    case "differ":
+      return {
+        border: "border-l-accent-orange",
+        badge: "bg-accent-orange/15 text-accent-orange border-accent-orange/30",
+        icon: "text-accent-orange",
+      };
+  }
+}
+
+export function getUserAnswerStyles(answer: UserAnswer): string {
+  switch (answer) {
+    case "zustimmen":
+      return "bg-accent/10 text-accent border-accent/25";
+    case "ablehnen":
+      return "bg-accent-orange/10 text-accent-orange border-accent-orange/25";
+    case "neutral":
+      return "bg-muted text-muted-foreground border-border";
+  }
+}
+
+function buildTheseComparison(
+  these: These,
+  answer: UserAnswer
+): TheseComparison {
+  const matchScore = calculateMatchScore(answer, these.position);
+  return {
+    these,
+    userAnswer: answer,
+    matchScore,
+    matchStatus: getMatchStatus(matchScore),
+  };
+}
+
 export function calculateQuizResult(
   quizThesen: These[],
   answers: Record<number, UserAnswer>
@@ -63,25 +153,34 @@ export function calculateQuizResult(
   let matches = 0;
   let partialMatches = 0;
 
+  const comparisons: TheseComparison[] = [];
+
   for (const these of quizThesen) {
     const answer = answers[these.id];
     if (!answer) continue;
 
-    const matchScore = calculateMatchScore(answer, these.position);
-    score += matchScore;
+    const comparison = buildTheseComparison(these, answer);
+    comparisons.push(comparison);
 
-    if (matchScore === 1) matches++;
-    else if (matchScore === 0.5) partialMatches++;
+    score += comparison.matchScore;
+
+    if (comparison.matchScore === 1) matches++;
+    else if (comparison.matchScore === 0.5) partialMatches++;
   }
 
   const total = quizThesen.length;
   const percentage = Math.round((score / total) * 100);
+
+  const agreements = comparisons.filter((c) => c.matchStatus === "match");
+  const differences = comparisons.filter((c) => c.matchStatus !== "match");
 
   return {
     percentage,
     matches,
     partialMatches,
     total,
+    agreements,
+    differences,
     ...getResultMessage(percentage),
   };
 }

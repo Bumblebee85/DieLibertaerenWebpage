@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, RotateCcw } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -12,6 +12,7 @@ import {
   type These,
   type UserAnswer,
 } from "@/lib/wahlomat";
+import { QuizResults } from "./quiz-results";
 
 type QuizPhase = "intro" | "quiz" | "results";
 
@@ -123,46 +124,11 @@ export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
 
   if (phase === "results" && result) {
     return (
-      <Card className="mx-auto max-w-2xl border-none bg-muted/40 shadow-none">
-        <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-            <CheckCircle2 className="h-8 w-8 text-primary" />
-          </div>
-          <CardTitle className="font-display text-3xl">{result.headline}</CardTitle>
-          <p className="mt-4 text-muted-foreground">{result.summary}</p>
-        </CardHeader>
-        <CardContent className="space-y-8 pb-10">
-          <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
-              Übereinstimmung
-            </p>
-            <p className="mt-2 font-display text-6xl font-bold text-primary">
-              {result.percentage}%
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {result.matches} exakte Treffer · {result.partialMatches} teilweise
-              Übereinstimmungen
-            </p>
-          </div>
-
-          <div className="h-3 overflow-hidden rounded-full bg-white">
-            <div
-              className="h-full rounded-full bg-primary transition-all duration-700"
-              style={{ width: `${result.percentage}%` }}
-            />
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <Button size="lg" onClick={onShowAllThesen}>
-              Alle Thesen ansehen
-            </Button>
-            <Button size="lg" variant="outline" onClick={startQuiz}>
-              <RotateCcw className="mr-2 h-4 w-4" />
-              Quiz wiederholen
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <QuizResults
+        result={result}
+        onShowAllThesen={onShowAllThesen}
+        onRestart={startQuiz}
+      />
     );
   }
 

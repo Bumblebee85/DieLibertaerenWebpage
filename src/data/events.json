@@ -1,0 +1,61 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Freiheitlicher Stammtisch Landsberg am Lech",
+      "date": "2026-06-25",
+      "time": "19:00 - 22:00",
+      "location": "Landsberg am Lech",
+      "type": "Stammtisch",
+      "recurring": false,
+      "url": "/events"
+    },
+    {
+      "id": "2",
+      "title": "Libertärer Stammtisch Hamburg",
+      "date": "2026-07-01",
+      "time": "19:00 - 22:00",
+      "location": "Hamburg",
+      "type": "Stammtisch",
+      "recurring": true,
+      "recurrence": "Jeden ersten Mittwoch im Monat",
+      "url": "/events"
+    },
+    {
+      "id": "3",
+      "title": "Libertärer Stammtisch Göppingen/Esslingen",
+      "date": "2026-07-02",
+      "time": "19:30 - 23:00",
+      "location": "Göppingen/Esslingen",
+      "type": "Stammtisch",
+      "recurring": true,
+      "recurrence": "Monatlich",
+      "url": "/events"
+    },
+    {
+      "id": "4",
+      "title": "Libertärer Stammtisch Frankfurt am Main",
+      "date": "2026-07-24",
+      "time": "19:00 - 22:00",
+      "location": "Frankfurt am Main",
+      "type": "Stammtisch",
+      "recurring": true,
+      "recurrence": "Monatlich",
+      "url": "/events"
+    },
+    {
+      "id": "5",
+      "title": "Bundesparteitag 2026",
+      "date": "2026-09-12",
+      "time": "10:00 - 18:00",
+      "location": "München",
+      "type": "Parteitag",
+      "recurring": false,
+      "url": "/events"
+    }
+  ],
+  "calendarLinks": {
+    "google": "https://www.google.com/calendar/render?cid=webcal%3A%2F%2Fdie-libertaeren.de%2F%3Fpost_type%3Dtribe_events%26ical%3D1%26eventDisplay%3Dlist",
+    "ical": "webcal://die-libertaeren.de/?post_type=tribe_events&ical=1&eventDisplay=list"
+  }
+}

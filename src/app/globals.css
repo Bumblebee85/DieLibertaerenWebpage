@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #21232d;
+  --primary: #ffb200;
+  --primary-foreground: #03050f;
+  --secondary: #03050f;
+  --secondary-foreground: #ffffff;
+  --accent: #61ce70;
+  --accent-orange: #ff4d08;
+  --muted: #f5f5f5;
+  --muted-foreground: #858791;
+  --border: #e0e0e0;
+  --card: #ffffff;
+  --radius: 0.75rem;
+
+  /* Hero background tuning – dark base, subtle texture (5–9% stripes, ≤25% overlay) */
+  --libertarian-image-opacity: 0.38;
+  --libertarian-overlay-opacity: 0.2;
+  --libertarian-stripe-gold: 0.07;
+  --libertarian-stripe-dark: 0.055;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-orange: var(--accent-orange);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --font-sans: var(--font-roboto);
+  --font-display: var(--font-roboto-slab);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 8%, #fafafa 70%);
+  color: var(--foreground);
+  font-family: var(--font-roboto), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #ffb200;
+  color: #03050f;
+}
+
+.libertarian-hero-overlay {
+  background-color: rgba(3, 5, 15, var(--libertarian-overlay-opacity));
+}
+
+/* Haarfeine Gold/Schwarz-Textur – Ancap-inspiriert, elegant */
+.libertarian-stripe-pattern {
+  background-image:
+    repeating-linear-gradient(
+      -40deg,
+      transparent 0,
+      transparent 96px,
+      rgba(255, 178, 0, var(--libertarian-stripe-gold)) 96px,
+      rgba(255, 178, 0, var(--libertarian-stripe-gold)) 97px
+    ),
+    repeating-linear-gradient(
+      -40deg,
+      transparent 0,
+      transparent 192px,
+      rgba(0, 0, 0, var(--libertarian-stripe-dark)) 192px,
+      rgba(0, 0, 0, var(--libertarian-stripe-dark)) 193px
+    );
+}

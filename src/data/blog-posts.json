@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "slug": "merz-schamlos-ehrliches-schuldeingestandnis",
+      "title": "Merz' schamlos ehrliches Schuldeingeständnis",
+      "excerpt": "Wenn Politiker offen über Schulden sprechen, zeigt sich die wahre Natur staatlicher Finanzpolitik.",
+      "date": "2026-04-13",
+      "author": "DIE LIBERTÄREN",
+      "image": "/images/blog-merz.jpg",
+      "tags": ["Politik", "Schulden"]
+    },
+    {
+      "slug": "frieden-und-neutralitaet-im-ukraine-russland-konflikt",
+      "title": "Frieden und Neutralität im Ukraine-Russland-Konflikt",
+      "excerpt": "DIE LIBERTÄREN plädieren für Neutralität, Diplomatie und die Ablehnung militärischer Eskalation.",
+      "date": "2025-03-05",
+      "author": "DIE LIBERTÄREN",
+      "image": "/images/blog-frieden.jpg",
+      "tags": ["Frieden", "Außenpolitik"]
+    },
+    {
+      "slug": "ohne-freiwillige-zustimmung-sind-steuern-und-abgaben-nicht-rechtmaessig",
+      "title": "Ohne freiwillige Zustimmung sind Steuern und Abgaben nicht rechtmäßig",
+      "excerpt": "Eine fundamentale Analyse des Eigentumsrechts und der Legitimität staatlicher Zwangsabgaben.",
+      "date": "2024-01-19",
+      "author": "DIE LIBERTÄREN",
+      "image": "/images/blog-steuern.jpg",
+      "tags": ["Steuern", "Eigentum"]
+    },
+    {
+      "slug": "mietpreisbremse-afuera",
+      "title": "Mietpreisbremse? Afuera!",
+      "excerpt": "Warum Preiskontrollen den Wohnungsmarkt verschärfen statt entlasten.",
+      "date": "2024-06-10",
+      "author": "DIE LIBERTÄREN",
+      "image": "/images/blog-wohnen.jpg",
+      "tags": ["Wohnen", "Markt"]
+    },
+    {
+      "slug": "klima-und-umwelt-freiheitlich",
+      "title": "Klima und Umwelt – ohne ideologische Zwänge",
+      "excerpt": "Innovation und Eigentumsrechte statt Verbote und Subventionen.",
+      "date": "2024-03-22",
+      "author": "DIE LIBERTÄREN",
+      "image": "/images/blog-klima.jpg",
+      "tags": ["Umwelt", "Innovation"]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "essays": [
+    {
+      "id": "1",
+      "week": 1,
+      "title": "Das Nichtaggressionsprinzip als Fundament",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Warum kein Mensch das Recht hat, Gewalt gegen andere auszuüben – und was das für Politik bedeutet.",
+      "content": "Das Nichtaggressionsprinzip (NAP) ist das ethische Fundament des Libertarismus: Kein Mensch darf Gewalt gegen Personen oder deren rechtmäßig erworbenes Eigentum anwenden. Dieses Prinzip gilt universell – auch für den Staat. Politische Maßnahmen, die auf Zwang basieren, verletzen das NAP per Definition. DIE LIBERTÄREN leiten daraus ab: Jede Politik muss am Individuum und seinen Rechten gemessen werden, nicht an kollektiven Zielen oder Mehrheitswillen.",
+      "tags": ["Grundlagen", "Ethik"]
+    },
+    {
+      "id": "2",
+      "week": 2,
+      "title": "Steuern, Eigentum und die Moral des Raubs",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Ohne freiwillige Zustimmung sind Abgaben nicht rechtmäßig – eine logische und ethische Analyse.",
+      "content": "Eigentum entsteht durch Arbeit, Tausch und freiwillige Übereinkunft. Steuern sind Zwangsabgaben: Wer nicht zahlt, wird bestraft. Dies unterscheidet sich fundamental von freiwilligen Beiträgen. DIE LIBERTÄREN fordern den schrittweisen Abbau aller Zwangsabgaben und deren Ersetzung durch freiwillige Finanzierung. Der Weg dorthin beginnt mit Transparenz, Steuersenkungen und der Abschaffung überflüssiger Abgaben.",
+      "tags": ["Steuern", "Eigentum"]
+    },
+    {
+      "id": "3",
+      "week": 3,
+      "title": "Freier Markt vs. staatliche Planung",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Warum Preissignale besser allokieren als Bürokraten – Lehren der Österreichischen Schule.",
+      "content": "Der freie Markt ist kein abstraktes System, sondern das Aggregat freiwilliger Tauschgeschäfte. Preise transportieren Information über Knappheit und Bedarf. Staatliche Eingriffe verzerren diese Signale und führen zu Fehlallokation, Mangel und Überschuss gleichzeitig. DIE LIBERTÄREN setzen auf Deregulierung, Privatisierung und den Abbau marktverzerrender Subventionen.",
+      "tags": ["Wirtschaft", "Markt"]
+    },
+    {
+      "id": "4",
+      "week": 4,
+      "title": "Selbstverschuldete Unmündigkeit",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Kants Aufklärungsideal und der libertäre Weg aus der staatlichen Bevormundung.",
+      "content": "Immanuel Kant definierte Aufklärung als den Ausgang aus der selbstverschuldeten Unmündigkeit. Heute bevormundet der Staat in Bildung, Gesundheit, Finanzen und Lebensstil. DIE LIBERTÄREN wollen Menschen befähigen, eigenverantwortlich zu entscheiden – durch Bildung, Transparenz und den Abbau staatlicher Gängelung.",
+      "tags": ["Aufklärung", "Philosophie"]
+    },
+    {
+      "id": "5",
+      "week": 5,
+      "title": "Geld und Zentralbankpolitik",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Inflation als versteckte Steuer und warum Währungswettbewerb die Lösung ist.",
+      "content": "Geldschöpfung durch Zentralbanken entwertet Ersparnisse und begünstigt Schuldennehmer – vor allem den Staat. DIE LIBERTÄREN fordern eine ehrliche Geldpolitik, den Schutz des Eigentums vor Entwertung und langfristig Wettbewerb zwischen Währungen und freiwilligen Zahlungsmitteln.",
+      "tags": ["Geld", "Inflation"]
+    },
+    {
+      "id": "6",
+      "week": 6,
+      "title": "Bildungsfreiheit statt Schulzwang",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Warum Eltern und Lernende die besten Entscheider für Bildung sind.",
+      "content": "Bildung ist kein staatliches Monopol. Vielfalt, Wettbewerb und freie Wahl zwischen Schulen, Homeschooling und alternativen Konzepten führen zu besserer Qualität. DIE LIBERTÄREN fordern Schulgeldvouchers, Deregulierung des Bildungsmarktes und die Abschaffung des Schulzwangs.",
+      "tags": ["Bildung", "Freiheit"]
+    },
+    {
+      "id": "7",
+      "week": 7,
+      "title": "Friedenspolitik und Neutralität",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Kein Krieg ohne individuelle Verantwortung – für echte Neutralität und Diplomatie.",
+      "content": "Krieg ist die intensivste Form staatlicher Gewalt. DIE LIBERTÄREN lehnen präventive Kriege, Waffenexporte in Konfliktregionen und militärische Bündnisse ab, die Deutschland in fremde Konflikte ziehen. Stattdessen: strikte Neutralität, freiwillige Verteidigung und internationale Kooperation auf Basis des NAP.",
+      "tags": ["Frieden", "Außenpolitik"]
+    },
+    {
+      "id": "8",
+      "week": 8,
+      "title": "Gesundheit als individuelle Verantwortung",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Warum der Gesundheitsmarkt von Regulierung und Subventionen befreit werden muss.",
+      "content": "Zwangsvollversicherung, Berufsverbote und Preisfestsetzungen erzeugen Wartelisten und Qualitätsverlust. DIE LIBERTÄREN setzen auf freie Arztwahl, transparente Preise, Deregulierung und freiwillige Versicherungsmodelle – für eine Gesundheitsversorgung, die dem Patienten dient.",
+      "tags": ["Gesundheit", "Markt"]
+    },
+    {
+      "id": "9",
+      "week": 9,
+      "title": "Klimapolitik ohne Zwang",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Innovation statt Verbote – wie Eigentumsrechte Umwelt schützen.",
+      "content": "Zentral geplante Klimapolitik verursacht hohe Kosten bei geringer Wirkung. DIE LIBERTÄREN setzen auf technologischen Fortschritt, Eigentumsrechte, Haftung bei Schäden und marktbasierte Lösungen statt Verbote, Subventionen und CO₂-Steuern.",
+      "tags": ["Umwelt", "Innovation"]
+    },
+    {
+      "id": "10",
+      "week": 10,
+      "title": "Praktischer Libertarismus",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Von der Theorie zur Umsetzung – erste Schritte für mehr Freiheit in Deutschland.",
+      "content": "Libertarismus ist keine Utopie, sondern eine Lebensphilosophie. DIE LIBERTÄREN verbinden klare Prinzipien mit konkreten Maßnahmen: Steuersenkungen, Deregulierung, Bildungsfreiheit, Eigentumsschutz und eine konsequente Friedenspolitik. Jeder Schritt Richtung Freiheit zählt.",
+      "tags": ["Praxis", "Programm"]
+    },
+    {
+      "id": "11",
+      "week": 11,
+      "title": "Mietpreisbremse und Wohnungsmarkt",
+      "author": "DIE LIBERTÄREN",
+      "excerpt": "Warum Preisdeckel Wohnraum verknappen – Afuera mit der Mietpreisbremse!",
+      "content": "Preiskontrollen reduzieren Anreize zum Neubau und verschärfen Knappheit. DIE LIBERTÄREN fordern die vollständige Abschaffung der Mietpreisbremse, Bau-Deregulierung und den Schutz von Eigentumsrechten – für mehr und günstigeren Wohnraum.",
+      "tags": ["Wohnen", "Markt"]
+    },
+    {
+      "id": "12",
+      "week": 12,
+      "title": "Freiheit braucht Mut",
+      "author": "Dr. Mathias Hummel",
+      "excerpt": "Warum es sich lohnt, für Freiheit zu kämpfen – und wie du Teil der Bewegung wirst.",
+      "content": "Freiheit ist kein Geschenk, sondern dein Recht. Sie muss verteidigt werden – mit Argumenten, Überzeugung und Engagement. Werde Mitglied bei DIE LIBERTÄREN, unterstütze unsere Arbeit und vernetze dich mit der freiheitlichen Bewegung. Gemeinsam lassen wir die Freiheit wieder erblühen.",
+      "tags": ["Engagement", "Bewegung"]
+    }
+  ]
+}

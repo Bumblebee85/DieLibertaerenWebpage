@@ -1,0 +1,155 @@
+{
+  "version": "4.0",
+  "title": "Thesenpapier DER LIBERTÄREN v4",
+  "subtitle": "FREIHEITLICH – AUS PRINZIP",
+  "pdfUrl": "/documents/thesen-v4.pdf",
+  "leitbild": {
+    "vision": {
+      "title": "Unsere Vision",
+      "headline": "Wir wollen in einer Welt leben, in der kein Mensch über den anderen herrscht.",
+      "text": "Der Mensch ist ein vernunftbegabtes Wesen mit naturgegebenen Rechten und einem unstillbaren Drang nach Freiheit. Wir leben jedoch in einer Welt, in der wir vielen äußeren Zwängen unterworfen sind: Menschen werden zur Verfügungsmasse anderer gemacht. Der Allgemeinheit wird aufgedrückt, was nur wenigen nützt. Die Mehrheit muss tagtäglich für deren Fehler bezahlen – mit Steuergeldern und persönlichen Freiheiten. Wir wollen eine Gesellschaft, die es ermöglicht, selbstbestimmt in Frieden und in Freiheit zu leben."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "headline": "Wir wollen den Menschen von seiner selbstverschuldeten Unmündigkeit befreien.",
+      "text": "Die Aufklärung beruft sich auf die Vernunft als universelle Urteilsinstanz, mit der man sich von starren und überholten Vorstellungen und Ideologien befreien will. Nur freie Menschen können gemeinsam eine positive und nachhaltig stabile Zukunft gestalten. Wir wollen dies ermöglichen, indem wir die fortschrittlichen Ideen des Libertarismus in die breite Öffentlichkeit bringen und in der politischen Arena die Übergriffigkeit des Staates vehement und beständig zurückdrängen."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "headline": "Unsere Werte sind Freiheit, Eigentum und Selbstbestimmung.",
+      "text": "Unsere Wertvorstellungen leiten wir ab vom Naturrecht, also der menschlichen Fähigkeit zur Selbsterkenntnis, Vernunft und Orientierung des Gewissens zur Schaffung von Moral. Die Natur gab dem Menschen die Freiheit zu Handeln und darüber zu reflektieren. In Freiheit schafft er durch sein Handeln Eigentum durch Arbeit und Tausch. Dadurch kann er selbstbestimmt sein eigenes Schicksal lenken und sich vervollkommnen. Daher sind wir Verteidiger des Naturrechtes auf Freiheit, Eigentum und Selbstbestimmung."
+    }
+  },
+  "grundthese": {
+    "title": "Grundthese",
+    "text": "Kein Mensch und keine Gruppe von Menschen haben das Recht, ihren Willen durch Androhung oder Ausübung von Gewalt einem anderen aufzuerlegen. Der Respekt vor individuellen Rechten und Freiheiten ist die fundamentale Grundlage für eine lebenswerte Welt, in welcher Frieden und Wohlstand geschaffen und langfristig erhalten werden. Die Rechtfertigung für kollektive Entscheidungen muss daher stets das selbstbestimmte Individuum als zentralen Ausgangspunkt haben.",
+    "pillars": [
+      {
+        "id": "individuell",
+        "title": "Individuelle Freiheit",
+        "subtitle": "Deine Freiheit, ein selbstbestimmtes Leben zu führen.",
+        "description": "Jeder Mensch hat das Recht, beliebigen Aktivitäten nachzugehen, solange er die Freiheiten und Rechte anderer nicht begrenzt."
+      },
+      {
+        "id": "vertraglich",
+        "title": "Vertragliche Freiheit",
+        "subtitle": "Eine friedvolle Gesellschaft fußt auf freiwilliger Kooperation und Verträgen.",
+        "description": "Freiwillige Verträge zwischen gleichberechtigten Partnern sind die Grundlage jeder friedlichen Gesellschaftsordnung."
+      },
+      {
+        "id": "gesellschaftlich",
+        "title": "Gesellschaftliche Freiheit",
+        "subtitle": "Gesellschaftliche Freiheit ist Ergebnis individueller Freiheit.",
+        "description": "Eine freie Gesellschaft entsteht nicht durch Zwang, sondern als Ergebnis freier Individuen, die freiwillig kooperieren."
+      }
+    ]
+  },
+  "ersteMassnahmen": [
+    "Sofortige Transparenz aller Staatsausgaben und -einnahmen",
+    "Abschaffung der Mietpreisbremse und Deregulierung des Wohnungsmarktes",
+    "Stopp der staatlichen NGO-Finanzierung",
+    "Steuersenkungen für Einkommen und Unternehmen",
+    "Abbau bürokratischer Regulierung für Gründer und KMU",
+    "Schaffung von Schulgeldvouchers und Bildungsfreiheit",
+    "Neutrale Außenpolitik ohne Waffenexporte in Konfliktregionen",
+    "Abschaffung ideologischer Sprachvorschriften im öffentlichen Raum"
+  ],
+  "topics": [
+    {
+      "category": "Individuelle Freiheit",
+      "pillar": "individuell",
+      "items": [
+        { "topic": "Selbstbestimmung", "massnahme": "Abschaffung aller staatlichen Bevormundungen im Privatleben; keine Vorschriften für Lebensstil, Ernährung oder Freizeit" },
+        { "topic": "Körperliche Autonomie", "massnahme": "Volle Entscheidungsfreiheit über den eigenen Körper; keine Zwangsimpfungen oder medizinischen Eingriffe" },
+        { "topic": "Meinungsfreiheit", "massnahme": "Abschaffung von Hate-Speech-Gesetzen und Zensur; Schutz der freien Rede als Grundrecht" },
+        { "topic": "Privatsphäre", "massnahme": "Stopp der Massenüberwachung; Ende von Vorratsdatenspeicherung und staatlichem Datenhandel" },
+        { "topic": "Waffenrecht", "massnahme": "Recht auf Selbstverteidigung; Vereinfachung legalen Waffenbesitzes für Bürger ohne Vorstrafen" },
+        { "topic": "Drogenpolitik", "massnahme": "Entkriminalisierung aller Drogen; Behandlung als Gesundheits- statt Straffrage" }
+      ]
+    },
+    {
+      "category": "Vertragliche Freiheit",
+      "pillar": "vertraglich",
+      "items": [
+        { "topic": "Arbeitsmarkt", "massnahme": "Abschaffung des Mindestlohns; Deregulierung von Kündigungsschutz und Arbeitszeitgesetzen" },
+        { "topic": "Unternehmertum", "massnahme": "Gründung eines Unternehmens in 24 Stunden; 90% weniger Bürokratie für KMU" },
+        { "topic": "Vertragsfreiheit", "massnahme": "Freie Vereinbarung zwischen Arbeitgeber und Arbeitnehmer ohne staatliche Eingriffe" },
+        { "topic": "Handel", "massnahme": "Freihandel ohne Zölle und Quoten; Austritt aus protektionistischen Handelsabkommen" },
+        { "topic": "Gewerbeordnung", "massnahme": "Abschaffung der Gewerbesteuer und vereinfachte Gewerbeanmeldung" },
+        { "topic": "Berufszulassungen", "massnahme": "Abbau von Berufsmonopolen und Zulassungshürden; freier Marktzugang für alle Berufe" }
+      ]
+    },
+    {
+      "category": "Gesellschaftliche Freiheit",
+      "pillar": "gesellschaftlich",
+      "items": [
+        { "topic": "Bildung", "massnahme": "Schulgeldvouchers; Abschaffung des Schulzwangs; freie Wahl zwischen Schulen und Homeschooling" },
+        { "topic": "Gesundheit", "massnahme": "Abschaffung der Zwangskrankenversicherung; freie Arztwahl und marktbasierte Preise" },
+        { "topic": "Rente", "massnahme": "Ausstieg aus der umlagefinanzierten Rentenversicherung; private Vorsorge als Standard" },
+        { "topic": "Familie", "massnahme": "Keine staatliche Definition von Familie; freie Lebensentwürfe ohne Förderung oder Benachteiligung" },
+        { "topic": "Soziales", "massnahme": "Ersetzung staatlicher Sozialsysteme durch freiwillige Solidarität und private Hilfsorganisationen" },
+        { "topic": "Kultur", "massnahme": "Stopp staatlicher Kulturförderung; freiwillige Finanzierung durch Bürger und Unternehmen" }
+      ]
+    },
+    {
+      "category": "Steuern & Finanzen",
+      "pillar": "individuell",
+      "items": [
+        { "topic": "Einkommensteuer", "massnahme": "Stufenweiser Abbau auf maximal 10%; langfristig vollständige Abschaffung" },
+        { "topic": "Umsatzsteuer", "massnahme": "Senkung auf 5%; langfristige Abschaffung zugunsten freiwilliger Finanzierung" },
+        { "topic": "Erbschaftsteuer", "massnahme": "Vollständige Abschaffung – Eigentum darf vererbt werden" },
+        { "topic": "Grundsteuer", "massnahme": "Abschaffung – Eigentum ist nicht verhandelbar" },
+        { "topic": "Geld", "massnahme": "Schutz vor Inflation; Wettbewerb zwischen Währungen; Ende der Zentralbankgeldschöpfung" },
+        { "topic": "Staatsverschuldung", "massnahme": "Schuldenbremse mit Verfassungsrang; keine Neuverschuldung ohne Volksentscheid" }
+      ]
+    },
+    {
+      "category": "Wirtschaft & Markt",
+      "pillar": "vertraglich",
+      "items": [
+        { "topic": "Deregulierung", "massnahme": "Abbau von 50% aller wirtschaftsrelevanten Vorschriften innerhalb einer Legislaturperiode" },
+        { "topic": "Subventionen", "massnahme": "Stopp aller Unternehmenssubventionen und staatlicher Markteingriffe" },
+        { "topic": "Privatisierung", "massnahme": "Verkauf staatlicher Beteiligungen; Privatisierung von Infrastruktur wo möglich" },
+        { "topic": "Energiemarkt", "massnahme": "Ende der Energiesteuern und EEG-Umlage; freier Energiemarkt ohne staatliche Lenkung" },
+        { "topic": "Wettbewerb", "massnahme": "Stärkung des Kartellrechts gegen staatliche Monopole" },
+        { "topic": "Kryptowährungen", "massnahme": "Keine Regulierung von Bitcoin und alternativen Währungen; freie Nutzung als Zahlungsmittel" }
+      ]
+    },
+    {
+      "category": "Außenpolitik & Frieden",
+      "pillar": "gesellschaftlich",
+      "items": [
+        { "topic": "Neutralität", "massnahme": "Strikte Neutralität; Austritt aus militärischen Bündnissen" },
+        { "topic": "Waffenexporte", "massnahme": "Vollständiges Verbot von Waffenexporten in Konfliktregionen" },
+        { "topic": "Entwicklungshilfe", "massnahme": "Stopp staatlicher Entwicklungshilfe; freiwillige private Hilfe statt Zwang" },
+        { "topic": "EU", "massnahme": "Föderalisierung statt Zentralisierung; Vetorecht für nationale Souveränität" },
+        { "topic": "Migration", "massnahme": "Freizügigkeit für friedliche Menschen; kein Sozialstaat für Nichtbeitragszahler" },
+        { "topic": "Diplomatie", "massnahme": "Handel statt Sanktionen; freiwillige Kooperation statt Zwang" }
+      ]
+    },
+    {
+      "category": "Umwelt & Klima",
+      "pillar": "gesellschaftlich",
+      "items": [
+        { "topic": "Eigentumsrechte", "massnahme": "Haftung bei Umweltschäden über Eigentumsrechte statt Verbote" },
+        { "topic": "Innovation", "massnahme": "Förderung technologischer Lösungen statt ideologischer Verbote" },
+        { "topic": "CO₂-Steuer", "massnahme": "Abschaffung aller CO₂-Abgaben und Emissionshandels" },
+        { "topic": "Subventionen", "massnahme": "Stopp staatlicher Klimasubventionen; Markt entscheidet über Energieträger" },
+        { "topic": "Verbote", "massnahme": "Keine Verbote von Verbrennern, Plastik oder anderen Produkten" },
+        { "topic": "Naturschutz", "massnahme": "Privatisierung von Naturschutzgebieten; Eigentum schützt Natur effektiver als Staat" }
+      ]
+    },
+    {
+      "category": "Sicherheit & Recht",
+      "pillar": "individuell",
+      "items": [
+        { "topic": "Polizei", "massnahme": "Community Policing; Rechenschaftspflicht bei Polizeigewalt" },
+        { "topic": "Justiz", "massnahme": "Schnellere Verfahren; Schadensersatz für Opfer statt Strafen für Täter allein" },
+        { "topic": "Opferrechte", "massnahme": "Stärkung der Opferrechte; Wiedergutmachung als zentrales Prinzip" },
+        { "topic": "Gefängnisse", "massnahme": "Privatisierung wo sinnvoll; Fokus auf Resozialisierung und Wiedergutmachung" },
+        { "topic": "Geheimdienste", "massnahme": "Abschaffung oder radikale Beschränkung der Befugnisse von Geheimdiensten" },
+        { "topic": "Notstandsgesetze", "massnahme": "Abschaffung aller Notstandsbefugnisse, die Grundrechte einschränken" }
+      ]
+    }
+  ]
+}

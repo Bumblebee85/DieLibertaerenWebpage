@@ -10,7 +10,8 @@
     "lint": "eslint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
-    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types"
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "seed:highlights": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-highlights.ts"
   },
   "engines": {
     "node": ">=20"
@@ -47,6 +48,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "^5"
   }
 }

@@ -7,6 +7,7 @@ import sharp from "sharp";
 
 import { Documents } from "./collections/Documents";
 import { Events } from "./collections/Events";
+import { Highlights } from "./collections/Highlights";
 import { Media } from "./collections/Media";
 import { Quotes } from "./collections/Quotes";
 import { Users } from "./collections/Users";
@@ -24,7 +25,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Events, Documents, Quotes],
+  collections: [Users, Media, Events, Documents, Quotes, Highlights],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

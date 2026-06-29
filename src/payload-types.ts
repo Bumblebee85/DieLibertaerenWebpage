@@ -72,6 +72,7 @@ export interface Config {
     events: Event;
     documents: Document;
     quotes: Quote;
+    highlights: Highlight;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +85,7 @@ export interface Config {
     events: EventsSelect<false> | EventsSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
     quotes: QuotesSelect<false> | QuotesSelect<true>;
+    highlights: HighlightsSelect<false> | HighlightsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -242,6 +244,35 @@ export interface Quote {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "highlights".
+ */
+export interface Highlight {
+  id: string;
+  title: string;
+  subtitle: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  image?: (string | null) | Media;
+  buttonText?: string | null;
+  link: string;
+  isActive?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -283,6 +314,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'quotes';
         value: string | Quote;
+      } | null)
+    | ({
+        relationTo: 'highlights';
+        value: string | Highlight;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -415,6 +450,20 @@ export interface QuotesSelect<T extends boolean = true> {
   source?: T;
   publishedAt?: T;
   published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "highlights_select".
+ */
+export interface HighlightsSelect<T extends boolean = true> {
+  title?: T;
+  subtitle?: T;
+  image?: T;
+  buttonText?: T;
+  link?: T;
+  isActive?: T;
   updatedAt?: T;
   createdAt?: T;
 }

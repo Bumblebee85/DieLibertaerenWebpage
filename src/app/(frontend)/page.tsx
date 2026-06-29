@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero";
+import { HighlightsSection } from "@/components/home/highlights-section";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyNews } from "@/components/home/daily-news";
 import { EventsTeaser } from "@/components/home/events-teaser";
@@ -39,6 +40,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <HighlightsSection />
 
       <LibertarianAtmosphere>
         <QuoteRotator quotes={quotes} />

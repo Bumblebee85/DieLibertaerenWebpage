@@ -16,12 +16,11 @@ import {
   getDatabaseUrl,
   getPayloadSecret,
   getServerURL,
+  getTrustedOrigins,
 } from "./lib/payload-env";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
-
-const serverURL = getServerURL();
 
 export default buildConfig({
   admin: {
@@ -43,21 +42,26 @@ export default buildConfig({
     Documents,
   ],
   editor: lexicalEditor(),
+  // Werte bei jedem Init neu aus process.env lesen (Vercel Serverless)
   secret: getPayloadSecret(),
-  serverURL,
-  // Vertrauenswürdige Origins für Admin/API auf Vercel
-  csrf: [serverURL],
-  cors: [serverURL],
+  serverURL: getServerURL(),
+  csrf: getTrustedOrigins(),
+  cors: getTrustedOrigins(),
+  // Diagnostik: PAYLOAD_DIAGNOSTICS=true in Vercel zeigt echte Fehler in API-Responses
+  debug: process.env.PAYLOAD_DIAGNOSTICS === "true",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: mongooseAdapter({
     url: getDatabaseUrl(),
-    // Serverless-freundliche Verbindungsparameter für Atlas + Vercel
+    // Serverless-optimiert für Vercel + MongoDB Atlas
     connectOptions: {
-      maxPoolSize: 10,
-      serverSelectionTimeoutMS: 15000,
+      maxPoolSize: 1,
+      minPoolSize: 0,
+      maxIdleTimeMS: 10000,
+      serverSelectionTimeoutMS: 20000,
       socketTimeoutMS: 45000,
+      connectTimeoutMS: 20000,
     },
   }),
   sharp,
@@ -67,8 +71,6 @@ export default buildConfig({
     defaultLocale: "de",
   },
   onInit: async (payload) => {
-    if (process.env.NODE_ENV !== "production") {
-      payload.logger.info(`Payload CMS ready – ${serverURL}/admin`);
-    }
+    payload.logger.info(`Payload CMS initialized – ${getServerURL()}/admin`);
   },
 });

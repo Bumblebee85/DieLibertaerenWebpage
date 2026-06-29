@@ -9,7 +9,10 @@ let cached: Promise<Payload> | null = null;
  */
 export async function getPayloadClient(): Promise<Payload> {
   if (!cached) {
-    cached = getPayload({ config });
+    cached = getPayload({ config }).catch((error) => {
+      cached = null;
+      throw error;
+    });
   }
   return cached;
 }

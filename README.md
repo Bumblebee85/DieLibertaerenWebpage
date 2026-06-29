@@ -66,11 +66,26 @@ Die API antwortet mit `There was an error initializing Payload`, wenn eine Pflic
 | DB-Verbindung schlägt fehl | `MONGODB_URI` falsch | Passwort URL-encoden (`@` → `%40`), Atlas IP `0.0.0.0/0` |
 | Admin lädt, API 500 | `NEXT_PUBLIC_SERVER_URL` fehlt | Production-URL in Vercel setzen |
 
-Lokal oder mit Atlas-URI prüfen:
+**Nach jedem Deploy prüfen:** `https://<deine-domain>/api/health`
+
+- `ok: true` → Payload + MongoDB verbunden, `/admin` sollte funktionieren
+- `ok: false` → `message` und `hint` zeigen die genaue Ursache
+
+Lokal mit Atlas-URI in `.env.local`:
 
 ```powershell
 npm run check:payload
 ```
+
+**Ersten Admin-Benutzer anlegen** (einmalig, mit Atlas-URI):
+
+```powershell
+$env:ADMIN_EMAIL="chris@die-libertaeren.de"
+$env:ADMIN_PASSWORD="DeinSicheresPasswort!"
+npm run seed:admin
+```
+
+Dann unter `/admin` einloggen.
 
 ### Admin-Panel & Collections
 

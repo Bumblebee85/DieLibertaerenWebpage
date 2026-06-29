@@ -5,6 +5,7 @@ import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
 
+import { DailyImpulses } from "./collections/DailyImpulses";
 import { Documents } from "./collections/Documents";
 import { Events } from "./collections/Events";
 import { Highlights } from "./collections/Highlights";
@@ -25,14 +26,23 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Events, Documents, Quotes, Highlights],
+  collections: [
+    Users,
+    Media,
+    Highlights,
+    Quotes,
+    Events,
+    DailyImpulses,
+    Documents,
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: mongooseAdapter({
-    url: process.env.DATABASE_URL || "",
+    // DATABASE_URL (lokal) oder MONGODB_URI (Atlas / Vercel)
+    url: process.env.DATABASE_URL || process.env.MONGODB_URI || "",
   }),
   sharp,
   localization: {

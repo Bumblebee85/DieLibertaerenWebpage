@@ -2,68 +2,79 @@ import type { CollectionConfig } from "payload";
 
 /**
  * Zitat-Pool für die Rotations-Sektion auf der Startseite.
- * Erweiterbar um Mises, Rothbard, Hayek, Antony Müller u. a.
  */
 export const Quotes: CollectionConfig = {
   slug: "quotes",
+  labels: {
+    singular: "Zitat",
+    plural: "Zitate",
+  },
   admin: {
-    useAsTitle: "author",
-    defaultColumns: ["text", "author", "source", "published"],
-    group: "Inhalte",
+    useAsTitle: "authorName",
+    defaultColumns: ["quoteText", "authorName", "authorTitle", "published"],
+    group: "Startseite",
+    description:
+      "Zitate rotieren automatisch auf der Startseite. Mindestens ein veröffentlichtes Zitat empfohlen.",
   },
   access: {
     read: () => true,
   },
   fields: [
     {
-      name: "text",
+      name: "quoteText",
       type: "textarea",
       label: "Zitat",
       required: true,
-    },
-    {
-      name: "author",
-      type: "text",
-      label: "Autor",
-      required: true,
-    },
-    {
-      name: "authorHandle",
-      type: "text",
-      label: "Handle / Kurzname",
       admin: {
-        description: 'z. B. "@hummel_mathias"',
+        description: "Der Zitat-Text in Anführungszeichen auf der Startseite.",
       },
     },
     {
-      name: "authorUrl",
-      type: "text",
-      label: "Profil-URL",
-    },
-    {
-      name: "source",
-      type: "select",
-      label: "Quelle",
-      defaultValue: "partei",
-      options: [
-        { label: "DIE LIBERTÄREN", value: "partei" },
-        { label: "Ludwig von Mises", value: "mises" },
-        { label: "Murray Rothbard", value: "rothbard" },
-        { label: "Friedrich Hayek", value: "hayek" },
-        { label: "Antony Müller", value: "mueller" },
-        { label: "Sonstiges", value: "sonstiges" },
+      type: "row",
+      fields: [
+        {
+          name: "authorName",
+          type: "text",
+          label: "Autor / Autorin",
+          required: true,
+          admin: { width: "50%" },
+        },
+        {
+          name: "authorTitle",
+          type: "text",
+          label: "Titel / Funktion",
+          admin: {
+            width: "50%",
+            description: 'z. B. „Bundesvorsitzender DIE LIBERTÄREN"',
+          },
+        },
       ],
     },
     {
-      name: "publishedAt",
-      type: "date",
-      label: "Datum",
+      name: "authorImage",
+      type: "upload",
+      label: "Autoren-Bild (optional)",
+      relationTo: "media",
+      admin: {
+        description: "Optional: Porträt neben dem Zitat.",
+      },
+    },
+    {
+      name: "source",
+      type: "text",
+      label: "Quelle (optional)",
+      admin: {
+        description: "z. B. Rede, Interview, Twitter/X, Buchtitel.",
+      },
     },
     {
       name: "published",
       type: "checkbox",
       label: "Veröffentlicht",
       defaultValue: true,
+      admin: {
+        description: "Nur veröffentlichte Zitate erscheinen in der Rotation.",
+      },
     },
   ],
 };

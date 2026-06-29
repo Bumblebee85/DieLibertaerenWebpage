@@ -69,10 +69,11 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    events: Event;
-    documents: Document;
-    quotes: Quote;
     highlights: Highlight;
+    quotes: Quote;
+    events: Event;
+    'daily-impulses': DailyImpulse;
+    documents: Document;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -82,10 +83,11 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    events: EventsSelect<false> | EventsSelect<true>;
-    documents: DocumentsSelect<false> | DocumentsSelect<true>;
-    quotes: QuotesSelect<false> | QuotesSelect<true>;
     highlights: HighlightsSelect<false> | HighlightsSelect<true>;
+    quotes: QuotesSelect<false> | QuotesSelect<true>;
+    events: EventsSelect<false> | EventsSelect<true>;
+    'daily-impulses': DailyImpulsesSelect<false> | DailyImpulsesSelect<true>;
+    documents: DocumentsSelect<false> | DocumentsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -172,37 +174,134 @@ export interface Media {
   focalY?: number | null;
 }
 /**
+ * Aktuelle Meldungen und Kampagnen – z. B. Afuera Fest. Maximal ein bis zwei gleichzeitig aktiv halten.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "highlights".
+ */
+export interface Highlight {
+  id: string;
+  /**
+   * Große Überschrift im Highlight-Bereich.
+   */
+  title: string;
+  /**
+   * Kurzname für interne Zuordnung (wird automatisch aus dem Titel erzeugt).
+   */
+  slug?: string | null;
+  /**
+   * 1–3 Sätze unter der Überschrift. Plain Text, kein HTML nötig.
+   */
+  shortText: string;
+  /**
+   * Wird als Info-Zeile angezeigt (z. B. Fest-Datum).
+   */
+  date?: string | null;
+  /**
+   * Optional: Highlight wird nach diesem Datum automatisch ausgeblendet.
+   */
+  activeUntil?: string | null;
+  /**
+   * Querformat empfohlen (z. B. 1200 × 800 px).
+   */
+  image?: (string | null) | Media;
+  /**
+   * Ziel des Buttons – intern (/events) oder extern (https://…).
+   */
+  link: string;
+  /**
+   * Nur aktive Highlights erscheinen unter „Aktuell bei DIE LIBERTÄREN“.
+   */
+  isActive?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Zitate rotieren automatisch auf der Startseite. Mindestens ein veröffentlichtes Zitat empfohlen.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quotes".
+ */
+export interface Quote {
+  id: string;
+  /**
+   * Der Zitat-Text in Anführungszeichen auf der Startseite.
+   */
+  quoteText: string;
+  authorName: string;
+  /**
+   * z. B. „Bundesvorsitzender DIE LIBERTÄREN"
+   */
+  authorTitle?: string | null;
+  /**
+   * Optional: Porträt neben dem Zitat.
+   */
+  authorImage?: (string | null) | Media;
+  /**
+   * z. B. Rede, Interview, Twitter/X, Buchtitel.
+   */
+  source?: string | null;
+  /**
+   * Nur veröffentlichte Zitate erscheinen in der Rotation.
+   */
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Termine, Stammtische und Feste – erscheinen auf der Startseite und unter /events.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events".
  */
 export interface Event {
   id: string;
   title: string;
+  startDate: string;
   /**
-   * URL-freundlicher Name (optional, wird aus dem Titel abgeleitet).
+   * Für mehrtägige Events. Leer lassen bei eintägigen Terminen.
    */
-  slug?: string | null;
+  endDate?: string | null;
+  /**
+   * Stadt oder Venue, z. B. „Hamburg" oder „Camping Strandbad Gerlebogk".
+   */
+  location: string;
+  category: 'stammtisch' | 'fest' | 'parteitag' | 'veranstaltung' | 'workshop' | 'sonstiges';
+  /**
+   * Kurze Info zum Event – optional, wird auf der Events-Seite angezeigt.
+   */
+  description?: string | null;
+  image?: (string | null) | Media;
+  /**
+   * Optional: Anmeldung oder externe Infoseite. Standard: /events
+   */
+  link?: string | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Kurze News mit libertärer Einordnung. Die 3 neuesten veröffentlichten Impulse erscheinen auf der Startseite.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "daily-impulses".
+ */
+export interface DailyImpulse {
+  id: string;
+  title: string;
+  /**
+   * Kurze Zusammenfassung der Meldung (2–4 Sätze).
+   */
+  shortText: string;
+  /**
+   * Warum ist das für Libertäre relevant? Freiheitliche Perspektive in 1–3 Sätzen.
+   */
+  libertarianPerspective: string;
   date: string;
   /**
-   * z. B. "19:00 - 22:00"
+   * Link zur Originalquelle oder zum Blog-Artikel.
    */
-  time?: string | null;
-  location: string;
-  type: 'stammtisch' | 'parteitag' | 'veranstaltung' | 'sonstiges';
-  /**
-   * Optional: Name einer Veranstaltungsreihe.
-   */
-  series?: string | null;
-  recurring?: boolean | null;
-  /**
-   * z. B. "Jeden ersten Mittwoch im Monat"
-   */
-  recurrence?: string | null;
-  description?: string | null;
-  /**
-   * Optionaler Link zu weiteren Infos oder Anmeldung.
-   */
-  externalUrl?: string | null;
+  sourceLink?: string | null;
   published?: boolean | null;
   updatedAt: string;
   createdAt: string;
@@ -220,54 +319,6 @@ export interface Document {
   file: string | Media;
   publishedAt?: string | null;
   published?: boolean | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quotes".
- */
-export interface Quote {
-  id: string;
-  text: string;
-  author: string;
-  /**
-   * z. B. "@hummel_mathias"
-   */
-  authorHandle?: string | null;
-  authorUrl?: string | null;
-  source?: ('partei' | 'mises' | 'rothbard' | 'hayek' | 'mueller' | 'sonstiges') | null;
-  publishedAt?: string | null;
-  published?: boolean | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "highlights".
- */
-export interface Highlight {
-  id: string;
-  title: string;
-  subtitle: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  image?: (string | null) | Media;
-  buttonText?: string | null;
-  link: string;
-  isActive?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -304,20 +355,24 @@ export interface PayloadLockedDocument {
         value: string | Media;
       } | null)
     | ({
-        relationTo: 'events';
-        value: string | Event;
-      } | null)
-    | ({
-        relationTo: 'documents';
-        value: string | Document;
+        relationTo: 'highlights';
+        value: string | Highlight;
       } | null)
     | ({
         relationTo: 'quotes';
         value: string | Quote;
       } | null)
     | ({
-        relationTo: 'highlights';
-        value: string | Highlight;
+        relationTo: 'events';
+        value: string | Event;
+      } | null)
+    | ({
+        relationTo: 'daily-impulses';
+        value: string | DailyImpulse;
+      } | null)
+    | ({
+        relationTo: 'documents';
+        value: string | Document;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -405,20 +460,61 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "highlights_select".
+ */
+export interface HighlightsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  shortText?: T;
+  date?: T;
+  activeUntil?: T;
+  image?: T;
+  link?: T;
+  isActive?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "quotes_select".
+ */
+export interface QuotesSelect<T extends boolean = true> {
+  quoteText?: T;
+  authorName?: T;
+  authorTitle?: T;
+  authorImage?: T;
+  source?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events_select".
  */
 export interface EventsSelect<T extends boolean = true> {
   title?: T;
-  slug?: T;
-  date?: T;
-  time?: T;
+  startDate?: T;
+  endDate?: T;
   location?: T;
-  type?: T;
-  series?: T;
-  recurring?: T;
-  recurrence?: T;
+  category?: T;
   description?: T;
-  externalUrl?: T;
+  image?: T;
+  link?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "daily-impulses_select".
+ */
+export interface DailyImpulsesSelect<T extends boolean = true> {
+  title?: T;
+  shortText?: T;
+  libertarianPerspective?: T;
+  date?: T;
+  sourceLink?: T;
   published?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -435,35 +531,6 @@ export interface DocumentsSelect<T extends boolean = true> {
   file?: T;
   publishedAt?: T;
   published?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "quotes_select".
- */
-export interface QuotesSelect<T extends boolean = true> {
-  text?: T;
-  author?: T;
-  authorHandle?: T;
-  authorUrl?: T;
-  source?: T;
-  publishedAt?: T;
-  published?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "highlights_select".
- */
-export interface HighlightsSelect<T extends boolean = true> {
-  title?: T;
-  subtitle?: T;
-  image?: T;
-  buttonText?: T;
-  link?: T;
-  isActive?: T;
   updatedAt?: T;
   createdAt?: T;
 }

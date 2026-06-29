@@ -1,15 +1,28 @@
 import type { CollectionConfig } from "payload";
 
+const categoryOptions = [
+  { label: "Stammtisch", value: "stammtisch" },
+  { label: "Fest", value: "fest" },
+  { label: "Parteitag", value: "parteitag" },
+  { label: "Veranstaltung", value: "veranstaltung" },
+  { label: "Workshop", value: "workshop" },
+  { label: "Sonstiges", value: "sonstiges" },
+] as const;
+
 /**
- * Veranstaltungen, Stammtische und Parteitage.
- * Wird auf der Startseite und unter /events angezeigt.
+ * Veranstaltungen für Startseite-Teaser und /events.
  */
 export const Events: CollectionConfig = {
   slug: "events",
+  labels: {
+    singular: "Veranstaltung",
+    plural: "Veranstaltungen",
+  },
   admin: {
     useAsTitle: "title",
-    defaultColumns: ["title", "date", "location", "type", "published"],
-    group: "Inhalte",
+    defaultColumns: ["title", "startDate", "location", "category", "published"],
+    group: "Startseite",
+    description: "Termine, Stammtische und Feste – erscheinen auf der Startseite und unter /events.",
   },
   access: {
     read: () => true,
@@ -22,31 +35,43 @@ export const Events: CollectionConfig = {
       required: true,
     },
     {
-      name: "slug",
-      type: "text",
-      label: "Slug",
-      unique: true,
-      admin: {
-        description: "URL-freundlicher Name (optional, wird aus dem Titel abgeleitet).",
-      },
-    },
-    {
       type: "row",
       fields: [
         {
-          name: "date",
+          name: "startDate",
           type: "date",
-          label: "Datum",
+          label: "Startdatum",
           required: true,
-          admin: { width: "50%" },
-        },
-        {
-          name: "time",
-          type: "text",
-          label: "Uhrzeit",
           admin: {
             width: "50%",
-            description: 'z. B. "19:00 - 22:00"',
+            date: {
+              pickerAppearance: "dayOnly",
+              displayFormat: "dd.MM.yyyy",
+            },
+          },
+        },
+        {
+          name: "endDate",
+          type: "date",
+          label: "Enddatum (optional)",
+          admin: {
+            width: "50%",
+            description: "Für mehrtägige Events. Leer lassen bei eintägigen Terminen.",
+            date: {
+              pickerAppearance: "dayOnly",
+              displayFormat: "dd.MM.yyyy",
+            },
+          },
+          validate: (value: unknown, { siblingData }) => {
+            const startDate = (siblingData as { startDate?: string } | undefined)
+              ?.startDate;
+            if (!value || typeof value !== "string" || !startDate) {
+              return true;
+            }
+            if (value < startDate) {
+              return "Enddatum darf nicht vor dem Startdatum liegen.";
+            }
+            return true;
           },
         },
       ],
@@ -56,54 +81,50 @@ export const Events: CollectionConfig = {
       type: "text",
       label: "Ort",
       required: true,
+      admin: {
+        description: 'Stadt oder Venue, z. B. „Hamburg" oder „Camping Strandbad Gerlebogk".',
+      },
     },
     {
-      name: "type",
+      name: "category",
       type: "select",
-      label: "Art",
+      label: "Kategorie",
       required: true,
       defaultValue: "stammtisch",
-      options: [
-        { label: "Stammtisch", value: "stammtisch" },
-        { label: "Parteitag", value: "parteitag" },
-        { label: "Veranstaltung", value: "veranstaltung" },
-        { label: "Sonstiges", value: "sonstiges" },
-      ],
-    },
-    {
-      name: "series",
-      type: "text",
-      label: "Serie",
-      admin: {
-        description: "Optional: Name einer Veranstaltungsreihe.",
-      },
-    },
-    {
-      name: "recurring",
-      type: "checkbox",
-      label: "Wiederkehrend",
-      defaultValue: false,
-    },
-    {
-      name: "recurrence",
-      type: "text",
-      label: "Wiederholung",
-      admin: {
-        condition: (_, siblingData) => siblingData?.recurring === true,
-        description: 'z. B. "Jeden ersten Mittwoch im Monat"',
-      },
+      options: [...categoryOptions],
     },
     {
       name: "description",
       type: "textarea",
       label: "Beschreibung",
+      admin: {
+        description: "Kurze Info zum Event – optional, wird auf der Events-Seite angezeigt.",
+      },
     },
     {
-      name: "externalUrl",
+      name: "image",
+      type: "upload",
+      label: "Bild (optional)",
+      relationTo: "media",
+    },
+    {
+      name: "link",
       type: "text",
-      label: "Externe URL",
+      label: "Link",
       admin: {
-        description: "Optionaler Link zu weiteren Infos oder Anmeldung.",
+        description: "Optional: Anmeldung oder externe Infoseite. Standard: /events",
+      },
+      defaultValue: "/events",
+      validate: (value: unknown) => {
+        if (!value || typeof value !== "string") return true;
+        if (
+          value.startsWith("/") ||
+          value.startsWith("http://") ||
+          value.startsWith("https://")
+        ) {
+          return true;
+        }
+        return "Link muss mit /, http:// oder https:// beginnen.";
       },
     },
     {

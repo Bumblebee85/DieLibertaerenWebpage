@@ -66,7 +66,7 @@ Die API antwortet mit `There was an error initializing Payload`, wenn eine Pflic
 | DB-Verbindung schlägt fehl | `MONGODB_URI` falsch | Passwort URL-encoden (`@` → `%40`), Atlas IP `0.0.0.0/0` |
 | Admin lädt, API 500 | `NEXT_PUBLIC_SERVER_URL` fehlt | Production-URL in Vercel setzen |
 
-**Nach jedem Deploy prüfen:** `https://<deine-domain>/api/payload-health`
+**Nach jedem Deploy prüfen:** `https://<deine-domain>/payload-health`
 
 - `ok: true` → Payload + MongoDB verbunden, `/admin` sollte funktionieren
 - `ok: false` → `message` und `hint` zeigen die genaue Ursache

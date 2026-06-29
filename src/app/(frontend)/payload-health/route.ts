@@ -5,8 +5,8 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Diagnose außerhalb des Payload catch-all (/api/[...slug]).
- * GET /api/payload-health
+ * Diagnose-Endpoint AUSSERHALB von /api (Payload catch-all blockiert /api/*).
+ * GET /payload-health
  */
 export async function GET() {
   const status = getPayloadEnvStatus();
@@ -66,7 +66,7 @@ export async function GET() {
         message,
         cause,
         fix:
-          "MongoDB Atlas: Network Access 0.0.0.0/0, URL-encode password (@→%40), cluster running, correct database name in URI.",
+          "MongoDB Atlas: Network Access 0.0.0.0/0, URL-encode password (@→%40), cluster running.",
         ...status,
       },
       { status: 500 }

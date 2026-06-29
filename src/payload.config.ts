@@ -22,6 +22,9 @@ import {
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
+const serverURL = getServerURL();
+const trustedOrigins = getTrustedOrigins();
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -42,19 +45,16 @@ export default buildConfig({
     Documents,
   ],
   editor: lexicalEditor(),
-  // Werte bei jedem Init neu aus process.env lesen (Vercel Serverless)
   secret: getPayloadSecret(),
-  serverURL: getServerURL(),
-  csrf: getTrustedOrigins(),
-  cors: getTrustedOrigins(),
-  // Diagnostik: PAYLOAD_DIAGNOSTICS=true in Vercel zeigt echte Fehler in API-Responses
-  debug: process.env.PAYLOAD_DIAGNOSTICS === "true",
+  serverURL,
+  csrf: trustedOrigins,
+  cors: trustedOrigins,
+  debug: process.env["PAYLOAD_DIAGNOSTICS"] === "true",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: mongooseAdapter({
     url: getDatabaseUrl(),
-    // Serverless-optimiert für Vercel + MongoDB Atlas
     connectOptions: {
       maxPoolSize: 1,
       minPoolSize: 0,
@@ -71,6 +71,6 @@ export default buildConfig({
     defaultLocale: "de",
   },
   onInit: async (payload) => {
-    payload.logger.info(`Payload CMS initialized – ${getServerURL()}/admin`);
+    payload.logger.info(`Payload CMS initialized – ${serverURL}/admin`);
   },
 });

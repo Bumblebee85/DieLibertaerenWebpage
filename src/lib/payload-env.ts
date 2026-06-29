@@ -15,6 +15,7 @@ function trimEnv(value: string | undefined): string {
   return trimmed;
 }
 
+/** Bracket access verhindert Next.js Build-Time-Inlining auf Vercel. */
 function readEnv(name: string): string {
   return trimEnv(process.env[name]);
 }

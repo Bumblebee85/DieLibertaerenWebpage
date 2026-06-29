@@ -7,9 +7,8 @@ type LightSectionBackgroundProps = {
 };
 
 /**
- * Premium paper background using Background_2.jpg.
- * Dark multiply base + contrast filter makes the pale grain readable;
- * a thin wash keeps the zone light and airy.
+ * Light paper background using Background_2.jpg.
+ * Soft multiply + bright off-white wash: visible grain, airy stationery feel.
  */
 export function LightSectionBackground({
   children,

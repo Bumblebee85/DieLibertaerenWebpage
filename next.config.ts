@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
         pathname: "/images/**",
       },
     ],
+    qualities: [75, 85],
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {

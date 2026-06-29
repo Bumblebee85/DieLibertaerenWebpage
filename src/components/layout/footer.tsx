@@ -38,7 +38,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Image
-              src="/logo.png"
+              src="/images/logo.png"
               alt="DIE LIBERTÄREN Logo"
               width={200}
               height={65}

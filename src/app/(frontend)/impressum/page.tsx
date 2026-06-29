@@ -15,7 +15,7 @@ export default function ImpressumPage() {
       <Section>
         <div className="mx-auto max-w-3xl space-y-8">
           <Image
-            src="/logo-dark.png"
+            src="/images/logo-dark.png"
             alt="DIE LIBERTÄREN Logo"
             width={300}
             height={98}

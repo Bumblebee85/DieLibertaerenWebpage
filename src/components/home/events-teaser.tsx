@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Calendar, MapPin, Clock } from "lucide-react";
+import Image from "next/image";
+import { Calendar, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,8 +8,23 @@ import { Section, SectionHeader } from "@/components/shared/section";
 import { getUpcomingEvents } from "@/lib/cms/events";
 import { formatDateDE } from "@/lib/utils";
 
+function formatEventDate(startDate: string, endDate?: string): string {
+  if (endDate && endDate !== startDate) {
+    return `${formatDateDE(startDate)} – ${formatDateDE(endDate)}`;
+  }
+  return formatDateDE(startDate);
+}
+
+/**
+ * Veranstaltungs-Teaser – Daten aus Payload CMS (Collection: events).
+ * Sektion wird ausgeblendet, wenn keine kommenden Termine vorhanden sind.
+ */
 export async function EventsTeaser() {
-  const upcoming = (await getUpcomingEvents(3));
+  const upcoming = await getUpcomingEvents(3);
+
+  if (upcoming.length === 0) {
+    return null;
+  }
 
   return (
     <Section className="border-t border-black/10">
@@ -20,32 +36,37 @@ export async function EventsTeaser() {
         {upcoming.map((event) => (
           <Card
             key={event.id}
-            className="texture-surface-card transition-shadow hover:shadow-lg"
+            className="texture-surface-card overflow-hidden transition-shadow hover:shadow-lg"
           >
+            {event.imageUrl && (
+              <div className="relative h-40 w-full">
+                <Image
+                  src={event.imageUrl}
+                  alt={event.imageAlt ?? event.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                />
+              </div>
+            )}
             <CardHeader>
               <div className="mb-2 flex items-center gap-2">
-                <Badge>{event.type}</Badge>
-                {event.recurring && (
-                  <Badge variant="muted">Serie</Badge>
-                )}
+                <Badge>{event.category}</Badge>
               </div>
               <CardTitle className="text-lg">{event.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4 text-primary" />
-                {formatDateDE(event.date)}
+                {formatEventDate(event.startDate, event.endDate)}
               </div>
-              {event.time && (
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-primary" />
-                  {event.time}
-                </div>
-              )}
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 {event.location}
               </div>
+              {event.description && (
+                <p className="line-clamp-3 leading-relaxed">{event.description}</p>
+              )}
             </CardContent>
           </Card>
         ))}

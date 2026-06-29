@@ -1,7 +1,7 @@
 import { Hero } from "@/components/home/hero";
 import { HighlightsSection } from "@/components/home/highlights-section";
 import { QuoteRotator } from "@/components/home/quote-rotator";
-import { DailyNews } from "@/components/home/daily-news";
+import { DailyImpulsesSection } from "@/components/home/daily-impulses";
 import { EventsTeaser } from "@/components/home/events-teaser";
 import { getPublishedQuotes } from "@/lib/cms/quotes";
 import { StatsSection } from "@/components/home/stats-section";
@@ -44,8 +44,8 @@ export default async function HomePage() {
 
       {/* Textur-Zone: Zitat → Impulse → Events → Prinzipien */}
       <LightSectionBackground>
-        <QuoteRotator quotes={quotes} />
-        <DailyNews />
+        {quotes.length > 0 && <QuoteRotator quotes={quotes} />}
+        <DailyImpulsesSection />
         <EventsTeaser />
 
         <Section className="border-t border-black/10 bg-transparent">

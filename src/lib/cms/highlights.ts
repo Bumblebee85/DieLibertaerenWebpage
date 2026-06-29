@@ -1,15 +1,16 @@
 import highlightsData from "@/data/highlights.json";
-import { richTextToHtml } from "@/lib/cms/rich-text";
+import { resolveMediaUrl } from "@/lib/cms/media";
 import { getPayloadClient } from "@/lib/payload";
-import type { Highlight, Media } from "@/payload-types";
+import type { Highlight } from "@/payload-types";
 
 export type HighlightDisplay = {
   id: string;
+  slug: string;
   title: string;
-  subtitleHtml: string;
+  shortText: string;
   imageUrl?: string;
   imageAlt?: string;
-  buttonText: string;
+  date?: string;
   link: string;
 };
 
@@ -17,50 +18,40 @@ const DEFAULT_HIGHLIGHT_IMAGES: Record<string, string> = {
   "afuera-fest-2026": "/images/afuera-fest-hero.jpg",
 };
 
+function todayIso(): string {
+  return new Date().toISOString().split("T")[0];
+}
+
+function isHighlightVisible(highlight: Highlight, today: string): boolean {
+  if (!highlight.isActive) return false;
+  if (!highlight.activeUntil) return true;
+  return highlight.activeUntil >= today;
+}
+
 function resolveHighlightImage(
-  id: string,
+  slug: string,
   imageUrl?: string,
   imageAlt?: string
 ): { url?: string; alt?: string } {
   return {
-    url: imageUrl ?? DEFAULT_HIGHLIGHT_IMAGES[id],
+    url: imageUrl ?? DEFAULT_HIGHLIGHT_IMAGES[slug],
     alt: imageAlt,
   };
 }
 
-function resolveMediaUrl(
-  image: string | number | Media | null | undefined
-): {
-  url?: string;
-  alt?: string;
-} {
-  if (!image || typeof image === "string" || typeof image === "number") {
-    return {};
-  }
-
-  return {
-    url: image.url ?? undefined,
-    alt: image.alt ?? undefined,
-  };
-}
-
-function mapPayloadHighlight(highlight: Highlight): HighlightDisplay | null {
-  if (!highlight.isActive) {
-    return null;
-  }
-
+function mapPayloadHighlight(highlight: Highlight): HighlightDisplay {
+  const slug = highlight.slug ?? String(highlight.id);
   const { url, alt } = resolveMediaUrl(highlight.image);
-  const highlightKey =
-    highlight.title.toLowerCase().includes("afuera") ? "afuera-fest-2026" : String(highlight.id);
-  const image = resolveHighlightImage(highlightKey, url, alt);
+  const image = resolveHighlightImage(slug, url, alt);
 
   return {
     id: String(highlight.id),
+    slug,
     title: highlight.title,
-    subtitleHtml: richTextToHtml(highlight.subtitle),
+    shortText: highlight.shortText,
     imageUrl: image.url,
     imageAlt: image.alt ?? highlight.title,
-    buttonText: highlight.buttonText ?? "Mehr erfahren",
+    date: highlight.date ?? undefined,
     link: highlight.link,
   };
 }
@@ -68,43 +59,57 @@ function mapPayloadHighlight(highlight: Highlight): HighlightDisplay | null {
 function mapJsonHighlight(
   highlight: (typeof highlightsData.highlights)[number]
 ): HighlightDisplay {
-  const imageUrl =
-    "image" in highlight ? (highlight.image as string | undefined) : undefined;
-  const image = resolveHighlightImage(highlight.id, imageUrl);
+  const slug = highlight.id;
+  const image = resolveHighlightImage(
+    slug,
+    "image" in highlight ? (highlight.image as string | undefined) : undefined
+  );
 
   return {
     id: highlight.id,
+    slug,
     title: highlight.title,
-    subtitleHtml: richTextToHtml(highlight.subtitle, highlight.subtitle),
+    shortText: highlight.subtitle,
     imageUrl: image.url,
     imageAlt: image.alt ?? highlight.title,
-    buttonText: highlight.buttonText ?? "Mehr erfahren",
+    date: "date" in highlight ? (highlight.date as string | undefined) : undefined,
     link: highlight.link,
   };
 }
 
-/** Aktive Highlights aus Payload, mit JSON-Fallback (inkl. Afuera Fest). */
+/** Aktive Highlights aus Payload (inkl. activeUntil-Filter), mit JSON-Fallback. */
 export async function getActiveHighlights(): Promise<HighlightDisplay[]> {
+  const today = todayIso();
+
   try {
     const payload = await getPayloadClient();
 
     const result = await payload.find({
       collection: "highlights",
       where: {
-        isActive: { equals: true },
+        and: [
+          { isActive: { equals: true } },
+          {
+            or: [
+              { activeUntil: { exists: false } },
+              { activeUntil: { equals: null } },
+              { activeUntil: { greater_than_equal: today } },
+            ],
+          },
+        ],
       },
-      sort: "-createdAt",
+      sort: "-date",
       limit: 10,
       depth: 1,
     });
 
     if (result.docs.length > 0) {
-      const mapped = result.docs
-        .map((doc) => mapPayloadHighlight(doc as Highlight))
-        .filter((item): item is HighlightDisplay => item !== null);
+      const visible = (result.docs as Highlight[]).filter((doc) =>
+        isHighlightVisible(doc, today)
+      );
 
-      if (mapped.length > 0) {
-        return mapped;
+      if (visible.length > 0) {
+        return visible.map(mapPayloadHighlight);
       }
     }
   } catch {

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CalendarDays, MapPin } from "lucide-react";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
 import { getActiveHighlights } from "@/lib/cms/highlights";
 import { Button } from "@/components/ui/button";
+import { formatDateDE } from "@/lib/utils";
 
 export async function HighlightsSection() {
   const highlights = await getActiveHighlights();
@@ -38,9 +39,11 @@ export async function HighlightsSection() {
               className="group overflow-hidden rounded-3xl bg-slate-900 shadow-2xl shadow-slate-900/25 ring-1 ring-slate-800"
             >
               <div className="grid lg:min-h-[480px] lg:grid-cols-[1.1fr_0.9fr]">
-                {/* Text & CTA – hoher Kontrast auf dunkler Card */}
                 <div className="relative flex flex-col justify-center p-8 md:p-12 lg:p-14">
-                  <div className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.08]" aria-hidden />
+                  <div
+                    className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.08]"
+                    aria-hidden
+                  />
 
                   <div className="relative">
                     <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-primary/60 bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
@@ -52,25 +55,20 @@ export async function HighlightsSection() {
                       {highlight.title}
                     </h3>
 
-                    <div
-                      className="prose prose-invert mt-5 max-w-xl text-base leading-relaxed text-slate-200 prose-p:my-0 md:text-lg"
-                      dangerouslySetInnerHTML={{ __html: highlight.subtitleHtml }}
-                    />
+                    <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">
+                      {highlight.shortText}
+                    </p>
 
-                    {highlight.id === "afuera-fest-2026" && (
+                    {highlight.date && (
                       <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate-300">
                         <span className="inline-flex items-center gap-2">
                           <CalendarDays className="h-4 w-4 shrink-0 text-primary" />
-                          24.–26. Juli 2026
-                        </span>
-                        <span className="inline-flex items-center gap-2">
-                          <MapPin className="h-4 w-4 shrink-0 text-primary" />
-                          Camping Strandbad Gerlebogk
+                          {formatDateDE(highlight.date)}
                         </span>
                       </div>
                     )}
 
-                    <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                    <div className="mt-10">
                       <Button
                         size="lg"
                         className="h-14 bg-primary px-10 text-base font-bold text-secondary shadow-lg shadow-primary/35 hover:bg-primary/95 hover:shadow-xl hover:shadow-primary/45"
@@ -87,20 +85,14 @@ export async function HighlightsSection() {
                               : undefined
                           }
                         >
-                          {highlight.buttonText}
+                          Mehr erfahren
                           <ArrowUpRight className="ml-1 h-5 w-5" />
                         </Link>
                       </Button>
-                      {highlight.id === "afuera-fest-2026" && (
-                        <p className="text-sm text-slate-400">
-                          Das größte libertäre Fest im deutschsprachigen Raum
-                        </p>
-                      )}
                     </div>
                   </div>
                 </div>
 
-                {/* Bild-Panel – scharf, 1904px Quelle */}
                 {highlight.imageUrl && (
                   <div className="relative min-h-[280px] lg:min-h-full">
                     <Image

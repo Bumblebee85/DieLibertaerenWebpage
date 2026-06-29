@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
 import type { QuoteDisplay } from "@/lib/cms/quotes";
 
 function getDailyQuoteIndex(quoteCount: number): number {
+  if (quoteCount === 0) return 0;
   const dayOfYear = Math.floor(
     (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
   );
@@ -20,17 +22,22 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const [index, setIndex] = useState(() => getDailyQuoteIndex(quotes.length));
 
   useEffect(() => {
+    if (quotes.length === 0) return;
+
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % quotes.length);
     }, 12000);
     return () => clearInterval(timer);
   }, [quotes.length]);
 
+  if (quotes.length === 0) {
+    return null;
+  }
+
   const current = quotes[index];
 
   return (
     <section className="relative border-y border-black/10 py-20 md:py-24">
-      {/* Libertäre Streifen – dezent über sichtbarer Papierstruktur */}
       <div
         className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.05]"
         aria-hidden
@@ -50,26 +57,29 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
               <blockquote className="font-display text-2xl font-medium leading-relaxed text-foreground md:text-3xl lg:text-4xl">
                 &ldquo;{current.text}&rdquo;
               </blockquote>
-              <cite className="mt-8 block text-base not-italic text-muted-foreground">
-                — {current.author}
-                {current.authorHandle && (
-                  <>
-                    {", "}
-                    {current.authorUrl ? (
-                      <a
-                        href={current.authorUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary transition-colors hover:underline"
-                      >
-                        {current.authorHandle}
-                      </a>
-                    ) : (
-                      <span>{current.authorHandle}</span>
-                    )}
-                  </>
+
+              <div className="mt-8 flex flex-col items-center gap-4">
+                {current.authorImageUrl && (
+                  <Image
+                    src={current.authorImageUrl}
+                    alt={current.authorImageAlt ?? current.authorName}
+                    width={64}
+                    height={64}
+                    className="h-16 w-16 rounded-full object-cover ring-2 ring-primary/30"
+                  />
                 )}
-              </cite>
+                <cite className="block text-base not-italic text-muted-foreground">
+                  — {current.authorName}
+                  {current.authorTitle && (
+                    <span className="mt-1 block text-sm">{current.authorTitle}</span>
+                  )}
+                  {current.source && (
+                    <span className="mt-1 block text-xs text-muted-foreground/80">
+                      {current.source}
+                    </span>
+                  )}
+                </cite>
+              </div>
             </motion.div>
           </AnimatePresence>
           <div className="mt-8 flex justify-center gap-2">

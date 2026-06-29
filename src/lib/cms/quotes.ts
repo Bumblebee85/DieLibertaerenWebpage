@@ -1,24 +1,29 @@
 import quotesData from "@/data/quotes.json";
+import { resolveMediaUrl } from "@/lib/cms/media";
 import { getPayloadClient } from "@/lib/payload";
 import type { Quote } from "@/payload-types";
 
 export type QuoteDisplay = {
   id: string;
   text: string;
-  author: string;
-  authorHandle?: string;
-  authorUrl?: string;
-  date?: string;
+  authorName: string;
+  authorTitle?: string;
+  authorImageUrl?: string;
+  authorImageAlt?: string;
+  source?: string;
 };
 
 function mapPayloadQuote(quote: Quote): QuoteDisplay {
+  const { url, alt } = resolveMediaUrl(quote.authorImage);
+
   return {
     id: String(quote.id),
-    text: quote.text,
-    author: quote.author,
-    authorHandle: quote.authorHandle ?? undefined,
-    authorUrl: quote.authorUrl ?? undefined,
-    date: quote.publishedAt ?? undefined,
+    text: quote.quoteText,
+    authorName: quote.authorName,
+    authorTitle: quote.authorTitle ?? undefined,
+    authorImageUrl: url,
+    authorImageAlt: alt ?? quote.authorName,
+    source: quote.source ?? undefined,
   };
 }
 
@@ -26,10 +31,9 @@ function mapJsonQuote(quote: (typeof quotesData.quotes)[number]): QuoteDisplay {
   return {
     id: quote.id,
     text: quote.text,
-    author: quotesData.author,
-    authorHandle: quotesData.handle,
-    authorUrl: quotesData.profileUrl,
-    date: quote.date,
+    authorName: quotesData.author,
+    authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
+    source: "DIE LIBERTÄREN",
   };
 }
 
@@ -43,12 +47,13 @@ export async function getPublishedQuotes(): Promise<QuoteDisplay[]> {
       where: {
         published: { equals: true },
       },
-      sort: "-publishedAt",
+      sort: "-createdAt",
       limit: 100,
+      depth: 1,
     });
 
     if (result.docs.length > 0) {
-      return result.docs.map(mapPayloadQuote);
+      return (result.docs as Quote[]).map(mapPayloadQuote);
     }
   } catch {
     // MongoDB nicht erreichbar – Fallback auf statische JSON-Daten

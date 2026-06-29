@@ -29,8 +29,8 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const current = quotes[index];
 
   return (
-    <section className="border-y border-border bg-muted/50 py-20">
-      <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+    <section className="py-20 md:py-24">
+      <div className="mx-auto max-w-4xl rounded-2xl border border-white/50 bg-white/75 px-6 py-14 text-center shadow-lg shadow-black/5 backdrop-blur-md lg:px-10">
         <Quote className="mx-auto mb-8 h-10 w-10 text-primary" />
         <AnimatePresence mode="wait">
           <motion.div

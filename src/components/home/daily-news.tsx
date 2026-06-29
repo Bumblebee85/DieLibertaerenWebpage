@@ -15,7 +15,7 @@ export function DailyNews() {
       />
       <div className="grid gap-8 md:grid-cols-3">
         {dailyNews.items.map((item) => (
-          <Card key={item.id} className="group flex flex-col">
+          <Card key={item.id} className="group flex flex-col border-white/60 bg-white/80 shadow-md shadow-black/5 backdrop-blur-sm">
             <CardHeader>
               <div className="mb-3 flex items-center justify-between">
                 <Badge variant="muted">{item.source}</Badge>

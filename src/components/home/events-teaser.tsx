@@ -18,7 +18,7 @@ export async function EventsTeaser() {
       />
       <div className="grid gap-8 md:grid-cols-3">
         {upcoming.map((event) => (
-          <Card key={event.id}>
+          <Card key={event.id} className="border-white/60 bg-white/85 shadow-md shadow-black/5 backdrop-blur-sm">
             <CardHeader>
               <div className="mb-2 flex items-center gap-2">
                 <Badge>{event.type}</Badge>

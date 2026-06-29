@@ -13,6 +13,21 @@ export type HighlightDisplay = {
   link: string;
 };
 
+const DEFAULT_HIGHLIGHT_IMAGES: Record<string, string> = {
+  "afuera-fest-2026": "/images/afuera-fest-hero.jpg",
+};
+
+function resolveHighlightImage(
+  id: string,
+  imageUrl?: string,
+  imageAlt?: string
+): { url?: string; alt?: string } {
+  return {
+    url: imageUrl ?? DEFAULT_HIGHLIGHT_IMAGES[id],
+    alt: imageAlt,
+  };
+}
+
 function resolveMediaUrl(
   image: string | number | Media | null | undefined
 ): {
@@ -35,13 +50,16 @@ function mapPayloadHighlight(highlight: Highlight): HighlightDisplay | null {
   }
 
   const { url, alt } = resolveMediaUrl(highlight.image);
+  const highlightKey =
+    highlight.title.toLowerCase().includes("afuera") ? "afuera-fest-2026" : String(highlight.id);
+  const image = resolveHighlightImage(highlightKey, url, alt);
 
   return {
     id: String(highlight.id),
     title: highlight.title,
     subtitleHtml: richTextToHtml(highlight.subtitle),
-    imageUrl: url,
-    imageAlt: alt,
+    imageUrl: image.url,
+    imageAlt: image.alt ?? highlight.title,
     buttonText: highlight.buttonText ?? "Mehr erfahren",
     link: highlight.link,
   };
@@ -50,11 +68,16 @@ function mapPayloadHighlight(highlight: Highlight): HighlightDisplay | null {
 function mapJsonHighlight(
   highlight: (typeof highlightsData.highlights)[number]
 ): HighlightDisplay {
+  const imageUrl =
+    "image" in highlight ? (highlight.image as string | undefined) : undefined;
+  const image = resolveHighlightImage(highlight.id, imageUrl);
+
   return {
     id: highlight.id,
     title: highlight.title,
     subtitleHtml: richTextToHtml(highlight.subtitle, highlight.subtitle),
-    imageUrl: "image" in highlight ? (highlight.image as string | undefined) : undefined,
+    imageUrl: image.url,
+    imageAlt: image.alt ?? highlight.title,
     buttonText: highlight.buttonText ?? "Mehr erfahren",
     link: highlight.link,
   };

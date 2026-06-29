@@ -11,7 +11,7 @@ export async function EventsTeaser() {
   const upcoming = (await getUpcomingEvents(3));
 
   return (
-    <Section className="border-t border-slate-300/70">
+    <Section className="border-t border-black/10">
       <SectionHeader
         title="Veranstaltungen"
         subtitle="Triff uns auf unseren Veranstaltungen oder lerne uns auf Events der Community kennen."

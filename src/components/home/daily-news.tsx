@@ -8,7 +8,7 @@ import { formatDateDE } from "@/lib/utils";
 
 export function DailyNews() {
   return (
-    <Section className="border-t border-slate-300/70">
+    <Section className="border-t border-black/10">
       <SectionHeader
         title="Tagesaktuelle libertäre Impulse"
         subtitle="3 Top News – täglich aktualisierbar über src/data/daily-news.json"

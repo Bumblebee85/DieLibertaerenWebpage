@@ -48,7 +48,7 @@ export default async function HomePage() {
         <DailyNews />
         <EventsTeaser />
 
-        <Section className="border-t border-slate-300/70 bg-transparent">
+        <Section className="border-t border-black/10 bg-transparent">
           <SectionHeader
             title="Für einen praktischen Libertarismus"
             subtitle="Libertarismus ist keine bloße Theorie – es ist eine Lebensphilosophie."

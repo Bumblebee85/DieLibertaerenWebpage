@@ -29,10 +29,10 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const current = quotes[index];
 
   return (
-    <section className="relative border-y border-slate-300/70 py-20 md:py-24">
-      {/* Libertäre Streifen – dezent über dem Section-Hintergrund */}
+    <section className="relative border-y border-black/10 py-20 md:py-24">
+      {/* Libertäre Streifen – dezent über sichtbarer Papierstruktur */}
       <div
-        className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.07]"
+        className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.05]"
         aria-hidden
       />
 

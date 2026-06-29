@@ -118,9 +118,29 @@ export function Footer() {
 
         <div className="mt-16 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <p className="text-sm text-white/50">
-              © {new Date().getFullYear()} DIE LIBERTÄREN e.V. Alle Rechte vorbehalten.
-            </p>
+            <div className="flex flex-col items-center gap-3 md:items-start">
+              <p className="text-sm text-white/50">
+                © {new Date().getFullYear()} DIE LIBERTÄREN e.V. Alle Rechte
+                vorbehalten.
+              </p>
+              <nav
+                aria-label="Rechtliche Hinweise"
+                className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start"
+              >
+                <Link
+                  href="/impressum"
+                  className="text-sm text-white/60 transition-colors hover:text-primary"
+                >
+                  Impressum
+                </Link>
+                <Link
+                  href="/datenschutz"
+                  className="text-sm text-white/60 transition-colors hover:text-primary"
+                >
+                  Datenschutz
+                </Link>
+              </nav>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               {socialLinks.map((link) => (
                 <a

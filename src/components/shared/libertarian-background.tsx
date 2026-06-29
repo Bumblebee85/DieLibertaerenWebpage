@@ -1,13 +1,17 @@
 import Image from "next/image";
 
+/** Maximale Quellbreite des Hero-JPEGs – verhindert künstliches Hochskalieren durch den Optimizer. */
+const HERO_IMAGE_WIDTH = 832;
+const HERO_IMAGE_HEIGHT = 1248;
+
 /**
- * Hero-Hintergrund – das starke Bild gilt NUR für den Hero-Bereich.
- * 40–60 % Dunkelgradient für optimale Textlesbarkeit.
+ * Hero-Hintergrund – starkes Bild NUR im Hero-Bereich.
+ * unoptimized + sizes auf Quellauflösung = maximale Schärfe bis ein 1920px+-Asset nachgeliefert wird.
  */
 export function HeroBackground() {
   return (
     <div
-      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-[#03050f]"
       aria-hidden
     >
       <Image
@@ -15,21 +19,22 @@ export function HeroBackground() {
         alt=""
         fill
         priority
-        className="object-cover object-center"
-        sizes="100vw"
-        quality={85}
+        unoptimized
+        sizes={`(max-width: ${HERO_IMAGE_WIDTH}px) 100vw, ${HERO_IMAGE_WIDTH}px`}
+        className="object-cover object-center [image-rendering:-webkit-optimize-contrast]"
       />
 
-      {/* Lesbarkeits-Overlay ~50 % */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#03050f]/60 via-[#03050f]/50 to-[#0a0c14]/45" />
+      {/* Overlay ~50 % für Lesbarkeit */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#03050f]/65 via-[#03050f]/52 to-[#0a0c14]/48" />
 
-      <div className="absolute inset-0 libertarian-stripe-pattern opacity-40" />
+      <div className="absolute inset-0 libertarian-stripe-pattern opacity-[0.18]" />
 
-      <div className="absolute -right-20 top-1/4 h-[480px] w-[480px] rounded-full bg-primary/[0.08] blur-3xl" />
-      <div className="absolute -left-16 bottom-1/4 h-[320px] w-[320px] rounded-full bg-[#1a2030]/50 blur-3xl" />
+      <div className="absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-primary/[0.07] blur-3xl" />
+      <div className="absolute -left-20 bottom-1/4 h-64 w-64 rounded-full bg-primary/[0.04] blur-3xl" />
 
-      {/* Kurzer Übergang zur Highlights-Sektion – kein Bild nach unten */}
-      <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-slate-950 md:h-28" />
+      {/* Übergang zur helleren Highlights-Sektion */}
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-slate-100 md:h-32" />
     </div>
   );
 }
+

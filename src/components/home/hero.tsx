@@ -22,16 +22,16 @@ export function Hero() {
             Willkommen bei DIE LIBERTÄREN
           </p>
           <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-6xl lg:text-7xl">
-            Willkommen,{" "}
-            <span className="text-primary">Freund der Freiheit!</span>
+            DIE LIBERTÄREN –{" "}
+            <span className="text-primary">libertäre Partei für Freiheit</span>
           </h1>
           <p className="mt-4 font-display text-2xl font-medium text-white/80 md:text-3xl">
             FREIHEITLICH – AUS PRINZIP
           </p>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-            Wir sind die konsequenteste Stimme für persönliche Freiheit in der
-            deutschen Parteienlandschaft. Wir wollen freie Menschen in einem
-            freien Land sein – ehrlich und kompromisslos.
+            Deutschlands konsequenteste Stimme für Libertarismus, Eigentum und
+            freien Markt: Wir stehen für individuelle Freiheit, Minimalstaat und
+            das Nichtaggressionsprinzip – ehrlich und kompromisslos.
           </p>
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <Button size="lg" asChild>

@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { PageHeader } from "@/components/shared/page-header";
 import { Section } from "@/components/shared/section";
 import { CTASection } from "@/components/shared/cta-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Unsere Prinzipien",
-  description:
-    "Die drei Säulen der Freiheit: Individuelle, vertragliche und gesellschaftliche Freiheit – das Fundament von DIE LIBERTÄREN.",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.prinzipien);
 
 const pillars = [
   {
@@ -40,6 +39,7 @@ const pillars = [
 export default function PrinzipienPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Unsere Prinzipien" }]} />
       <PageHeader
         title="Unsere Prinzipien"
         subtitle="Das Fundament unserer Überzeugungen – von der individuellen über die vertragliche zur gesellschaftlichen Freiheit."
@@ -63,11 +63,26 @@ export default function PrinzipienPage() {
             von Gewalt einem anderen aufzuerlegen.
           </p>
           <p>
-            Wir stehen für die Freiheit und das Recht jedes Menschen, beliebigen
-            Aktivitäten nachzugehen, solange sie die Freiheiten und Rechte
-            anderer dadurch nicht begrenzen. Wir unterstützen die freie
-            Marktwirtschaft und den freien Wettbewerb gemäß der Österreichischen
-            Schule.
+            Das <strong className="text-foreground">Nichtaggressionsprinzip</strong>{" "}
+            ist unser ethisches Fundament: Kein Mensch darf Gewalt oder Drohung
+            einsetzen, um anderen seinen Willen aufzuerzwingen. Wir stehen für
+            die Freiheit und das Recht jedes Menschen, beliebigen Aktivitäten
+            nachzugehen, solange sie die Freiheiten und Rechte anderer dadurch
+            nicht begrenzen – und für unverletzliches{" "}
+            <strong className="text-foreground">Eigentum</strong> als Basis
+            freiwilliger Verträge.
+          </p>
+          <p>
+            Wir unterstützen die freie Marktwirtschaft und den freien Wettbewerb
+            gemäß der Österreichischen Schule. Mehr dazu in unserem{" "}
+            <Link href="/programm" className="text-primary hover:underline">
+              libertären Programm
+            </Link>{" "}
+            und im{" "}
+            <Link href="/blog" className="text-primary hover:underline">
+              Blog
+            </Link>
+            .
           </p>
           <p>
             Aus Erfahrung der gelebten Realität erkennen wir an, dass eine

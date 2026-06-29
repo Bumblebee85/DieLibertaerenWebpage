@@ -6,10 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import siteConfig from "@/data/site-config.json";
 
-export const metadata: Metadata = {
-  title: "Netzwerk",
-  description: "Das libertäre Netzwerk von DIE LIBERTÄREN – Vernetzung in Wissenschaft und Zivilgesellschaft.",
-};
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.netzwerk);
 
 const partners = [
   {

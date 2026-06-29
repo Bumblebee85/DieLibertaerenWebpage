@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { PageHeader } from "@/components/shared/page-header";
 import { Section, SectionHeader } from "@/components/shared/section";
 import { WeeklyEssay } from "@/components/blog/weekly-essay";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import blogPosts from "@/data/blog-posts.json";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { formatDateDE } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Blog & Libertärer Gedanke der Woche",
-  description:
-    "Artikel, Gastbeiträge und der wöchentliche libertäre Aufsatz von DIE LIBERTÄREN.",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.blog);
 
 export default function BlogPage() {
   return (
     <>
+      <Breadcrumbs items={[{ label: "Blog" }]} />
       <PageHeader
         title="Blog"
         subtitle="Grundsätzliche und aktuelle Themen – plus der Libertäre Aufsatz der Woche."

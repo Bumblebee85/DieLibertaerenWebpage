@@ -3,42 +3,24 @@ import { Roboto, Roboto_Slab } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { OrganizationJsonLd } from "@/components/shared/json-ld";
-import siteConfig from "@/data/site-config.json";
+import { createRootMetadata } from "@/lib/seo/metadata";
 import "./globals.css";
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
+  display: "swap",
 });
 
 const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} – ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  metadataBase: new URL("https://die-libertaeren.de"),
-  openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "de_DE",
-    type: "website",
-  },
-  robots: { index: true, follow: true },
-  icons: {
-    icon: "/images/favicon.ico",
-    apple: "/images/logo.png",
-  },
-};
+export const metadata: Metadata = createRootMetadata();
 
 export default function RootLayout({
   children,
@@ -52,7 +34,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen antialiased">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

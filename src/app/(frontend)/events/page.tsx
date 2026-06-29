@@ -8,12 +8,10 @@ import { Button } from "@/components/ui/button";
 import { getCalendarLinks, getUpcomingEvents } from "@/lib/cms/events";
 import { formatDateDE } from "@/lib/utils";
 import siteConfig from "@/data/site-config.json";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Events & Stammtische",
-  description:
-    "Veranstaltungen, libertäre Stammtische und Termine von DIE LIBERTÄREN in ganz Deutschland.",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.events);
 
 function formatEventDate(startDate: string, endDate?: string): string {
   if (endDate && endDate !== startDate) {

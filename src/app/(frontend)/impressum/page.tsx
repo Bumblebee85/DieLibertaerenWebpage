@@ -4,12 +4,10 @@ import { LegalNav, LegalProse, LegalSection } from "@/components/legal/legal-pro
 import { PageHeader } from "@/components/shared/page-header";
 import { Section } from "@/components/shared/section";
 import { legal } from "@/data/legal";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Impressum",
-  description:
-    "Impressum von DIE LIBERTÄREN e.V. – Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.impressum);
 
 const navItems = [
   { id: "anbieter", label: "Anbieterkennzeichnung" },

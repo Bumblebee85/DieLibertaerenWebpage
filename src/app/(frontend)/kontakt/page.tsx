@@ -5,10 +5,10 @@ import { Section } from "@/components/shared/section";
 import { ContactForm } from "@/components/shared/contact-form";
 import siteConfig from "@/data/site-config.json";
 
-export const metadata: Metadata = {
-  title: "Kontakt",
-  description: "Nimm Kontakt mit DIE LIBERTÄREN auf – Fragen, Feedback und Anregungen.",
-};
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.kontakt);
 
 export default function KontaktPage() {
   return (

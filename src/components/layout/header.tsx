@@ -33,7 +33,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-80">
           <Image
             src="/images/logo-dark.png"
-            alt="DIE LIBERTÄREN Logo"
+            alt="DIE LIBERTÄREN – libertäre Partei für Freiheit"
             width={180}
             height={58}
             className="h-12 w-auto"

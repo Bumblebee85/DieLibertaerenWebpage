@@ -5,10 +5,10 @@ import { Section } from "@/components/shared/section";
 import { CTASection } from "@/components/shared/cta-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Bundesvorstand",
-  description: "Der Bundesvorstand von DIE LIBERTÄREN – Dr. Mathias Hummel und Florian Handwerker.",
-};
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.bundesvorstand);
 
 const board = [
   {

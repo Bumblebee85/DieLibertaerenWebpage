@@ -5,11 +5,10 @@ import { Section } from "@/components/shared/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Heart, Calendar, MessageCircle } from "lucide-react";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Mitmachen",
-  description: "Engagiere dich bei DIE LIBERTÄREN – werde Mitglied, spende oder nimm an Veranstaltungen teil.",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.mitmachen);
 
 const options = [
   {

@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Werde Mitglied",
-  description: "Werde Mitglied bei DIE LIBERTÄREN – der konsequentesten Stimme für Freiheit in Deutschland.",
-};
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.mitglied);
 
 const benefits = [
   "Stimme für Freiheit in der öffentlichen Debatte",

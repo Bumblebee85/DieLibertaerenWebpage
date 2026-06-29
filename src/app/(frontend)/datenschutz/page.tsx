@@ -5,12 +5,10 @@ import { PageHeader } from "@/components/shared/page-header";
 import { Section } from "@/components/shared/section";
 import { legal } from "@/data/legal";
 import siteConfig from "@/data/site-config.json";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Datenschutz",
-  description:
-    "Datenschutzerklärung von DIE LIBERTÄREN e.V. – transparent, DSGVO-konform und mit minimaler Datenerhebung.",
-};
+export const metadata: Metadata = createPageMetadata(seoPages.datenschutz);
 
 const navItems = [
   { id: "grundsaetze", label: "Grundsätze" },

@@ -4,10 +4,10 @@ import { Section } from "@/components/shared/section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export const metadata: Metadata = {
-  title: "Spenden",
-  description: "Unterstütze DIE LIBERTÄREN mit einer Spende – für eine wahre Freiheitsbewegung.",
-};
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.spenden);
 
 export default function SpendenPage() {
   return (

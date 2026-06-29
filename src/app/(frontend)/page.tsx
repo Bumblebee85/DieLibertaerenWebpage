@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/home/hero";
+import { SeoIntro } from "@/components/seo/seo-intro";
+import { seoPages } from "@/data/seo-pages";
+import { createPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = createPageMetadata(seoPages.home);
 import { HighlightsSection } from "@/components/home/highlights-section";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyImpulsesSection } from "@/components/home/daily-impulses";
@@ -84,6 +90,7 @@ export default async function HomePage() {
         secondaryHref="/werde-mitglied"
       />
 
+      <SeoIntro />
       <StatsSection />
     </>
   );

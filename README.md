@@ -11,7 +11,8 @@ Vollständig statisch vorgerendert – ideal für den **Vercel Hobby/Free Tier**
 - **Next.js 16** (App Router) + TypeScript
 - **Tailwind CSS 4** + shadcn/ui-Komponenten + lucide-react
 - **framer-motion** für subtile Animationen
-- Inhalte über editierbare JSON-Dateien in `src/data/`
+- **Payload CMS 3** für Startseiten-Inhalte (Highlights, Zitate, Events, Tagesimpulse)
+- JSON-Fallback in `src/data/` wenn MongoDB nicht erreichbar ist
 
 ### Brand-Farben (exakt von die-libertaeren.de)
 
@@ -26,11 +27,63 @@ Vollständig statisch vorgerendert – ideal für den **Vercel Hobby/Free Tier**
 
 ---
 
+## Payload CMS & MongoDB
+
+Die Startseite lädt Inhalte aus Payload CMS. Ohne Datenbank greifen automatisch JSON-Fallbacks.
+
+### Umgebungsvariablen
+
+Kopiere `.env.example` nach `.env.local`:
+
+| Variable | Pflicht | Beschreibung |
+|----------|---------|--------------|
+| `PAYLOAD_SECRET` | Ja | Min. 32 Zeichen, zufällig (`openssl rand -base64 32`) |
+| `DATABASE_URL` | Lokal | `mongodb://127.0.0.1:27017/die-libertaeren` |
+| `MONGODB_URI` | Vercel | Atlas Connection String (`mongodb+srv://…`) |
+| `NEXT_PUBLIC_SERVER_URL` | Ja | `http://localhost:3010` bzw. Production-URL |
+
+`payload.config.ts` akzeptiert `DATABASE_URL` **oder** `MONGODB_URI`.
+
+### MongoDB Atlas (Produktion / Vercel)
+
+1. [cloud.mongodb.com](https://cloud.mongodb.com) → Cluster erstellen (M0 Free)
+2. **Database Access** → Benutzer + Passwort
+3. **Network Access** → `0.0.0.0/0` (Vercel Serverless)
+4. **Connect** → Connection String kopieren
+5. In **Vercel → Settings → Environment Variables** eintragen:
+   - `MONGODB_URI`
+   - `PAYLOAD_SECRET`
+   - `NEXT_PUBLIC_SERVER_URL` (z. B. `https://deine-domain.vercel.app`)
+6. Redeploy auslösen
+
+### Admin-Panel & Collections
+
+- URL: `/admin` (ersten Benutzer unter **Users** anlegen)
+- **Highlights** – „Aktuell bei DIE LIBERTÄREN“ (`isActive`, `activeUntil`)
+- **Zitate** – Rotations-Sektion auf der Startseite
+- **Veranstaltungen** – Teaser + `/events`
+- **Tagesimpulse** – „Tagesaktuelle libertäre Impulse“
+
+### Seed-Daten anlegen
+
+```powershell
+npm run seed:cms
+```
+
+### Typen nach Schema-Änderungen
+
+```powershell
+npm run generate:types
+```
+
+---
+
 ## Lokale Entwicklung
 
 ```powershell
 cd C:\KI_CODE_Projekte\DieLibertaerenWebseite
 npm install
+cp .env.example .env.local   # oder manuell anlegen
 npm run dev
 ```
 

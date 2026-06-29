@@ -1,12 +1,12 @@
 import "dotenv/config";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import { plainTextToLexical } from "@/lib/cms/rich-text";
-import type { Highlight } from "@/payload-types";
 
 /**
- * Legt den ersten Highlight-Eintrag (Afuera Fest 2026) im CMS an.
- * Ausführen: npx tsx src/scripts/seed-highlights.ts
+ * Legt den Highlight-Eintrag „Afuera Fest 2026“ im CMS an.
+ * Ausführen: npm run seed:highlights
+ *
+ * Für alle Collections: npm run seed:cms
  */
 async function seed() {
   const payload = await getPayload({ config });
@@ -28,11 +28,12 @@ async function seed() {
     collection: "highlights",
     data: {
       title: "Afuera Fest 2026",
-      subtitle: plainTextToLexical(
-        "Das größte libertäre Fest im deutschsprachigen Raum. Wir brauchen deine Unterstützung vor Ort!"
-      ) as Highlight["subtitle"],
+      slug: "afuera-fest-2026",
+      shortText:
+        "Das größte libertäre Fest im deutschsprachigen Raum. Wir brauchen deine Unterstützung vor Ort!",
+      date: "2026-07-24",
+      activeUntil: "2026-07-27",
       link: "https://afuerafest.de/",
-      buttonText: "Zum Afuera Fest",
       isActive: true,
     },
   });

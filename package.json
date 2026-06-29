@@ -11,7 +11,8 @@
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
-    "seed:highlights": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-highlights.ts"
+    "seed:highlights": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-highlights.ts",
+    "seed:cms": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-cms.ts"
   },
   "engines": {
     "node": ">=20"

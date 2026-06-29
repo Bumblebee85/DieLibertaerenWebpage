@@ -8,7 +8,7 @@ import { formatDateDE } from "@/lib/utils";
 
 export function DailyNews() {
   return (
-    <Section>
+    <Section className="border-t border-slate-300/70">
       <SectionHeader
         title="Tagesaktuelle libertäre Impulse"
         subtitle="3 Top News – täglich aktualisierbar über src/data/daily-news.json"
@@ -17,7 +17,7 @@ export function DailyNews() {
         {dailyNews.items.map((item) => (
           <Card
             key={item.id}
-            className="group flex flex-col border-border/90 bg-white/95 shadow-md shadow-slate-200/60 backdrop-blur-sm transition-shadow hover:shadow-lg"
+            className="texture-surface-card group flex flex-col transition-shadow hover:shadow-lg"
           >
             <CardHeader>
               <div className="mb-3 flex items-center justify-between">

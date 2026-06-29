@@ -42,13 +42,13 @@ export default async function HomePage() {
       <Hero />
       <HighlightsSection />
 
-      {/* Ab Zitat: dezentes Background_2.jpg – luftig, hell, premium */}
+      {/* Textur-Zone: Zitat → Impulse → Events → Prinzipien */}
       <LightSectionBackground>
         <QuoteRotator quotes={quotes} />
         <DailyNews />
         <EventsTeaser />
 
-        <Section className="bg-transparent">
+        <Section className="border-t border-slate-300/70 bg-transparent">
           <SectionHeader
             title="Für einen praktischen Libertarismus"
             subtitle="Libertarismus ist keine bloße Theorie – es ist eine Lebensphilosophie."
@@ -58,7 +58,7 @@ export default async function HomePage() {
             {pillars.map((pillar) => (
               <Card
                 key={pillar.title}
-                className="border-border/90 bg-white/95 shadow-md shadow-slate-200/50 backdrop-blur-sm transition-shadow hover:shadow-lg"
+                className="texture-surface-card transition-shadow hover:shadow-lg"
               >
                 <CardHeader>
                   <pillar.icon className="mx-auto h-10 w-10 text-primary" />
@@ -75,8 +75,6 @@ export default async function HomePage() {
         </Section>
       </LightSectionBackground>
 
-      <StatsSection />
-
       <CTASection
         title="Freiheit ist kein Geschenk, sondern dein Recht!"
         description="Für uns ist Freiheit nicht nur ein Begriff, sondern ein Prinzip. Werde der Patron einer wahren Freiheitsbewegung!"
@@ -85,6 +83,8 @@ export default async function HomePage() {
         secondaryLabel="Werde Mitglied"
         secondaryHref="/werde-mitglied"
       />
+
+      <StatsSection />
     </>
   );
 }

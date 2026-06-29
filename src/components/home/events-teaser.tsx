@@ -11,7 +11,7 @@ export async function EventsTeaser() {
   const upcoming = (await getUpcomingEvents(3));
 
   return (
-    <Section>
+    <Section className="border-t border-slate-300/70">
       <SectionHeader
         title="Veranstaltungen"
         subtitle="Triff uns auf unseren Veranstaltungen oder lerne uns auf Events der Community kennen."
@@ -20,7 +20,7 @@ export async function EventsTeaser() {
         {upcoming.map((event) => (
           <Card
             key={event.id}
-            className="border-border/90 bg-white/95 shadow-md shadow-slate-200/60 backdrop-blur-sm transition-shadow hover:shadow-lg"
+            className="texture-surface-card transition-shadow hover:shadow-lg"
           >
             <CardHeader>
               <div className="mb-2 flex items-center gap-2">

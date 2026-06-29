@@ -29,7 +29,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const current = quotes[index];
 
   return (
-    <section className="relative border-y border-border/50 py-20 md:py-24">
+    <section className="relative border-y border-slate-300/70 py-20 md:py-24">
       {/* Libertäre Streifen – dezent über dem Section-Hintergrund */}
       <div
         className="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.07]"
@@ -37,7 +37,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
       />
 
       <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
-        <div className="rounded-2xl border border-white/80 bg-white/90 px-6 py-14 text-center shadow-lg shadow-slate-200/50 backdrop-blur-sm md:px-10">
+        <div className="texture-surface-card rounded-2xl px-6 py-14 text-center md:px-10">
           <Quote className="mx-auto mb-8 h-10 w-10 text-primary" />
           <AnimatePresence mode="wait">
             <motion.div

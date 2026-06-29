@@ -7,8 +7,8 @@ type LightSectionBackgroundProps = {
 };
 
 /**
- * Dezenter Section-Hintergrund mit Background_2.jpg.
- * Nur für helle Inhaltsbereiche unterhalb von Hero + Highlights.
+ * Heller Section-Hintergrund mit kontrastreicher Background_2.jpg-Papierstruktur.
+ * Multiply-Blend + warmes Tint-Overlay – Textur sichtbar, Text lesbar.
  */
 export function LightSectionBackground({
   children,

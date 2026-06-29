@@ -56,6 +56,22 @@ Kopiere `.env.example` nach `.env.local`:
    - `NEXT_PUBLIC_SERVER_URL` (z. B. `https://deine-domain.vercel.app`)
 6. Redeploy auslösen
 
+### /admin zeigt Server-Fehler?
+
+Die API antwortet mit `There was an error initializing Payload`, wenn eine Pflicht-Variable fehlt:
+
+| Symptom | Ursache | Fix |
+|---------|---------|-----|
+| Server Error auf `/admin` | `PAYLOAD_SECRET` fehlt | In Vercel setzen (min. 32 Zeichen), redeployen |
+| DB-Verbindung schlägt fehl | `MONGODB_URI` falsch | Passwort URL-encoden (`@` → `%40`), Atlas IP `0.0.0.0/0` |
+| Admin lädt, API 500 | `NEXT_PUBLIC_SERVER_URL` fehlt | Production-URL in Vercel setzen |
+
+Lokal oder mit Atlas-URI prüfen:
+
+```powershell
+npm run check:payload
+```
+
 ### Admin-Panel & Collections
 
 - URL: `/admin` (ersten Benutzer unter **Users** anlegen)

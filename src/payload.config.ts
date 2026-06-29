@@ -12,9 +12,16 @@ import { Highlights } from "./collections/Highlights";
 import { Media } from "./collections/Media";
 import { Quotes } from "./collections/Quotes";
 import { Users } from "./collections/Users";
+import {
+  getDatabaseUrl,
+  getPayloadSecret,
+  getServerURL,
+} from "./lib/payload-env";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
+
+const serverURL = getServerURL();
 
 export default buildConfig({
   admin: {
@@ -36,18 +43,32 @@ export default buildConfig({
     Documents,
   ],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || "",
+  secret: getPayloadSecret(),
+  serverURL,
+  // Vertrauenswürdige Origins für Admin/API auf Vercel
+  csrf: [serverURL],
+  cors: [serverURL],
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: mongooseAdapter({
-    // DATABASE_URL (lokal) oder MONGODB_URI (Atlas / Vercel)
-    url: process.env.DATABASE_URL || process.env.MONGODB_URI || "",
+    url: getDatabaseUrl(),
+    // Serverless-freundliche Verbindungsparameter für Atlas + Vercel
+    connectOptions: {
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 15000,
+      socketTimeoutMS: 45000,
+    },
   }),
   sharp,
   localization: {
     locales: ["de"],
     fallback: true,
     defaultLocale: "de",
+  },
+  onInit: async (payload) => {
+    if (process.env.NODE_ENV !== "production") {
+      payload.logger.info(`Payload CMS ready – ${serverURL}/admin`);
+    }
   },
 });

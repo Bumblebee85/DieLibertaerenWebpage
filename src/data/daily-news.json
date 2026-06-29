@@ -1,32 +1,41 @@
 {
-  "lastUpdated": "2026-06-20",
+  "lastUpdated": "2026-06-29",
   "items": [
     {
       "id": "1",
-      "title": "Steuern sind Raub – ohne freiwillige Zustimmung keine Legitimität",
-      "summary": "DIE LIBERTÄREN fordern die grundsätzliche Anerkennung des Eigentumsrechts und lehnen jede Zwangsabgabe ab, die nicht freiwillig vereinbart wurde.",
-      "libertarianPerspective": "Jede Zwangsabgabe ohne freiwillige Zustimmung verletzt das Eigentumsrecht – und damit die individuelle Freiheit.",
-      "url": "/blog/ohne-freiwillige-zustimmung-sind-steuern-und-abgaben-nicht-rechtmaessig",
-      "source": "DIE LIBERTÄREN",
-      "date": "2026-06-20"
+      "title": "US Supreme Court: Präsidialmacht vs. unabhängige Behörden",
+      "summary": "Der Supreme Court erlaubte der US-Regierung, einen FTC-Kommissar zu entlassen – ein Einschnitt in die Grenzen exekutiver Macht und die Unabhängigkeit von Regulierungsbehörden.",
+      "libertarianPerspective": "Libertäre kritisieren beides: willkürliche Macht ohne klare Regeln und den Regulierungsstaat an sich. Freiheit braucht feste Eigentums- und Vertragsrechte – nicht immer mehr Behördenkompetenz.",
+      "url": "https://www.scotusblog.com/2026/06/court-allows-trump-to-fire-ftc-commissioner-and-overturns-major-restraint-on-presidential-power/",
+      "source": "SCOTUSblog",
+      "date": "2026-06-29"
     },
     {
       "id": "2",
-      "title": "Libertärer Stammtisch Hamburg – jeden ersten Mittwoch",
-      "summary": "Triff Gleichgesinnte in entspannter Atmosphäre. Freiheitliche Gedanken, offene Debatten, keine Ideologie-Zwang.",
-      "libertarianPerspective": "Freiheit lebt vom Austausch im privaten Raum – Stammtische sind zivilgesellschaftliche Freiheitsräume ohne staatliche Lenkung.",
-      "url": "/events",
-      "source": "Veranstaltungen",
-      "date": "2026-06-20"
+      "title": "Persischer Golf: Handelswege und Eskalation im Fokus",
+      "summary": "Neue Spannungen rund um den Straßen von Hormuz belasten internationale Lieferketten und treiben Energie- und Versicherungskosten.",
+      "libertarianPerspective": "Freier Welthandel scheitert an Kriegsrhetorik und Interventionismus. Libertäre plädieren für offene Märkte und Zurückhaltung – nicht für die Verstaatlichung globaler Risiken.",
+      "url": "https://www.reuters.com/world/asia-pacific/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-hormuz-escalating-2026-06-27/",
+      "source": "Reuters",
+      "date": "2026-06-29"
     },
     {
       "id": "3",
-      "title": "Thesenpapier v4: Konsequenter Libertarismus für Deutschland",
-      "summary": "Unser aktualisiertes Programm mit Leitbild, Grundthese und konkreten Maßnahmen für mehr individuelle, vertragliche und gesellschaftliche Freiheit.",
-      "libertarianPerspective": "Libertarismus braucht konkrete politische Modelle – nicht nur Theorie, sondern umsetzbare Freiheitskonzepte.",
-      "url": "/programm",
-      "source": "Programm",
-      "date": "2026-06-20"
+      "title": "EZB und Märkte: Geldpolitik unter dem Sommer-Druck",
+      "summary": "Vor dem neuen Handelsmonat richten Anleger den Blick erneut auf Zinsentscheidungen und Inflationsdaten in Europa.",
+      "libertarianPerspective": "Inflation ist Folge von Kreditexpansion und Staatsfinanzierung. Sound Money und strikte Haushaltsdisziplin sind die libertäre Antwort – nicht neue Geldschöpfung als politisches Werkzeug.",
+      "url": "https://www.cnbc.com/2026/06/26/stock-market-next-week-outlook-for-june-29-july-3-2026.html",
+      "source": "CNBC",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "4",
+      "title": "Deutschland: Bürokratie und Wirtschaftswachstum im Clinch",
+      "summary": "Unternehmen beklagen weiter steigende Regulierungs- und Energiekosten, während die Politik neue Förderprogramme ankündigt.",
+      "libertarianPerspective": "Wohlstand entsteht durch Deregulierung und Eigentumsschutz, nicht durch Subventionspolitik. Wer Freiheit wirtschaftlich ernst meint, muss den Staat kleiner machen.",
+      "url": "https://www.mercatus.org/research/policy-briefs/economic-situation-june-2026",
+      "source": "Mercatus Center",
+      "date": "2026-06-29"
     }
   ]
 }

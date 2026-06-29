@@ -6,12 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
 import type { QuoteDisplay } from "@/lib/cms/quotes";
 
-function getDailyQuoteIndex(quoteCount: number): number {
+function getRandomQuoteIndex(quoteCount: number): number {
   if (quoteCount === 0) return 0;
-  const dayOfYear = Math.floor(
-    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
-  );
-  return dayOfYear % quoteCount;
+  return Math.floor(Math.random() * quoteCount);
 }
 
 type QuoteRotatorProps = {
@@ -19,7 +16,7 @@ type QuoteRotatorProps = {
 };
 
 export function QuoteRotator({ quotes }: QuoteRotatorProps) {
-  const [index, setIndex] = useState(() => getDailyQuoteIndex(quotes.length));
+  const [index, setIndex] = useState(() => getRandomQuoteIndex(quotes.length));
 
   useEffect(() => {
     if (quotes.length === 0) return;

@@ -65,27 +65,13 @@ async function seed() {
     console.log("– Events existieren bereits");
   }
 
-  // --- Daily Impulses ---
+  // --- Daily Impulses (volle Bibliothek: npm run seed:impulses) ---
   const existingImpulses = await payload.find({
     collection: "daily-impulses",
     limit: 1,
   });
   if (existingImpulses.docs.length === 0) {
-    await payload.create({
-      collection: "daily-impulses",
-      data: {
-        title: "Steuern sind Raub – ohne freiwillige Zustimmung keine Legitimität",
-        shortText:
-          "DIE LIBERTÄREN fordern die grundsätzliche Anerkennung des Eigentumsrechts.",
-        libertarianPerspective:
-          "Jede Zwangsabgabe ohne freiwillige Zustimmung verletzt das Eigentumsrecht und damit die individuelle Freiheit.",
-        date: new Date().toISOString().split("T")[0],
-        sourceLink:
-          "/blog/ohne-freiwillige-zustimmung-sind-steuern-und-abgaben-nicht-rechtmaessig",
-        published: true,
-      },
-    });
-    console.log("✓ Beispiel-Tagesimpuls angelegt");
+    console.log("– Keine Tagesimpulse vorhanden → bitte npm run seed:impulses ausführen");
   } else {
     console.log("– Tagesimpulse existieren bereits");
   }

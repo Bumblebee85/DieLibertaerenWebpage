@@ -1,14 +1,12 @@
 import { NextResponse } from "next/server";
-import { getPayload } from "payload";
-import config from "@payload-config";
 import { getPayloadEnvStatus } from "@/lib/payload-env";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Diagnose-Endpoint für Payload auf Vercel.
- * GET /api/health – zeigt Env-Status und Verbindungsfehler (ohne Secrets).
+ * Diagnose außerhalb des Payload catch-all (/api/[...slug]).
+ * GET /api/payload-health
  */
 export async function GET() {
   const status = getPayloadEnvStatus();
@@ -18,7 +16,8 @@ export async function GET() {
       {
         ok: false,
         stage: "env",
-        message: "PAYLOAD_SECRET missing or too short (min. 32 chars)",
+        message: "PAYLOAD_SECRET missing or shorter than 32 characters",
+        fix: "Vercel → Environment Variables → PAYLOAD_SECRET (openssl rand -base64 32) → Redeploy",
         ...status,
       },
       { status: 500 }
@@ -30,7 +29,8 @@ export async function GET() {
       {
         ok: false,
         stage: "env",
-        message: "MONGODB_URI missing or not a mongodb:// / mongodb+srv:// URL",
+        message: "No valid MongoDB URI found (must start with mongodb:// or mongodb+srv://)",
+        fix: "Set MONGODB_URI in Vercel. Remove conflicting postgres DATABASE_URL if present.",
         ...status,
       },
       { status: 500 }
@@ -38,6 +38,9 @@ export async function GET() {
   }
 
   try {
+    const { default: config } = await import("@payload-config");
+    const { getPayload } = await import("payload");
+
     const payload = await getPayload({ config });
     const users = await payload.find({ collection: "users", limit: 1 });
 
@@ -62,8 +65,8 @@ export async function GET() {
         stage: "init",
         message,
         cause,
-        hint:
-          "Check MongoDB Atlas: Network Access 0.0.0.0/0, URL-encoded password, cluster not paused.",
+        fix:
+          "MongoDB Atlas: Network Access 0.0.0.0/0, URL-encode password (@→%40), cluster running, correct database name in URI.",
         ...status,
       },
       { status: 500 }

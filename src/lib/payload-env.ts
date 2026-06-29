@@ -1,6 +1,6 @@
 /**
- * Zentrale Payload-Umgebungsvariablen mit Validierung.
- * Liest Werte zur Laufzeit (wichtig für Vercel Serverless).
+ * Payload-Umgebungsvariablen – liest zur Laufzeit aus process.env (Vercel Serverless).
+ * Keine Throws beim Import: Fehler werden in /api/payload-health sichtbar.
  */
 
 function trimEnv(value: string | undefined): string {
@@ -15,9 +15,8 @@ function trimEnv(value: string | undefined): string {
   return trimmed;
 }
 
-/** Strikte Validierung auf Vercel (Build + Runtime). */
-function isVercel(): boolean {
-  return process.env.VERCEL === "1";
+function readEnv(name: string): string {
+  return trimEnv(process.env[name]);
 }
 
 function isCodegenScript(): boolean {
@@ -25,14 +24,8 @@ function isCodegenScript(): boolean {
   return event === "generate:types" || event === "generate:importmap";
 }
 
-/** Runtime-Zugriff – nicht am Modul-Top-Level cachen. */
-function readEnv(name: string): string {
-  return trimEnv(process.env[name]);
-}
-
 /**
- * MongoDB connection string.
- * Reihenfolge: MONGODB_URI → MONGODB_URL → DATABASE_URL (nur wenn mongodb://)
+ * MongoDB URI – ignoriert nicht-Mongo DATABASE_URL (z. B. Vercel Postgres).
  */
 export function getDatabaseUrl(): string {
   const candidates = [
@@ -41,24 +34,14 @@ export function getDatabaseUrl(): string {
     readEnv("DATABASE_URL"),
   ].filter(Boolean);
 
-  // Vercel kann eine Postgres-DATABASE_URL injizieren – Mongo-URI bevorzugen
-  const mongoUrl =
+  return (
     candidates.find(
       (url) =>
         url.startsWith("mongodb://") || url.startsWith("mongodb+srv://")
-    ) ?? "";
-
-  if (!mongoUrl && isVercel() && !isCodegenScript()) {
-    throw new Error(
-      "MONGODB_URI is missing or invalid. Use mongodb+srv://… in Vercel Environment Variables. " +
-        "URL-encode special characters in the password (@ → %40)."
-    );
-  }
-
-  return mongoUrl;
+    ) ?? ""
+  );
 }
 
-/** Hostname aus der URI für Diagnostik (ohne Credentials). */
 export function getDatabaseHost(): string | null {
   const url = getDatabaseUrl();
   if (!url) return null;
@@ -69,9 +52,7 @@ export function getDatabaseHost(): string | null {
   }
 }
 
-/**
- * Payload secret – min. 32 Zeichen, Pflicht auf Vercel.
- */
+/** Payload secret – kein Throw; Payload meldet Fehler bei zu kurzem Secret. */
 export function getPayloadSecret(): string {
   const secret = readEnv("PAYLOAD_SECRET");
 
@@ -83,44 +64,27 @@ export function getPayloadSecret(): string {
     return secret || "codegen-only-placeholder-secret-32chars!";
   }
 
-  if (isVercel()) {
-    if (!secret) {
-      throw new Error(
-        "PAYLOAD_SECRET is missing on Vercel. Add it in Settings → Environment Variables " +
-          "(min. 32 characters). Generate: openssl rand -base64 32. Then redeploy."
-      );
-    }
-    throw new Error(
-      `PAYLOAD_SECRET is too short (${secret.length} chars). Must be at least 32 characters.`
-    );
+  // Lokale Entwicklung
+  if (process.env.NODE_ENV !== "production") {
+    return secret || "local-dev-only-placeholder-secret-32ch";
   }
 
-  return secret || "local-dev-only-placeholder-secret-32ch";
+  return secret;
 }
 
-/**
- * Öffentliche Server-URL – benötigt für Admin-Panel, CSRF und Medien-Links.
- */
 export function getServerURL(): string {
   const explicit = readEnv("NEXT_PUBLIC_SERVER_URL");
-  if (explicit) {
-    return explicit.replace(/\/$/, "");
-  }
+  if (explicit) return explicit.replace(/\/$/, "");
 
   const production = readEnv("VERCEL_PROJECT_PRODUCTION_URL");
-  if (production) {
-    return `https://${production.replace(/\/$/, "")}`;
-  }
+  if (production) return `https://${production.replace(/\/$/, "")}`;
 
   const vercel = readEnv("VERCEL_URL");
-  if (vercel) {
-    return `https://${vercel.replace(/\/$/, "")}`;
-  }
+  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
 
   return "http://localhost:3010";
 }
 
-/** Alle vertrauenswürdigen Origins für CSRF/CORS (Vercel-Deployments inkl.). */
 export function getTrustedOrigins(): string[] {
   const origins = new Set<string>();
 
@@ -142,13 +106,12 @@ export function getTrustedOrigins(): string[] {
   return [...origins];
 }
 
-/** Env-Status für Diagnostik (keine Secrets). */
 export function getPayloadEnvStatus() {
   const secret = readEnv("PAYLOAD_SECRET");
   const dbUrl = getDatabaseUrl();
 
   return {
-    vercel: isVercel(),
+    vercel: process.env.VERCEL === "1",
     nodeEnv: process.env.NODE_ENV ?? "unknown",
     secretSet: secret.length > 0,
     secretLength: secret.length,

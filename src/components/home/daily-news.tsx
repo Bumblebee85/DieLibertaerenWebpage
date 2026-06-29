@@ -13,9 +13,12 @@ export function DailyNews() {
         title="Tagesaktuelle libertäre Impulse"
         subtitle="3 Top News – täglich aktualisierbar über src/data/daily-news.json"
       />
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-10">
         {dailyNews.items.map((item) => (
-          <Card key={item.id} className="group flex flex-col border-border/80 bg-white shadow-sm transition-shadow hover:shadow-md">
+          <Card
+            key={item.id}
+            className="group flex flex-col border-border/90 bg-white/95 shadow-md shadow-slate-200/60 backdrop-blur-sm transition-shadow hover:shadow-lg"
+          >
             <CardHeader>
               <div className="mb-3 flex items-center justify-between">
                 <Badge variant="muted">{item.source}</Badge>

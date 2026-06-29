@@ -16,9 +16,12 @@ export async function EventsTeaser() {
         title="Veranstaltungen"
         subtitle="Triff uns auf unseren Veranstaltungen oder lerne uns auf Events der Community kennen."
       />
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-10">
         {upcoming.map((event) => (
-          <Card key={event.id} className="border-border/80 bg-white shadow-sm transition-shadow hover:shadow-md">
+          <Card
+            key={event.id}
+            className="border-border/90 bg-white/95 shadow-md shadow-slate-200/60 backdrop-blur-sm transition-shadow hover:shadow-lg"
+          >
             <CardHeader>
               <div className="mb-2 flex items-center gap-2">
                 <Badge>{event.type}</Badge>

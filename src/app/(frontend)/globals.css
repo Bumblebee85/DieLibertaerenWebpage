@@ -59,7 +59,33 @@ body {
   color: #03050f;
 }
 
-/* Gold/Schwarz-Textur – nur im Hero und Highlights-Cards */
+/* Dezenter Hintergrund für helle untere Sektionen (Background_2.jpg) */
+.light-section-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(248, 250, 252, 0.93) 0%,
+      rgba(255, 255, 255, 0.86) 45%,
+      rgba(250, 251, 252, 0.9) 100%
+    ),
+    url("/images/Background_2.jpg");
+  background-size: cover, cover;
+  background-position: center top, center top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+@media (min-width: 768px) {
+  .light-section-texture::before {
+    background-attachment: scroll, scroll;
+  }
+}
+
+/* Gold/Schwarz-Textur – Hero, Highlights-Cards, Zitat-Bereich */
 .libertarian-stripe-pattern {
   background-image:
     repeating-linear-gradient(

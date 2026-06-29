@@ -12,15 +12,12 @@ export async function HighlightsSection() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-[#05060a]">
-      {/* Sektions-Hintergrund */}
+    <section className="relative overflow-hidden bg-slate-950">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0c12] via-[#05060a] to-[#080a10]" />
-        <div className="absolute inset-0 libertarian-stripe-pattern opacity-[0.18]" />
-        <div className="absolute inset-0 libertarian-noise" />
-        <div className="absolute -left-32 top-0 h-[500px] w-[500px] rounded-full bg-primary/[0.07] blur-3xl" />
-        <div className="absolute -right-32 bottom-0 h-[400px] w-[400px] rounded-full bg-accent-orange/[0.05] blur-3xl" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-[#0a0c12]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900" />
+        <div className="absolute inset-0 libertarian-stripe-pattern opacity-[0.12]" />
+        <div className="absolute -left-32 top-0 h-[400px] w-[400px] rounded-full bg-primary/[0.06] blur-3xl" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-slate-50" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8 lg:py-28">
@@ -31,7 +28,7 @@ export async function HighlightsSection() {
           <h2 className="font-display text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
             Aktuell bei DIE LIBERTÄREN
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/60">
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">
             Was uns gerade bewegt – und wo du mitmachen kannst.
           </p>
         </header>
@@ -40,9 +37,8 @@ export async function HighlightsSection() {
           {highlights.map((highlight) => (
             <article
               key={highlight.id}
-              className="group relative min-h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/40 md:min-h-[480px] lg:min-h-[540px]"
+              className="group relative min-h-[420px] overflow-hidden rounded-3xl border-2 border-primary/25 shadow-2xl shadow-black/50 ring-1 ring-white/10 md:min-h-[480px] lg:min-h-[540px]"
             >
-              {/* Banner-Hintergrundbild */}
               {highlight.imageUrl && (
                 <Image
                   src={highlight.imageUrl}
@@ -55,13 +51,12 @@ export async function HighlightsSection() {
                 />
               )}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-[#03050f]/[0.97] via-[#03050f]/85 to-[#03050f]/55 md:via-[#03050f]/80 md:to-[#03050f]/30" />
-              <div className="absolute inset-0 libertarian-stripe-pattern opacity-[0.14]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/88 to-slate-950/50 md:to-slate-950/35" />
+              <div className="absolute inset-0 libertarian-stripe-pattern opacity-[0.1]" />
 
               <div className="relative grid min-h-[420px] gap-8 p-8 md:min-h-[480px] md:grid-cols-[1.15fr_0.85fr] md:items-center md:p-12 lg:min-h-[540px] lg:p-14">
-                {/* Text & CTA */}
                 <div className="flex flex-col justify-center">
-                  <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
+                  <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-primary/50 bg-primary/20 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary">
                     <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
                     Jetzt aktuell
                   </div>
@@ -71,12 +66,12 @@ export async function HighlightsSection() {
                   </h3>
 
                   <div
-                    className="prose prose-invert mt-6 max-w-xl text-lg leading-relaxed text-white/80 prose-p:my-0 md:text-xl md:leading-relaxed"
+                    className="prose prose-invert mt-6 max-w-xl text-lg leading-relaxed text-white/90 prose-p:my-0 md:text-xl"
                     dangerouslySetInnerHTML={{ __html: highlight.subtitleHtml }}
                   />
 
                   {highlight.id === "afuera-fest-2026" && (
-                    <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/55">
+                    <div className="mt-6 flex flex-wrap gap-4 text-sm text-white/70">
                       <span className="inline-flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-primary" />
                         24.–26. Juli 2026
@@ -91,7 +86,7 @@ export async function HighlightsSection() {
                   <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                     <Button
                       size="lg"
-                      className="h-14 px-10 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35"
+                      className="h-14 px-10 text-base font-bold shadow-lg shadow-primary/30 ring-2 ring-primary/40 hover:shadow-xl hover:shadow-primary/40"
                       asChild
                     >
                       <Link
@@ -108,17 +103,16 @@ export async function HighlightsSection() {
                       </Link>
                     </Button>
                     {highlight.id === "afuera-fest-2026" && (
-                      <p className="text-sm text-white/45">
+                      <p className="text-sm text-white/55">
                         Das größte libertäre Fest im deutschsprachigen Raum
                       </p>
                     )}
                   </div>
                 </div>
 
-                {/* Bild-Panel (Desktop) */}
                 {highlight.imageUrl && (
                   <div className="relative hidden md:block">
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/15 shadow-2xl">
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-2 border-white/20 shadow-2xl ring-1 ring-primary/20">
                       <Image
                         src={highlight.imageUrl}
                         alt={highlight.imageAlt ?? highlight.title}
@@ -127,7 +121,7 @@ export async function HighlightsSection() {
                         sizes="(max-width: 768px) 100vw, 420px"
                         quality={85}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#03050f]/60 via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent" />
                     </div>
                   </div>
                 )}

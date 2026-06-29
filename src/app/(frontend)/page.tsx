@@ -6,7 +6,6 @@ import { EventsTeaser } from "@/components/home/events-teaser";
 import { getPublishedQuotes } from "@/lib/cms/quotes";
 import { StatsSection } from "@/components/home/stats-section";
 import { CTASection } from "@/components/shared/cta-section";
-import { LibertarianAtmosphere } from "@/components/shared/libertarian-background";
 import { Section, SectionHeader } from "@/components/shared/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, Network, Megaphone } from "lucide-react";
@@ -42,15 +41,16 @@ export default async function HomePage() {
       <Hero />
       <HighlightsSection />
 
-      <LibertarianAtmosphere>
+      {/* Helle Inhaltsbereiche – kein Hero-Bild, viel Luft */}
+      <div className="bg-gradient-to-b from-slate-50 via-white to-white">
         <QuoteRotator quotes={quotes} />
         <DailyNews />
         <EventsTeaser />
-      </LibertarianAtmosphere>
+      </div>
 
       <StatsSection />
 
-      <Section>
+      <Section className="bg-white">
         <SectionHeader
           title="Für einen praktischen Libertarismus"
           subtitle="Libertarismus ist keine bloße Theorie – es ist eine Lebensphilosophie."
@@ -58,13 +58,16 @@ export default async function HomePage() {
         />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar) => (
-            <Card key={pillar.title} className="text-center">
+            <Card
+              key={pillar.title}
+              className="border-border/80 bg-white shadow-sm transition-shadow hover:shadow-md"
+            >
               <CardHeader>
                 <pillar.icon className="mx-auto h-10 w-10 text-primary" />
-                <CardTitle className="text-lg">{pillar.title}</CardTitle>
+                <CardTitle className="text-center text-lg">{pillar.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-center text-sm leading-relaxed text-muted-foreground">
                   {pillar.text}
                 </p>
               </CardContent>

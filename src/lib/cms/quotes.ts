@@ -48,7 +48,7 @@ export async function getPublishedQuotes(): Promise<QuoteDisplay[]> {
         published: { equals: true },
       },
       sort: "-createdAt",
-      limit: 100,
+      limit: 200,
       depth: 1,
     });
 

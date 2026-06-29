@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./load-env";
 import { getPayload } from "payload";
 import config from "@payload-config";
 import {

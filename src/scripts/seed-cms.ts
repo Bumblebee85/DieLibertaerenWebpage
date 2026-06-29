@@ -1,4 +1,4 @@
-import "dotenv/config";
+import "./load-env";
 import { getPayload } from "payload";
 import config from "@payload-config";
 
@@ -37,21 +37,10 @@ async function seed() {
     console.log("– Highlight „Afuera Fest 2026“ existiert bereits");
   }
 
-  // --- Quotes ---
+  // --- Quotes (volle Bibliothek: npm run seed:quotes) ---
   const existingQuotes = await payload.find({ collection: "quotes", limit: 1 });
   if (existingQuotes.docs.length === 0) {
-    await payload.create({
-      collection: "quotes",
-      data: {
-        quoteText:
-          "Freiheit ist kein Geschenk des Staates. Sie ist das Naturrecht jedes Individuums.",
-        authorName: "Mathias Hummel",
-        authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-        source: "DIE LIBERTÄREN",
-        published: true,
-      },
-    });
-    console.log("✓ Beispiel-Zitat angelegt");
+    console.log("– Keine Zitate vorhanden → bitte npm run seed:quotes ausführen");
   } else {
     console.log("– Zitate existieren bereits");
   }

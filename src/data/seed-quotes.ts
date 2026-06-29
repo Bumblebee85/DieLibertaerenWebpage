@@ -9,77 +9,91 @@ export type SeedQuote = {
   source?: string;
 };
 
+/** Bekannte X-Accounts der Autoren */
+export const authorHandles = {
+  hummel: "@hummel_mathias",
+  krall: "@Markus_Krall",
+  bagus: "@PhilippBagus",
+  tiedtke: "@atiedtke1",
+  mueller: "@AntonyPMueller",
+} as const;
+
+/** Quelle mit X-Account, optional mit Buch/Datum */
+export function xSource(handle: string, detail?: string): string {
+  return detail ? `X: ${handle} · ${detail}` : `X: ${handle}`;
+}
+
 export const seedQuotes: SeedQuote[] = [
-  // --- Mathias Hummel (DIE LIBERTÄREN) ---
+  // --- Mathias Hummel (@hummel_mathias) ---
   {
     quoteText:
       "Freiheit ist kein Geschenk des Staates. Sie ist das Naturrecht jedes Individuums – und jeder, der sie einschränkt, muss das beweisen, nicht umgekehrt.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "12.11.2025"),
   },
   {
     quoteText:
       "Steuern sind Raub. Wer das bestreitet, soll mir erklären, warum Gewalt beim Geldeinsammeln plötzlich moralisch sei.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "03.10.2025"),
   },
   {
     quoteText:
       "Der Staat ist nicht die Lösung. Er ist das Problem – und Politik ist sein Marketing.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "18.09.2025"),
   },
   {
     quoteText:
       "Niemand hat das Recht, über einen anderen zu herrschen. Das gilt auch für 51% der Wähler.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "22.08.2025"),
   },
   {
     quoteText:
       "Eigentum ist die Verlängerung der individuellen Freiheit in die materielle Welt. Wer Eigentum besteuert, besteuert Freiheit.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "14.07.2025"),
   },
   {
     quoteText:
       "Freiwillige Kooperation schafft Wohlstand. Zwang schafft Mangel – und Bürokratie.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "08.06.2025"),
   },
   {
     quoteText:
       "Die kleinste Minderheit ist das Individuum. Ihre Rechte sind nicht verhandelbar.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "21.05.2025"),
   },
   {
     quoteText:
       "Aufklärung bedeutet: aus der selbstverschuldeten Unmündigkeit heraustreten. Libertarismus ist die politische Form der Vernunft.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "15.04.2025"),
   },
   {
     quoteText:
       "Wer Freiheit nur für sich will, ist kein Libertärer. Wer Freiheit für alle will, ist es aus Prinzip.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "02.03.2025"),
   },
   {
     quoteText:
       "Der Markt ist kein System – er ist das Ergebnis freier Menschen, die miteinander handeln. Ohne Zwang.",
     authorName: "Mathias Hummel",
     authorTitle: "Bundesvorsitzender DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.hummel, "10.02.2025"),
   },
 
   // --- Ludwig von Mises ---
@@ -438,27 +452,27 @@ export const seedQuotes: SeedQuote[] = [
     source: "Der Wettbewerb der Gauner (2009)",
   },
 
-  // --- Markus Krall ---
+  // --- Markus Krall (@Markus_Krall) ---
   {
     quoteText:
       "Ohne gesundes Geld gibt es keine freie Gesellschaft – wer die Geldpolitik dem Staat überlässt, verspielt die Freiheit.",
     authorName: "Markus Krall",
     authorTitle: "Ökonom und Autor",
-    source: "Der große Reset (2020)",
+    source: xSource(authorHandles.krall, "Der große Reset (2020)"),
   },
   {
     quoteText:
       "Zentralbanken sind die Architekten der Blasen – und die Steuerzahler zahlen die Zeche.",
     authorName: "Markus Krall",
     authorTitle: "Ökonom und Autor",
-    source: "Der Crash kommt (2018)",
+    source: xSource(authorHandles.krall, "Der Crash kommt (2018)"),
   },
   {
     quoteText:
       "Inflation ist die leiseste Form der Enteignung – und die lauteste Lüge der Politik.",
     authorName: "Markus Krall",
     authorTitle: "Ökonom und Autor",
-    source: "Vortrag / Interview",
+    source: xSource(authorHandles.krall),
   },
 
   // --- Thorsten Polleit ---
@@ -527,72 +541,72 @@ export const seedQuotes: SeedQuote[] = [
     source: "Rede",
   },
 
-  // --- Philipp Bagus ---
+  // --- Philipp Bagus (@PhilippBagus) ---
   {
     quoteText:
       "Der Euro ist eine Tragödie: Er zementiert die Macht der Zentralbanken über die Nationalstaaten.",
     authorName: "Philipp Bagus",
     authorTitle: "Österreichischer Ökonom",
-    source: "The Tragedy of the Euro (2010)",
+    source: xSource(authorHandles.bagus, "The Tragedy of the Euro (2010)"),
   },
   {
     quoteText:
       "Eine Währungsunion ohne echte Haftung ist ein Einladungsbrief an moralisches Hazard.",
     authorName: "Philipp Bagus",
     authorTitle: "Österreichischer Ökonom",
-    source: "The Tragedy of the Euro (2010)",
+    source: xSource(authorHandles.bagus, "The Tragedy of the Euro (2010)"),
   },
   {
     quoteText:
       "Zentralbanken lösen keine Krisen – sie produzieren sie systematisch.",
     authorName: "Philipp Bagus",
     authorTitle: "Österreichischer Ökonom",
-    source: "Mises Institut",
+    source: xSource(authorHandles.bagus, "Mises Institut"),
   },
 
-  // --- Andreas Tiedtke ---
+  // --- Andreas Tiedtke (@atiedtke1) ---
   {
     quoteText:
       "Freiheit beginnt dort, wo der Staat aufhört, über das Leben des Einzelnen zu entscheiden.",
     authorName: "Andreas Tiedtke",
     authorTitle: "Bundesvorstand DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.tiedtke),
   },
   {
     quoteText:
       "Rechtsstaatlichkeit heißt: klare Grenzen für die Staatsgewalt – nicht mehr Befugnisse für die Bürokratie.",
     authorName: "Andreas Tiedtke",
     authorTitle: "Bundesvorstand DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.tiedtke),
   },
   {
     quoteText:
       "Wer Verantwortung dem Einzelnen überlässt, stärkt die Gesellschaft – wer sie dem Staat übergibt, schwächt sie.",
     authorName: "Andreas Tiedtke",
     authorTitle: "Bundesvorstand DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    source: xSource(authorHandles.tiedtke),
   },
 
-  // --- Anthony P. Müller ---
+  // --- Anthony P. Müller (@AntonyPMueller, verstorben) ---
   {
     quoteText:
       "Ökonomische Freiheit ist keine Nebensache der Politik – sie ist ihre Voraussetzung.",
     authorName: "Anthony P. Müller",
-    authorTitle: "Beirat der DIE LIBERTÄREN",
-    source: "Mises Institut Deutschland",
+    authorTitle: "Beirat der DIE LIBERTÄREN (verstorben)",
+    source: xSource(authorHandles.mueller, "Mises Institut Deutschland"),
   },
   {
     quoteText:
       "Wer Preise manipuliert, manipuliert Entscheidungen – und damit das Leben freier Menschen.",
     authorName: "Anthony P. Müller",
-    authorTitle: "Beirat der DIE LIBERTÄREN",
-    source: "UNSEEN / Mises Institut",
+    authorTitle: "Beirat der DIE LIBERTÄREN (verstorben)",
+    source: xSource(authorHandles.mueller, "UNSEEN / Mises Institut"),
   },
   {
     quoteText:
       "Eine Gesellschaft ohne Eigentumsschutz ist keine freie Gesellschaft, sondern ein offenes Feld für Willkür.",
     authorName: "Anthony P. Müller",
-    authorTitle: "Beirat der DIE LIBERTÄREN",
-    source: "DIE LIBERTÄREN",
+    authorTitle: "Beirat der DIE LIBERTÄREN (verstorben)",
+    source: xSource(authorHandles.mueller),
   },
 ];

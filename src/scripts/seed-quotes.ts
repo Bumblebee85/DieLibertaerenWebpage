@@ -10,12 +10,13 @@ import { seedQuotes } from "@/data/seed-quotes";
  *   npm run seed:quotes
  *
  * Voraussetzung: MONGODB_URI (oder DATABASE_URL) und PAYLOAD_SECRET gesetzt.
- * Bereits vorhandene Zitate (gleicher Text + Autor) werden übersprungen.
+ * Bereits vorhandene Zitate (gleicher Text + Autor) werden aktualisiert oder übersprungen.
  */
 async function seed() {
   const payload = await getPayload({ config });
 
   let created = 0;
+  let updated = 0;
   let skipped = 0;
 
   for (const quote of seedQuotes) {
@@ -31,7 +32,23 @@ async function seed() {
     });
 
     if (existing.docs.length > 0) {
-      skipped++;
+      const doc = existing.docs[0];
+      const needsUpdate =
+        doc.authorTitle !== quote.authorTitle || doc.source !== quote.source;
+
+      if (needsUpdate) {
+        await payload.update({
+          collection: "quotes",
+          id: doc.id,
+          data: {
+            authorTitle: quote.authorTitle,
+            source: quote.source,
+          },
+        });
+        updated++;
+      } else {
+        skipped++;
+      }
       continue;
     }
 
@@ -50,7 +67,8 @@ async function seed() {
 
   console.log(`\n✓ Quotes-Seed abgeschlossen`);
   console.log(`  Neu angelegt: ${created}`);
-  console.log(`  Übersprungen: ${skipped} (bereits vorhanden)`);
+  console.log(`  Aktualisiert: ${updated}`);
+  console.log(`  Übersprungen: ${skipped} (unverändert)`);
   console.log(`  Gesamt in Bibliothek: ${seedQuotes.length}`);
   console.log(`\nAdmin-Panel: /admin → Zitate`);
   process.exit(0);

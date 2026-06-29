@@ -3,12 +3,10 @@ import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyNews } from "@/components/home/daily-news";
 import { EventsTeaser } from "@/components/home/events-teaser";
 import { getPublishedQuotes } from "@/lib/cms/quotes";
-import { LeitbildSnippet } from "@/components/home/leitbild-snippet";
 import { StatsSection } from "@/components/home/stats-section";
 import { CTASection } from "@/components/shared/cta-section";
+import { LibertarianAtmosphere } from "@/components/shared/libertarian-background";
 import { Section, SectionHeader } from "@/components/shared/section";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, Network, Megaphone } from "lucide-react";
 
@@ -41,38 +39,13 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <QuoteRotator quotes={quotes} />
-      <DailyNews />
 
-      <Section>
-        <SectionHeader
-          title="Wir sind Libertäre"
-          subtitle="Freunde der Menschen – Verfechter der Freiheit und Selbstbestimmung."
-        />
-        <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
-          <p>
-            Wir verstehen uns als Freunde der Menschen – wir wollen unseren
-            Mitmenschen die Ideen der Freiheit und der Selbstbestimmung
-            nahebringen. Wir glauben nicht an soziale Utopien. Wir sind davon
-            überzeugt, dass kein Mensch, unter keinen Umständen, das Recht hat
-            über einen anderen zu herrschen.
-          </p>
-          <p>
-            Wir sind Anhänger des Voluntarismus – der freiwilligen Kooperation
-            und des freiwilligen Austausches. In Zeiten von immer schneller und
-            stärker zunehmenden staatlichen Interventionen kämpfen wir mit der
-            Idee der Freiheit und den besseren Argumenten.
-          </p>
-        </div>
-        <div className="mt-10">
-          <Button size="lg" asChild>
-            <Link href="/unsere-prinzipien">Unsere Prinzipien</Link>
-          </Button>
-        </div>
-      </Section>
+      <LibertarianAtmosphere>
+        <QuoteRotator quotes={quotes} />
+        <DailyNews />
+        <EventsTeaser />
+      </LibertarianAtmosphere>
 
-      <EventsTeaser />
-      <LeitbildSnippet />
       <StatsSection />
 
       <Section>

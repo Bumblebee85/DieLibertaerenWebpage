@@ -20,6 +20,7 @@
   --libertarian-overlay-opacity: 0.2;
   --libertarian-stripe-gold: 0.07;
   --libertarian-stripe-dark: 0.055;
+  --libertarian-atmosphere-stripe: 0.04;
 }
 
 @theme inline {
@@ -82,5 +83,24 @@ body {
       transparent 192px,
       rgba(0, 0, 0, var(--libertarian-stripe-dark)) 192px,
       rgba(0, 0, 0, var(--libertarian-stripe-dark)) 193px
+    );
+}
+
+/* Dezente Textur für Bereiche unter dem Hero */
+.libertarian-atmosphere-pattern {
+  background-image:
+    repeating-linear-gradient(
+      -40deg,
+      transparent 0,
+      transparent 120px,
+      rgba(255, 178, 0, var(--libertarian-atmosphere-stripe)) 120px,
+      rgba(255, 178, 0, var(--libertarian-atmosphere-stripe)) 121px
+    ),
+    repeating-linear-gradient(
+      -40deg,
+      transparent 0,
+      transparent 240px,
+      rgba(3, 5, 15, 0.025) 240px,
+      rgba(3, 5, 15, 0.025) 241px
     );
 }

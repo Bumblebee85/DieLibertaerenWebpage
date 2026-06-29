@@ -7,8 +7,9 @@ type LightSectionBackgroundProps = {
 };
 
 /**
- * Heller Section-Hintergrund mit kontrastreicher Background_2.jpg-Papierstruktur.
- * Multiply-Blend + warmes Tint-Overlay – Textur sichtbar, Text lesbar.
+ * Premium paper background using Background_2.jpg.
+ * Dark multiply base + contrast filter makes the pale grain readable;
+ * a thin wash keeps the zone light and airy.
  */
 export function LightSectionBackground({
   children,

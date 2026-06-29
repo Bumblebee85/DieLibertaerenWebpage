@@ -18,10 +18,14 @@
   --libertarian-stripe-gold: 0.07;
   --libertarian-stripe-dark: 0.055;
 
-  /* Background_2.jpg – warmes Tint-Overlay (niedriger = Textur sichtbarer) */
-  --texture-tint-top: 0.42;
-  --texture-tint-mid: 0.36;
-  --texture-tint-bottom: 0.4;
+  /*
+   * Background_2.jpg is extremely pale – needs a dark multiply base
+   * and minimal white wash for the paper grain to read clearly.
+   */
+  --texture-base-color: #6e6356;
+  --texture-wash-top: 0.2;
+  --texture-wash-mid: 0.1;
+  --texture-wash-bottom: 0.16;
 }
 
 @theme inline {
@@ -64,19 +68,32 @@ body {
   color: #03050f;
 }
 
-/* Papierstruktur: Bild + warmes Tint-Overlay – kein White-on-White */
+/*
+ * Premium paper texture (Background_2.jpg)
+ * Layer 1: dark multiply base + contrast filter exposes pale diagonal grain
+ * Layer 2: thin airy wash keeps sections light while structure stays visible
+ */
+.light-section-texture {
+  background-color: #cfc4b6;
+  border-top: 1px solid rgba(0, 0, 0, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 2px 8px rgba(30, 36, 51, 0.06);
+}
+
 .light-section-texture::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -2;
   pointer-events: none;
-  background-color: #c9c2b8;
+  background-color: var(--texture-base-color);
   background-image: url("/images/Background_2.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+  filter: contrast(1.65) brightness(0.92) saturate(1.08);
 }
 
 .light-section-texture::after {
@@ -87,26 +104,33 @@ body {
   pointer-events: none;
   background-image: linear-gradient(
     180deg,
-    rgba(252, 249, 244, var(--texture-tint-top)) 0%,
-    rgba(245, 240, 232, var(--texture-tint-mid)) 48%,
-    rgba(240, 235, 226, var(--texture-tint-bottom)) 100%
+    rgba(255, 252, 246, var(--texture-wash-top)) 0%,
+    rgba(255, 249, 242, var(--texture-wash-mid)) 48%,
+    rgba(252, 246, 238, var(--texture-wash-bottom)) 100%
   );
 }
 
-.light-section-texture {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+/* Semi-transparent cards – texture shows through edges, text stays crisp */
+.texture-surface-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background-color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    0 1px 0 rgba(0, 0, 0, 0.04);
+    0 1px 3px rgba(30, 36, 51, 0.1),
+    0 12px 32px rgba(30, 36, 51, 0.14);
 }
 
-/* Lesbare Cards auf Textur-Hintergrund */
-.texture-surface-card {
-  border-color: rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+.texture-surface-card:hover {
+  background-color: rgba(255, 255, 255, 0.92);
   box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.06),
-    0 8px 24px rgba(15, 23, 42, 0.08);
+    0 2px 6px rgba(30, 36, 51, 0.12),
+    0 16px 40px rgba(30, 36, 51, 0.16);
+}
+
+/* Slightly stronger type contrast on warm parchment */
+.light-section-texture .text-muted-foreground {
+  color: #5a5d68;
 }
 
 /* Dunkler Gradient – „Beende deine Knechtschaft“ (nicht rein schwarz) */

@@ -5,7 +5,7 @@ import { Section } from "@/components/shared/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import eventsData from "@/data/events.json";
+import { getCalendarLinks, getUpcomingEvents } from "@/lib/cms/events";
 import siteConfig from "@/data/site-config.json";
 
 export const metadata: Metadata = {
@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     "Veranstaltungen, libertäre Stammtische und Termine von DIE LIBERTÄREN in ganz Deutschland.",
 };
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const events = await getUpcomingEvents(50);
+  const calendarLinks = getCalendarLinks();
+
   return (
     <>
       <PageHeader
@@ -39,7 +42,7 @@ export default function EventsPage() {
         </div>
 
         <div className="grid gap-6">
-          {eventsData.events.map((event) => (
+          {events.map((event) => (
             <Card key={event.id} className="overflow-hidden">
               <div className="flex flex-col md:flex-row">
                 <div className="flex items-center justify-center bg-secondary p-8 text-center text-white md:w-48">
@@ -65,11 +68,13 @@ export default function EventsPage() {
                     <CardTitle className="text-xl">{event.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4 text-primary" />
-                      {event.time}
-                      {event.recurrence && ` · ${event.recurrence}`}
-                    </div>
+                    {event.time && (
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-primary" />
+                        {event.time}
+                        {event.recurrence && ` · ${event.recurrence}`}
+                      </div>
+                    )}
                     <div className="flex items-center gap-2">
                       <MapPin className="h-4 w-4 text-primary" />
                       {event.location}
@@ -85,12 +90,12 @@ export default function EventsPage() {
           <h3 className="font-display text-xl font-bold">Kalender abonnieren</h3>
           <div className="mt-4 flex flex-wrap gap-4">
             <Button variant="outline" asChild>
-              <a href={eventsData.calendarLinks.google} target="_blank" rel="noopener noreferrer">
+              <a href={calendarLinks.google} target="_blank" rel="noopener noreferrer">
                 Google Kalender
               </a>
             </Button>
             <Button variant="outline" asChild>
-              <a href={eventsData.calendarLinks.ical}>iCalendar</a>
+              <a href={calendarLinks.ical}>iCalendar</a>
             </Button>
           </div>
         </div>

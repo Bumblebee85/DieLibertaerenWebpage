@@ -4,11 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/shared/section";
-import eventsData from "@/data/events.json";
+import { getUpcomingEvents } from "@/lib/cms/events";
 import { formatDateDE } from "@/lib/utils";
 
-export function EventsTeaser() {
-  const upcoming = eventsData.events.slice(0, 3);
+export async function EventsTeaser() {
+  const upcoming = (await getUpcomingEvents(3));
 
   return (
     <Section>
@@ -33,10 +33,12 @@ export function EventsTeaser() {
                 <Calendar className="h-4 w-4 text-primary" />
                 {formatDateDE(event.date)}
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-primary" />
-                {event.time}
-              </div>
+              {event.time && (
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-primary" />
+                  {event.time}
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 {event.location}

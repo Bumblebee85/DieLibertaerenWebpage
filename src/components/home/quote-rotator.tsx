@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote } from "lucide-react";
-import quotesData from "@/data/quotes.json";
+import type { QuoteDisplay } from "@/lib/cms/quotes";
 
 function getDailyQuoteIndex(quoteCount: number): number {
   const dayOfYear = Math.floor(
@@ -12,8 +12,11 @@ function getDailyQuoteIndex(quoteCount: number): number {
   return dayOfYear % quoteCount;
 }
 
-export function QuoteRotator() {
-  const quotes = quotesData.quotes;
+type QuoteRotatorProps = {
+  quotes: QuoteDisplay[];
+};
+
+export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const [index, setIndex] = useState(() => getDailyQuoteIndex(quotes.length));
 
   useEffect(() => {
@@ -41,15 +44,24 @@ export function QuoteRotator() {
               &ldquo;{current.text}&rdquo;
             </blockquote>
             <cite className="mt-8 block text-base not-italic text-muted-foreground">
-              — {quotesData.author},{" "}
-              <a
-                href={quotesData.profileUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary transition-colors hover:underline"
-              >
-                {quotesData.handle}
-              </a>
+              — {current.author}
+              {current.authorHandle && (
+                <>
+                  {", "}
+                  {current.authorUrl ? (
+                    <a
+                      href={current.authorUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary transition-colors hover:underline"
+                    >
+                      {current.authorHandle}
+                    </a>
+                  ) : (
+                    <span>{current.authorHandle}</span>
+                  )}
+                </>
+              )}
             </cite>
           </motion.div>
         </AnimatePresence>

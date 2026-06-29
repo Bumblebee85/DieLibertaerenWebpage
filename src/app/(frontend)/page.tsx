@@ -2,6 +2,7 @@ import { Hero } from "@/components/home/hero";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyNews } from "@/components/home/daily-news";
 import { EventsTeaser } from "@/components/home/events-teaser";
+import { getPublishedQuotes } from "@/lib/cms/quotes";
 import { LeitbildSnippet } from "@/components/home/leitbild-snippet";
 import { StatsSection } from "@/components/home/stats-section";
 import { CTASection } from "@/components/shared/cta-section";
@@ -34,11 +35,13 @@ const pillars = [
   },
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const quotes = await getPublishedQuotes();
+
   return (
     <>
       <Hero />
-      <QuoteRotator />
+      <QuoteRotator quotes={quotes} />
       <DailyNews />
 
       <Section>

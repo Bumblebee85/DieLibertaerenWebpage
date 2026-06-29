@@ -25,6 +25,38 @@ function isCodegenScript(): boolean {
   return event === "generate:types" || event === "generate:importmap";
 }
 
+export const DEFAULT_MONGO_DB_NAME = "die-libertaeren";
+
+/**
+ * Ergänzt fehlenden Datenbanknamen in der MongoDB-URI.
+ * Atlas-Strings ohne /die-libertaeren landen sonst in der falschen DB → leeres Admin-Panel.
+ */
+export function ensureMongoDatabaseName(
+  uri: string,
+  dbName = DEFAULT_MONGO_DB_NAME
+): string {
+  if (!uri) return uri;
+
+  try {
+    const normalized = uri
+      .replace(/^mongodb\+srv:\/\//, "https://")
+      .replace(/^mongodb:\/\//, "http://");
+    const parsed = new URL(normalized);
+    const pathDb = parsed.pathname.replace(/^\//, "").split("/")[0];
+
+    if (pathDb) return uri;
+
+    const [withoutQuery, query] = uri.split("?");
+    const withDb = withoutQuery.endsWith("/")
+      ? `${withoutQuery}${dbName}`
+      : `${withoutQuery}/${dbName}`;
+
+    return query ? `${withDb}?${query}` : withDb;
+  } catch {
+    return uri;
+  }
+}
+
 /**
  * MongoDB URI – ignoriert nicht-Mongo DATABASE_URL (z. B. Vercel Postgres).
  */
@@ -35,12 +67,29 @@ export function getDatabaseUrl(): string {
     readEnv("DATABASE_URL"),
   ].filter(Boolean);
 
-  return (
+  const raw =
     candidates.find(
       (url) =>
         url.startsWith("mongodb://") || url.startsWith("mongodb+srv://")
-    ) ?? ""
-  );
+    ) ?? "";
+
+  return ensureMongoDatabaseName(raw);
+}
+
+export function getDatabaseName(): string {
+  const url = getDatabaseUrl();
+  if (!url) return DEFAULT_MONGO_DB_NAME;
+
+  try {
+    const normalized = url
+      .replace(/^mongodb\+srv:\/\//, "https://")
+      .replace(/^mongodb:\/\//, "http://");
+    const parsed = new URL(normalized);
+    const pathDb = parsed.pathname.replace(/^\//, "").split("/")[0];
+    return pathDb || DEFAULT_MONGO_DB_NAME;
+  } catch {
+    return DEFAULT_MONGO_DB_NAME;
+  }
 }
 
 export function getDatabaseHost(): string | null {
@@ -119,6 +168,7 @@ export function getPayloadEnvStatus() {
     secretValid: secret.length >= 32,
     dbUrlSet: dbUrl.length > 0,
     dbHost: getDatabaseHost(),
+    dbName: getDatabaseName(),
     dbProtocol: dbUrl.startsWith("mongodb+srv://")
       ? "mongodb+srv"
       : dbUrl.startsWith("mongodb://")

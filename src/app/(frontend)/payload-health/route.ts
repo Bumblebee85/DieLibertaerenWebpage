@@ -42,13 +42,23 @@ export async function GET() {
     const { getPayload } = await import("payload");
 
     const payload = await getPayload({ config });
-    const users = await payload.find({ collection: "users", limit: 1 });
+    const [users, quotes, impulses] = await Promise.all([
+      payload.find({ collection: "users", limit: 1 }),
+      payload.find({ collection: "quotes", limit: 1 }),
+      payload.find({ collection: "daily-impulses", limit: 1 }),
+    ]);
 
     return NextResponse.json({
       ok: true,
       stage: "connected",
       message: "Payload CMS is ready",
       userCount: users.totalDocs,
+      quoteCount: quotes.totalDocs,
+      dailyImpulseCount: impulses.totalDocs,
+      seedHint:
+        quotes.totalDocs < 10
+          ? "Run npm run seed:content locally or POST /seed-content with SEED_SECRET"
+          : undefined,
       adminUrl: `${status.serverURL}/admin`,
       ...status,
     });

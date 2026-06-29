@@ -39,6 +39,15 @@ export const seedDailyImpulses: SeedDailyImpulse[] = [
     sourceLink: "https://www.cnbc.com/2026/06/26/stock-market-next-week-outlook-for-june-29-july-3-2026.html",
   },
   {
+    title: "EU: Neue Regulierungswelle trifft digitale Wirtschaft",
+    shortText:
+      "Brüssel diskutiert verschärfte Vorgaben für Plattformen, KI-Systeme und Finanzdaten. Unternehmen warnen vor Compliance-Kosten und Innovationshemmnissen – während Verbraucherschutz und Bürokratie wieder einmal vermischt werden.",
+    libertarianPerspective:
+      "Regulierung ist kein Ersatz für Eigentumsrechte und Vertragsfreiheit. Libertäre fordern klare Spielregeln statt ständig neuer Eingriffe – der Markt braucht Rechtssicherheit, nicht mehr Vorschriften.",
+    date: "2026-06-29",
+    sourceLink: "https://ec.europa.eu/commission/presscorner/home/en",
+  },
+  {
     title: "Deutschland: Bürokratie und Wirtschaftswachstum im Clinch",
     shortText:
       "Unternehmen beklagen weiter steigende Regulierungs- und Energiekosten, während die Politik neue Förderprogramme und Eingriffe ankündigt. Der Mittelstand trägt die Last – ohne spürbare Entlastung bei Steuern und Genehmigungen.",

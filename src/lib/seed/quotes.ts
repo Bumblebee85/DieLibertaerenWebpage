@@ -13,7 +13,10 @@ export async function runSeedQuotes(payload: Payload): Promise<SeedStats> {
   let updated = 0;
   let skipped = 0;
 
-  for (const quote of seedQuotes) {
+  for (const [i, quote] of seedQuotes.entries()) {
+    if (i > 0 && i % 20 === 0) {
+      console.log(`  … ${i}/${seedQuotes.length} Zitate verarbeitet`);
+    }
     const existing = await payload.find({
       collection: "quotes",
       where: {

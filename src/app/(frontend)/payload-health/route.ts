@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server";
 import { getPayloadEnvStatus } from "@/lib/payload-env";
+import {
+  readSeedSecretFromRequest,
+  verifySeedOrPayloadSecret,
+} from "@/lib/seed/auth";
+import { runSeedContent } from "@/lib/seed/run-content";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 /**
  * Diagnose-Endpoint AUSSERHALB von /api (Payload catch-all blockiert /api/*).
@@ -81,5 +87,44 @@ export async function GET() {
       },
       { status: 500 }
     );
+  }
+}
+
+/**
+ * Remote-Seed-Fallback auf dem bereits deployten Diagnose-Endpoint.
+ * POST /payload-health mit Authorization: Bearer <SEED_SECRET|PAYLOAD_SECRET>
+ */
+export async function POST(request: Request) {
+  const provided = readSeedSecretFromRequest(request);
+
+  if (!provided || !verifySeedOrPayloadSecret(provided)) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message:
+          "Unauthorized. Pass SEED_SECRET or PAYLOAD_SECRET via Bearer, X-Seed-Secret, or ?secret=.",
+      },
+      { status: 401 }
+    );
+  }
+
+  const status = getPayloadEnvStatus();
+  if (!status.dbUrlSet || !status.secretValid) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "MongoDB URI or PAYLOAD_SECRET not configured.",
+        ...status,
+      },
+      { status: 500 }
+    );
+  }
+
+  try {
+    const result = await runSeedContent();
+    return NextResponse.json(result);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return NextResponse.json({ ok: false, message, ...status }, { status: 500 });
   }
 }

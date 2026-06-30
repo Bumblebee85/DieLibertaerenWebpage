@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import {
-  getSeedSecretConfigError,
   readSeedSecretFromRequest,
-  verifySeedSecret,
+  verifySeedOrPayloadSecret,
 } from "@/lib/seed/auth";
 import { runSeedContent } from "@/lib/seed/run-content";
 import { getPayloadEnvStatus } from "@/lib/payload-env";
@@ -35,10 +34,14 @@ function unauthorized(message: string) {
 }
 
 async function handleSeed() {
-  const configError = getSeedSecretConfigError();
-  if (configError) {
+  const seedSecret = process.env["SEED_SECRET"]?.trim();
+  if (seedSecret && seedSecret.length < 16) {
     return NextResponse.json(
-      { ok: false, message: configError, usage: USAGE },
+      {
+        ok: false,
+        message: "SEED_SECRET must be at least 16 characters.",
+        usage: USAGE,
+      },
       { status: 503 }
     );
   }
@@ -84,8 +87,8 @@ export async function GET(request: Request) {
     );
   }
 
-  if (!verifySeedSecret(provided)) {
-    return unauthorized("Invalid SEED_SECRET.");
+  if (!verifySeedOrPayloadSecret(provided)) {
+    return unauthorized("Invalid SEED_SECRET or PAYLOAD_SECRET.");
   }
 
   return handleSeed();
@@ -94,9 +97,9 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const provided = readSeedSecretFromRequest(request);
 
-  if (!provided || !verifySeedSecret(provided)) {
+  if (!provided || !verifySeedOrPayloadSecret(provided)) {
     return unauthorized(
-      "Unauthorized. Set SEED_SECRET in Vercel and pass it via Bearer header, X-Seed-Secret, or ?secret=."
+      "Unauthorized. Pass SEED_SECRET or PAYLOAD_SECRET via Bearer header, X-Seed-Secret, or ?secret=."
     );
   }
 

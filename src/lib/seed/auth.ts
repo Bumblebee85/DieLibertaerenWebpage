@@ -36,3 +36,21 @@ export function getSeedSecretConfigError(): string | null {
   if (secret.length < 16) return "SEED_SECRET must be at least 16 characters.";
   return null;
 }
+
+function secretsMatch(provided: string, expected: string): boolean {
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+/** Akzeptiert SEED_SECRET oder – als Bootstrap – PAYLOAD_SECRET (≥32 Zeichen). */
+export function verifySeedOrPayloadSecret(provided: string | null): boolean {
+  if (!provided) return false;
+  if (verifySeedSecret(provided)) return true;
+
+  const payloadSecret = process.env["PAYLOAD_SECRET"]?.trim();
+  if (!payloadSecret || payloadSecret.length < 32) return false;
+
+  return secretsMatch(provided, payloadSecret);
+}

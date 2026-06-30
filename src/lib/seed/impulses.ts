@@ -2,22 +2,26 @@ import type { Payload } from "payload";
 import { seedDailyImpulses } from "@/data/seed-daily-impulses";
 import type { SeedStats } from "@/lib/seed/quotes";
 
+/** Idempotent: ein DB-Read, dann Create/Update nur bei Bedarf. */
 export async function runSeedImpulses(payload: Payload): Promise<SeedStats> {
   let created = 0;
   let updated = 0;
   let skipped = 0;
 
-  for (const impulse of seedDailyImpulses) {
-    const existing = await payload.find({
-      collection: "daily-impulses",
-      where: {
-        title: { equals: impulse.title },
-      },
-      limit: 1,
-    });
+  const existing = await payload.find({
+    collection: "daily-impulses",
+    limit: 100,
+    pagination: false,
+  });
 
-    if (existing.docs.length > 0) {
-      const doc = existing.docs[0];
+  const byTitle = new Map(
+    existing.docs.map((doc) => [String(doc.title), doc])
+  );
+
+  for (const impulse of seedDailyImpulses) {
+    const doc = byTitle.get(impulse.title);
+
+    if (doc) {
       const needsUpdate =
         doc.shortText !== impulse.shortText ||
         doc.libertarianPerspective !== impulse.libertarianPerspective ||

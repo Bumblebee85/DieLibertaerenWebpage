@@ -8,28 +8,34 @@ export type SeedStats = {
   total: number;
 };
 
+function quoteKey(quoteText: string, authorName: string): string {
+  return `${quoteText}|||${authorName}`;
+}
+
+/** Idempotent: ein DB-Read, dann Create/Update nur bei Bedarf. */
 export async function runSeedQuotes(payload: Payload): Promise<SeedStats> {
   let created = 0;
   let updated = 0;
   let skipped = 0;
 
-  for (const [i, quote] of seedQuotes.entries()) {
-    if (i > 0 && i % 20 === 0) {
-      console.log(`  … ${i}/${seedQuotes.length} Zitate verarbeitet`);
-    }
-    const existing = await payload.find({
-      collection: "quotes",
-      where: {
-        and: [
-          { quoteText: { equals: quote.quoteText } },
-          { authorName: { equals: quote.authorName } },
-        ],
-      },
-      limit: 1,
-    });
+  const existing = await payload.find({
+    collection: "quotes",
+    limit: 500,
+    pagination: false,
+  });
 
-    if (existing.docs.length > 0) {
-      const doc = existing.docs[0];
+  const byKey = new Map(
+    existing.docs.map((doc) => [
+      quoteKey(String(doc.quoteText), String(doc.authorName)),
+      doc,
+    ])
+  );
+
+  for (const quote of seedQuotes) {
+    const key = quoteKey(quote.quoteText, quote.authorName);
+    const doc = byKey.get(key);
+
+    if (doc) {
       const needsUpdate =
         doc.authorTitle !== quote.authorTitle || doc.source !== quote.source;
 

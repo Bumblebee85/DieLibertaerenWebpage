@@ -1,14 +1,10 @@
 import "./load-env";
-import { getPayload } from "payload";
-import config from "@payload-config";
-import { getDatabaseName, getDatabaseHost, getPayloadEnvStatus } from "@/lib/payload-env";
-import { runSeedImpulses } from "@/lib/seed/impulses";
-import { runSeedQuotes } from "@/lib/seed/quotes";
+import { getDatabaseHost, getDatabaseName, getPayloadEnvStatus } from "@/lib/payload-env";
+import { runSeedContent } from "@/lib/seed/run-content";
 
 /**
- * Führt Quotes- und DailyImpulses-Seeds in einer MongoDB-Sitzung aus.
- *
- * Ausführen: npm run seed:content
+ * Führt Quotes- und DailyImpulses-Seeds lokal aus.
+ * Auf Vercel stattdessen: GET/POST /seed-content mit SEED_SECRET
  */
 async function seed() {
   const env = getPayloadEnvStatus();
@@ -19,27 +15,18 @@ async function seed() {
     process.exit(1);
   }
 
-  const payload = await getPayload({ config });
+  const result = await runSeedContent();
 
-  console.log("\n=== Seed: Quotes ===\n");
-  const quoteStats = await runSeedQuotes(payload);
-  console.log(`  Neu: ${quoteStats.created} | Aktualisiert: ${quoteStats.updated} | Übersprungen: ${quoteStats.skipped}`);
-
-  console.log("\n=== Seed: Daily Impulses ===\n");
-  const impulseStats = await runSeedImpulses(payload);
-  console.log(`  Neu: ${impulseStats.created} | Aktualisiert: ${impulseStats.updated} | Übersprungen: ${impulseStats.skipped}`);
-
-  const quotes = await payload.find({ collection: "quotes", limit: 1 });
-  const impulses = await payload.find({ collection: "daily-impulses", limit: 1 });
-
-  console.log("\n✓ Alle Content-Seeds abgeschlossen.");
-  console.log(`  Bibliothek: ${quoteStats.total} Zitate, ${impulseStats.total} Impulse`);
-  console.log(`  In MongoDB: ${quotes.totalDocs} Zitate, ${impulses.totalDocs} Tagesimpulse`);
-  console.log(`  Admin: ${env.serverURL}/admin`);
+  console.log("\n✓ Content-Seed abgeschlossen");
+  console.log(`  Zitate: neu ${result.quotes.created}, aktualisiert ${result.quotes.updated}, übersprungen ${result.quotes.skipped}`);
+  console.log(`  Impulse: neu ${result.impulses.created}, aktualisiert ${result.impulses.updated}, übersprungen ${result.impulses.skipped}`);
+  console.log(`  In MongoDB: ${result.totalsInDb.quotes} Zitate, ${result.totalsInDb.dailyImpulses} Impulse`);
+  console.log(`  Dauer: ${result.durationMs}ms`);
+  console.log(`  Admin: ${result.adminUrl}`);
   process.exit(0);
 }
 
 seed().catch((error) => {
-  console.error("Combined seed failed:", error instanceof Error ? error.message : error);
+  console.error("Seed fehlgeschlagen:", error instanceof Error ? error.message : error);
   process.exit(1);
 });

@@ -1,6 +1,4 @@
-import "./load-env";
-import { getPayload } from "payload";
-import config from "@payload-config";
+import { getPayloadForScript } from "@/lib/scripts/payload-cli";
 import {
   getDatabaseUrl,
   getPayloadSecret,
@@ -28,7 +26,7 @@ async function check() {
     console.log(`✓ Server URL: ${serverURL}`);
 
     console.log("\nConnecting to MongoDB...");
-    const payload = await getPayload({ config });
+    const payload = await getPayloadForScript();
 
     const users = await payload.find({ collection: "users", limit: 1 });
     console.log(`✓ MongoDB connected (${users.totalDocs} user(s) in database)`);

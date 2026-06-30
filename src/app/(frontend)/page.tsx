@@ -7,7 +7,6 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = createPageMetadata(seoPages.home);
 export const dynamic = "force-dynamic";
 import { HighlightsSection } from "@/components/home/highlights-section";
-import { WeeklyEssayTeaser } from "@/components/home/weekly-essay-teaser";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyImpulsesSection } from "@/components/home/daily-impulses";
 import { EventsTeaser } from "@/components/home/events-teaser";
@@ -49,9 +48,8 @@ export default async function HomePage() {
     <>
       <Hero />
       <HighlightsSection />
-      <WeeklyEssayTeaser />
 
-      {/* Textur-Zone: Zitat → Impulse → Events → Prinzipien */}
+      {/* Textur-Zone: Zitat → Impulse → Veranstaltungen + Wochenaufsatz → Prinzipien */}
       <LightSectionBackground>
         {quotes.length > 0 && <QuoteRotator quotes={quotes} />}
         <DailyImpulsesSection />

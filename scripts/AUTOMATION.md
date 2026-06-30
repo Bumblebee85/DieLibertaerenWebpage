@@ -27,12 +27,16 @@ API-Key: [console.x.ai](https://console.x.ai/)
 ## Befehle
 
 ```bash
-# 3 Tagesimpulse für heute (überspringt, wenn bereits vorhanden)
+# Lokal (MongoDB direkt)
 npm run generate:daily
-
-# Ein Blog-Artikel pro Kalenderwoche
 npm run generate:weekly
+
+# Über Vercel (wenn lokal querySrv ECONNREFUSED)
+npm run generate:daily:remote
+npm run generate:weekly:remote
 ```
+
+Bei **querySrv ECONNREFUSED** unter Windows: In Atlas „Standard connection string“ kopieren und als `MONGODB_URI_DIRECT` in `.env.local` setzen (ohne SRV-DNS).
 
 ## Cron-Beispiele (Linux)
 
@@ -55,6 +59,8 @@ npm run generate:weekly
 | Skript | Collection | Idempotenz |
 |--------|------------|------------|
 | `generate:daily` | `daily-impulses` | Max. 3 Einträge pro Datum |
-| `generate:weekly` | `blog-posts` | Ein Post pro KW-Slug (`woche-2026-26`) |
+| `generate:weekly` | `weekly-essays` + `blog-posts` | Ein Aufsatz pro KW + Blog-Slug (`woche-2026-26`) |
 
-Inhalte erscheinen nach Veröffentlichung (`published: true`) auf Startseite bzw. `/blog`.
+Skripte laden `.env.local` und verbinden über `MONGODB_URI` (bevorzugt). Prüfen: `npm run check:payload`.
+
+Inhalte erscheinen nach Veröffentlichung (`published: true`) auf Startseite (Wochenaufsatz unter „Aktuelle Veranstaltungen“) bzw. `/blog`.

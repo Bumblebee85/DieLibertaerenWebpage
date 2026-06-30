@@ -79,6 +79,7 @@ export interface Config {
     'blog-categories': BlogCategory;
     'blog-posts': BlogPost;
     'weekly-essays': WeeklyEssay;
+    'beirat-members': BeiratMember;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -98,6 +99,7 @@ export interface Config {
     'blog-categories': BlogCategoriesSelect<false> | BlogCategoriesSelect<true>;
     'blog-posts': BlogPostsSelect<false> | BlogPostsSelect<true>;
     'weekly-essays': WeeklyEssaysSelect<false> | WeeklyEssaysSelect<true>;
+    'beirat-members': BeiratMembersSelect<false> | BeiratMembersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -109,9 +111,13 @@ export interface Config {
   fallbackLocale: ('false' | 'none' | 'null') | false | null | 'de' | 'de'[];
   globals: {
     program: Program;
+    beirat: Beirat;
+    freiheitsbewegung: Freiheitsbewegung;
   };
   globalsSelect: {
     program: ProgramSelect<false> | ProgramSelect<true>;
+    beirat: BeiratSelect<false> | BeiratSelect<true>;
+    freiheitsbewegung: FreiheitsbewegungSelect<false> | FreiheitsbewegungSelect<true>;
   };
   locale: 'de';
   widgets: {
@@ -485,6 +491,38 @@ export interface WeeklyEssay {
   createdAt: string;
 }
 /**
+ * Mitglieder des Beirats – Foto, Rolle und Kurzbiografie.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "beirat-members".
+ */
+export interface BeiratMember {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  /**
+   * Empfohlen: quadratisches Porträt. Alternativ externe Bild-URL unten.
+   */
+  photo?: (string | null) | Media;
+  /**
+   * Externe URL, wenn kein Upload in Medien vorhanden ist.
+   */
+  imageUrl?: string | null;
+  deceased?: boolean | null;
+  /**
+   * z. B. „24. Mai 2026"
+   */
+  deceasedDate?: string | null;
+  /**
+   * Kleinere Zahl = weiter oben.
+   */
+  sortOrder?: number | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -555,6 +593,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'weekly-essays';
         value: string | WeeklyEssay;
+      } | null)
+    | ({
+        relationTo: 'beirat-members';
+        value: string | BeiratMember;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -816,6 +858,23 @@ export interface WeeklyEssaysSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "beirat-members_select".
+ */
+export interface BeiratMembersSelect<T extends boolean = true> {
+  name?: T;
+  role?: T;
+  bio?: T;
+  photo?: T;
+  imageUrl?: T;
+  deceased?: T;
+  deceasedDate?: T;
+  sortOrder?: T;
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -907,6 +966,123 @@ export interface Program {
   createdAt?: string | null;
 }
 /**
+ * Einleitung, Aufgaben, Nachruf und Kontakt-Hinweis für die Beirat-Seite.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "beirat".
+ */
+export interface Beirat {
+  id: string;
+  pageTitle: string;
+  pageSubtitle?: string | null;
+  intro: string;
+  tasksSectionTitle?: string | null;
+  tasks?:
+    | {
+        icon: 'book-open' | 'line-chart' | 'megaphone' | 'search' | 'user-search' | 'users';
+        title: string;
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  membersSectionTitle?: string | null;
+  membersSectionSubtitle?: string | null;
+  nachruf: {
+    enabled?: boolean | null;
+    badgeLabel?: string | null;
+    title?: string | null;
+    subtitle?: string | null;
+    body: {
+      root: {
+        type: string;
+        children: {
+          type: any;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    };
+  };
+  contactHint?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Geschichte, Österreichische Schule und Meilensteine.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "freiheitsbewegung".
+ */
+export interface Freiheitsbewegung {
+  id: string;
+  pageTitle: string;
+  pageSubtitle?: string | null;
+  introParagraphs?:
+    | {
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  austrianSchool: {
+    title?: string | null;
+    subtitle?: string | null;
+    cardLeft: {
+      title: string;
+      paragraphs?:
+        | {
+            text: string;
+            id?: string | null;
+          }[]
+        | null;
+    };
+    cardRight: {
+      title: string;
+      paragraphs?:
+        | {
+            text: string;
+            id?: string | null;
+          }[]
+        | null;
+    };
+  };
+  figuresSectionTitle?: string | null;
+  figures?:
+    | {
+        name: string;
+        years: string;
+        role: string;
+        photo?: (string | null) | Media;
+        imageUrl?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  history?: {
+    title?: string | null;
+    subtitle?: string | null;
+    paragraphs?:
+      | {
+          icon?: ('book-open' | 'globe') | null;
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+    milestonesTitle?: string | null;
+    milestones?:
+      | {
+          text: string;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "program_select".
  */
@@ -958,6 +1134,115 @@ export interface ProgramSelect<T extends boolean = true> {
     | {
         text?: T;
         id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "beirat_select".
+ */
+export interface BeiratSelect<T extends boolean = true> {
+  pageTitle?: T;
+  pageSubtitle?: T;
+  intro?: T;
+  tasksSectionTitle?: T;
+  tasks?:
+    | T
+    | {
+        icon?: T;
+        title?: T;
+        text?: T;
+        id?: T;
+      };
+  membersSectionTitle?: T;
+  membersSectionSubtitle?: T;
+  nachruf?:
+    | T
+    | {
+        enabled?: T;
+        badgeLabel?: T;
+        title?: T;
+        subtitle?: T;
+        body?: T;
+      };
+  contactHint?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "freiheitsbewegung_select".
+ */
+export interface FreiheitsbewegungSelect<T extends boolean = true> {
+  pageTitle?: T;
+  pageSubtitle?: T;
+  introParagraphs?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  austrianSchool?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+        cardLeft?:
+          | T
+          | {
+              title?: T;
+              paragraphs?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+            };
+        cardRight?:
+          | T
+          | {
+              title?: T;
+              paragraphs?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+            };
+      };
+  figuresSectionTitle?: T;
+  figures?:
+    | T
+    | {
+        name?: T;
+        years?: T;
+        role?: T;
+        photo?: T;
+        imageUrl?: T;
+        id?: T;
+      };
+  history?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+        paragraphs?:
+          | T
+          | {
+              icon?: T;
+              text?: T;
+              id?: T;
+            };
+        milestonesTitle?: T;
+        milestones?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
       };
   updatedAt?: T;
   createdAt?: T;

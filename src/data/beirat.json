@@ -1,0 +1,73 @@
+{
+  "pageTitle": "Der Beirat",
+  "pageSubtitle": "Wissenschaftliches Gremium für fundiertes Expertenwissen, strategische Einordnung und gesellschaftliche Vernetzung.",
+  "intro": "Der Beirat ist ein parteinahes Gremium, das unsere Arbeit unabhängig bewertet, Fachwissen bereitstellt und gesellschaftliche Interessengruppen vernetzt. Grundlage aller Positionen sind wissenschaftliche Fakten – darauf bauen wir Programme und Positionspapiere auf.",
+  "tasksSectionTitle": "Zweck und Aufgaben",
+  "tasks": [
+    {
+      "icon": "book-open",
+      "title": "Expertenwissen",
+      "text": "Fachwissen für politische Themen, Stellungnahmen und Positionspapiere."
+    },
+    {
+      "icon": "line-chart",
+      "title": "Strategiebewertung",
+      "text": "Langfristige Parteistrategie durch fachliches und praktisches Feedback."
+    },
+    {
+      "icon": "search",
+      "title": "Politische Analyse",
+      "text": "Trends und gesellschaftliche Entwicklungen frühzeitig einordnen."
+    },
+    {
+      "icon": "megaphone",
+      "title": "Öffentlichkeitsarbeit",
+      "text": "Reputation und Netzwerke für klarere libertäre Botschaften nutzen."
+    },
+    {
+      "icon": "user-search",
+      "title": "Talente identifizieren",
+      "text": "Unterstützung bei Rekrutierung politischen Nachwuchses."
+    },
+    {
+      "icon": "users",
+      "title": "Interessengruppen",
+      "text": "Stimmen der Zivilgesellschaft in die Parteiarbeit einbringen."
+    }
+  ],
+  "membersSectionTitle": "Unser Beirat",
+  "membersSectionSubtitle": "Vertreter aus Wissenschaft, Wirtschaft, Zivilgesellschaft und libertärem Aktivismus.",
+  "members": [
+    {
+      "name": "Dr. Antony P. Mueller",
+      "role": "Ehemaliger Beirat",
+      "bio": "Habilitierter Wirtschaftswissenschaftler der Universität Erlangen-Nürnberg und emeritierter Professor der Volkswirtschaftslehre an der brasilianischen Bundesuniversität UFS.",
+      "imageUrl": "https://die-libertaeren.de/wp-content/uploads/2023/07/AntonyPMueller_Photo_Beirat-1024x1024.jpg",
+      "deceased": true,
+      "deceasedDate": "24. Mai 2026",
+      "sortOrder": 0
+    },
+    {
+      "name": "Prof. Dr. iur. David Dürr",
+      "role": "Beirat",
+      "bio": "Schweizer Rechtstheoretiker, Wirtschaftsanwalt und Notar in der SwissLegal-Gruppe. Beirat des Ludwig-von-Mises-Instituts Deutschland sowie des Liberalen Instituts Zürich.",
+      "imageUrl": "https://die-libertaeren.de/wp-content/uploads/2023/07/DavidDuerr_Photo_Beirat-1024x1024.jpg",
+      "deceased": false,
+      "sortOrder": 1
+    }
+  ],
+  "nachruf": {
+    "enabled": true,
+    "badgeLabel": "Nachruf",
+    "title": "In Gedenken an Dr. Antony Peter Müller",
+    "subtitle": "Gestorben am 24. Mai 2026 – Ehemaliger Beirat der DIE LIBERTÄREN",
+    "paragraphs": [
+      "Mit tiefer Trauer nehmen wir Abschied von Dr. Antony P. Müller.",
+      "Er war nicht nur ein brillanter Wirtschaftswissenschaftler und leidenschaftlicher Verfechter der Österreichischen Schule, sondern auch ein enger Wegbegleiter und geschätzter Beirat unserer Partei. In zahlreichen Gesprächen, Video-Konferenzen und auf dem Afrika-Festival 2025 durften wir seine Energie, seine klugen Analysen und seine Fähigkeit erleben, Menschen für die Ideen von Freiheit und Eigentum zu begeistern.",
+      "Auch über sein wissenschaftliches Wirken hinaus war Antony ein großartiger Mensch. Sein Humor, seine Ideen, seine Manuskripte und nicht zuletzt seine Einblicke in sein erfülltes Leben werden uns fehlen.",
+      "Danke, Antony, für deine Ideen, deine Zeit und deine Freundschaft. Dein Wirken bleibt ein wichtiger Teil unserer intellektuellen Grundlage.",
+      "In Freiheit und Dankbarkeit\nDIE LIBERTÄREN"
+    ]
+  },
+  "contactHint": "Fragen zum Beirat? Schreib uns an info@die-libertaeren.de."
+}

@@ -1,15 +1,17 @@
 import "./load-env";
 import { getPayload } from "payload";
 import config from "@payload-config";
+import beiratData from "@/data/beirat.json";
 import thesenData from "@/data/thesen-v4.json";
 import wahlomatData from "@/data/wahlomat-thesen.json";
 import blogPostsData from "@/data/blog-posts.json";
 import weeklyEssaysData from "@/data/weekly-essays.json";
-import { plainTextToLexical } from "@/lib/cms/rich-text";
+import freiheitsbewegungData from "@/data/freiheitsbewegung.json";
+import { plainParagraphsToLexical, plainTextToLexical } from "@/lib/cms/rich-text";
 import { slugify } from "@/lib/cms/slugify";
 
 /**
- * Legt Programm, Wahl-O-Mat, Blog und Wochenaufsätze aus JSON in Payload an.
+ * Legt Programm, Wahl-O-Mat, Blog, Wochenaufsätze, Beirat und Freiheitsbewegung in Payload an.
  * Ausführen: npm run seed:editorial
  */
 async function seed() {
@@ -181,6 +183,125 @@ async function seed() {
       },
     });
     console.log(`✓ Wochenaufsatz KW ${essay.week} angelegt`);
+  }
+
+  // --- Beirat global ---
+  const existingBeirat = await payload.findGlobal({ slug: "beirat" });
+  if (!existingBeirat?.intro) {
+    await payload.updateGlobal({
+      slug: "beirat",
+      data: {
+        pageTitle: beiratData.pageTitle,
+        pageSubtitle: beiratData.pageSubtitle,
+        intro: beiratData.intro,
+        tasksSectionTitle: beiratData.tasksSectionTitle,
+        tasks: beiratData.tasks.map((task) => ({
+          icon: task.icon as
+            | "book-open"
+            | "line-chart"
+            | "megaphone"
+            | "search"
+            | "user-search"
+            | "users",
+          title: task.title,
+          text: task.text,
+        })),
+        membersSectionTitle: beiratData.membersSectionTitle,
+        membersSectionSubtitle: beiratData.membersSectionSubtitle,
+        nachruf: {
+          enabled: beiratData.nachruf.enabled,
+          badgeLabel: beiratData.nachruf.badgeLabel,
+          title: beiratData.nachruf.title,
+          subtitle: beiratData.nachruf.subtitle,
+          body: plainParagraphsToLexical(beiratData.nachruf.paragraphs),
+        },
+        contactHint: beiratData.contactHint,
+      },
+    });
+    console.log("✓ Beirat-Global angelegt");
+  } else {
+    console.log("– Beirat-Global existiert bereits");
+  }
+
+  // --- Beirat members ---
+  for (const member of beiratData.members) {
+    const existing = await payload.find({
+      collection: "beirat-members",
+      where: { name: { equals: member.name } },
+      limit: 1,
+    });
+    if (existing.docs.length > 0) {
+      console.log(`– Beiratsmitglied „${member.name}“ existiert bereits`);
+      continue;
+    }
+
+    await payload.create({
+      collection: "beirat-members",
+      data: {
+        name: member.name,
+        role: member.role,
+        bio: member.bio,
+        imageUrl: member.imageUrl,
+        deceased: member.deceased,
+        deceasedDate: member.deceasedDate,
+        sortOrder: member.sortOrder,
+        published: true,
+      },
+    });
+    console.log(`✓ Beiratsmitglied „${member.name}“ angelegt`);
+  }
+
+  // --- Freiheitsbewegung global ---
+  const existingFreiheit = await payload.findGlobal({ slug: "freiheitsbewegung" });
+  if (!(existingFreiheit?.introParagraphs ?? []).length) {
+    await payload.updateGlobal({
+      slug: "freiheitsbewegung",
+      data: {
+        pageTitle: freiheitsbewegungData.pageTitle,
+        pageSubtitle: freiheitsbewegungData.pageSubtitle,
+        introParagraphs: freiheitsbewegungData.introParagraphs.map((text) => ({
+          text,
+        })),
+        austrianSchool: {
+          title: freiheitsbewegungData.austrianSchool.title,
+          subtitle: freiheitsbewegungData.austrianSchool.subtitle,
+          cardLeft: {
+            title: freiheitsbewegungData.austrianSchool.cardLeft.title,
+            paragraphs: freiheitsbewegungData.austrianSchool.cardLeft.paragraphs.map(
+              (text) => ({ text })
+            ),
+          },
+          cardRight: {
+            title: freiheitsbewegungData.austrianSchool.cardRight.title,
+            paragraphs: freiheitsbewegungData.austrianSchool.cardRight.paragraphs.map(
+              (text) => ({ text })
+            ),
+          },
+        },
+        figuresSectionTitle: freiheitsbewegungData.figuresSectionTitle,
+        figures: freiheitsbewegungData.figures.map((figure) => ({
+          name: figure.name,
+          years: figure.years,
+          role: figure.role,
+          imageUrl: figure.imageUrl,
+        })),
+        history: {
+          title: freiheitsbewegungData.history.title,
+          subtitle: freiheitsbewegungData.history.subtitle,
+          paragraphs: freiheitsbewegungData.history.paragraphs.map((item) => ({
+            icon: item.icon as "book-open" | "globe",
+            text: item.text,
+          })),
+          milestonesTitle: freiheitsbewegungData.history.milestonesTitle,
+          milestones: freiheitsbewegungData.history.milestones.map((text) => ({
+            text,
+          })),
+        },
+      },
+    });
+    console.log("✓ Freiheitsbewegung-Global angelegt");
+  } else {
+    console.log("– Freiheitsbewegung-Global existiert bereits");
   }
 
   console.log("\nEditorial-Seed abgeschlossen. Admin-Panel: /admin");

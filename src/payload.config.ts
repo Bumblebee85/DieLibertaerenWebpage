@@ -5,6 +5,7 @@ import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
 
+import { BeiratMembers } from "./collections/BeiratMembers";
 import { BlogCategories } from "./collections/BlogCategories";
 import { BlogPosts } from "./collections/BlogPosts";
 import { DailyImpulses } from "./collections/DailyImpulses";
@@ -17,6 +18,8 @@ import { Quotes } from "./collections/Quotes";
 import { Users } from "./collections/Users";
 import { WahlomatElections } from "./collections/WahlomatElections";
 import { WeeklyEssays } from "./collections/WeeklyEssays";
+import { Beirat } from "./globals/Beirat";
+import { Freiheitsbewegung } from "./globals/Freiheitsbewegung";
 import { Program } from "./globals/Program";
 import {
   getDatabaseUrl,
@@ -54,8 +57,9 @@ export default buildConfig({
     BlogCategories,
     BlogPosts,
     WeeklyEssays,
+    BeiratMembers,
   ],
-  globals: [Program],
+  globals: [Program, Beirat, Freiheitsbewegung],
   editor: lexicalEditor(),
   secret: getPayloadSecret(),
   serverURL,

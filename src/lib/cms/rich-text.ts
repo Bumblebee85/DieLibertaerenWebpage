@@ -1,5 +1,36 @@
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
+/** Mehrere Absätze in Lexical-Struktur für Payload-Seeds umwandeln. */
+export function plainParagraphsToLexical(paragraphs: string[]) {
+  return {
+    root: {
+      type: "root",
+      format: "" as const,
+      indent: 0,
+      version: 1,
+      children: paragraphs.map((text) => ({
+        type: "paragraph",
+        format: "" as const,
+        indent: 0,
+        version: 1,
+        children: [
+          {
+            type: "text",
+            format: 0,
+            detail: 0,
+            mode: "normal",
+            style: "",
+            text,
+            version: 1,
+          },
+        ],
+        direction: "ltr" as const,
+      })),
+      direction: "ltr" as const,
+    },
+  };
+}
+
 /** Einfachen Text in Lexical-Struktur für Payload-Seeds umwandeln. */
 export function plainTextToLexical(text: string) {
   return {

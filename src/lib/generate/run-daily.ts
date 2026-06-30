@@ -1,6 +1,6 @@
 import type { Payload } from "payload";
+import { getDailyImpulsesSystemPrompt } from "@/lib/cms/prompt-templates";
 import { callGrokJson } from "@/lib/grok/client";
-import { PARTY_DAILY_SYSTEM_PROMPT } from "@/lib/grok/party";
 
 type DailyImpulseBatch = {
   impulses: Array<{
@@ -46,11 +46,13 @@ export async function runGenerateDaily(payload: Payload): Promise<RunDailyResult
     };
   }
 
+  const systemPrompt = await getDailyImpulsesSystemPrompt(payload);
+
   const result = await callGrokJson<DailyImpulseBatch>({
     messages: [
       {
         role: "system",
-        content: PARTY_DAILY_SYSTEM_PROMPT,
+        content: systemPrompt,
       },
       {
         role: "user",

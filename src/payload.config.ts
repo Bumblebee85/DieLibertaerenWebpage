@@ -13,6 +13,7 @@ import { Documents } from "./collections/Documents";
 import { Events } from "./collections/Events";
 import { Highlights } from "./collections/Highlights";
 import { Media } from "./collections/Media";
+import { PromptTemplates } from "./collections/PromptTemplates";
 import { ProgramTopicCategories } from "./collections/ProgramTopicCategories";
 import { Quotes } from "./collections/Quotes";
 import { Users } from "./collections/Users";
@@ -58,6 +59,7 @@ export default buildConfig({
     BlogPosts,
     WeeklyEssays,
     BeiratMembers,
+    PromptTemplates,
   ],
   globals: [Program, Beirat, Freiheitsbewegung],
   editor: lexicalEditor(),

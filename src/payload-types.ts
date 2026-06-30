@@ -80,6 +80,7 @@ export interface Config {
     'blog-posts': BlogPost;
     'weekly-essays': WeeklyEssay;
     'beirat-members': BeiratMember;
+    'prompt-templates': PromptTemplate;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -100,6 +101,7 @@ export interface Config {
     'blog-posts': BlogPostsSelect<false> | BlogPostsSelect<true>;
     'weekly-essays': WeeklyEssaysSelect<false> | WeeklyEssaysSelect<true>;
     'beirat-members': BeiratMembersSelect<false> | BeiratMembersSelect<true>;
+    'prompt-templates': PromptTemplatesSelect<false> | PromptTemplatesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -523,6 +525,34 @@ export interface BeiratMember {
   createdAt: string;
 }
 /**
+ * System-Prompts für Grok-Skripte (z. B. generate:daily). Slug nicht ändern, sobald verknüpft.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "prompt-templates".
+ */
+export interface PromptTemplate {
+  id: string;
+  name: string;
+  /**
+   * Technischer Schlüssel. Nur ein Eintrag pro Schlüssel. Nicht ändern, wenn das Skript bereits darauf verweist.
+   */
+  slug: 'daily-impulses-system';
+  /**
+   * Anweisungen an Grok (Rolle, Ton, Sprache, JSON-Ausgabe). Wird von generate:daily als system-Nachricht verwendet.
+   */
+  systemPrompt: string;
+  /**
+   * Optional: Hinweise für Redakteure, nicht an Grok gesendet.
+   */
+  description?: string | null;
+  /**
+   * Inaktive Vorlagen werden ignoriert – das Skript nutzt dann den Standard-Prompt aus dem Code.
+   */
+  active?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -597,6 +627,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'beirat-members';
         value: string | BeiratMember;
+      } | null)
+    | ({
+        relationTo: 'prompt-templates';
+        value: string | PromptTemplate;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -870,6 +904,19 @@ export interface BeiratMembersSelect<T extends boolean = true> {
   deceasedDate?: T;
   sortOrder?: T;
   published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "prompt-templates_select".
+ */
+export interface PromptTemplatesSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  systemPrompt?: T;
+  description?: T;
+  active?: T;
   updatedAt?: T;
   createdAt?: T;
 }

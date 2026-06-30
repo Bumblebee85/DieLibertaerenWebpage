@@ -63,4 +63,6 @@ Bei **querySrv ECONNREFUSED** unter Windows: In Atlas „Standard connection str
 
 Skripte laden `.env.local` und verbinden über `MONGODB_URI` (bevorzugt). Prüfen: `npm run check:payload`.
 
+**System-Prompt Tagesimpulse:** Im CMS unter „PromptTemplates“ → „Tagesimpulse – System-Prompt“ bearbeiten (Slug `daily-impulses-system`). Inaktive Einträge fallen auf den Standard-Prompt im Code zurück.
+
 Inhalte erscheinen nach Veröffentlichung (`published: true`) auf Startseite (Wochenaufsatz unter „Aktuelle Veranstaltungen“) bzw. `/blog`.

@@ -9,8 +9,11 @@ In `.env.local` (oder Server-Umgebung):
 ```env
 MONGODB_URI=mongodb+srv://.../die-libertaeren
 PAYLOAD_SECRET=...mindestens-32-zeichen...
+# Offizieller xAI-API-Schlüssel des DIE-LIBERTÄREN-Parteikontos
 GROK_API_KEY=xai-...
 ```
+
+Nur `GROK_API_KEY` wird verwendet (kein `XAI_API_KEY` o. Ä.). API-Anfragen laufen unter dem Parteikonto `die-libertaeren-party`.
 
 Optional:
 

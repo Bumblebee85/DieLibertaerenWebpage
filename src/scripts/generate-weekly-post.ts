@@ -4,6 +4,7 @@ import config from "@payload-config";
 import { plainTextToLexical } from "@/lib/cms/rich-text";
 import { slugify } from "@/lib/cms/slugify";
 import { callGrokJson } from "@/lib/grok/client";
+import { PARTY_ACCOUNT, PARTY_WEEKLY_SYSTEM_PROMPT } from "@/lib/grok/party";
 import { getDatabaseHost, getDatabaseName, getPayloadEnvStatus } from "@/lib/payload-env";
 import { getWeekNumber } from "@/lib/utils";
 
@@ -70,15 +71,14 @@ async function main() {
   }
 
   console.log(`MongoDB: ${getDatabaseHost()} / ${getDatabaseName()}`);
+  console.log(`Parteikonto: ${PARTY_ACCOUNT.name} (Grok via GROK_API_KEY)`);
   console.log(`Generiere Wochen-Blog-Post (${slug}) …`);
 
   const result = await callGrokJson<WeeklyPostResult>({
     messages: [
       {
         role: "system",
-        content:
-          "Du bist Autor für den Blog von DIE LIBERTÄREN (libertäre Partei Deutschland). " +
-          "Schreibe auf Deutsch, sachlich und prinzipientreu. Antworte nur als JSON.",
+        content: PARTY_WEEKLY_SYSTEM_PROMPT,
       },
       {
         role: "user",
@@ -104,7 +104,7 @@ async function main() {
       excerpt: result.excerpt,
       content: plainTextToLexical(result.content),
       date,
-      author: "DIE LIBERTÄREN",
+      author: PARTY_ACCOUNT.author,
       category: categoryId,
       tags: (result.tags ?? []).map((tag) => ({ tag })),
       published: true,

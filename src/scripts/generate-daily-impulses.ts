@@ -2,6 +2,7 @@ import "./load-env";
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { callGrokJson } from "@/lib/grok/client";
+import { PARTY_ACCOUNT, PARTY_DAILY_SYSTEM_PROMPT } from "@/lib/grok/party";
 import { getDatabaseHost, getDatabaseName, getPayloadEnvStatus } from "@/lib/payload-env";
 
 type DailyImpulseBatch = {
@@ -43,15 +44,14 @@ async function main() {
   }
 
   console.log(`MongoDB: ${getDatabaseHost()} / ${getDatabaseName()}`);
+  console.log(`Parteikonto: ${PARTY_ACCOUNT.name} (Grok via GROK_API_KEY)`);
   console.log(`Generiere ${remaining} Impulse für ${date} …`);
 
   const result = await callGrokJson<DailyImpulseBatch>({
     messages: [
       {
         role: "system",
-        content:
-          "Du bist Redakteur für DIE LIBERTÄREN, eine konsequent libertäre Partei in Deutschland. " +
-          "Schreibe auf Deutsch. Antworte ausschließlich als gültiges JSON-Objekt.",
+        content: PARTY_DAILY_SYSTEM_PROMPT,
       },
       {
         role: "user",

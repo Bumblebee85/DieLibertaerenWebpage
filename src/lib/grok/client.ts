@@ -1,3 +1,5 @@
+import { getPartyGrokApiKey, PARTY_ACCOUNT } from "@/lib/grok/party";
+
 const GROK_API_URL = "https://api.x.ai/v1/chat/completions";
 
 export type GrokMessage = {
@@ -10,11 +12,7 @@ export async function callGrokJson<T>(options: {
   model?: string;
   temperature?: number;
 }): Promise<T> {
-  const apiKey = process.env.GROK_API_KEY;
-  if (!apiKey) {
-    throw new Error("GROK_API_KEY ist nicht gesetzt.");
-  }
-
+  const apiKey = getPartyGrokApiKey();
   const model = options.model ?? process.env.GROK_MODEL ?? "grok-3-mini";
 
   const response = await fetch(GROK_API_URL, {
@@ -27,6 +25,7 @@ export async function callGrokJson<T>(options: {
       model,
       temperature: options.temperature ?? 0.7,
       response_format: { type: "json_object" },
+      user: PARTY_ACCOUNT.grokUserId,
       messages: options.messages,
     }),
   });

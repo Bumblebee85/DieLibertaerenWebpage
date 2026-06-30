@@ -18,44 +18,85 @@ function getRandomQuoteIndex(quoteCount: number, exclude = -1): number {
   return next;
 }
 
+type QuoteHistoryState = {
+  history: number[];
+  pointer: number;
+};
+
+function createInitialState(quoteCount: number): QuoteHistoryState {
+  return {
+    history: [getRandomQuoteIndex(quoteCount)],
+    pointer: 0,
+  };
+}
+
 type QuoteRotatorProps = {
   quotes: QuoteDisplay[];
 };
 
 export function QuoteRotator({ quotes }: QuoteRotatorProps) {
-  const [index, setIndex] = useState(() => getRandomQuoteIndex(quotes.length));
+  const [nav, setNav] = useState<QuoteHistoryState>(() =>
+    createInitialState(quotes.length)
+  );
+
+  const canGoBack = nav.pointer > 0;
+
+  const goPrev = useCallback(() => {
+    setNav((prev) =>
+      prev.pointer > 0 ? { ...prev, pointer: prev.pointer - 1 } : prev
+    );
+  }, []);
 
   const goToRandom = useCallback(() => {
     if (quotes.length <= 1) return;
-    setIndex((prev) => getRandomQuoteIndex(quotes.length, prev));
+
+    setNav((prev) => {
+      const currentIdx = prev.history[prev.pointer];
+      const nextIdx = getRandomQuoteIndex(quotes.length, currentIdx);
+      const trimmed = prev.history.slice(0, prev.pointer + 1);
+      return {
+        history: [...trimmed, nextIdx],
+        pointer: trimmed.length,
+      };
+    });
   }, [quotes.length]);
 
-  const goPrev = goToRandom;
-  const goNext = goToRandom;
+  const goToIndex = useCallback(
+    (index: number) => {
+      setNav((prev) => {
+        if (index === prev.history[prev.pointer]) return prev;
+        const trimmed = prev.history.slice(0, prev.pointer + 1);
+        return {
+          history: [...trimmed, index],
+          pointer: trimmed.length,
+        };
+      });
+    },
+    []
+  );
 
   useEffect(() => {
     if (quotes.length === 0) return;
 
-    const timer = setInterval(() => {
-      setIndex((prev) => getRandomQuoteIndex(quotes.length, prev));
-    }, 12000);
+    const timer = setInterval(goToRandom, 12000);
     return () => clearInterval(timer);
-  }, [quotes.length]);
+  }, [goToRandom, quotes.length]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "ArrowLeft") goPrev();
-      if (event.key === "ArrowRight") goNext();
+      if (event.key === "ArrowRight") goToRandom();
     }
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [goNext, goPrev]);
+  }, [goPrev, goToRandom]);
 
   if (quotes.length === 0) {
     return null;
   }
 
+  const index = nav.history[nav.pointer];
   const current = quotes[index];
   const showDots = quotes.length <= 12;
 
@@ -80,6 +121,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
               variant="outline"
               size="icon"
               onClick={goPrev}
+              disabled={!canGoBack}
               className="absolute left-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 rounded-full border-border bg-white/90 shadow-sm md:inline-flex"
               aria-label="Vorheriges Zitat"
             >
@@ -128,7 +170,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
               type="button"
               variant="outline"
               size="icon"
-              onClick={goNext}
+              onClick={goToRandom}
               className="absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 rounded-full border-border bg-white/90 shadow-sm md:inline-flex"
               aria-label="Nächstes Zitat"
             >
@@ -138,11 +180,17 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
 
           <div className="mt-8 flex flex-col items-center gap-4">
             <div className="flex items-center gap-3 md:hidden">
-              <Button type="button" variant="outline" size="sm" onClick={goPrev}>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={goPrev}
+                disabled={!canGoBack}
+              >
                 <ChevronLeft className="mr-1 h-4 w-4" />
                 Zurück
               </Button>
-              <Button type="button" variant="outline" size="sm" onClick={goNext}>
+              <Button type="button" variant="outline" size="sm" onClick={goToRandom}>
                 Weiter
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
@@ -154,7 +202,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
                   <button
                     key={quote.id}
                     type="button"
-                    onClick={() => setIndex(i)}
+                    onClick={() => goToIndex(i)}
                     className={`h-2 rounded-full transition-all ${
                       i === index ? "w-8 bg-primary" : "w-2 bg-border"
                     }`}

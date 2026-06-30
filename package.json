@@ -19,7 +19,9 @@
     "seed:content": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-content.ts",
     "seed:remote": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-remote.ts",
     "seed:cms": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-cms.ts",
-    "seed:editorial": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-editorial.ts"
+    "seed:editorial": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-editorial.ts",
+    "generate:daily": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/generate-daily-impulses.ts",
+    "generate:weekly": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/generate-weekly-post.ts"
   },
   "engines": {
     "node": ">=20"

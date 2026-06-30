@@ -22,7 +22,7 @@ const options = [
     icon: Heart,
     title: "Spende",
     text: "Unterstütze unsere Arbeit für mehr Freiheit mit einer Spende.",
-    href: "/spenden",
+    href: "/werde-unterstuetzer",
     cta: "Jetzt spenden",
   },
   {

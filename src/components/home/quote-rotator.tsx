@@ -148,7 +148,7 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
               </Button>
             </div>
 
-            {showDots ? (
+            {showDots && (
               <div className="flex flex-wrap justify-center gap-2">
                 {quotes.map((quote, i) => (
                   <button
@@ -163,10 +163,6 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
                   />
                 ))}
               </div>
-            ) : (
-              <p className="text-xs text-muted-foreground">
-                Nutze die Pfeiltasten oder die Buttons, um durch die Zitat-Bibliothek zu blättern.
-              </p>
             )}
           </div>
         </div>

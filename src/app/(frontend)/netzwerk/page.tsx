@@ -20,12 +20,12 @@ const partners = [
   {
     name: "Freiheitsbewegung",
     description: "Vernetzung mit Organisationen der internationalen Freiheitsbewegung.",
-    url: "https://die-libertaeren.de/freiheitsbewegung/",
+    url: "/freiheitsbewegung",
   },
   {
     name: "Beirat",
     description: "Wissenschaftlicher Beirat mit fachkundigen Persönlichkeiten.",
-    url: "https://die-libertaeren.de/beirat/",
+    url: "/beirat",
   },
 ];
 
@@ -56,12 +56,15 @@ export default function NetzwerkPage() {
                 </p>
                 <a
                   href={partner.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(partner.url.startsWith("http")
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
                 >
                   Mehr erfahren
-                  <ExternalLink className="h-3 w-3" />
+                  {partner.url.startsWith("http") && (
+                    <ExternalLink className="h-3 w-3" />
+                  )}
                 </a>
               </CardContent>
             </Card>

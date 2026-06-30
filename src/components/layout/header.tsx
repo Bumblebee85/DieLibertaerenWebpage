@@ -18,7 +18,9 @@ const navItems = [
     href: "#",
     children: [
       { label: "Bundesvorstand", href: "/bundesvorstand" },
+      { label: "Beirat", href: "/beirat" },
       { label: "Netzwerk", href: "/netzwerk" },
+      { label: "Freiheitsbewegung", href: "/freiheitsbewegung" },
       { label: "Mitmachen", href: "/mitmachen" },
     ],
   },
@@ -76,7 +78,7 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button variant="outline" size="sm" asChild>
-            <Link href="/spenden">Spenden</Link>
+            <Link href="/werde-unterstuetzer">Spenden</Link>
           </Button>
           <Button size="sm" asChild>
             <Link href="/werde-mitglied">Mitglied werden</Link>
@@ -124,7 +126,7 @@ export function Header() {
           )}
           <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
             <Button variant="outline" asChild>
-              <Link href="/spenden">Spenden</Link>
+              <Link href="/werde-unterstuetzer">Spenden</Link>
             </Button>
             <Button asChild>
               <Link href="/werde-mitglied">Mitglied werden</Link>

@@ -105,6 +105,37 @@ export const seoPages = {
     path: "/spenden",
     keywords: ["libertäre Partei spenden", "Freiheit unterstützen", "DIE LIBERTÄREN Spende"],
   },
+  unterstuetzer: {
+    title: "Unterstützer werden – Spende für Freiheit",
+    description:
+      "Unterstütze DIE LIBERTÄREN per Überweisung, PayPal oder Krypto. Keine staatliche Finanzierung – freiwillige Spenden für libertäre Aufklärung und Politik.",
+    path: "/werde-unterstuetzer",
+    keywords: [
+      "libertäre Partei spenden",
+      "Bitcoin Spende Partei",
+      "Freiheit unterstützen",
+      "DIE LIBERTÄREN Spende",
+    ],
+  },
+  freiheitsbewegung: {
+    title: "Freiheitsbewegung – Geschichte des Libertarismus",
+    description:
+      "Von der Aufklärung zur Österreichischen Schule: Geschichte und geistige Wurzeln der Freiheitsbewegung und des Libertarismus bei DIE LIBERTÄREN.",
+    path: "/freiheitsbewegung",
+    keywords: [
+      "Freiheitsbewegung",
+      "Österreichische Schule",
+      "Libertarismus Geschichte",
+      "Hayek Mises",
+    ],
+  },
+  beirat: {
+    title: "Beirat – Wissenschaft & Expertise",
+    description:
+      "Der Beirat von DIE LIBERTÄREN: Expertenwissen aus Wissenschaft und Zivilgesellschaft für fundierte libertäre Positionen.",
+    path: "/beirat",
+    keywords: ["Beirat DIE LIBERTÄREN", "libertäre Wissenschaft", "Expertenrat Partei"],
+  },
   netzwerk: {
     title: "Netzwerk – Libertäre Vernetzung & Wissenschaft",
     description:

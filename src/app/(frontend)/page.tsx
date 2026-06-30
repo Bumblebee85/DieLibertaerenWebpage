@@ -88,7 +88,7 @@ export default async function HomePage() {
         title="Freiheit ist kein Geschenk, sondern dein Recht!"
         description="Für uns ist Freiheit nicht nur ein Begriff, sondern ein Prinzip. Werde der Patron einer wahren Freiheitsbewegung!"
         primaryLabel="Unterstütze uns"
-        primaryHref="/spenden"
+        primaryHref="/werde-unterstuetzer"
         secondaryLabel="Werde Mitglied"
         secondaryHref="/werde-mitglied"
       />

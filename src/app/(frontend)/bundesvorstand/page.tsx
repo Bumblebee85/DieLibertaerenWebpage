@@ -108,7 +108,7 @@ export default function BundesvorstandPage() {
         title="Freiheit ist kein Geschenk, sondern dein Recht!"
         description="Lasse auch du deinem Freiheitswillen Taten folgen! Werde der Patron einer wahren Freiheitsbewegung!"
         primaryLabel="Unterstütze uns"
-        primaryHref="/spenden"
+        primaryHref="/werde-unterstuetzer"
       />
     </>
   );

@@ -5,7 +5,7 @@ import siteConfig from "@/data/site-config.json";
 const footerLinks = {
   engagement: [
     { label: "Mitmachen", href: "/mitmachen" },
-    { label: "Spenden", href: "/spenden" },
+    { label: "Spenden", href: "/werde-unterstuetzer" },
     { label: "Mitglied werden", href: "/werde-mitglied" },
     { label: "Shop", href: siteConfig.shop, external: true },
   ],

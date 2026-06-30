@@ -1,6 +1,5 @@
 import quotesData from "@/data/quotes.json";
 import { resolveMediaUrl } from "@/lib/cms/media";
-import { samplePublished } from "@/lib/cms/mongo-sample";
 import { getPayloadClient } from "@/lib/payload";
 import type { Quote } from "@/payload-types";
 
@@ -14,8 +13,8 @@ export type QuoteDisplay = {
   source?: string;
 };
 
-/** Deckt die volle Zitat-Bibliothek ab; $sample liefert bei weniger Docs alle in Zufallsreihenfolge. */
-const QUOTE_SAMPLE_SIZE = 100;
+/** Oberes Limit für die Zitat-Bibliothek auf der Startseite. */
+const QUOTE_FETCH_LIMIT = 500;
 
 function mapPayloadQuote(quote: Quote): QuoteDisplay {
   const { url, alt } = resolveMediaUrl(quote.authorImage);
@@ -50,14 +49,20 @@ function shuffle<T>(items: T[]): T[] {
   return copy;
 }
 
-/** Veröffentlichte Zitate zufällig aus Payload ($sample), mit JSON-Fallback. */
+/** Alle veröffentlichten Zitate aus Payload, zufällig gemischt; JSON-Fallback bei DB-Ausfall. */
 export async function getPublishedQuotes(): Promise<QuoteDisplay[]> {
   try {
     const payload = await getPayloadClient();
-    const docs = await samplePublished<Quote>(payload, "quotes", QUOTE_SAMPLE_SIZE);
+    const result = await payload.find({
+      collection: "quotes",
+      where: { published: { equals: true } },
+      limit: QUOTE_FETCH_LIMIT,
+      pagination: false,
+      depth: 1,
+    });
 
-    if (docs.length > 0) {
-      return docs.map(mapPayloadQuote);
+    if (result.docs.length > 0) {
+      return shuffle(result.docs.map((doc) => mapPayloadQuote(doc as Quote)));
     }
   } catch {
     // MongoDB nicht erreichbar – Fallback auf statische JSON-Daten

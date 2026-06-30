@@ -5,6 +5,7 @@ import { seoPages } from "@/data/seo-pages";
 import { createPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createPageMetadata(seoPages.home);
+export const dynamic = "force-dynamic";
 import { HighlightsSection } from "@/components/home/highlights-section";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyImpulsesSection } from "@/components/home/daily-impulses";

@@ -48,9 +48,9 @@ export function ThesenViewer() {
           />
         </div>
         <Button size="lg" asChild>
-          <a href={thesenData.pdfUrl} download>
+          <a href={thesenData.pdfUrl} download="Thesenpapier.pdf">
             <Download className="mr-2 h-4 w-4" />
-            Thesenpapier v4 als PDF
+            Thesenpapier als PDF
           </a>
         </Button>
       </div>

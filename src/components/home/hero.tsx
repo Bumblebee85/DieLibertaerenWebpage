@@ -46,7 +46,7 @@ export function Hero() {
               className="border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white"
               asChild
             >
-              <Link href="/programm">Thesenpapier v4</Link>
+              <Link href="/programm">Thesenpapier</Link>
             </Button>
           </div>
         </motion.div>

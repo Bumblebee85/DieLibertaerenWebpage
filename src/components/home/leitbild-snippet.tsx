@@ -42,7 +42,7 @@ export function LeitbildSnippet() {
           href="/programm"
           className="inline-flex items-center gap-2 font-semibold text-primary transition-colors hover:underline"
         >
-          Vollständiges Leitbild & Thesenpapier v4
+          Vollständiges Leitbild & Thesenpapier
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

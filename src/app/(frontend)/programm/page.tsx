@@ -26,7 +26,7 @@ export default function ProgrammPage() {
         description="Lasse auch du deinem Freiheitswillen Taten folgen und engagiere dich bei uns. Werde noch heute Mitglied!"
         primaryLabel="Werde Mitglied"
         primaryHref="/werde-mitglied"
-        secondaryLabel="Programm als PDF"
+        secondaryLabel="Thesenpapier als PDF"
         secondaryHref={thesenData.pdfUrl}
       />
     </>

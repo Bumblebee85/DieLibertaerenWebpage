@@ -7,9 +7,15 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { QuoteDisplay } from "@/lib/cms/quotes";
 
-function getRandomQuoteIndex(quoteCount: number): number {
+function getRandomQuoteIndex(quoteCount: number, exclude = -1): number {
   if (quoteCount === 0) return 0;
-  return Math.floor(Math.random() * quoteCount);
+  if (quoteCount === 1) return 0;
+
+  let next = Math.floor(Math.random() * quoteCount);
+  while (next === exclude) {
+    next = Math.floor(Math.random() * quoteCount);
+  }
+  return next;
 }
 
 type QuoteRotatorProps = {
@@ -19,22 +25,19 @@ type QuoteRotatorProps = {
 export function QuoteRotator({ quotes }: QuoteRotatorProps) {
   const [index, setIndex] = useState(() => getRandomQuoteIndex(quotes.length));
 
-  const goTo = useCallback(
-    (next: number) => {
-      if (quotes.length === 0) return;
-      setIndex((next + quotes.length) % quotes.length);
-    },
-    [quotes.length]
-  );
+  const goToRandom = useCallback(() => {
+    if (quotes.length <= 1) return;
+    setIndex((prev) => getRandomQuoteIndex(quotes.length, prev));
+  }, [quotes.length]);
 
-  const goPrev = useCallback(() => goTo(index - 1), [goTo, index]);
-  const goNext = useCallback(() => goTo(index + 1), [goTo, index]);
+  const goPrev = goToRandom;
+  const goNext = goToRandom;
 
   useEffect(() => {
     if (quotes.length === 0) return;
 
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % quotes.length);
+      setIndex((prev) => getRandomQuoteIndex(quotes.length, prev));
     }, 12000);
     return () => clearInterval(timer);
   }, [quotes.length]);
@@ -134,10 +137,6 @@ export function QuoteRotator({ quotes }: QuoteRotatorProps) {
           </div>
 
           <div className="mt-8 flex flex-col items-center gap-4">
-            <p className="text-sm font-medium text-muted-foreground" aria-live="polite">
-              Zitat {index + 1} von {quotes.length}
-            </p>
-
             <div className="flex items-center gap-3 md:hidden">
               <Button type="button" variant="outline" size="sm" onClick={goPrev}>
                 <ChevronLeft className="mr-1 h-4 w-4" />

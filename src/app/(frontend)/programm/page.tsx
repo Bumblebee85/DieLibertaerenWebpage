@@ -4,22 +4,25 @@ import { PageHeader } from "@/components/shared/page-header";
 import { Section } from "@/components/shared/section";
 import { CTASection } from "@/components/shared/cta-section";
 import { ThesenViewer } from "@/components/programm/thesen-viewer";
-import thesenData from "@/data/thesen-v4.json";
+import { getProgramContent } from "@/lib/cms/program";
 import { seoPages } from "@/data/seo-pages";
 import { createPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createPageMetadata(seoPages.programm);
+export const dynamic = "force-dynamic";
 
-export default function ProgrammPage() {
+export default async function ProgrammPage() {
+  const program = await getProgramContent();
+
   return (
     <>
       <Breadcrumbs items={[{ label: "Programm" }]} />
       <PageHeader
-        title={thesenData.title}
-        subtitle={`${thesenData.subtitle} – Leitbild, Grundthese, Erste Maßnahmen und alle Themen mit konkreten Maßnahmen.`}
+        title={program.title}
+        subtitle={`${program.subtitle} – Leitbild, Grundthese, Erste Maßnahmen und alle Themen mit konkreten Maßnahmen.`}
       />
       <Section>
-        <ThesenViewer />
+        <ThesenViewer program={program} />
       </Section>
       <CTASection
         title="Wahre Freiheit braucht mutige Kämpfer!"
@@ -27,7 +30,7 @@ export default function ProgrammPage() {
         primaryLabel="Werde Mitglied"
         primaryHref="/werde-mitglied"
         secondaryLabel="Thesenpapier als PDF"
-        secondaryHref={thesenData.pdfUrl}
+        secondaryHref={program.pdfUrl}
       />
     </>
   );

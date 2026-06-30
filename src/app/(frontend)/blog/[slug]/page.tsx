@@ -7,7 +7,8 @@ import { PageHeader } from "@/components/shared/page-header";
 import { Section } from "@/components/shared/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import blogPosts from "@/data/blog-posts.json";
+import { getBlogPostBySlug, getPublishedBlogPosts } from "@/lib/cms/blog";
+import { richTextToHtml } from "@/lib/cms/rich-text";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { formatDateDE } from "@/lib/utils";
 
@@ -15,21 +16,24 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateStaticParams() {
-  return blogPosts.posts.map((post) => ({ slug: post.slug }));
+  const posts = await getPublishedBlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.posts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
   if (!post) return { title: "Artikel nicht gefunden" };
 
   return createPageMetadata({
     title: post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
-    keywords: [...post.tags, "Libertarismus", "DIE LIBERTÄREN"],
-    ogImage: post.image,
+    keywords: [...post.tags, post.category.name, "Libertarismus", "DIE LIBERTÄREN"],
+    ogImage: post.imageUrl,
     ogImageAlt: post.title,
     type: "article",
     publishedTime: post.date,
@@ -38,8 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = blogPosts.posts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
   if (!post) notFound();
+
+  const contentHtml = richTextToHtml(post.content, post.contentHtml || post.excerpt);
 
   return (
     <>
@@ -48,7 +54,7 @@ export default async function BlogPostPage({ params }: Props) {
         description={post.excerpt}
         path={`/blog/${post.slug}`}
         datePublished={post.date}
-        image={post.image}
+        image={post.imageUrl}
       />
       <Breadcrumbs
         items={[
@@ -63,28 +69,17 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="text-sm text-muted-foreground">
               {formatDateDE(post.date)} · {post.author}
             </span>
+            <Badge variant="muted">{post.category.name}</Badge>
             {post.tags.map((tag) => (
-              <Badge key={tag} variant="muted">
+              <Badge key={tag} variant="outline">
                 {tag}
               </Badge>
             ))}
           </div>
-          <div className="prose prose-lg max-w-none space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>{post.excerpt}</p>
-            <p>
-              Dieser Artikel wird in Kürze mit dem vollständigen Inhalt aus dem
-              bestehenden Blog übernommen. Bis dahin findest du verwandte Themen
-              in unserem{" "}
-              <Link href="/programm" className="text-primary hover:underline">
-                libertären Programm
-              </Link>{" "}
-              und bei den{" "}
-              <Link href="/unsere-prinzipien" className="text-primary hover:underline">
-                Prinzipien
-              </Link>
-              .
-            </p>
-          </div>
+          <div
+            className="prose prose-lg max-w-none space-y-6 text-lg leading-relaxed text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
           <Button variant="outline" className="mt-12" asChild>
             <Link href="/blog">← Zurück zum Blog</Link>
           </Button>

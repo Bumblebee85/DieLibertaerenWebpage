@@ -1,16 +1,21 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import weeklyEssays from "@/data/weekly-essays.json";
-import { getWeekNumber } from "@/lib/utils";
+import { richTextToHtml } from "@/lib/cms/rich-text";
+import type { WeeklyEssayDisplay } from "@/lib/cms/weekly-essays";
 
-export function WeeklyEssay() {
-  const weekNumber = getWeekNumber();
-  const essay =
-    weeklyEssays.essays.find((e) => e.week === weekNumber) ??
-    weeklyEssays.essays[(weekNumber - 1) % weeklyEssays.essays.length];
+type WeeklyEssayProps = {
+  essay: WeeklyEssayDisplay;
+  weekNumber: number;
+};
+
+export function WeeklyEssay({ essay, weekNumber }: WeeklyEssayProps) {
+  const contentHtml = richTextToHtml(essay.content, essay.contentPlain);
 
   return (
-    <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
+    <Card
+      id="aufsatz-der-woche"
+      className="scroll-mt-28 border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent"
+    >
       <CardHeader>
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <Badge>Libertärer Aufsatz der Woche</Badge>
@@ -21,7 +26,10 @@ export function WeeklyEssay() {
       </CardHeader>
       <CardContent>
         <p className="mb-4 text-lg font-medium text-foreground">{essay.excerpt}</p>
-        <p className="leading-relaxed text-muted-foreground">{essay.content}</p>
+        <div
+          className="prose prose-lg max-w-none leading-relaxed text-muted-foreground"
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
         <div className="mt-6 flex flex-wrap gap-2">
           {essay.tags.map((tag) => (
             <Badge key={tag} variant="outline">

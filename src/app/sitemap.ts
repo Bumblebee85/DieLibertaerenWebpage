@@ -5,7 +5,7 @@ import {
   toAbsoluteSitemapUrl,
 } from "@/lib/seo/sitemap-routes";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries = staticSitemapRoutes.map((route) => ({
     url: toAbsoluteSitemapUrl(route.path),
     lastModified: route.lastModified ?? new Date(),
@@ -13,7 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route.priority,
   }));
 
-  const blogEntries = getBlogSitemapEntries().map((route) => ({
+  const blogRoutes = await getBlogSitemapEntries();
+  const blogEntries = blogRoutes.map((route) => ({
     url: toAbsoluteSitemapUrl(route.path),
     lastModified: route.lastModified ?? new Date(),
     changeFrequency: route.changeFrequency,

@@ -12,14 +12,18 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import thesenData from "@/data/thesen-v4.json";
+import type { ProgramDisplay } from "@/lib/cms/program";
 
-export function ThesenViewer() {
+type ThesenViewerProps = {
+  program: ProgramDisplay;
+};
+
+export function ThesenViewer({ program }: ThesenViewerProps) {
   const [search, setSearch] = useState("");
   const [activePillar, setActivePillar] = useState("all");
 
   const filteredTopics = useMemo(() => {
-    return thesenData.topics
+    return program.topics
       .filter((cat) => activePillar === "all" || cat.pillar === activePillar)
       .map((cat) => ({
         ...cat,
@@ -32,7 +36,13 @@ export function ThesenViewer() {
         ),
       }))
       .filter((cat) => cat.items.length > 0);
-  }, [search, activePillar]);
+  }, [search, activePillar, program.topics]);
+
+  const leitbildItems = [
+    program.leitbild.vision,
+    program.leitbild.mission,
+    program.leitbild.values,
+  ];
 
   return (
     <div className="space-y-16">
@@ -48,7 +58,7 @@ export function ThesenViewer() {
           />
         </div>
         <Button size="lg" asChild>
-          <a href={thesenData.pdfUrl} download="Thesenpapier.pdf">
+          <a href={program.pdfUrl} download="Thesenpapier.pdf">
             <Download className="mr-2 h-4 w-4" />
             Thesenpapier als PDF
           </a>
@@ -65,7 +75,7 @@ export function ThesenViewer() {
 
         <TabsContent value="leitbild">
           <div className="grid gap-8 md:grid-cols-3">
-            {Object.values(thesenData.leitbild).map((item) => (
+            {leitbildItems.map((item) => (
               <Card key={item.title} className="border-none bg-muted/50">
                 <CardHeader>
                   <Badge className="w-fit">{item.title}</Badge>
@@ -86,12 +96,14 @@ export function ThesenViewer() {
         <TabsContent value="grundthese">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">{thesenData.grundthese.title}</CardTitle>
+              <CardTitle className="text-2xl">
+                {program.grundthese.title}
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-8">
-              <p className="text-lg leading-relaxed">{thesenData.grundthese.text}</p>
+              <p className="text-lg leading-relaxed">{program.grundthese.text}</p>
               <div className="grid gap-6 md:grid-cols-3">
-                {thesenData.grundthese.pillars.map((pillar) => (
+                {program.grundthese.pillars.map((pillar) => (
                   <div
                     key={pillar.id}
                     className="rounded-2xl border border-border bg-muted/30 p-6"
@@ -117,7 +129,7 @@ export function ThesenViewer() {
             </CardHeader>
             <CardContent>
               <ol className="space-y-4">
-                {thesenData.ersteMassnahmen.map((massnahme, i) => (
+                {program.ersteMassnahmen.map((massnahme, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-secondary">
                       {i + 1}
@@ -140,6 +152,7 @@ export function ThesenViewer() {
             ].map((pillar) => (
               <button
                 key={pillar.id}
+                type="button"
                 onClick={() => setActivePillar(pillar.id)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                   activePillar === pillar.id
@@ -155,7 +168,7 @@ export function ThesenViewer() {
           <Accordion type="multiple" className="space-y-4">
             {filteredTopics.map((category) => (
               <AccordionItem
-                key={category.category}
+                key={category.id}
                 value={category.category}
                 className="rounded-2xl border border-border bg-white px-6"
               >

@@ -17,6 +17,7 @@ import { QuizResults } from "./quiz-results";
 type QuizPhase = "intro" | "quiz" | "results";
 
 interface SchnellCheckQuizProps {
+  thesen: These[];
   onShowAllThesen: () => void;
 }
 
@@ -42,7 +43,7 @@ const answerOptions: Array<{
   },
 ];
 
-export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
+export function SchnellCheckQuiz({ thesen, onShowAllThesen }: SchnellCheckQuizProps) {
   const [phase, setPhase] = useState<QuizPhase>("intro");
   const [quizThesen, setQuizThesen] = useState<These[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,12 +58,12 @@ export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
     : 0;
 
   const startQuiz = useCallback(() => {
-    setQuizThesen(shuffleThesen(QUIZ_QUESTION_COUNT));
+    setQuizThesen(shuffleThesen(thesen, QUIZ_QUESTION_COUNT));
     setCurrentIndex(0);
     setAnswers({});
     setResult(null);
     setPhase("quiz");
-  }, []);
+  }, [thesen]);
 
   const selectAnswer = (answer: UserAnswer) => {
     if (!currentThese) return;
@@ -87,7 +88,7 @@ export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
     setPhase("results");
   };
 
-  const allAnswered = quizThesen.every((these) => answers[these.id]);
+  const allAnswered = quizThesen.every((item) => answers[item.id]);
 
   if (phase === "intro") {
     return (
@@ -114,7 +115,7 @@ export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
               <p>Auswertung</p>
             </div>
           </div>
-          <Button size="lg" onClick={startQuiz}>
+          <Button size="lg" onClick={startQuiz} disabled={thesen.length === 0}>
             Jetzt Quiz starten
           </Button>
         </CardContent>
@@ -167,6 +168,7 @@ export function SchnellCheckQuiz({ onShowAllThesen }: SchnellCheckQuizProps) {
             {answerOptions.map((option) => (
               <button
                 key={option.value}
+                type="button"
                 onClick={() => selectAnswer(option.value)}
                 className={`rounded-2xl border-2 px-4 py-4 text-sm font-semibold transition-all hover:scale-[1.02] ${
                   currentAnswer === option.value

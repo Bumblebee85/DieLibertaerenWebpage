@@ -1,19 +1,24 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { PageHeader } from "@/components/shared/page-header";
 import { Section, SectionHeader } from "@/components/shared/section";
+import { BlogPostGrid } from "@/components/blog/blog-post-grid";
 import { WeeklyEssay } from "@/components/blog/weekly-essay";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import blogPosts from "@/data/blog-posts.json";
+import { getBlogCategories, getPublishedBlogPosts } from "@/lib/cms/blog";
+import { getWeeklyEssayForCurrentWeek } from "@/lib/cms/weekly-essays";
 import { seoPages } from "@/data/seo-pages";
 import { createPageMetadata } from "@/lib/seo/metadata";
-import { formatDateDE } from "@/lib/utils";
 
 export const metadata: Metadata = createPageMetadata(seoPages.blog);
+export const dynamic = "force-dynamic";
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const [posts, categories, weeklyEssay] = await Promise.all([
+    getPublishedBlogPosts(),
+    getBlogCategories(),
+    getWeeklyEssayForCurrentWeek(),
+  ]);
+
   return (
     <>
       <Breadcrumbs items={[{ label: "Blog" }]} />
@@ -23,43 +28,15 @@ export default function BlogPage() {
       />
 
       <Section>
-        <WeeklyEssay />
+        <WeeklyEssay
+          essay={weeklyEssay.essay}
+          weekNumber={weeklyEssay.weekNumber}
+        />
       </Section>
 
       <Section className="bg-muted/30">
         <SectionHeader title="Alle Artikel" />
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.posts.map((post) => (
-            <Card key={post.slug} className="group">
-              <CardHeader>
-                <div className="mb-2 flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <Badge key={tag} variant="muted">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <CardTitle className="group-hover:text-primary transition-colors">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                </CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  {formatDateDE(post.date)} · {post.author}
-                </p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {post.excerpt}
-                </p>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
-                >
-                  Artikel lesen →
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <BlogPostGrid posts={posts} categories={categories} />
       </Section>
     </>
   );

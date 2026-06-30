@@ -1,4 +1,5 @@
 import blogPosts from "@/data/blog-posts.json";
+import { getPublishedBlogPosts } from "@/lib/cms/blog";
 import { getSiteUrl } from "@/lib/seo/site-url";
 
 export type SitemapEntry = {
@@ -26,8 +27,14 @@ export const staticSitemapRoutes: SitemapEntry[] = [
   { path: "/datenschutz", changeFrequency: "yearly", priority: 0.3 },
 ];
 
-export function getBlogSitemapEntries(): SitemapEntry[] {
-  return blogPosts.posts.map((post) => ({
+export async function getBlogSitemapEntries(): Promise<SitemapEntry[]> {
+  const posts = await getPublishedBlogPosts();
+  const source = posts.length > 0 ? posts : blogPosts.posts.map((post) => ({
+    slug: post.slug,
+    date: post.date,
+  }));
+
+  return source.map((post) => ({
     path: `/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,

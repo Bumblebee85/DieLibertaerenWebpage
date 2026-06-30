@@ -18,7 +18,8 @@
     "seed:impulses": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-impulses.ts",
     "seed:content": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-content.ts",
     "seed:remote": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-remote.ts",
-    "seed:cms": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-cms.ts"
+    "seed:cms": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-cms.ts",
+    "seed:editorial": "cross-env NODE_OPTIONS=--no-deprecation tsx src/scripts/seed-editorial.ts"
   },
   "engines": {
     "node": ">=20"

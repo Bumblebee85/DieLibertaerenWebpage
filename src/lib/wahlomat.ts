@@ -1,5 +1,3 @@
-import wahlomatData from "@/data/wahlomat-thesen.json";
-
 export type PartyPosition = "Ja" | "Nein" | "Neutral";
 export type UserAnswer = "zustimmen" | "neutral" | "ablehnen";
 
@@ -33,13 +31,14 @@ export interface QuizResult {
 
 export const QUIZ_QUESTION_COUNT = 20;
 
-export const thesen: These[] = wahlomatData.thesen as These[];
+export function getCategories(thesen: These[]): string[] {
+  return Array.from(new Set(thesen.map((t) => t.category))).sort();
+}
 
-export const categories = Array.from(
-  new Set(thesen.map((t) => t.category))
-).sort();
-
-export function shuffleThesen(count: number = QUIZ_QUESTION_COUNT): These[] {
+export function shuffleThesen(
+  thesen: These[],
+  count: number = QUIZ_QUESTION_COUNT
+): These[] {
   const pool = [...thesen];
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

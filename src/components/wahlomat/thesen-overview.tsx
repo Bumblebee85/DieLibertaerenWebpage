@@ -10,11 +10,10 @@ import {
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import {
-  categories,
   getPositionColor,
   getPositionLabel,
-  thesen,
   type PartyPosition,
+  type These,
 } from "@/lib/wahlomat";
 
 const positionFilters: Array<PartyPosition | "all"> = [
@@ -24,7 +23,12 @@ const positionFilters: Array<PartyPosition | "all"> = [
   "Nein",
 ];
 
-export function ThesenOverview() {
+type ThesenOverviewProps = {
+  thesen: These[];
+  categories: string[];
+};
+
+export function ThesenOverview({ thesen, categories }: ThesenOverviewProps) {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [activePosition, setActivePosition] = useState<PartyPosition | "all">(
@@ -53,7 +57,7 @@ export function ThesenOverview() {
         }),
       }))
       .filter((group) => group.items.length > 0);
-  }, [search, activeCategory, activePosition]);
+  }, [search, activeCategory, activePosition, categories, thesen]);
 
   const totalVisible = filteredByCategory.reduce(
     (sum, group) => sum + group.items.length,
@@ -76,6 +80,7 @@ export function ThesenOverview() {
       <div className="space-y-4">
         <div className="flex flex-wrap gap-2">
           <button
+            type="button"
             onClick={() => setActiveCategory("all")}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
               activeCategory === "all"
@@ -88,6 +93,7 @@ export function ThesenOverview() {
           {categories.map((category) => (
             <button
               key={category}
+              type="button"
               onClick={() => setActiveCategory(category)}
               className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                 activeCategory === category
@@ -104,6 +110,7 @@ export function ThesenOverview() {
           {positionFilters.map((position) => (
             <button
               key={position}
+              type="button"
               onClick={() => setActivePosition(position)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
                 activePosition === position

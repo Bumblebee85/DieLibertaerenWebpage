@@ -5,13 +5,19 @@ import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
 
+import { BlogCategories } from "./collections/BlogCategories";
+import { BlogPosts } from "./collections/BlogPosts";
 import { DailyImpulses } from "./collections/DailyImpulses";
 import { Documents } from "./collections/Documents";
 import { Events } from "./collections/Events";
 import { Highlights } from "./collections/Highlights";
 import { Media } from "./collections/Media";
+import { ProgramTopicCategories } from "./collections/ProgramTopicCategories";
 import { Quotes } from "./collections/Quotes";
 import { Users } from "./collections/Users";
+import { WahlomatElections } from "./collections/WahlomatElections";
+import { WeeklyEssays } from "./collections/WeeklyEssays";
+import { Program } from "./globals/Program";
 import {
   getDatabaseUrl,
   getPayloadSecret,
@@ -43,7 +49,13 @@ export default buildConfig({
     Events,
     DailyImpulses,
     Documents,
+    ProgramTopicCategories,
+    WahlomatElections,
+    BlogCategories,
+    BlogPosts,
+    WeeklyEssays,
   ],
+  globals: [Program],
   editor: lexicalEditor(),
   secret: getPayloadSecret(),
   serverURL,

@@ -74,6 +74,11 @@ export interface Config {
     events: Event;
     'daily-impulses': DailyImpulse;
     documents: Document;
+    'program-topic-categories': ProgramTopicCategory;
+    'wahlomat-elections': WahlomatElection;
+    'blog-categories': BlogCategory;
+    'blog-posts': BlogPost;
+    'weekly-essays': WeeklyEssay;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -88,6 +93,11 @@ export interface Config {
     events: EventsSelect<false> | EventsSelect<true>;
     'daily-impulses': DailyImpulsesSelect<false> | DailyImpulsesSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
+    'program-topic-categories': ProgramTopicCategoriesSelect<false> | ProgramTopicCategoriesSelect<true>;
+    'wahlomat-elections': WahlomatElectionsSelect<false> | WahlomatElectionsSelect<true>;
+    'blog-categories': BlogCategoriesSelect<false> | BlogCategoriesSelect<true>;
+    'blog-posts': BlogPostsSelect<false> | BlogPostsSelect<true>;
+    'weekly-essays': WeeklyEssaysSelect<false> | WeeklyEssaysSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -97,8 +107,12 @@ export interface Config {
     defaultIDType: string;
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | 'de' | 'de'[];
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    program: Program;
+  };
+  globalsSelect: {
+    program: ProgramSelect<false> | ProgramSelect<true>;
+  };
   locale: 'de';
   widgets: {
     collections: CollectionsWidget;
@@ -323,6 +337,154 @@ export interface Document {
   createdAt: string;
 }
 /**
+ * Kategorien mit konkreten Themen und Maßnahmen für das Thesenpapier.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program-topic-categories".
+ */
+export interface ProgramTopicCategory {
+  id: string;
+  category: string;
+  pillar: 'individuell' | 'vertraglich' | 'gesellschaftlich';
+  /**
+   * Niedrigere Zahlen erscheinen zuerst.
+   */
+  sortOrder?: number | null;
+  items?:
+    | {
+        topic: string;
+        massnahme: string;
+        id?: string | null;
+      }[]
+    | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Wahl-O-Mat-Thesen pro Wahl (z. B. Sachsen-Anhalt 2026). Eine Wahl als Standard markieren.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "wahlomat-elections".
+ */
+export interface WahlomatElection {
+  id: string;
+  title: string;
+  /**
+   * URL-Kennung, z. B. sachsen-anhalt-2026
+   */
+  slug?: string | null;
+  subtitle?: string | null;
+  region: string;
+  year: number;
+  source?: string | null;
+  /**
+   * Wird auf der Wahl-O-Mat-Seite vorausgewählt.
+   */
+  isDefault?: boolean | null;
+  thesen?:
+    | {
+        theseNumber: number;
+        theseText: string;
+        position: 'Ja' | 'Nein' | 'Neutral';
+        begruendung: string;
+        category: string;
+        id?: string | null;
+      }[]
+    | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-categories".
+ */
+export interface BlogCategory {
+  id: string;
+  name: string;
+  slug?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Vollständige Blog-Artikel mit Rich Text.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-posts".
+ */
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug?: string | null;
+  excerpt: string;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  date: string;
+  author?: string | null;
+  featuredImage?: (string | null) | Media;
+  category: string | BlogCategory;
+  tags?:
+    | {
+        tag: string;
+        id?: string | null;
+      }[]
+    | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Libertärer Aufsatz der Woche – wird nach Kalenderwoche auf Blog und Startseite angezeigt.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "weekly-essays".
+ */
+export interface WeeklyEssay {
+  id: string;
+  week: number;
+  title: string;
+  author?: string | null;
+  excerpt: string;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  tags?:
+    | {
+        tag: string;
+        id?: string | null;
+      }[]
+    | null;
+  published?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
@@ -373,6 +535,26 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'documents';
         value: string | Document;
+      } | null)
+    | ({
+        relationTo: 'program-topic-categories';
+        value: string | ProgramTopicCategory;
+      } | null)
+    | ({
+        relationTo: 'wahlomat-elections';
+        value: string | WahlomatElection;
+      } | null)
+    | ({
+        relationTo: 'blog-categories';
+        value: string | BlogCategory;
+      } | null)
+    | ({
+        relationTo: 'blog-posts';
+        value: string | BlogPost;
+      } | null)
+    | ({
+        relationTo: 'weekly-essays';
+        value: string | WeeklyEssay;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -536,6 +718,104 @@ export interface DocumentsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program-topic-categories_select".
+ */
+export interface ProgramTopicCategoriesSelect<T extends boolean = true> {
+  category?: T;
+  pillar?: T;
+  sortOrder?: T;
+  items?:
+    | T
+    | {
+        topic?: T;
+        massnahme?: T;
+        id?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "wahlomat-elections_select".
+ */
+export interface WahlomatElectionsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  subtitle?: T;
+  region?: T;
+  year?: T;
+  source?: T;
+  isDefault?: T;
+  thesen?:
+    | T
+    | {
+        theseNumber?: T;
+        theseText?: T;
+        position?: T;
+        begruendung?: T;
+        category?: T;
+        id?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-categories_select".
+ */
+export interface BlogCategoriesSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog-posts_select".
+ */
+export interface BlogPostsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  excerpt?: T;
+  content?: T;
+  date?: T;
+  author?: T;
+  featuredImage?: T;
+  category?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "weekly-essays_select".
+ */
+export interface WeeklyEssaysSelect<T extends boolean = true> {
+  week?: T;
+  title?: T;
+  author?: T;
+  excerpt?: T;
+  content?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  published?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -573,6 +853,115 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * Titel, Leitbild, Grundthese und erste Maßnahmen des Thesenpapiers.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program".
+ */
+export interface Program {
+  id: string;
+  title: string;
+  subtitle?: string | null;
+  /**
+   * Optional: PDF zum Download auf der Programm-Seite.
+   */
+  pdfFile?: (string | null) | Media;
+  leitbild: {
+    vision: {
+      title: string;
+      headline: string;
+      text: string;
+    };
+    mission: {
+      title: string;
+      headline: string;
+      text: string;
+    };
+    values: {
+      title: string;
+      headline: string;
+      text: string;
+    };
+  };
+  grundthese: {
+    title?: string | null;
+    text: string;
+    pillars?:
+      | {
+          id: 'individuell' | 'vertraglich' | 'gesellschaftlich';
+          title: string;
+          subtitle: string;
+          description: string;
+        }[]
+      | null;
+  };
+  ersteMassnahmen?:
+    | {
+        text: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program_select".
+ */
+export interface ProgramSelect<T extends boolean = true> {
+  title?: T;
+  subtitle?: T;
+  pdfFile?: T;
+  leitbild?:
+    | T
+    | {
+        vision?:
+          | T
+          | {
+              title?: T;
+              headline?: T;
+              text?: T;
+            };
+        mission?:
+          | T
+          | {
+              title?: T;
+              headline?: T;
+              text?: T;
+            };
+        values?:
+          | T
+          | {
+              title?: T;
+              headline?: T;
+              text?: T;
+            };
+      };
+  grundthese?:
+    | T
+    | {
+        title?: T;
+        text?: T;
+        pillars?:
+          | T
+          | {
+              id?: T;
+              title?: T;
+              subtitle?: T;
+              description?: T;
+            };
+      };
+  ersteMassnahmen?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

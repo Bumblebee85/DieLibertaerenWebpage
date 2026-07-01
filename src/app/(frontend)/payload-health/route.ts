@@ -50,20 +50,21 @@ export async function GET() {
 
     const payload = await getPayload({ config });
 
-    const eventsNeedBackfill = await payload.find({
-      collection: "events",
-      where: {
-        or: [
-          { slug: { exists: false } },
-          { venue: { exists: false } },
-          { startTime: { exists: false } },
-        ],
-      },
-      limit: 1,
-    });
+    const allEvents = await payload.find({ collection: "events", limit: 100, depth: 0 });
+    const eventsNeedBackfill = allEvents.docs.some(
+      (doc) =>
+        !doc.slug ||
+        !doc.venue ||
+        !doc.startTime ||
+        !doc.categories?.length ||
+        (doc.recurrence?.enabled !== true &&
+          ["Libertärer Stammtisch Hamburg", "Libertärer Stammtisch Göppingen/Esslingen", "Libertärer Stammtisch Frankfurt am Main"].includes(
+            doc.title
+          ))
+    );
 
     let eventsBackfilled = 0;
-    if (eventsNeedBackfill.totalDocs > 0) {
+    if (eventsNeedBackfill) {
       const cmsStats = await runCmsSeed(payload);
       eventsBackfilled = cmsStats.eventsUpdated + cmsStats.events;
     }

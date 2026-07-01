@@ -281,11 +281,11 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
     if (existing.docs.length > 0) {
       const doc = existing.docs[0];
       const needsUpdate =
-        !doc.slug ||
+        !doc.slug?.trim() ||
         !doc.venue ||
-        !doc.categories?.length ||
-        !doc.startTime ||
-        (seed.recurring && !doc.recurrence?.enabled);
+        !(doc.categories as unknown[] | undefined)?.length ||
+        !doc.startTime?.trim() ||
+        (seed.recurring && doc.recurrence?.enabled !== true);
 
       if (needsUpdate) {
         await payload.update({

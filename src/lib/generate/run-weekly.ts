@@ -1,8 +1,9 @@
 import type { Payload } from "payload";
+import { getWeeklyEssaySystemPrompt } from "@/lib/cms/prompt-templates";
 import { plainTextToLexical } from "@/lib/cms/rich-text";
 import { slugify } from "@/lib/cms/slugify";
 import { callGrokJson } from "@/lib/grok/client";
-import { PARTY_ACCOUNT, PARTY_WEEKLY_SYSTEM_PROMPT } from "@/lib/grok/party";
+import { PARTY_ACCOUNT } from "@/lib/grok/party";
 import { getWeekNumber } from "@/lib/utils";
 
 type WeeklyPostResult = {
@@ -81,23 +82,25 @@ export async function runGenerateWeekly(payload: Payload): Promise<RunWeeklyResu
     };
   }
 
+  const systemPrompt = await getWeeklyEssaySystemPrompt(payload);
+
   const result = await callGrokJson<WeeklyPostResult>({
     messages: [
       {
         role: "system",
-        content: PARTY_WEEKLY_SYSTEM_PROMPT,
+        content: systemPrompt,
       },
       {
         role: "user",
         content:
-          `Schreibe einen vollständigen Blog-Artikel für Kalenderwoche ${weekNumber}. ` +
-          "Thema: libertärer Gedanke mit Bezug zu Freiheit, Eigentum, Minimalstaat oder freiem Markt. " +
-          "800–1200 Wörter Fließtext in content (Absätze mit \\n\\n). " +
+          `Schreibe den Libertären Aufsatz der Woche für Kalenderwoche ${weekNumber}. ` +
+          "Wähle ein aktuelles oder zeitloses Thema aus Politik, Wirtschaft oder Gesellschaft und ordne es libertär ein (NAP, Eigentum, Minimalstaat, freier Markt). " +
+          "Ca. 500 Wörter natürlicher Fließtext in content (Absätze mit \\n\\n). " +
           'JSON: {"title":"...","excerpt":"...","content":"...","tags":["..."],"category":"Grundlagen|Politik|Wirtschaft|Gesellschaft"}. ' +
-          "Keine erfundenen Zitate von realen Personen.",
+          "Titel knackig, excerpt 1–2 Sätze. Keine erfundenen Zitate von realen Personen.",
       },
     ],
-    temperature: 0.6,
+    temperature: 0.7,
   });
 
   const lexicalContent = plainTextToLexical(result.content);

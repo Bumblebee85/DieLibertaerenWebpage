@@ -40,13 +40,12 @@ export function Hero({ content }: HeroProps) {
           ) : null}
           <h1 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-6xl lg:text-7xl">
             {headline}
-            {headlineAccent ? (
-              <>
-                {" – "}
-                <span className="text-primary">{headlineAccent}</span>
-              </>
-            ) : null}
           </h1>
+          {headlineAccent ? (
+            <p className="mt-3 font-display text-base font-semibold leading-snug tracking-tight text-primary sm:text-lg md:mt-4 md:text-xl md:whitespace-nowrap lg:text-2xl">
+              {headlineAccent}
+            </p>
+          ) : null}
           {tagline ? (
             <p className="mt-4 font-display text-2xl font-medium text-white/80 md:text-3xl">
               {tagline}

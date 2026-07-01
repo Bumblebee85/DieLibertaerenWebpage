@@ -9,7 +9,10 @@ import weeklyEssaysData from "@/data/weekly-essays.json";
 import freiheitsbewegungData from "@/data/freiheitsbewegung.json";
 import { PROMPT_TEMPLATE_KEYS } from "@/collections/PromptTemplates";
 import { plainParagraphsToLexical, plainTextToLexical } from "@/lib/cms/rich-text";
-import { PARTY_DAILY_SYSTEM_PROMPT } from "@/lib/grok/party";
+import {
+  PARTY_DAILY_SYSTEM_PROMPT,
+  PARTY_WEEKLY_SYSTEM_PROMPT,
+} from "@/lib/grok/party";
 import { slugify } from "@/lib/cms/slugify";
 
 /**
@@ -327,6 +330,28 @@ async function seed() {
     console.log("✓ Prompt-Vorlage „Tagesimpulse – System-Prompt“ angelegt");
   } else {
     console.log("– Prompt-Vorlage für Tagesimpulse existiert bereits");
+  }
+
+  const existingWeeklyPrompt = await payload.find({
+    collection: "prompt-templates",
+    where: { slug: { equals: PROMPT_TEMPLATE_KEYS.WEEKLY_ESSAY_SYSTEM } },
+    limit: 1,
+  });
+  if (existingWeeklyPrompt.docs.length === 0) {
+    await payload.create({
+      collection: "prompt-templates",
+      data: {
+        name: "Wochenaufsatz – System-Prompt",
+        slug: PROMPT_TEMPLATE_KEYS.WEEKLY_ESSAY_SYSTEM,
+        systemPrompt: PARTY_WEEKLY_SYSTEM_PROMPT,
+        description:
+          "System-Prompt für npm run generate:weekly und /generate-weekly. Stil: Mathias Hummel, ca. 500 Wörter, JSON-Ausgabe beibehalten.",
+        active: true,
+      },
+    });
+    console.log("✓ Prompt-Vorlage „Wochenaufsatz – System-Prompt“ angelegt");
+  } else {
+    console.log("– Prompt-Vorlage für Wochenaufsatz existiert bereits");
   }
 
   console.log("\nEditorial-Seed abgeschlossen. Admin-Panel: /admin");

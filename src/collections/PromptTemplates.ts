@@ -2,6 +2,7 @@ import type { CollectionConfig } from "payload";
 
 export const PROMPT_TEMPLATE_KEYS = {
   DAILY_IMPULSES_SYSTEM: "daily-impulses-system",
+  WEEKLY_ESSAY_SYSTEM: "weekly-essay-system",
 } as const;
 
 export type PromptTemplateKey =
@@ -21,7 +22,7 @@ export const PromptTemplates: CollectionConfig = {
     defaultColumns: ["name", "slug", "active"],
     group: "Automatisierung",
     description:
-      "System-Prompts für Grok-Skripte (z. B. generate:daily). Slug nicht ändern, sobald verknüpft.",
+      "System-Prompts für Grok-Skripte (generate:daily, generate:weekly). Slug nicht ändern, sobald verknüpft.",
   },
   access: {
     read: () => true,
@@ -45,6 +46,10 @@ export const PromptTemplates: CollectionConfig = {
           label: "Tagesimpulse – System-Prompt",
           value: PROMPT_TEMPLATE_KEYS.DAILY_IMPULSES_SYSTEM,
         },
+        {
+          label: "Wochenaufsatz – System-Prompt",
+          value: PROMPT_TEMPLATE_KEYS.WEEKLY_ESSAY_SYSTEM,
+        },
       ],
       defaultValue: PROMPT_TEMPLATE_KEYS.DAILY_IMPULSES_SYSTEM,
       admin: {
@@ -59,7 +64,7 @@ export const PromptTemplates: CollectionConfig = {
       required: true,
       admin: {
         description:
-          "Anweisungen an Grok (Rolle, Ton, Sprache, JSON-Ausgabe). Wird von generate:daily als system-Nachricht verwendet.",
+          "Anweisungen an Grok (Rolle, Ton, Sprache, JSON-Ausgabe). Wird von generate:daily bzw. generate:weekly als system-Nachricht verwendet.",
       },
     },
     {

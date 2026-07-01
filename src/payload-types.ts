@@ -527,7 +527,7 @@ export interface BeiratMember {
   createdAt: string;
 }
 /**
- * System-Prompts für Grok-Skripte (z. B. generate:daily). Slug nicht ändern, sobald verknüpft.
+ * System-Prompts für Grok-Skripte (generate:daily, generate:weekly). Slug nicht ändern, sobald verknüpft.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "prompt-templates".
@@ -538,9 +538,9 @@ export interface PromptTemplate {
   /**
    * Technischer Schlüssel. Nur ein Eintrag pro Schlüssel. Nicht ändern, wenn das Skript bereits darauf verweist.
    */
-  slug: 'daily-impulses-system';
+  slug: 'daily-impulses-system' | 'weekly-essay-system';
   /**
-   * Anweisungen an Grok (Rolle, Ton, Sprache, JSON-Ausgabe). Wird von generate:daily als system-Nachricht verwendet.
+   * Anweisungen an Grok (Rolle, Ton, Sprache, JSON-Ausgabe). Wird von generate:daily bzw. generate:weekly als system-Nachricht verwendet.
    */
   systemPrompt: string;
   /**

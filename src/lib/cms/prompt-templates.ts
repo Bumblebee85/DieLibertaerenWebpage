@@ -3,7 +3,10 @@ import {
   PROMPT_TEMPLATE_KEYS,
   type PromptTemplateKey,
 } from "@/collections/PromptTemplates";
-import { PARTY_DAILY_SYSTEM_PROMPT } from "@/lib/grok/party";
+import {
+  PARTY_DAILY_SYSTEM_PROMPT,
+  PARTY_WEEKLY_SYSTEM_PROMPT,
+} from "@/lib/grok/party";
 
 export { PROMPT_TEMPLATE_KEYS };
 
@@ -39,5 +42,15 @@ export async function getDailyImpulsesSystemPrompt(
     payload,
     PROMPT_TEMPLATE_KEYS.DAILY_IMPULSES_SYSTEM,
     PARTY_DAILY_SYSTEM_PROMPT
+  );
+}
+
+export async function getWeeklyEssaySystemPrompt(
+  payload: Payload
+): Promise<string> {
+  return getSystemPromptForTemplate(
+    payload,
+    PROMPT_TEMPLATE_KEYS.WEEKLY_ESSAY_SYSTEM,
+    PARTY_WEEKLY_SYSTEM_PROMPT
   );
 }

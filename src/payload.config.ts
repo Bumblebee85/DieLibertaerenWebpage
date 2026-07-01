@@ -118,38 +118,22 @@ export default buildConfig({
     if (process.env["AUTO_SEED_ON_INIT"] === "false") return;
 
     try {
-      const [needsEditorial, quotes, eventCategories, eventsNeedBackfill] =
-        await Promise.all([
-          needsEditorialSeed(payload),
-          payload.find({ collection: "quotes", limit: 1 }),
-          payload.find({ collection: "event-categories", limit: 1 }),
-          payload.find({
-            collection: "events",
-            where: {
-              or: [
-                { slug: { exists: false } },
-                { venue: { exists: false } },
-                { categories: { exists: false } },
-              ],
-            },
-            limit: 1,
-          }),
-        ]);
+      const [needsEditorial, quotes] = await Promise.all([
+        needsEditorialSeed(payload),
+        payload.find({ collection: "quotes", limit: 1 }),
+      ]);
 
-      const needsFullSeed =
-        needsEditorial || quotes.totalDocs === 0 || eventCategories.totalDocs === 0;
+      if (needsEditorial || quotes.totalDocs === 0) {
+        payload.logger.info("Auto-seeding editorial content (idempotent)…");
+        await runEditorialSeed(payload);
+        if (quotes.totalDocs === 0) await runSeedQuotes(payload);
 
-      if (!needsFullSeed && eventsNeedBackfill.totalDocs === 0) return;
+        const impulses = await payload.find({ collection: "daily-impulses", limit: 1 });
+        if (impulses.totalDocs === 0) await runSeedImpulses(payload);
+      }
 
-      payload.logger.info("Auto-seeding CMS content (idempotent)…");
-      if (needsFullSeed) await runEditorialSeed(payload);
       await runCmsSeed(payload);
-      if (quotes.totalDocs === 0) await runSeedQuotes(payload);
-
-      const impulses = await payload.find({ collection: "daily-impulses", limit: 1 });
-      if (impulses.totalDocs === 0) await runSeedImpulses(payload);
-
-      payload.logger.info("Auto-seed completed.");
+      payload.logger.info("CMS seed / event backfill completed.");
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       payload.logger.error(`Auto-seed failed: ${message}`);

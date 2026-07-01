@@ -9,7 +9,7 @@ export const Hero: GlobalConfig = {
   admin: {
     group: "Startseite",
     description:
-      "Überschrift, Tagline und Fließtext im oberen Bereich der Startseite.",
+      "Überschrift, goldener Akzent und Fließtext im oberen Bereich der Startseite.",
   },
   access: {
     read: () => true,
@@ -31,18 +31,12 @@ export const Hero: GlobalConfig = {
     {
       name: "headlineAccent",
       type: "text",
-      label: "Akzent im Titel (gold hervorgehoben)",
+      label: "Gold-Akzent (unter dem Titel)",
       defaultValue: "Deutschlands konsequenteste libertäre Stimme",
       admin: {
         description:
-          "Ersetzt den früheren Untertitel „libertäre Partei für Freiheit“. Leer lassen, um nur den Haupttitel zu zeigen.",
+          "Einzige Unterzeile im Hero – gold hervorgehoben. Leer lassen, um nur den Haupttitel zu zeigen.",
       },
-    },
-    {
-      name: "tagline",
-      type: "text",
-      label: "Tagline",
-      defaultValue: "FREIHEITLICH – AUS PRINZIP",
     },
     {
       name: "description",

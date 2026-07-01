@@ -282,15 +282,14 @@ git push origin main
 |------|----------|
 | eyebrow | Willkommen bei DIE LIBERTÄREN |
 | headline | DIE LIBERTÄREN |
-| headlineAccent | Deutschlands konsequenteste libertäre Stimme |
-| tagline | FREIHEITLICH – AUS PRINZIP |
+| headlineAccent | Deutschlands konsequenteste libertäre Stimme (gold, einzige Unterzeile) |
 | description | Deutschlands konsequenteste Stimme für Libertarismus, Eigentum und freien Markt: Wir stehen für individuelle Freiheit, drastische Zurückdrängung des Staates und das Nichtaggressionsprinzip – ehrlich und kompromisslos. |
 | primaryCta | Unsere Prinzipien → `/unsere-prinzipien` |
 | secondaryCta | Thesenpapier → `/programm` |
 
 **Code:** `src/components/home/hero.tsx` (Client) · `src/lib/cms/hero.ts` (Daten) · `src/data/hero.json` (Fallback)
 
-`headlineAccent` leer lassen → nur `headline` ohne goldene Ergänzung.
+`headlineAccent` leer lassen → nur `headline` ohne goldene Ergänzung. Es gibt keine separate graue Tagline mehr im Hero.
 
 ---
 

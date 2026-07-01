@@ -16,7 +16,6 @@ export function Hero({ content }: HeroProps) {
     eyebrow,
     headline,
     headlineAccent,
-    tagline,
     description,
     primaryCta,
     secondaryCta,
@@ -44,11 +43,6 @@ export function Hero({ content }: HeroProps) {
           {headlineAccent ? (
             <p className="mt-3 font-display text-base font-semibold leading-snug tracking-tight text-primary sm:text-lg md:mt-4 md:text-xl md:whitespace-nowrap lg:text-2xl">
               {headlineAccent}
-            </p>
-          ) : null}
-          {tagline ? (
-            <p className="mt-4 font-display text-2xl font-medium text-white/80 md:text-3xl">
-              {tagline}
             </p>
           ) : null}
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">

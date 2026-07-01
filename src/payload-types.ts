@@ -1286,7 +1286,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
- * Überschrift, Tagline und Fließtext im oberen Bereich der Startseite.
+ * Überschrift, goldener Akzent und Fließtext im oberen Bereich der Startseite.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "hero".
@@ -1296,10 +1296,9 @@ export interface Hero {
   eyebrow?: string | null;
   headline: string;
   /**
-   * Ersetzt den früheren Untertitel „libertäre Partei für Freiheit“. Leer lassen, um nur den Haupttitel zu zeigen.
+   * Einzige Unterzeile im Hero – gold hervorgehoben. Leer lassen, um nur den Haupttitel zu zeigen.
    */
   headlineAccent?: string | null;
-  tagline?: string | null;
   description: string;
   primaryCta: {
     label: string;
@@ -1489,7 +1488,6 @@ export interface HeroSelect<T extends boolean = true> {
   eyebrow?: T;
   headline?: T;
   headlineAccent?: T;
-  tagline?: T;
   description?: T;
   primaryCta?:
     | T

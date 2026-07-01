@@ -255,7 +255,7 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
       startDate: seed.startDate,
       startTime: seed.startTime,
       endTime: seed.endTime,
-      timezone: "Europe/Berlin",
+      timezone: "Europe/Berlin" as const,
       venue: locationIds[seed.locationKey],
       locationLabel: seed.locationLabel,
       categories: seed.categories.map((name) => categoryIds[name]),

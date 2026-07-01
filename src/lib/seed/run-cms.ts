@@ -10,6 +10,7 @@ export type CmsSeedStats = {
   eventLocations: number;
   eventOrganizers: number;
   events: number;
+  eventsUpdated: number;
 };
 
 const defaultCategories = [
@@ -90,6 +91,7 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
     eventLocations: 0,
     eventOrganizers: 0,
     events: 0,
+    eventsUpdated: 0,
   };
 
   const existingHero = await payload.findGlobal({ slug: "hero", depth: 0 });
@@ -245,40 +247,60 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
       where: { title: { equals: seed.title } },
       limit: 1,
     });
-    if (existing.docs.length > 0) continue;
 
     const jsonFallback = eventsData.events.find((e) => e.title === seed.title);
+    const eventData = {
+      title: seed.title,
+      slug: slugify(seed.title),
+      startDate: seed.startDate,
+      startTime: seed.startTime,
+      endTime: seed.endTime,
+      timezone: "Europe/Berlin",
+      venue: locationIds[seed.locationKey],
+      locationLabel: seed.locationLabel,
+      categories: seed.categories.map((name) => categoryIds[name]),
+      tags: seed.tags.map((tag) => ({ tag })),
+      seriesName: "seriesName" in seed ? seed.seriesName : undefined,
+      excerpt: "excerpt" in seed ? seed.excerpt : undefined,
+      organizers: [organizerId],
+      published: true,
+      showQrCode: true,
+      recurrence: seed.recurring
+        ? {
+            enabled: true,
+            frequency: seed.frequency,
+            interval: 1,
+            weekOfMonth: seed.weekOfMonth,
+            weekday: seed.weekday,
+            endDate: seed.recurrenceEndDate,
+          }
+        : { enabled: false },
+      link: `/events/${slugify(seed.title)}`,
+    };
+
+    if (existing.docs.length > 0) {
+      const doc = existing.docs[0];
+      const needsUpdate =
+        !doc.slug ||
+        !doc.venue ||
+        !doc.categories?.length ||
+        !doc.startTime ||
+        (seed.recurring && !doc.recurrence?.enabled);
+
+      if (needsUpdate) {
+        await payload.update({
+          collection: "events",
+          id: doc.id,
+          data: eventData,
+        });
+        stats.eventsUpdated++;
+      }
+      continue;
+    }
 
     await payload.create({
       collection: "events",
-      data: {
-        title: seed.title,
-        slug: slugify(seed.title),
-        startDate: seed.startDate,
-        startTime: seed.startTime,
-        endTime: seed.endTime,
-        timezone: "Europe/Berlin",
-        venue: locationIds[seed.locationKey],
-        locationLabel: seed.locationLabel,
-        categories: seed.categories.map((name) => categoryIds[name]),
-        tags: seed.tags.map((tag) => ({ tag })),
-        seriesName: "seriesName" in seed ? seed.seriesName : undefined,
-        excerpt: "excerpt" in seed ? seed.excerpt : undefined,
-        organizers: [organizerId],
-        published: true,
-        showQrCode: true,
-        recurrence: seed.recurring
-          ? {
-              enabled: true,
-              frequency: seed.frequency,
-              interval: 1,
-              weekOfMonth: seed.weekOfMonth,
-              weekday: seed.weekday,
-              endDate: seed.recurrenceEndDate,
-            }
-          : { enabled: false },
-        link: jsonFallback?.url ?? `/events/${slugify(seed.title)}`,
-      },
+      data: eventData,
     });
     stats.events++;
   }

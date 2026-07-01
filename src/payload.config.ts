@@ -118,13 +118,24 @@ export default buildConfig({
     if (process.env["AUTO_SEED_ON_INIT"] === "false") return;
 
     try {
-      const [needsEditorial, quotes, eventCategories] = await Promise.all([
-        needsEditorialSeed(payload),
-        payload.find({ collection: "quotes", limit: 1 }),
-        payload.find({ collection: "event-categories", limit: 1 }),
-      ]);
+      const [needsEditorial, quotes, eventCategories, legacyEvents] =
+        await Promise.all([
+          needsEditorialSeed(payload),
+          payload.find({ collection: "quotes", limit: 1 }),
+          payload.find({ collection: "event-categories", limit: 1 }),
+          payload.find({
+            collection: "events",
+            where: { slug: { exists: false } },
+            limit: 1,
+          }),
+        ]);
 
-      if (!needsEditorial && quotes.totalDocs > 0 && eventCategories.totalDocs > 0) {
+      if (
+        !needsEditorial &&
+        quotes.totalDocs > 0 &&
+        eventCategories.totalDocs > 0 &&
+        legacyEvents.totalDocs === 0
+      ) {
         return;
       }
 

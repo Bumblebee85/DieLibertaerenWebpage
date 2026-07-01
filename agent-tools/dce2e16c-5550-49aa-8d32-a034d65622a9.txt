@@ -1,0 +1,503 @@
+
+.elementor-6802 .elementor-element.elementor-element-ea1533f:not(.elementor-motion-effects-element-type-background), 
+.elementor-6802 .elementor-element.elementor-element-ea1533f > .elementor-motion-effects-container > .elementor-motion-
+effects-layer{background-image:url("https://die-libertaeren.de/wp-content/uploads/2023/06/UnterstutzeUns_Header-scaled.
+jpg");background-position:0px -325px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 
+.elementor-element.elementor-element-ea1533f > 
+.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(180deg, #03050F59 0%, var( 
+--e-global-color-secondary ) 100%);opacity:1;transition:background 0.3s, border-radius 0.3s, opacity 
+0.3s;}.elementor-6802 .elementor-element.elementor-element-ea1533f{transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:70px 0px 25px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9c54564 > .elementor-element-populated{margin:0px 0px 0px 
+0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 13px 0px 13px;}.elementor-6802 
+.elementor-element.elementor-element-20cf3f8{width:var( --container-widget-width, 66% 
+);max-width:66%;--container-widget-width:66%;--container-widget-flex-grow:0;}.elementor-6802 
+.elementor-element.elementor-element-20cf3f8 .elementor-heading-title{color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-892d796{width:var( 
+--container-widget-width, 100% 
+);max-width:100%;--container-widget-width:100%;--container-widget-flex-grow:0;text-align:justify;color:var( 
+--e-global-color-1b20456 );font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-892d796 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ef58ea8:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-ef58ea8 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-color:var( --e-global-color-a443c4f );}.elementor-6802 
+.elementor-element.elementor-element-ef58ea8{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 
+0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ef58ea8 > .elementor-background-overlay{transition:background 0.3s, border-radius 
+0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-10e8736 > 
+.elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 
+13px 0px 13px;}.elementor-6802 .elementor-element.elementor-element-5708988 > .elementor-widget-container{margin:0px 
+0px 25px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-5708988{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-5708988 .elementor-heading-title{color:var( --e-global-color-secondary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-f4e22d6 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-f4e22d6{text-align:justify;color:var( --e-global-color-text );font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-6802 .elementor-element.elementor-element-94da188 .elementor-button{background-color:var( 
+--e-global-color-primary );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-accent-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-width:2px 2px 2px 2px;border-color:var( --e-global-color-primary );border-radius:0px 0px 
+0px 0px;}.elementor-6802 .elementor-element.elementor-element-94da188 .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-94da188 .elementor-button:focus{background-color:#02010100;color:var( 
+--e-global-color-primary );}.elementor-6802 .elementor-element.elementor-element-94da188 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 25px 0px;}.elementor-6802 
+.elementor-element.elementor-element-94da188 .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-94da188 .elementor-button:focus svg{fill:var( --e-global-color-primary 
+);}.elementor-6802 .elementor-element.elementor-element-d9d777b{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-d9d777b .elementor-heading-title{color:var( --e-global-color-secondary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-3c1f728 > 
+.elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 
+13px 0px 13px;}.elementor-6802 .elementor-element.elementor-element-dc9465b{transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:25px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-dc9465b > .elementor-background-overlay{transition:background 0.3s, border-radius 
+0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-4a74576 > 
+.elementor-element-populated{box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 0.15);color:var( --e-global-color-text 
+);margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:25px 13px 40px 
+13px;}.elementor-6802 .elementor-element.elementor-element-4a74576:hover > .elementor-element-populated{box-shadow:0px 
+0px 0px 0px rgba(0,0,0,0.5);}.elementor-6802 .elementor-element.elementor-element-4a74576 .elementor-element-populated 
+.elementor-heading-title{color:var( --e-global-color-secondary );}.elementor-6802 
+.elementor-element.elementor-element-34541f8{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-34541f8 .elementor-heading-title{color:var( --e-global-color-secondary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b > 
+.elementor-widget-container{margin:25px 0px 0px 0px;}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-group{padding-right:calc( 10px/2 );padding-left:calc( 10px/2 );margin-bottom:10px;}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-form-fields-wrapper{margin-left:calc( -10px/2 
+);margin-right:calc( -10px/2 );margin-bottom:-10px;}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-group.recaptcha_v3-bottomleft, .elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-group.recaptcha_v3-bottomright{margin-bottom:0;}body.rtl .elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-labels-inline .elementor-field-group > 
+label{padding-left:0px;}body:not(.rtl) .elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-labels-inline .elementor-field-group > label{padding-right:0px;}body .elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-labels-above .elementor-field-group > 
+label{padding-bottom:0px;}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-group > label, 
+.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-subgroup label{color:var( 
+--e-global-color-text );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-group > 
+label{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-type-html{padding-bottom:0px;color:var( --e-global-color-text );font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-group .elementor-field{color:var( 
+--e-global-color-text );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-group 
+.elementor-field, .elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-field-subgroup 
+label{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-group:not(.elementor-field-type-upload) 
+.elementor-field:not(.elementor-select-wrapper){background-color:var( --e-global-color-a443c4f );border-width:0px 0px 
+0px 0px;border-radius:0px 0px 0px 0px;}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.elementor-field-group .elementor-select-wrapper select{background-color:var( --e-global-color-a443c4f 
+);border-width:0px 0px 0px 0px;border-radius:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-button{font-family:var( 
+--e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight 
+);border-style:solid;border-width:2px 2px 2px 2px;border-radius:0px 0px 0px 0px;padding:0px 0px 0px 
+0px;}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.e-form__buttons__wrapper__button-next{background-color:var( --e-global-color-primary );color:var( 
+--e-global-color-1b20456 );border-color:var( --e-global-color-primary );}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-button[type="submit"]{background-color:var( 
+--e-global-color-primary );color:var( --e-global-color-1b20456 );border-color:var( --e-global-color-primary 
+);}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-button[type="submit"] svg *{fill:var( 
+--e-global-color-1b20456 );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.e-form__buttons__wrapper__button-previous{background-color:var( --e-global-color-a443c4f 
+);color:#ffffff;border-color:var( --e-global-color-primary );}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .e-form__buttons__wrapper__button-next:hover{background-color:var( 
+--e-global-color-1b20456 );color:var( --e-global-color-primary );}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-button[type="submit"]:hover{background-color:var( 
+--e-global-color-1b20456 );color:var( --e-global-color-primary );}.elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .elementor-button[type="submit"]:hover svg *{fill:var( 
+--e-global-color-primary );}.elementor-6802 .elementor-element.elementor-element-cbcbd6b 
+.e-form__buttons__wrapper__button-previous:hover{color:#ffffff;border-color:var( --e-global-color-primary 
+);}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .elementor-message{font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-6802 .elementor-element.elementor-element-cbcbd6b .e-form__indicators__indicator, .elementor-6802 
+.elementor-element.elementor-element-cbcbd6b .e-form__indicators__indicator__label{font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-6802 .elementor-element.elementor-element-cbcbd6b{--e-form-steps-indicators-spacing:20px;--e-form-steps-i
+ndicator-padding:30px;--e-form-steps-indicator-inactive-primary-color:var( --e-global-color-text 
+);--e-form-steps-indicator-active-primary-color:var( --e-global-color-primary );--e-form-steps-indicator-active-seconda
+ry-color:#FFFFFF;--e-form-steps-indicator-completed-secondary-color:#ffffff;--e-form-steps-divider-width:1px;--e-form-s
+teps-divider-gap:10px;}.elementor-6802 
+.elementor-element.elementor-element-e3a6176{margin-top:0px;margin-bottom:0px;padding:50px 0px 0px 
+0px;}.elementor-6802 .elementor-element.elementor-element-301e5d9 > .elementor-element-populated{margin:0px 0px 0px 
+0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 13px 0px 13px;}.elementor-6802 
+.elementor-element.elementor-element-809e17a > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 
+0px;}.elementor-6802 .elementor-element.elementor-element-809e17a{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-809e17a .elementor-heading-title{color:var( --e-global-color-secondary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-4f7ef06 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4f7ef06{text-align:justify;color:var( --e-global-color-secondary 
+);font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 
+.elementor-element.elementor-element-f6c3a5d:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-f6c3a5d > .elementor-motion-effects-container > .elementor-motion-effects-layer{ba
+ckground-image:url("https://die-libertaeren.de/wp-content/uploads/2023/08/Bezahlen_Lightning_Header.jpg");background-po
+sition:0px -315px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 
+.elementor-element.elementor-element-f6c3a5d > 
+.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(180deg, var( 
+--e-global-color-text ) 0%, var( --e-global-color-secondary ) 100%);opacity:0.5;transition:background 0.3s, 
+border-radius 0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-f6c3a5d{transition:background 
+0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 
+0px;}.elementor-6802 .elementor-element.elementor-element-48c9e62{text-align:left;color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-0363cb0 
+.elementor-button .elementor-align-icon-left{margin-left:0;margin-right:12px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button{background-color:var( --e-global-color-primary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-width:2px 2px 2px 2px;border-color:#FFA420;border-radius:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button:focus{background-color:var( --e-global-color-1b20456 
+);color:var( --e-global-color-secondary );border-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .e-offscreen{position:absolute;left:-999em;display:block 
+!important;}.elementor-6802 .elementor-element.elementor-element-0363cb0 
+.e-input-group{display:flex;position:relative;flex-wrap:wrap;align-items:stretch;width:100%;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .e-input-group-append, .elementor-6802 
+.elementor-element.elementor-element-0363cb0 .e-input-group-prepend{display:flex;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .e-input-group > .e-form-control{position:relative;flex:1 1 
+auto;width:1%;margin-bottom:0;}.elementor-6802 .elementor-element.elementor-element-0363cb0 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button 
+.elementor-align-icon-right{margin-left:12px;}.elementor-6802 .elementor-element.elementor-element-0363cb0 
+.elementor-button .elementor-button-icon{font-size:15px;}.elementor-6802 .elementor-element.elementor-element-0363cb0 
+.elementor-button .elementor-button-text{line-height:15px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-0363cb0 .elementor-button:focus svg{fill:var( --e-global-color-secondary 
+);}.elementor-6802 .elementor-element.elementor-element-166f46d > .elementor-widget-container{margin:0px 0px 0px 
+0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-166f46d{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-a880c01:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-a880c01 > .elementor-motion-effects-container > .elementor-motion-effects-layer{ba
+ckground-image:url("https://die-libertaeren.de/wp-content/uploads/2023/06/Bezahlen_BitcoinA_Header-scaled.jpg");backgro
+und-position:0px -352px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 
+.elementor-element.elementor-element-a880c01 > 
+.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(180deg, var( 
+--e-global-color-text ) 0%, var( --e-global-color-secondary ) 100%);opacity:0.5;transition:background 0.3s, 
+border-radius 0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-a880c01{transition:background 
+0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 
+0px;}.elementor-6802 .elementor-element.elementor-element-d9e2db7{text-align:left;color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-ed7a96f 
+.elementor-button .elementor-align-icon-left{margin-left:0;margin-right:12px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button{background-color:var( --e-global-color-primary 
+);font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-accent-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-color:#FFA420;border-radius:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button:focus{background-color:var( --e-global-color-a443c4f 
+);color:var( --e-global-color-secondary );border-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .e-offscreen{position:absolute;left:-999em;display:block 
+!important;}.elementor-6802 .elementor-element.elementor-element-ed7a96f 
+.e-input-group{display:flex;position:relative;flex-wrap:wrap;align-items:stretch;width:100%;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .e-input-group-append, .elementor-6802 
+.elementor-element.elementor-element-ed7a96f .e-input-group-prepend{display:flex;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .e-input-group > .e-form-control{position:relative;flex:1 1 
+auto;width:1%;margin-bottom:0;}.elementor-6802 .elementor-element.elementor-element-ed7a96f > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button 
+.elementor-align-icon-right{margin-left:12px;}.elementor-6802 .elementor-element.elementor-element-ed7a96f 
+.elementor-button .elementor-button-icon{font-size:15px;}.elementor-6802 .elementor-element.elementor-element-ed7a96f 
+.elementor-button .elementor-button-text{line-height:15px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-ed7a96f .elementor-button:focus svg{fill:var( --e-global-color-secondary 
+);}.elementor-6802 .elementor-element.elementor-element-4763956 > .elementor-widget-container{margin:0px 0px 0px 
+0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4763956{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-016c926:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-016c926 > .elementor-motion-effects-container > .elementor-motion-effects-layer{ba
+ckground-image:url("https://die-libertaeren.de/wp-content/uploads/2023/06/Bezahlen_BitcoinB_Header-scaled.jpg");backgro
+und-position:0px -144px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 
+.elementor-element.elementor-element-016c926 > 
+.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(180deg, var( 
+--e-global-color-text ) 0%, var( --e-global-color-secondary ) 100%);opacity:0.5;transition:background 0.3s, 
+border-radius 0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-016c926{transition:background 
+0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 
+0px;}.elementor-6802 .elementor-element.elementor-element-19c7e8c{text-align:left;color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-9bc761e 
+.elementor-button .elementor-align-icon-left{margin-left:0;margin-right:12px;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .elementor-button{background-color:var( --e-global-color-primary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-width:2px 2px 2px 2px;border-color:var( --e-global-color-primary );border-radius:0px 0px 
+0px 0px;}.elementor-6802 .elementor-element.elementor-element-9bc761e .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-9bc761e .elementor-button:focus{background-color:var( --e-global-color-1b20456 
+);color:var( --e-global-color-secondary );border-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .e-offscreen{position:absolute;left:-999em;display:block 
+!important;}.elementor-6802 .elementor-element.elementor-element-9bc761e 
+.e-input-group{display:flex;position:relative;flex-wrap:wrap;align-items:stretch;width:100%;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .e-input-group-append, .elementor-6802 
+.elementor-element.elementor-element-9bc761e .e-input-group-prepend{display:flex;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .e-input-group > .e-form-control{position:relative;flex:1 1 
+auto;width:1%;margin-bottom:0;}.elementor-6802 .elementor-element.elementor-element-9bc761e > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .elementor-button 
+.elementor-align-icon-right{margin-left:12px;}.elementor-6802 .elementor-element.elementor-element-9bc761e 
+.elementor-button .elementor-button-icon{font-size:15px;}.elementor-6802 .elementor-element.elementor-element-9bc761e 
+.elementor-button .elementor-button-text{line-height:15px;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-9bc761e .elementor-button:focus svg{fill:var( --e-global-color-secondary 
+);}.elementor-6802 .elementor-element.elementor-element-579aef1 > .elementor-widget-container{margin:0px 0px 0px 
+0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-579aef1{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-4a9b322:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-4a9b322 > .elementor-motion-effects-container > .elementor-motion-effects-layer{ba
+ckground-image:url("https://die-libertaeren.de/wp-content/uploads/2023/06/Bezahlen_Etherium_Header-scaled.jpg");backgro
+und-position:0px -406px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 
+.elementor-element.elementor-element-4a9b322 > 
+.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(180deg, var( 
+--e-global-color-text ) 0%, var( --e-global-color-secondary ) 100%);opacity:0.5;transition:background 0.3s, 
+border-radius 0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-4a9b322{transition:background 
+0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 
+0px;}.elementor-6802 .elementor-element.elementor-element-bb3fbf8{text-align:left;color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-text-font-weight );}.elementor-6802 .elementor-element.elementor-element-9cdc02a 
+.elementor-button .elementor-align-icon-left{margin-left:0;margin-right:12px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button{background-color:var( --e-global-color-primary 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-width:2px 2px 2px 2px;border-color:#FFA420;border-radius:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button:focus{background-color:var( --e-global-color-1b20456 
+);color:var( --e-global-color-secondary );border-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .e-offscreen{position:absolute;left:-999em;display:block 
+!important;}.elementor-6802 .elementor-element.elementor-element-9cdc02a 
+.e-input-group{display:flex;position:relative;flex-wrap:wrap;align-items:stretch;width:100%;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .e-input-group-append, .elementor-6802 
+.elementor-element.elementor-element-9cdc02a .e-input-group-prepend{display:flex;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .e-input-group > .e-form-control{position:relative;flex:1 1 
+auto;width:1%;margin-bottom:0;}.elementor-6802 .elementor-element.elementor-element-9cdc02a > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button 
+.elementor-align-icon-right{margin-left:12px;}.elementor-6802 .elementor-element.elementor-element-9cdc02a 
+.elementor-button .elementor-button-icon{font-size:15px;}.elementor-6802 .elementor-element.elementor-element-9cdc02a 
+.elementor-button .elementor-button-text{line-height:15px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-9cdc02a .elementor-button:focus svg{fill:var( --e-global-color-secondary 
+);}.elementor-6802 .elementor-element.elementor-element-9d6eaa4 > .elementor-widget-container{margin:0px 0px 0px 
+0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9d6eaa4{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-0ba4a48:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-0ba4a48 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-color:var( --e-global-color-secondary );}.elementor-6802 
+.elementor-element.elementor-element-0ba4a48{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 
+0.3s;margin-top:0px;margin-bottom:0px;padding:50px 0px 50px 0px;}.elementor-6802 
+.elementor-element.elementor-element-0ba4a48 > .elementor-background-overlay{transition:background 0.3s, border-radius 
+0.3s, opacity 0.3s;}.elementor-6802 .elementor-element.elementor-element-76c23fc > 
+.elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 
+13px 0px 13px;}.elementor-6802 .elementor-element.elementor-element-bc77c43 > .elementor-widget-container{margin:0px 
+0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-bc77c43{text-align:left;}.elementor-6802 
+.elementor-element.elementor-element-bc77c43 .elementor-heading-title{color:var( --e-global-color-1b20456 
+);font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 
+.elementor-element.elementor-element-5dee0b4{text-align:left;color:var( --e-global-color-ef524b5 );font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-bc-flex-widget .elementor-6802 .elementor-element.elementor-element-814813c.elementor-column 
+.elementor-widget-wrap{align-items:center;}.elementor-6802 
+.elementor-element.elementor-element-814813c.elementor-column.elementor-element[data-element_type="column"] > 
+.elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}.elementor-6802 
+.elementor-element.elementor-element-814813c > .elementor-element-populated{transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;margin:0px 0px 0px 
+0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 13px 0px 13px;}.elementor-6802 
+.elementor-element.elementor-element-814813c > .elementor-element-populated > 
+.elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-6802 
+.elementor-element.elementor-element-99d7f51 .elementor-icon-wrapper{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-stacked .elementor-icon{background-color:var( 
+--e-global-color-primary );}.elementor-6802 .elementor-element.elementor-element-99d7f51.elementor-view-framed 
+.elementor-icon, .elementor-6802 .elementor-element.elementor-element-99d7f51.elementor-view-default 
+.elementor-icon{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-framed .elementor-icon, .elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-default .elementor-icon svg{fill:var( 
+--e-global-color-primary );}.elementor-6802 .elementor-element.elementor-element-99d7f51.elementor-view-stacked 
+.elementor-icon:hover{background-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-framed .elementor-icon:hover, .elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-default .elementor-icon:hover{color:var( 
+--e-global-color-1b20456 );border-color:var( --e-global-color-1b20456 );}.elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-framed .elementor-icon:hover, .elementor-6802 
+.elementor-element.elementor-element-99d7f51.elementor-view-default .elementor-icon:hover svg{fill:var( 
+--e-global-color-1b20456 );}.elementor-6802 .elementor-element.elementor-element-99d7f51 
+.elementor-icon{font-size:123px;}.elementor-6802 .elementor-element.elementor-element-99d7f51 .elementor-icon 
+svg{height:123px;}.elementor-6802 
+.elementor-element.elementor-element-97f3b12:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-97f3b12 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-color:var( --e-global-color-secondary );background-image:url("https://die-li
+bertaeren.de/wp-content/uploads/2020/07/Werde_Header-scaled.jpg");background-position:0px 
+-279px;background-repeat:no-repeat;background-size:cover;}.elementor-6802 .elementor-element.elementor-element-97f3b12 
+> .elementor-background-overlay{opacity:0.5;transition:background 0.3s, border-radius 0.3s, opacity 
+0.3s;}.elementor-6802 .elementor-element.elementor-element-97f3b12{transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-e7ed386 > .elementor-element-populated{margin:0px 0px 0px 
+0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-a60b15f{margin-top:0px;margin-bottom:0px;padding:50px 13px 50px 
+13px;}.elementor-6802 
+.elementor-element.elementor-element-fb71035:not(.elementor-motion-effects-element-type-background) > 
+.elementor-widget-wrap, .elementor-6802 .elementor-element.elementor-element-fb71035 > .elementor-widget-wrap > 
+.elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-primary 
+);}.elementor-6802 .elementor-element.elementor-element-fb71035 > 
+.elementor-element-populated{border-style:none;box-shadow:0px 0px 30px 0px rgba(64.99999999999994, 71.99999999999997, 
+90.99999999999993, 0.3);transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;padding:0px 0px 
+25px 0px;}.elementor-6802 .elementor-element.elementor-element-fb71035 > .elementor-element-populated > 
+.elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-6802 
+.elementor-element.elementor-element-4fbd85c > .elementor-widget-container{margin:0px 0px 0px 0px;padding:25px 25px 
+0px 25px;}.elementor-6802 .elementor-element.elementor-element-4fbd85c .elementor-heading-title{color:var( 
+--e-global-color-1b20456 );font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-primary-font-weight );}.elementor-6802 .elementor-element.elementor-element-067ef80 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 25px 0px 25px;}.elementor-6802 
+.elementor-element.elementor-element-067ef80{color:var( --e-global-color-1b20456 );font-family:var( 
+--e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight 
+);}.elementor-6802 .elementor-element.elementor-element-c0bd235 .elementor-button{background-color:var( 
+--e-global-color-secondary );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( 
+--e-global-typography-accent-font-weight );fill:var( --e-global-color-1b20456 );color:var( --e-global-color-1b20456 
+);border-style:solid;border-width:2px 2px 2px 2px;border-color:var( --e-global-color-secondary );border-radius:0px 0px 
+0px 0px;}.elementor-6802 .elementor-element.elementor-element-c0bd235 .elementor-button:hover, .elementor-6802 
+.elementor-element.elementor-element-c0bd235 .elementor-button:focus{background-color:var( --e-global-color-primary 
+);color:var( --e-global-color-secondary );}.elementor-6802 .elementor-element.elementor-element-c0bd235 > 
+.elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 25px 0px 25px;}.elementor-6802 
+.elementor-element.elementor-element-c0bd235 .elementor-button:hover svg, .elementor-6802 
+.elementor-element.elementor-element-c0bd235 .elementor-button:focus svg{fill:var( --e-global-color-secondary 
+);}.elementor-6802 .elementor-element.elementor-element-5e0dea6{--spacer-size:50px;}.elementor-6802 
+.elementor-element.elementor-element-4fbfebe > .elementor-element-populated{border-style:none;box-shadow:0px 0px 30px 
+0px rgba(64.99999999999994, 71.99999999999997, 90.99999999999993, 0.3);transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;padding:0px 0px 25px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4fbfebe > .elementor-element-populated > 
+.elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-6802 
+.elementor-element.elementor-element-d83bd5d{--spacer-size:50px;}.elementor-6802 
+.elementor-element.elementor-element-121c92a > .elementor-element-populated{border-style:none;box-shadow:0px 0px 30px 
+0px rgba(64.99999999999994, 71.99999999999997, 90.99999999999993, 0.3);transition:background 0.3s, border 0.3s, 
+border-radius 0.3s, box-shadow 0.3s;padding:0px 0px 25px 0px;}.elementor-6802 
+.elementor-element.elementor-element-121c92a > .elementor-element-populated > 
+.elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 
+0.3s;}@media(min-width:768px){.elementor-6802 
+.elementor-element.elementor-element-fb71035{width:31.8%;}.elementor-6802 
+.elementor-element.elementor-element-b9c20d2{width:2.3%;}.elementor-6802 
+.elementor-element.elementor-element-4fbfebe{width:31.8%;}.elementor-6802 
+.elementor-element.elementor-element-2205fea{width:2.3%;}.elementor-6802 
+.elementor-element.elementor-element-121c92a{width:31.8%;}}@media(max-width:1024px){.elementor-6802 
+.elementor-element.elementor-element-ea1533f:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-ea1533f > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4a74576 > .elementor-element-populated{margin:050px 020px 020px 
+020px;--e-column-margin-right:020px;--e-column-margin-left:020px;}.elementor-6802 
+.elementor-element.elementor-element-f6c3a5d:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-f6c3a5d > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-166f46d > .elementor-widget-container{margin:0px 500px -15px 
+13px;}.elementor-6802 .elementor-element.elementor-element-166f46d{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-a880c01:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-a880c01 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4763956 > .elementor-widget-container{margin:0px 500px -15px 
+13px;}.elementor-6802 .elementor-element.elementor-element-4763956{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-016c926:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-016c926 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-579aef1 > .elementor-widget-container{margin:0px 500px -15px 
+13px;}.elementor-6802 .elementor-element.elementor-element-579aef1{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-4a9b322:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-4a9b322 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9d6eaa4 > .elementor-widget-container{margin:0px 500px -15px 
+13px;}.elementor-6802 .elementor-element.elementor-element-9d6eaa4{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-97f3b12:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-97f3b12 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-97f3b12{padding:0px 25px 0px 25px;}}@media(max-width:767px){.elementor-6802 
+.elementor-element.elementor-element-ea1533f:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-ea1533f > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4a74576 > .elementor-element-populated{margin:030px 015px 015px 
+015px;--e-column-margin-right:015px;--e-column-margin-left:015px;}.elementor-6802 
+.elementor-element.elementor-element-f6c3a5d:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-f6c3a5d > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-0363cb0 > .elementor-widget-container{margin:0px 0px 0px -6px;}.elementor-6802 
+.elementor-element.elementor-element-166f46d > .elementor-widget-container{margin:0px 0px -15px 0px;}.elementor-6802 
+.elementor-element.elementor-element-166f46d{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-a880c01:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-a880c01 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-ed7a96f > .elementor-widget-container{margin:0px 0px 0px -6px;}.elementor-6802 
+.elementor-element.elementor-element-4763956 > .elementor-widget-container{margin:0px 0px -15px 0px;}.elementor-6802 
+.elementor-element.elementor-element-4763956{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-016c926:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-016c926 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9bc761e > .elementor-widget-container{margin:0px 0px 0px -6px;}.elementor-6802 
+.elementor-element.elementor-element-579aef1 > .elementor-widget-container{margin:0px 0px -15px 0px;padding:0px 0px 
+0px 0px;}.elementor-6802 .elementor-element.elementor-element-579aef1{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-4a9b322:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-4a9b322 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9cdc02a > .elementor-widget-container{margin:0px 0px 0px -6px;}.elementor-6802 
+.elementor-element.elementor-element-9d6eaa4 > .elementor-widget-container{margin:0px 0px -15px 0px;}.elementor-6802 
+.elementor-element.elementor-element-9d6eaa4{text-align:center;}.elementor-6802 
+.elementor-element.elementor-element-97f3b12:not(.elementor-motion-effects-element-type-background), .elementor-6802 
+.elementor-element.elementor-element-97f3b12 > .elementor-motion-effects-container > 
+.elementor-motion-effects-layer{background-position:0px 0px;}.elementor-6802 
+.elementor-element.elementor-element-97f3b12{padding:0px 15px 0px 15px;}.elementor-6802 
+.elementor-element.elementor-element-5e0dea6{--spacer-size:25px;}.elementor-6802 
+.elementor-element.elementor-element-d83bd5d{--spacer-size:25px;}}@media(max-width:1024px) and 
+(min-width:768px){.elementor-6802 .elementor-element.elementor-element-4a74576{width:100%;}.elementor-6802 
+.elementor-element.elementor-element-fb71035{width:100%;}.elementor-6802 
+.elementor-element.elementor-element-4fbfebe{width:100%;}.elementor-6802 
+.elementor-element.elementor-element-121c92a{width:100%;}}/* Start custom CSS for form, class: 
+.elementor-element-cbcbd6b */input#form-field-field_991f859 {
+<link rel="apple-touch-icon" 
+href="https://die-libertaeren.de/wp-content/uploads/2020/07/cropped-DieLibertaeren_Profillogo_Fackel-1-180x180.png" />
+<meta name="msapplication-TileImage" 
+content="https://die-libertaeren.de/wp-content/uploads/2020/07/cropped-DieLibertaeren_Profillogo_Fackel-1-270x270.png" 
+/>
+<h2 class="elementor-heading-title elementor-size-default">SPENDE MIT CRYPTO-WÄHRUNG</h2></div>
+<p>Wir bieten dir auch die Möglichkeit deine Spende in Form von Bitcoin und Ethereum zu tätigen. Nutze dafür 
+die Möglichkeiten unten.</p></div>
+<p><strong>Coin: </strong>Bitcoin (BTC)<br /><strong>Netzwerk:</strong> Lightning (LN)</p></div>
+            <button class="elementor-button elementor-size-sm" data-clipboard-target="#e-clipboard-value-0363cb0-6802" 
+type="button" id="e-clipboard-btn-0363cb0-6802">
+<img decoding="async" width="150" height="150" 
+src="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-lightning-150x150.png" class="attachment-thumbnail 
+size-thumbnail wp-image-14029" alt="" 
+srcset="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-lightning-150x150.png 150w, 
+https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-lightning.png 250w" sizes="(max-width: 150px) 100vw, 
+150px" /></div>
+<p><strong>Coin: </strong>Bitcoin (BTC)<br /><strong>Netzwerk:</strong> Bitcoin (BTC)</p></div>
+            <button class="elementor-button elementor-size-sm" data-clipboard-target="#e-clipboard-value-ed7a96f-6802" 
+type="button" id="e-clipboard-btn-ed7a96f-6802">
+<img decoding="async" width="150" height="150" 
+src="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc-150x150.png" class="attachment-thumbnail 
+size-thumbnail wp-image-14026" alt="" 
+srcset="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc-150x150.png 150w, 
+https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc.png 250w" sizes="(max-width: 150px) 100vw, 150px" />
+</div>
+<p><strong>Coin: </strong>Bitcoin (BTC)<br /><strong>Netzwerk:</strong> SEGWITBTC BTC (SegWit)</p></div>
+            <button class="elementor-button elementor-size-sm" data-clipboard-target="#e-clipboard-value-9bc761e-6802" 
+type="button" id="e-clipboard-btn-9bc761e-6802">
+                        <input class="elementor-size-sm e-offscreen elementor-field-textual e-form-control" 
+aria-hidden="true" id="e-clipboard-value-9bc761e-6802" type="text" value="bc1qcwrp97ewaxdn6fcny65m2xctm2t2dlq8c5jmph"> 
+           
+<img decoding="async" width="150" height="150" 
+src="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc-segwit-150x150.png" class="attachment-thumbnail 
+size-thumbnail wp-image-14027" alt="" 
+srcset="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc-segwit-150x150.png 150w, 
+https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-btc-segwit.png 250w" sizes="(max-width: 150px) 100vw, 
+150px" /></div>
+            <button class="elementor-button elementor-size-sm" data-clipboard-target="#e-clipboard-value-9cdc02a-6802" 
+type="button" id="e-clipboard-btn-9cdc02a-6802">
+                        <input class="elementor-size-sm e-offscreen elementor-field-textual e-form-control" 
+aria-hidden="true" id="e-clipboard-value-9cdc02a-6802" type="text" value="0xf0782427fb006846458e8e4b5d78e829326c53d7"> 
+           
+<img loading="lazy" decoding="async" width="150" height="150" 
+src="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-eth-150x150.png" class="attachment-thumbnail 
+size-thumbnail wp-image-14028" alt="" 
+srcset="https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-eth-150x150.png 150w, 
+https://die-libertaeren.de/wp-content/uploads/2023/08/qr-250-eth.png 250w" sizes="(max-width: 150px) 100vw, 150px" />
+</div>
+

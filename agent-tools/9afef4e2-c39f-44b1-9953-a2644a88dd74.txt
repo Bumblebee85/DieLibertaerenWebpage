@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html><html lang="de" class="roboto_702e2240-module__nm7JIq__variable 
+roboto_slab_6b868db6-module__fi8lwW__variable"><head><meta charSet="utf-8"/><meta name="viewport" 
+content="width=device-width, initial-scale=1"/><link rel="preload" 
+href="/_next/static/media/5cf8828ea9d4dda3-s.p.05uz1l1tir_-_.woff2" as="font" crossorigin="" type="font/woff2"/><link 
+rel="preload" href="/_next/static/media/ce62453a442c7f35-s.p.0a0h245ktd4x0.woff2" as="font" crossorigin="" 
+type="font/woff2"/><link rel="preload" as="image" 
+imageSrcSet="/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=256&amp;q=75 1x, 
+/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=384&amp;q=75 2x"/><link rel="preload" as="image" 
+href="/images/hero-background.jpg"/><link rel="preload" as="image" 
+imageSrcSet="/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=640&amp;q=90 640w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=640&amp;q=90 640w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=750&amp;q=90 750w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=828&amp;q=90 828w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=832&amp;q=90 832w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1080&amp;q=90 1080w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1200&amp;q=90 1200w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1920&amp;q=90 1920w" imageSizes="(max-width: 1024px) 100vw, 
+640px"/><link rel="stylesheet" href="/_next/static/chunks/20jjvqonre8in.css" data-precedence="next"/><link 
+rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/37v5ulr6qjozi.js"/><script 
+src="/_next/static/chunks/3r4kwx2m833kg.js" async=""></script><script src="/_next/static/chunks/1wpi-_59dw0su.js" 
+async=""></script><script src="/_next/static/chunks/06j3juy1u5a-6.js" async=""></script><script 
+src="/_next/static/chunks/3nc6x0_y5iwnk.js" async=""></script><script 
+src="/_next/static/chunks/turbopack-2sc3ab9ltz630.js" async=""></script><script 
+src="/_next/static/chunks/2yl1jv4w6po1z.js" async=""></script><script src="/_next/static/chunks/1ntn7efqc-iiw.js" 
+async=""></script><script src="/_next/static/chunks/1co1lrqxz3761.js" async=""></script><script 
+src="/_next/static/chunks/3k0ryh65wh-r1.js" async=""></script><script src="/_next/static/chunks/179ej4e72znmi.js" 
+async=""></script><script src="/_next/static/chunks/3731h1foz99dy.js" async=""></script><meta name="next-size-adjust" 
+content=""/><title>Libertäre Partei für Freiheit, Eigentum &amp; freien Markt</title><meta name="description" 
+content="DIE LIBERTÄREN: Deutschlands konsequente libertäre Partei für individuelle Freiheit, 
+Nichtaggressionsprinzip, Eigentumsschutz, Minimalstaat und freie Marktwirtschaft – freiheitlich aus Prinzip."/><link 
+rel="author" href="https://die-libertaeren-webpage.vercel.app"/><meta name="author" content="DIE LIBERTÄREN"/><meta 
+name="keywords" content="Libertarismus,Freiheit,liberale Partei 
+Deutschland,Minimalstaat,Nichtaggressionsprinzip,Eigentum,freier Markt,libertäre Partei"/><meta name="creator" 
+content="DIE LIBERTÄREN"/><meta name="publisher" content="DIE LIBERTÄREN"/><meta name="robots" content="index, 
+follow"/><meta name="googlebot" content="index, follow"/><meta name="category" content="Politik"/><link 
+rel="canonical" href="https://die-libertaeren-webpage.vercel.app"/><meta property="og:title" content="Libertäre 
+Partei für Freiheit, Eigentum &amp; freien Markt | DIE LIBERTÄREN"/><meta property="og:description" content="DIE 
+LIBERTÄREN: Deutschlands konsequente libertäre Partei für individuelle Freiheit, Nichtaggressionsprinzip, 
+Eigentumsschutz, Minimalstaat und freie Marktwirtschaft – freiheitlich aus Prinzip."/><meta property="og:url" 
+content="https://die-libertaeren-webpage.vercel.app"/><meta property="og:site_name" content="DIE LIBERTÄREN"/><meta 
+property="og:locale" content="de_DE"/><meta property="og:image" 
+content="https://die-libertaeren-webpage.vercel.app/images/logo-dark.png"/><meta property="og:image:width" 
+content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content="DIE LIBERTÄREN 
+– FREIHEITLICH – AUS PRINZIP"/><meta property="og:type" content="website"/><meta name="twitter:card" 
+content="summary_large_image"/><meta name="twitter:title" content="Libertäre Partei für Freiheit, Eigentum &amp; 
+freien Markt | DIE LIBERTÄREN"/><meta name="twitter:description" content="DIE LIBERTÄREN: Deutschlands konsequente 
+libertäre Partei für individuelle Freiheit, Nichtaggressionsprinzip, Eigentumsschutz, Minimalstaat und freie 
+Marktwirtschaft – freiheitlich aus Prinzip."/><meta name="twitter:image" 
+content="https://die-libertaeren-webpage.vercel.app/images/logo-dark.png"/><link rel="icon" 
+href="/images/favicon.ico"/><link rel="apple-touch-icon" href="/images/logo.png"/><script type="application/ld+json">{"
+@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"PoliticalParty","@id":"https://die-l
+ibertaeren-webpage.vercel.app/#politicalparty","name":"DIE LIBERTÄREN e.V.","alternateName":"DIE 
+LIBERTÄREN","description":"DIE LIBERTÄREN – Deutschlands konsequente libertäre Partei für Freiheit, Eigentum, 
+Minimalstaat und freien Markt. Freiheitlich aus Prinzip.","url":"https://die-libertaeren-webpage.vercel.app","logo":"ht
+tps://die-libertaeren-webpage.vercel.app/images/logo-dark.png","image":"https://die-libertaeren-webpage.vercel.app/imag
+es/logo-dark.png","email":"info@die-libertaeren.de","telephone":"+49 159 06320502","slogan":"FREIHEITLICH – AUS 
+PRINZIP","foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","streetAddress":"Wallbergstraße 4","po
+stalCode":"83620","addressLocality":"Feldkirchen-Westerham","addressCountry":"DE"}},"address":{"@type":"PostalAddress",
+"streetAddress":"Wallbergstraße 4","postalCode":"83620","addressLocality":"Feldkirchen-Westerham","addressCountry":"DE
+"},"sameAs":["https://t.me/DIE_LIBERTAEREN_INFO","https://twitter.com/Die_Libertaeren","https://twitter.com/hummel_math
+ias","https://www.facebook.com/ParteiDieLibertaeren","https://www.instagram.com/die_libertaeren/","https://www.youtube.
+com/channel/UCQKceupSNziCYDB5hqN4vHQ","https://www.tiktok.com/@die_libertaeren"],"memberOf":{"@type":"Organization","na
+me":"Libertäre Bewegung 
+Deutschland"},"knowsAbout":["Libertarismus","Freiheit","Minimalstaat","Nichtaggressionsprinzip","Eigentum","freier Mark
+t","Sezession"]},{"@context":"https://schema.org","@type":"Organization","@id":"https://die-libertaeren-webpage.vercel.
+app/#organization","name":"DIE LIBERTÄREN e.V.","url":"https://die-libertaeren-webpage.vercel.app","logo":"https://die
+-libertaeren-webpage.vercel.app/images/logo-dark.png","email":"info@die-libertaeren.de","telephone":"+49 159 06320502",
+"sameAs":["https://t.me/DIE_LIBERTAEREN_INFO","https://twitter.com/Die_Libertaeren","https://twitter.com/hummel_mathias
+","https://www.facebook.com/ParteiDieLibertaeren","https://www.instagram.com/die_libertaeren/","https://www.youtube.com
+/channel/UCQKceupSNziCYDB5hqN4vHQ","https://www.tiktok.com/@die_libertaeren"]},{"@context":"https://schema.org","@type"
+:"WebSite","@id":"https://die-libertaeren-webpage.vercel.app/#website","name":"DIE 
+LIBERTÄREN","url":"https://die-libertaeren-webpage.vercel.app","description":"DIE LIBERTÄREN – Deutschlands 
+konsequente libertäre Partei für Freiheit, Eigentum, Minimalstaat und freien Markt. Freiheitlich aus Prinzip.","inLan
+guage":"de-DE","publisher":{"@id":"https://die-libertaeren-webpage.vercel.app/#organization"},"potentialAction":{"@type
+":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://die-libertaeren-webpage.vercel.app/blog?q={searc
+h_term_string}"},"query-input":"required name=search_term_string"}}]}</script><script 
+src="/_next/static/chunks/0cz1d0mv5g_q7.js" noModule=""></script></head><body class="min-h-screen antialiased"><div 
+hidden=""><!--$--><!--/$--></div><header class="sticky top-0 z-50 w-full border-b border-border/50 bg-white/90 
+backdrop-blur-md"><div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8"><a class="flex 
+items-center gap-3 transition-opacity hover:opacity-80" href="/"><img alt="DIE LIBERTÄREN – libertäre Partei für 
+Freiheit" width="180" height="58" decoding="async" data-nimg="1" class="h-12 w-auto" style="color:transparent" 
+srcSet="/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=256&amp;q=75 1x, 
+/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=384&amp;q=75 2x" 
+src="/_next/image?url=%2Fimages%2Flogo-dark.png&amp;w=384&amp;q=75"/></a><nav class="hidden items-center gap-8 
+lg:flex"><a class="text-sm font-medium text-foreground transition-colors hover:text-primary" 
+href="/unsere-prinzipien">Prinzipien</a><a class="text-sm font-medium text-foreground transition-colors 
+hover:text-primary" href="/programm">Programm</a><a class="text-sm font-medium text-foreground transition-colors 
+hover:text-primary" href="/stimmst-du-mit-uns-ueberein">Wahl-O-Mat</a><a class="text-sm font-medium text-foreground 
+transition-colors hover:text-primary" href="/events">Events</a><a class="text-sm font-medium text-foreground 
+transition-colors hover:text-primary" href="/blog">Blog</a><div class="group relative"><button class="text-sm 
+font-medium text-foreground transition-colors hover:text-primary">Partei</button><div class="invisible absolute left-0 
+top-full z-50 min-w-[200px] pt-2 opacity-0 transition-all group-hover:visible group-hover:opacity-100"><div 
+class="rounded-xl border border-border bg-white p-2 shadow-lg"><a class="block rounded-lg px-4 py-2.5 text-sm 
+transition-colors hover:bg-muted hover:text-primary" href="/bundesvorstand">Bundesvorstand</a><a class="block 
+rounded-lg px-4 py-2.5 text-sm transition-colors hover:bg-muted hover:text-primary" href="/netzwerk">Netzwerk</a><a 
+class="block rounded-lg px-4 py-2.5 text-sm transition-colors hover:bg-muted hover:text-primary" 
+href="/mitmachen">Mitmachen</a></div></div></div></nav><div class="hidden items-center gap-3 lg:flex"><a 
+class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all 
+duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 
+[&amp;_svg]:shrink-0 border-2 border-primary bg-transparent text-foreground hover:bg-primary hover:text-secondary h-10 
+px-6 text-xs" href="/spenden">Spenden</a><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap 
+rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 
+focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 
+[&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-secondary hover:bg-primary/90 
+hover:shadow-lg hover:shadow-primary/25 h-10 px-6 text-xs" href="/werde-mitglied">Mitglied werden</a></div><button 
+class="lg:hidden" aria-label="Menü öffnen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 
+0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+class="lucide lucide-menu h-6 w-6" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 
+19h16"></path></svg></button></div><div class="overflow-hidden border-t border-border bg-white transition-all 
+lg:hidden max-h-0"><nav class="flex flex-col gap-1 px-6 py-4"><a class="rounded-lg px-4 py-3 text-sm font-medium 
+hover:bg-muted" href="/unsere-prinzipien">Prinzipien</a><a class="rounded-lg px-4 py-3 text-sm font-medium 
+hover:bg-muted" href="/programm">Programm</a><a class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted" 
+href="/stimmst-du-mit-uns-ueberein">Wahl-O-Mat</a><a class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted" 
+href="/events">Events</a><a class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted" href="/blog">Blog</a><a 
+class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted" href="/bundesvorstand">Bundesvorstand</a><a 
+class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-muted" href="/netzwerk">Netzwerk</a><a class="rounded-lg px-4 
+py-3 text-sm font-medium hover:bg-muted" href="/mitmachen">Mitmachen</a><div class="mt-4 flex flex-col gap-2 border-t 
+border-border pt-4"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm 
+font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none 
+[&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 border-primary bg-transparent text-foreground hover:bg-primary 
+hover:text-secondary h-12 px-8 py-3" href="/spenden">Spenden</a><a class="inline-flex items-center justify-center 
+gap-2 whitespace-nowrap rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none 
+focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none 
+disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-secondary 
+hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 h-12 px-8 py-3" href="/werde-mitglied">Mitglied 
+werden</a></div></nav></div></header><main id="main-content" class="flex-1"><section class="relative overflow-hidden 
+py-32 md:py-40 lg:py-48"><div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-[#03050f]" 
+aria-hidden="true"><img alt="" decoding="async" data-nimg="fill" class="object-cover object-center 
+[image-rendering:-webkit-optimize-contrast]" 
+style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" 
+src="/images/hero-background.jpg"/><div class="absolute inset-0 bg-gradient-to-br from-[#03050f]/65 via-[#03050f]/52 
+to-[#0a0c14]/48"></div><div class="absolute inset-0 libertarian-stripe-pattern opacity-[0.18]"></div><div 
+class="absolute -right-24 top-1/4 h-80 w-80 rounded-full bg-primary/[0.07] blur-3xl"></div><div class="absolute 
+-left-20 bottom-1/4 h-64 w-64 rounded-full bg-primary/[0.04] blur-3xl"></div><div class="absolute inset-x-0 bottom-0 
+h-24 bg-gradient-to-b from-transparent to-slate-100 md:h-32"></div></div><div class="mx-auto max-w-7xl px-6 
+lg:px-8"><div class="max-w-4xl" style="opacity:0;transform:translateY(30px)"><p class="mb-6 text-sm font-semibold 
+uppercase tracking-[0.2em] text-primary">Willkommen bei DIE LIBERTÄREN</p><h1 class="font-display text-5xl font-bold 
+leading-[1.1] tracking-tight text-white md:text-6xl lg:text-7xl">DIE LIBERTÄREN –<!-- --> <span 
+class="text-primary">libertäre Partei für Freiheit</span></h1><p class="mt-4 font-display text-2xl font-medium 
+text-white/80 md:text-3xl">FREIHEITLICH – AUS PRINZIP</p><p class="mt-8 max-w-2xl text-lg leading-relaxed 
+text-white/70 md:text-xl">Deutschlands konsequenteste Stimme für Libertarismus, Eigentum und freien Markt: Wir stehen 
+für individuelle Freiheit, Minimalstaat und das Nichtaggressionsprinzip – ehrlich und kompromisslos.</p><div 
+class="mt-12 flex flex-col gap-4 sm:flex-row"><a class="inline-flex items-center justify-center gap-2 
+whitespace-nowrap rounded-full font-semibold transition-all duration-300 focus-visible:outline-none 
+focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none 
+disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-secondary 
+hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 h-14 px-10 text-base" href="/unsere-prinzipien">Unsere 
+Prinzipien<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right 
+ml-2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="inline-flex 
+items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all duration-300 
+focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 
+[&amp;_svg]:shrink-0 border-2 h-14 px-10 text-base border-white/25 bg-white/5 text-white hover:bg-white/10 
+hover:text-white" href="/programm">Thesenpapier v4</a></div></div></div></section><section class="relative 
+overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-white"><div class="pointer-events-none absolute 
+inset-0" aria-hidden="true"><div class="absolute -right-40 top-0 h-96 w-96 rounded-full bg-primary/[0.06] 
+blur-3xl"></div><div class="absolute -left-40 bottom-20 h-72 w-72 rounded-full bg-slate-200/80 
+blur-3xl"></div></div><div class="relative mx-auto max-w-7xl px-6 py-16 md:py-24 lg:px-8 lg:py-28"><header 
+class="mb-10 text-center md:mb-14"><p class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] 
+text-primary">Highlight</p><h2 class="font-display text-3xl font-bold tracking-tight text-foreground md:text-4xl 
+lg:text-5xl">Aktuell bei DIE LIBERTÄREN</h2><p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">Was uns 
+gerade bewegt – und wo du mitmachen kannst.</p></header><div class="space-y-10"><article class="group 
+overflow-hidden rounded-3xl bg-slate-900 shadow-2xl shadow-slate-900/25 ring-1 ring-slate-800"><div class="grid 
+lg:min-h-[480px] lg:grid-cols-[1.1fr_0.9fr]"><div class="relative flex flex-col justify-center p-8 md:p-12 
+lg:p-14"><div class="pointer-events-none absolute inset-0 libertarian-stripe-pattern opacity-[0.08]" 
+aria-hidden="true"></div><div class="relative"><div class="mb-5 inline-flex w-fit items-center gap-2 rounded-full 
+border border-primary/60 bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-primary"><span 
+class="h-1.5 w-1.5 animate-pulse rounded-full bg-primary"></span>Jetzt aktuell</div><h3 class="font-display text-3xl 
+font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl">Afuera Fest 2026</h3><p class="mt-5 
+max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">Das größte libertäre Fest im deutschsprachigen Raum. 
+Wir brauchen deine Unterstützung vor Ort!</p><div class="mt-10"><a target="_blank" rel="noopener noreferrer" 
+class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full transition-all duration-300 
+focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 
+[&amp;_svg]:shrink-0 h-14 bg-primary px-10 text-base font-bold text-secondary shadow-lg shadow-primary/35 
+hover:bg-primary/95 hover:shadow-xl hover:shadow-primary/45" href="https://afuerafest.de/">Mehr erfahren<svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right ml-1 h-5 w-5" 
+aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div></div></div><div 
+class="relative min-h-[280px] lg:min-h-full"><img alt="Afuera Fest 2026" decoding="async" data-nimg="fill" 
+class="object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
+style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="(max-width: 
+1024px) 100vw, 640px" srcSet="/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=640&amp;q=90 640w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=640&amp;q=90 640w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=750&amp;q=90 750w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=828&amp;q=90 828w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=832&amp;q=90 832w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1080&amp;q=90 1080w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1200&amp;q=90 1200w, 
+/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1920&amp;q=90 1920w" 
+src="/_next/image?url=%2Fimages%2Fafuera-fest-hero.jpg&amp;w=1920&amp;q=90"/><div class="absolute inset-0 
+bg-gradient-to-t from-slate-900/80 via-slate-900/10 to-transparent lg:bg-gradient-to-l lg:from-slate-900/90 
+lg:via-slate-900/20 lg:to-transparent"></div></div></div></article></div></div></section><div 
+class="light-section-texture relative isolate"><section class="relative border-y border-black/10 py-20 md:py-24" 
+aria-roledescription="carousel" aria-label="Zitat-Rotation"><div class="pointer-events-none absolute inset-0 
+libertarian-stripe-pattern opacity-[0.05]" aria-hidden="true"></div><div class="relative mx-auto max-w-4xl px-6 
+lg:px-8"><div class="texture-surface-card rounded-2xl px-6 py-14 text-center md:px-10"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote mx-auto mb-8 h-10 w-10 
+text-primary" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 
+0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 
+1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div 
+class="relative"><button class="items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold 
+transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none 
+[&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 text-foreground hover:bg-primary hover:text-secondary absolute left-0 
+top-1/2 hidden h-11 w-11 -translate-y-1/2 rounded-full border-border bg-white/90 shadow-sm md:inline-flex" 
+type="button" aria-label="Vorheriges Zitat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 
+0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+class="lucide lucide-chevron-left h-5 w-5" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><div 
+class="mx-auto max-w-3xl px-0 md:px-14" style="opacity:0;transform:translateY(20px)"><blockquote class="font-display 
+text-2xl font-medium leading-relaxed text-foreground md:text-3xl lg:text-4xl">“<!-- -->Der Markt ist kein System – 
+er ist das Ergebnis freier Menschen, die miteinander handeln. Ohne Zwang.<!-- -->”</blockquote><div class="mt-8 flex 
+flex-col items-center gap-4"><cite class="block text-base not-italic text-muted-foreground">— <!-- -->Mathias 
+Hummel<span class="mt-1 block text-sm">Bundesvorsitzender DIE LIBERTÄREN</span><span class="mt-1 block text-xs 
+text-muted-foreground/80">X: @hummel_mathias</span></cite></div></div><button class="items-center justify-center gap-2 
+whitespace-nowrap text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 
+focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 
+[&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 text-foreground hover:bg-primary 
+hover:text-secondary absolute right-0 top-1/2 hidden h-11 w-11 -translate-y-1/2 rounded-full border-border bg-white/90 
+shadow-sm md:inline-flex" type="button" aria-label="Nächstes Zitat"><svg xmlns="http://www.w3.org/2000/svg" 
+width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="lucide lucide-chevron-right h-5 w-5" aria-hidden="true"><path d="m9 18 
+6-6-6-6"></path></svg></button></div><div class="mt-8 flex flex-col items-center gap-4"><p class="text-sm font-medium 
+text-muted-foreground" aria-live="polite">Zitat <!-- -->6<!-- --> von <!-- -->10</p><div class="flex items-center 
+gap-3 md:hidden"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full 
+font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none 
+[&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 border-primary bg-transparent text-foreground hover:bg-primary 
+hover:text-secondary h-10 px-6 text-xs" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+class="lucide lucide-chevron-left mr-1 h-4 w-4" aria-hidden="true"><path d="m15 18-6-6 
+6-6"></path></svg>Zurück</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap 
+rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 
+focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 
+[&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 border-primary bg-transparent 
+text-foreground hover:bg-primary hover:text-secondary h-10 px-6 text-xs" type="button">Weiter<svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-1 h-4 w-4" 
+aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button></div><div class="flex flex-wrap justify-center 
+gap-2"><button type="button" class="h-2 rounded-full transition-all w-2 bg-border" aria-label="Zitat 1: Mathias 
+Hummel" aria-current="false"></button><button type="button" class="h-2 rounded-full transition-all w-2 bg-border" 
+aria-label="Zitat 2: Mathias Hummel" aria-current="false"></button><button type="button" class="h-2 rounded-full 
+transition-all w-2 bg-border" aria-label="Zitat 3: Mathias Hummel" aria-current="false"></button><button type="button" 
+class="h-2 rounded-full transition-all w-2 bg-border" aria-label="Zitat 4: Mathias Hummel" 
+aria-current="false"></button><button type="button" class="h-2 rounded-full transition-all w-2 bg-border" 
+aria-label="Zitat 5: Mathias Hummel" aria-current="false"></button><button type="button" class="h-2 rounded-full 
+transition-all w-8 bg-primary" aria-label="Zitat 6: Mathias Hummel" aria-current="true"></button><button type="button" 
+class="h-2 rounded-full transition-all w-2 bg-border" aria-label="Zitat 7: Mathias Hummel" 
+aria-current="false"></button><button type="button" class="h-2 rounded-full transition-all w-2 bg-border" 
+aria-label="Zitat 8: Mathias Hummel" aria-current="false"></button><button type="button" class="h-2 rounded-full 
+transition-all w-2 bg-border" aria-label="Zitat 9: Mathias Hummel" aria-current="false"></button><button type="button" 
+class="h-2 rounded-full transition-all w-2 bg-border" aria-label="Zitat 10: Mathias Hummel" 
+aria-current="false"></button></div></div></div></div></section><section class="py-24 md:py-32 border-t 
+border-black/10"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mb-16"><h2 class="font-display text-3xl 
+font-bold tracking-tight md:text-4xl lg:text-5xl text-foreground">Tagesaktuelle libertäre Impulse</h2><p class="mt-4 
+max-w-3xl text-lg leading-relaxed text-muted-foreground">Kurznews mit libertärer Einordnung – pflegbar im CMS unter 
+„Tagesimpulse“.</p></div><div class="grid gap-8 md:grid-cols-3 md:gap-10"><div class="rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card group flex flex-col 
+transition-shadow hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><div class="mb-3 flex items-center 
+justify-between"><span class="text-xs font-medium text-muted-foreground">29. Juni 2026</span></div><h3 
+class="font-semibold tracking-tight group-hover:text-primary text-lg transition-colors"><a class="flex items-start 
+gap-2" href="https://www.scotusblog.com/2026/06/court-allows-trump-to-fire-ftc-commissioner-and-overturns-major-restrai
+nt-on-presidential-power/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide 
+lucide-lightbulb mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 
+1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 
+22h4"></path></svg><span>US Supreme Court: Präsidialmacht vs. unabhängige Behörden</span></a></h3></div><div 
+class="p-8 pt-0 mt-auto"><p class="mb-3 text-sm leading-relaxed text-muted-foreground">Der Supreme Court erlaubte der 
+US-Regierung, einen FTC-Kommissar zu entlassen – ein Einschnitt in die Grenzen exekutiver Macht und die 
+Unabhängigkeit von Regulierungsbehörden.</p><p class="mb-4 rounded-lg border border-primary/15 bg-primary/5 px-3 
+py-2 text-sm leading-relaxed text-foreground"><span class="font-semibold text-primary">Libertäre Sicht: 
+</span>Libertäre kritisieren beides: willkürliche Macht ohne klare Regeln und den Regulierungsstaat an sich. 
+Freiheit braucht feste Eigentums- und Vertragsrechte – nicht immer mehr Behördenkompetenz.</p><a class="inline-flex 
+items-center gap-1 text-sm font-semibold text-primary transition-colors hover:underline" href="https://www.scotusblog.c
+om/2026/06/court-allows-trump-to-fire-ftc-commissioner-and-overturns-major-restraint-on-presidential-power/">Weiterlese
+n<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4" 
+aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div></div><div 
+class="rounded-2xl border border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card group flex 
+flex-col transition-shadow hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><div class="mb-3 flex 
+items-center justify-between"><span class="text-xs font-medium text-muted-foreground">29. Juni 2026</span></div><h3 
+class="font-semibold tracking-tight group-hover:text-primary text-lg transition-colors"><a class="flex items-start 
+gap-2" href="https://www.reuters.com/world/asia-pacific/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-h
+ormuz-escalating-2026-06-27/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide 
+lucide-lightbulb mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 
+1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 
+22h4"></path></svg><span>Persischer Golf: Handelswege und Eskalation im Fokus</span></a></h3></div><div class="p-8 
+pt-0 mt-auto"><p class="mb-3 text-sm leading-relaxed text-muted-foreground">Neue Spannungen rund um den Straßen von 
+Hormuz belasten internationale Lieferketten und treiben Energie- und Versicherungskosten.</p><p class="mb-4 rounded-lg 
+border border-primary/15 bg-primary/5 px-3 py-2 text-sm leading-relaxed text-foreground"><span class="font-semibold 
+text-primary">Libertäre Sicht: </span>Freier Welthandel scheitert an Kriegsrhetorik und Interventionismus. Libertäre 
+plädieren für offene Märkte und Zurückhaltung – nicht für die Verstaatlichung globaler Risiken.</p><a 
+class="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:underline" href="https
+://www.reuters.com/world/asia-pacific/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-hormuz-escalating-2
+026-06-27/">Weiterlesen<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide 
+lucide-arrow-up-right h-4 w-4" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 
+7"></path></svg></a></div></div><div class="rounded-2xl border border-border bg-card text-foreground shadow-sm 
+duration-300 texture-surface-card group flex flex-col transition-shadow hover:shadow-lg"><div class="flex flex-col 
+space-y-2 p-8"><div class="mb-3 flex items-center justify-between"><span class="text-xs font-medium 
+text-muted-foreground">29. Juni 2026</span></div><h3 class="font-semibold tracking-tight group-hover:text-primary 
+text-lg transition-colors"><a class="flex items-start gap-2" 
+href="https://www.cnbc.com/2026/06/26/stock-market-next-week-outlook-for-june-29-july-3-2026.html"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb mt-1 h-5 w-5 shrink-0 
+text-primary" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 
+3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><span>EZB und Märkte: 
+Geldpolitik unter dem Sommer-Druck</span></a></h3></div><div class="p-8 pt-0 mt-auto"><p class="mb-3 text-sm 
+leading-relaxed text-muted-foreground">Vor dem neuen Handelsmonat richten Anleger den Blick erneut auf 
+Zinsentscheidungen und Inflationsdaten in Europa.</p><p class="mb-4 rounded-lg border border-primary/15 bg-primary/5 
+px-3 py-2 text-sm leading-relaxed text-foreground"><span class="font-semibold text-primary">Libertäre Sicht: 
+</span>Inflation ist Folge von Kreditexpansion und Staatsfinanzierung. Sound Money und strikte Haushaltsdisziplin sind 
+die libertäre Antwort – nicht neue Geldschöpfung als politisches Werkzeug.</p><a class="inline-flex items-center 
+gap-1 text-sm font-semibold text-primary transition-colors hover:underline" 
+href="https://www.cnbc.com/2026/06/26/stock-market-next-week-outlook-for-june-29-july-3-2026.html">Weiterlesen<svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4" 
+aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 
+7"></path></svg></a></div></div></div></div></section><section class="py-24 md:py-32 border-t border-black/10"><div 
+class="mx-auto max-w-7xl px-6 lg:px-8"><div class="mb-16"><h2 class="font-display text-3xl font-bold tracking-tight 
+md:text-4xl lg:text-5xl text-foreground">Veranstaltungen</h2><p class="mt-4 max-w-3xl text-lg leading-relaxed 
+text-muted-foreground">Triff uns auf unseren Veranstaltungen oder lerne uns auf Events der Community 
+kennen.</p></div><div class="grid gap-8 md:grid-cols-3 md:gap-10"><div class="rounded-2xl border border-border bg-card 
+text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden transition-shadow hover:shadow-lg"><div 
+class="flex flex-col space-y-2 p-8"><div class="mb-2 flex items-center gap-2"><div class="inline-flex items-center 
+rounded-full border px-3 py-1 text-xs font-medium transition-colors border-transparent bg-primary 
+text-secondary">Stammtisch</div></div><h3 class="font-semibold tracking-tight text-lg">Libertärer Stammtisch 
+Hamburg</h3></div><div class="p-8 pt-0 space-y-3 text-sm text-muted-foreground"><div class="flex items-center 
+gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar 
+h-4 w-4 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" 
+x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>1. Juli 2026</div><div class="flex items-center gap-2"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-primary" 
+aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 
+0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Hamburg</div></div></div><div class="rounded-2xl 
+border border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden 
+transition-shadow hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><div class="mb-2 flex items-center 
+gap-2"><div class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium transition-colors 
+border-transparent bg-primary text-secondary">Stammtisch</div></div><h3 class="font-semibold tracking-tight 
+text-lg">Libertärer Stammtisch Göppingen/Esslingen</h3></div><div class="p-8 pt-0 space-y-3 text-sm 
+text-muted-foreground"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" 
+height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="lucide lucide-calendar h-4 w-4 text-primary" aria-hidden="true"><path d="M8 
+2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 
+10h18"></path></svg>2. Juli 2026</div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" 
+width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-primary" aria-hidden="true"><path d="M20 10c0 
+4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" 
+cy="10" r="3"></circle></svg>Göppingen/Esslingen</div></div></div><div class="rounded-2xl border border-border 
+bg-card text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden transition-shadow 
+hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><div class="mb-2 flex items-center gap-2"><div 
+class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium transition-colors border-transparent 
+bg-primary text-secondary">Stammtisch</div></div><h3 class="font-semibold tracking-tight text-lg">Libertärer 
+Stammtisch Frankfurt am Main</h3></div><div class="p-8 pt-0 space-y-3 text-sm text-muted-foreground"><div class="flex 
+items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar 
+h-4 w-4 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" 
+x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>24. Juli 2026</div><div class="flex items-center gap-2"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-primary" 
+aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 
+0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>Frankfurt am Main</div></div></div></div><div 
+class="mt-12 text-center"><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full 
+font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none 
+[&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-secondary hover:bg-primary/90 hover:shadow-lg 
+hover:shadow-primary/25 h-14 px-10 text-base" href="/events">Zu allen Terminen</a></div></div></section><section 
+class="py-24 md:py-32 border-t border-black/10 bg-transparent"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div 
+class="mb-16 text-center"><h2 class="font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl 
+text-foreground">Für einen praktischen Libertarismus</h2><p class="mt-4 max-w-3xl text-lg leading-relaxed 
+text-muted-foreground mx-auto">Libertarismus ist keine bloße Theorie – es ist eine Lebensphilosophie.</p></div><div 
+class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 md:gap-10"><div class="rounded-2xl border border-border bg-card 
+text-foreground shadow-sm duration-300 texture-surface-card transition-shadow hover:shadow-lg"><div class="flex 
+flex-col space-y-2 p-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone 
+mx-auto h-10 w-10 text-primary" aria-hidden="true"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 
+1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 
+3.2-2.4A8 8 0 0 1 10 14"></path><path d="M8 6v8"></path></svg><h3 class="font-semibold tracking-tight text-center 
+text-lg">Aktionismus</h3></div><div class="p-8 pt-0"><p class="text-center text-sm leading-relaxed 
+text-muted-foreground">Wir bringen den Libertarismus in die öffentliche Debatte und auf die 
+Straße.</p></div></div><div class="rounded-2xl border border-border bg-card text-foreground shadow-sm duration-300 
+texture-surface-card transition-shadow hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text mx-auto h-10 w-10 
+text-primary" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 
+3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 
+9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg><h3 class="font-semibold tracking-tight 
+text-center text-lg">Parteiarbeit</h3></div><div class="p-8 pt-0"><p class="text-center text-sm leading-relaxed 
+text-muted-foreground">Wir stellen Positionspapiere und Programme auf, um den Rahmen für mehr gesellschaftliche 
+Freiheit zu schaffen.</p></div></div><div class="rounded-2xl border border-border bg-card text-foreground shadow-sm 
+duration-300 texture-surface-card transition-shadow hover:shadow-lg"><div class="flex flex-col space-y-2 p-8"><svg 
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users mx-auto h-10 w-10 
+text-primary" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 
+1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><h3 
+class="font-semibold tracking-tight text-center text-lg">Modellierung</h3></div><div class="p-8 pt-0"><p 
+class="text-center text-sm leading-relaxed text-muted-foreground">Wir transformieren die Lehre in praktische Modelle 
+und unterstützen freiheitliche Organisationen.</p></div></div><div class="rounded-2xl border border-border bg-card 
+text-foreground shadow-sm duration-300 texture-surface-card transition-shadow hover:shadow-lg"><div class="flex 
+flex-col space-y-2 p-8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network 
+mx-auto h-10 w-10 text-primary" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" 
+y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 
+0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg><h3 class="font-semibold tracking-tight text-center 
+text-lg">Vernetzung</h3></div><div class="p-8 pt-0"><p class="text-center text-sm leading-relaxed 
+text-muted-foreground">Wir vernetzen uns in der Wissenschaft und in der 
+Zivilgesellschaft.</p></div></div></div></div></section></div><section class="relative overflow-hidden py-24 border-t 
+border-slate-700/50 bg-secondary shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"><div class="pointer-events-none 
+absolute inset-0 libertarian-stripe-pattern opacity-[0.05]" aria-hidden="true"></div><div class="relative mx-auto 
+max-w-4xl px-6 text-center lg:px-8"><h2 class="font-display text-3xl font-bold tracking-tight md:text-4xl 
+text-white">Freiheit ist kein Geschenk, sondern dein Recht!</h2><p class="mx-auto mt-6 max-w-2xl text-lg 
+leading-relaxed text-white/70">Für uns ist Freiheit nicht nur ein Begriff, sondern ein Prinzip. Werde der Patron 
+einer wahren Freiheitsbewegung!</p><div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"><a 
+class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-all 
+duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 
+[&amp;_svg]:shrink-0 bg-primary text-secondary hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25 h-14 px-10 
+text-base" href="/spenden">Unterstütze uns</a><a class="inline-flex items-center justify-center gap-2 
+whitespace-nowrap rounded-full font-semibold transition-all duration-300 focus-visible:outline-none 
+focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none 
+disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border-2 bg-transparent 
+h-14 px-10 text-base border-white text-white hover:bg-white hover:text-secondary" href="/werde-mitglied">Werde 
+Mitglied</a></div></div></section><section class="border-t border-black/10 bg-muted/20 py-16 md:py-20" 
+aria-labelledby="seo-intro-heading"><div class="mx-auto max-w-4xl px-6 text-center lg:px-8"><h2 id="seo-intro-heading" 
+class="font-display text-2xl font-bold tracking-tight text-foreground md:text-3xl">Libertarismus, Freiheit und 
+Eigentum – aus Prinzip</h2><p class="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg"><strong 
+class="font-semibold text-foreground">DIE LIBERTÄREN</strong> sind die konsequente libertäre Partei in Deutschland: 
+Wir stehen für individuelle Freiheit, das <strong class="font-semibold 
+text-foreground">Nichtaggressionsprinzip</strong>, unverletzliches <strong class="font-semibold 
+text-foreground">Eigentum</strong> und einen <strong class="font-semibold text-foreground">Minimalstaat</strong>, der 
+Rechte schützt statt sie zu beschneiden. Wir setzen auf den<!-- --> <strong class="font-semibold 
+text-foreground">freien Markt</strong>, freiwillige Kooperation und – wo nötig – das Recht auf<!-- --> <strong 
+class="font-semibold text-foreground">Sezession</strong> als friedliches Mittel gegen Zentralismus.</p><nav 
+aria-label="Wichtige Themen" class="mt-8"><ul class="flex flex-wrap justify-center gap-3"><li><a class="inline-flex 
+rounded-full border border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors 
+hover:border-primary hover:text-primary" href="/unsere-prinzipien">Nichtaggressionsprinzip &amp; 
+Prinzipien</a></li><li><a class="inline-flex rounded-full border border-primary/25 bg-white px-4 py-2 text-sm 
+font-medium text-foreground transition-colors hover:border-primary hover:text-primary" href="/programm">Programm &amp; 
+Minimalstaat</a></li><li><a class="inline-flex rounded-full border border-primary/25 bg-white px-4 py-2 text-sm 
+font-medium text-foreground transition-colors hover:border-primary hover:text-primary" href="/blog">Blog zu Freiheit 
+&amp; Eigentum</a></li><li><a class="inline-flex rounded-full border border-primary/25 bg-white px-4 py-2 text-sm 
+font-medium text-foreground transition-colors hover:border-primary hover:text-primary" 
+href="/stimmst-du-mit-uns-ueberein">Wahl-O-Mat libertär</a></li><li><a class="inline-flex rounded-full border 
+border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary 
+hover:text-primary" href="/werde-mitglied">Mitglied werden</a></li></ul></nav></div></section><section 
+class="knechtschaft-gradient relative overflow-hidden border-t border-slate-600/40 py-24 text-white 
+shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"><div class="pointer-events-none absolute inset-0 
+libertarian-stripe-pattern opacity-[0.06]" aria-hidden="true"></div><div class="pointer-events-none absolute -right-32 
+top-0 h-80 w-80 rounded-full bg-primary/[0.06] blur-3xl" aria-hidden="true"></div><div class="relative mx-auto 
+max-w-7xl px-6 lg:px-8"><h2 class="mb-16 text-center font-display text-3xl font-bold md:text-4xl">Beende deine 
+Knechtschaft jetzt!</h2><div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4"><div class="rounded-2xl border 
+border-white/10 bg-white/5 px-4 py-8 text-center backdrop-blur-sm" style="opacity:0;transform:translateY(20px)"><div 
+class="font-display text-5xl font-bold text-primary md:text-6xl">6,5<span class="ml-1 text-2xl 
+text-white/60">Monate</span></div><p class="mt-4 text-sm leading-relaxed text-white/75">arbeitest du im Jahr für den 
+Staat</p></div><div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center backdrop-blur-sm" 
+style="opacity:0;transform:translateY(20px)"><div class="font-display text-5xl font-bold text-primary 
+md:text-6xl">45%</div><p class="mt-4 text-sm leading-relaxed text-white/75">Steuern auf dein Einkommen</p></div><div 
+class="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center backdrop-blur-sm" 
+style="opacity:0;transform:translateY(20px)"><div class="font-display text-5xl font-bold text-primary 
+md:text-6xl">37</div><p class="mt-4 text-sm leading-relaxed text-white/75">Steuerarten in Deutschland</p></div><div 
+class="rounded-2xl border border-white/10 bg-white/5 px-4 py-8 text-center backdrop-blur-sm" 
+style="opacity:0;transform:translateY(20px)"><div class="font-display text-5xl font-bold text-primary 
+md:text-6xl">49,7%</div><p class="mt-4 text-sm leading-relaxed text-white/75">Staatsquote in 
+Deutschland</p></div></div></div></section><!--$--><!--/$--></main><footer class="bg-secondary text-white"><div 
+class="mx-auto max-w-7xl px-6 py-20 lg:px-8"><div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4"><div 
+class="lg:col-span-1"><img alt="DIE LIBERTÄREN Logo" loading="lazy" width="200" height="65" decoding="async" 
+data-nimg="1" class="mb-6 h-14 w-auto" style="color:transparent" 
+srcSet="/_next/image?url=%2Fimages%2Flogo.png&amp;w=256&amp;q=75 1x, 
+/_next/image?url=%2Fimages%2Flogo.png&amp;w=640&amp;q=75 2x" 
+src="/_next/image?url=%2Fimages%2Flogo.png&amp;w=640&amp;q=75"/><p class="text-sm leading-relaxed 
+text-white/70">FREIHEITLICH – AUS PRINZIP</p><p class="mt-4 text-sm text-white/50">Postfach 75 02 07, 81332 
+München</p></div><div><h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">Engagement</h3><ul 
+class="space-y-3"><li><a class="text-sm text-white/70 transition-colors hover:text-primary" 
+href="/mitmachen">Mitmachen</a></li><li><a class="text-sm text-white/70 transition-colors hover:text-primary" 
+href="/spenden">Spenden</a></li><li><a class="text-sm text-white/70 transition-colors hover:text-primary" 
+href="/werde-mitglied">Mitglied werden</a></li><li><a href="https://ankap.store/die-libertaeren/" target="_blank" 
+rel="noopener noreferrer" class="text-sm text-white/70 transition-colors 
+hover:text-primary">Shop</a></li></ul></div><div><h3 class="mb-4 text-sm font-semibold uppercase tracking-wider 
+text-primary">Information</h3><ul class="space-y-3"><li><a class="text-sm text-white/70 transition-colors 
+hover:text-primary" href="/kontakt">Kontakt</a></li><li><a class="text-sm text-white/70 transition-colors 
+hover:text-primary" href="/programm">Programm</a></li><li><a class="text-sm text-white/70 transition-colors 
+hover:text-primary" href="/events">Events</a></li><li><a class="text-sm text-white/70 transition-colors 
+hover:text-primary" href="/blog">Blog</a></li></ul></div><div><h3 class="mb-4 text-sm font-semibold uppercase 
+tracking-wider text-primary">Rechtliches</h3><ul class="space-y-3"><li><a class="text-sm text-white/70 
+transition-colors hover:text-primary" href="/impressum">Impressum</a></li><li><a class="text-sm text-white/70 
+transition-colors hover:text-primary" href="/datenschutz">Datenschutz</a></li><li><a class="text-sm text-white/70 
+transition-colors hover:text-primary" href="/programm">Satzung</a></li></ul></div></div><div class="mt-16 border-t 
+border-white/10 pt-8"><div class="flex flex-col items-center justify-between gap-6 md:flex-row"><div class="flex 
+flex-col items-center gap-3 md:items-start"><p class="text-sm text-white/50">© <!-- -->2026<!-- --> DIE LIBERTÄREN 
+e.V. Alle Rechte vorbehalten.</p><nav aria-label="Rechtliche Hinweise" class="flex flex-wrap justify-center gap-x-4 
+gap-y-2 md:justify-start"><a class="text-sm text-white/60 transition-colors hover:text-primary" 
+href="/impressum">Impressum</a><a class="text-sm text-white/60 transition-colors hover:text-primary" 
+href="/datenschutz">Datenschutz</a></nav></div><div class="flex flex-wrap justify-center gap-4"><a 
+href="https://t.me/DIE_LIBERTAEREN_INFO" target="_blank" rel="noopener noreferrer" class="text-sm text-white/60 
+transition-colors hover:text-primary" aria-label="Telegram">Telegram</a><a href="https://twitter.com/Die_Libertaeren" 
+target="_blank" rel="noopener noreferrer" class="text-sm text-white/60 transition-colors hover:text-primary" 
+aria-label="X">X</a><a href="https://www.facebook.com/ParteiDieLibertaeren" target="_blank" rel="noopener noreferrer" 
+class="text-sm text-white/60 transition-colors hover:text-primary" aria-label="Facebook">Facebook</a><a 
+href="https://www.instagram.com/die_libertaeren/" target="_blank" rel="noopener noreferrer" class="text-sm 
+text-white/60 transition-colors hover:text-primary" aria-label="Instagram">Instagram</a><a 
+href="https://www.youtube.com/channel/UCQKceupSNziCYDB5hqN4vHQ" target="_blank" rel="noopener noreferrer" 
+class="text-sm text-white/60 transition-colors hover:text-primary" aria-label="YouTube">YouTube</a><a 
+href="https://www.tiktok.com/@die_libertaeren" target="_blank" rel="noopener noreferrer" class="text-sm text-white/60 
+transition-colors hover:text-primary" aria-label="TikTok">TikTok</a></div></div></div></div></footer><script 
+src="/_next/static/chunks/37v5ulr6qjozi.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([
+0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[339756,[\"/_next/static/chunks/2yl1jv4w6po1z.js\
+",\"/_next/static/chunks/1ntn7efqc-iiw.js\"],\"default\"]\n3:I[837457,[\"/_next/static/chunks/2yl1jv4w6po1z.js\",\"/_ne
+xt/static/chunks/1ntn7efqc-iiw.js\"],\"default\"]\n9:I[168027,[],\"default\",1]\n:HL[\"/_next/static/chunks/20jjvqonre8
+in.css\",\"style\"]\n:HL[\"/_next/static/media/5cf8828ea9d4dda3-s.p.05uz1l1tir_-_.woff2\",\"font\",{\"crossOrigin\":\"\
+",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/ce62453a442c7f35-s.p.0a0h245ktd4x0.woff2\",\"font\",{\"crossOrig
+in\":\"\",\"type\":\"font/woff2\"}]\n4:Tb40,"])</script><script>self.__next_f.push([1,"{\"@context\":\"https://schema.o
+rg\",\"@graph\":[{\"@context\":\"https://schema.org\",\"@type\":\"PoliticalParty\",\"@id\":\"https://die-libertaeren-we
+bpage.vercel.app/#politicalparty\",\"name\":\"DIE LIBERTÄREN e.V.\",\"alternateName\":\"DIE 
+LIBERTÄREN\",\"description\":\"DIE LIBERTÄREN – Deutschlands konsequente libertäre Partei für Freiheit, 
+Eigentum, Minimalstaat und freien Markt. Freiheitlich aus Prinzip.\",\"url\":\"https://die-libertaeren-webpage.vercel.a
+pp\",\"logo\":\"https://die-libertaeren-webpage.vercel.app/images/logo-dark.png\",\"image\":\"https://die-libertaeren-w
+ebpage.vercel.app/images/logo-dark.png\",\"email\":\"info@die-libertaeren.de\",\"telephone\":\"+49 159 
+06320502\",\"slogan\":\"FREIHEITLICH – AUS PRINZIP\",\"foundingLocation\":{\"@type\":\"Place\",\"address\":{\"@type\"
+:\"PostalAddress\",\"streetAddress\":\"Wallbergstraße 4\",\"postalCode\":\"83620\",\"addressLocality\":\"Feldkirchen-W
+esterham\",\"addressCountry\":\"DE\"}},\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Wallbergstraße 4\"
+,\"postalCode\":\"83620\",\"addressLocality\":\"Feldkirchen-Westerham\",\"addressCountry\":\"DE\"},\"sameAs\":[\"https:
+//t.me/DIE_LIBERTAEREN_INFO\",\"https://twitter.com/Die_Libertaeren\",\"https://twitter.com/hummel_mathias\",\"https://
+www.facebook.com/ParteiDieLibertaeren\",\"https://www.instagram.com/die_libertaeren/\",\"https://www.youtube.com/channe
+l/UCQKceupSNziCYDB5hqN4vHQ\",\"https://www.tiktok.com/@die_libertaeren\"],\"memberOf\":{\"@type\":\"Organization\",\"na
+me\":\"Libertäre Bewegung Deutschland\"},\"knowsAbout\":[\"Libertarismus\",\"Freiheit\",\"Minimalstaat\",\"Nichtaggres
+sionsprinzip\",\"Eigentum\",\"freier Markt\",\"Sezession\"]},{\"@context\":\"https://schema.org\",\"@type\":\"Organizat
+ion\",\"@id\":\"https://die-libertaeren-webpage.vercel.app/#organization\",\"name\":\"DIE LIBERTÄREN e.V.\",\"url\":\"
+https://die-libertaeren-webpage.vercel.app\",\"logo\":\"https://die-libertaeren-webpage.vercel.app/images/logo-dark.png
+\",\"email\":\"info@die-libertaeren.de\",\"telephone\":\"+49 159 06320502\",\"sameAs\":[\"https://t.me/DIE_LIBERTAEREN_
+INFO\",\"https://twitter.com/Die_Libertaeren\",\"https://twitter.com/hummel_mathias\",\"https://www.facebook.com/Partei
+DieLibertaeren\",\"https://www.instagram.com/die_libertaeren/\",\"https://www.youtube.com/channel/UCQKceupSNziCYDB5hqN4
+vHQ\",\"https://www.tiktok.com/@die_libertaeren\"]},{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"@id\":
+\"https://die-libertaeren-webpage.vercel.app/#website\",\"name\":\"DIE 
+LIBERTÄREN\",\"url\":\"https://die-libertaeren-webpage.vercel.app\",\"description\":\"DIE LIBERTÄREN – 
+Deutschlands konsequente libertäre Partei für Freiheit, Eigentum, Minimalstaat und freien Markt. Freiheitlich aus Pri
+nzip.\",\"inLanguage\":\"de-DE\",\"publisher\":{\"@id\":\"https://die-libertaeren-webpage.vercel.app/#organization\"},\
+"potentialAction\":{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://die-liber
+taeren-webpage.vercel.app/blog?q={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}}]}"])</s
+cript><script>self.__next_f.push([1,"0:{\"P\":null,\"c\":[\"\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\"
+:[\"(frontend)\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",16]}],[[\"$\",\"$1\",\"c\",{\"children\
+":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\"
+,\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScrip
+ts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be 
+found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe 
+UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"text
+Align\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"cen
+ter\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\
+"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media 
+(prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}
+}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 
+0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},
+\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"sty
+le\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be fo
+und.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c
+\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/20jjvqonre8in.css\",\"
+precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\"
+:\"/_next/static/chunks/1co1lrqxz3761.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"
+src\":\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang
+\":\"de\",\"className\":\"roboto_702e2240-module__nm7JIq__variable roboto_slab_6b868db6-module__fi8lwW__variable\",\"ch
+ildren\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetI
+nnerHTML\":{\"__html\":\"$4\"}}]}],\"$L5\"]}]]}],{\"children\":[\"$L6\",{},null,false,null]},null,false,null]},null,fal
+se,\"$@7\"],\"$L8\",false]],\"m\":\"$undefined\",\"G\":[\"$9\",[]],\"S\":true,\"h\":null,\"s\":\"$undefined\",\"l\":\"$
+undefined\",\"p\":\"$undefined\",\"d\":\"$undefined\",\"b\":\"S9fpIm5nyvVPYPraoW8s7\"}\n"])</script><script>self.__next
+_f.push([1,"a:I[545872,[\"/_next/static/chunks/1co1lrqxz3761.js\",\"/_next/static/chunks/3k0ryh65wh-r1.js\"],\"Header\"
+]\nb:I[605500,[\"/_next/static/chunks/1co1lrqxz3761.js\",\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"/_next/static/chun
+ks/179ej4e72znmi.js\",\"/_next/static/chunks/3731h1foz99dy.js\"],\"Image\"]\nc:I[522016,[\"/_next/static/chunks/1co1lrq
+xz3761.js\",\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"/_next/static/chunks/179ej4e72znmi.js\",\"/_next/static/chunks/
+3731h1foz99dy.js\"],\"\"]\n11:I[897367,[\"/_next/static/chunks/2yl1jv4w6po1z.js\",\"/_next/static/chunks/1ntn7efqc-iiw.
+js\"],\"OutletBoundary\"]\n12:\"$Sreact.suspense\"\n15:I[897367,[\"/_next/static/chunks/2yl1jv4w6po1z.js\",\"/_next/sta
+tic/chunks/1ntn7efqc-iiw.js\"],\"ViewportBoundary\"]\n17:I[897367,[\"/_next/static/chunks/2yl1jv4w6po1z.js\",\"/_next/s
+tatic/chunks/1ntn7efqc-iiw.js\"],\"MetadataBoundary\"]\n"])</script><script>self.__next_f.push([1,"5:[\"$\",\"body\",nu
+ll,{\"className\":\"min-h-screen antialiased\",\"children\":[[\"$\",\"$La\",null,{}],[\"$\",\"main\",null,{\"id\":\"mai
+n-content\",\"className\":\"flex-1\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$
+undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templ
+ateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404:
+ This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:0:props:children:1:props:notFound:0:1:prop
+s:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\
+":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media 
+(prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}
+}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$0:f:0:1:0:props:children:1:props:notFound:0:1:p
+rops:children:props:children:1:props:style\",\"children\":404}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:0:props:child
+ren:1:props:notFound:0:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$0:
+f:0:1:0:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style\",\"children\":\
+"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",
+\"footer\",null,{\"className\":\"bg-secondary text-white\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto 
+max-w-7xl px-6 py-20 lg:px-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"grid gap-12 md:grid-cols-2 lg:grid-co
+ls-4\",\"children\":[[\"$\",\"div\",null,{\"className\":\"lg:col-span-1\",\"children\":[[\"$\",\"$Lb\",null,{\"src\":\"
+/images/logo.png\",\"alt\":\"DIE LIBERTÄREN Logo\",\"width\":200,\"height\":65,\"className\":\"mb-6 h-14 
+w-auto\"}],[\"$\",\"p\",null,{\"className\":\"text-sm leading-relaxed text-white/70\",\"children\":\"FREIHEITLICH – 
+AUS PRINZIP\"}],[\"$\",\"p\",null,{\"className\":\"mt-4 text-sm text-white/50\",\"children\":\"Postfach 75 02 07, 
+81332 München\"}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\",null,{\"className\":\"mb-4 text-sm 
+font-semibold uppercase tracking-wider text-primary\",\"children\":\"Engagement\"}],[\"$\",\"ul\",null,{\"className\":\
+"space-y-3\",\"children\":[[\"$\",\"li\",\"/mitmachen\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/mitmachen\",\"cl
+assName\":\"text-sm text-white/70 transition-colors hover:text-primary\",\"children\":\"Mitmachen\"}]}],[\"$\",\"li\",\
+"/spenden\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/spenden\",\"className\":\"text-sm text-white/70 
+transition-colors hover:text-primary\",\"children\":\"Spenden\"}]}],[\"$\",\"li\",\"/werde-mitglied\",{\"children\":[\"
+$\",\"$Lc\",null,{\"href\":\"/werde-mitglied\",\"className\":\"text-sm text-white/70 transition-colors 
+hover:text-primary\",\"children\":\"Mitglied werden\"}]}],[\"$\",\"li\",\"https://ankap.store/die-libertaeren/\",{\"chi
+ldren\":[\"$\",\"a\",null,{\"href\":\"https://ankap.store/die-libertaeren/\",\"target\":\"_blank\",\"rel\":\"noopener 
+noreferrer\",\"className\":\"text-sm text-white/70 transition-colors hover:text-primary\",\"children\":\"Shop\"}]}]]}]]
+}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\",null,{\"className\":\"mb-4 text-sm font-semibold uppercase 
+tracking-wider text-primary\",\"children\":\"Information\"}],[\"$\",\"ul\",null,{\"className\":\"space-y-3\",\"children
+\":[[\"$\",\"li\",\"/kontakt\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/kontakt\",\"className\":\"text-sm 
+text-white/70 transition-colors hover:text-primary\",\"children\":\"Kontakt\"}]}],[\"$\",\"li\",\"/programm\",{\"childr
+en\":[\"$\",\"$Lc\",null,{\"href\":\"/programm\",\"className\":\"text-sm text-white/70 transition-colors hover:text-pri
+mary\",\"children\":\"Programm\"}]}],[\"$\",\"li\",\"/events\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/events\",
+\"className\":\"text-sm text-white/70 transition-colors hover:text-primary\",\"children\":\"Events\"}]}],[\"$\",\"li\",
+\"/blog\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/blog\",\"className\":\"text-sm text-white/70 
+transition-colors hover:text-primary\",\"children\":\"Blog\"}]}]]}]]}],[\"$\",\"div\",null,{\"children\":[[\"$\",\"h3\"
+,null,{\"className\":\"mb-4 text-sm font-semibold uppercase tracking-wider text-primary\",\"children\":\"Rechtliches\"}
+],[\"$\",\"ul\",null,{\"className\":\"space-y-3\",\"children\":[[\"$\",\"li\",\"/impressum\",{\"children\":[\"$\",\"$Lc
+\",null,{\"href\":\"/impressum\",\"className\":\"text-sm text-white/70 transition-colors hover:text-primary\",\"childre
+n\":\"Impressum\"}]}],[\"$\",\"li\",\"/datenschutz\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/datenschutz\",\"cla
+ssName\":\"text-sm text-white/70 transition-colors hover:text-primary\",\"children\":\"Datenschutz\"}]}],[\"$\",\"li\",
+\"/programm\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/programm\",\"className\":\"text-sm text-white/70 
+transition-colors 
+hover:text-primary\",\"children\":\"Satzung\"}]}]]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"mt-16 border-t 
+border-white/10 pt-8\",\"children\":[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center justify-between 
+gap-6 md:flex-row\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex flex-col items-center gap-3 md:items-start\
+",\"children\":[\"$Ld\",\"$Le\"]}],\"$Lf\"]}]}]]}]}]]}]\n"])</script><script>self.__next_f.push([1,"6:[\"$\",\"$1\",\"c
+\",{\"children\":[\"$L10\",[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/179ej4e72znmi.js\",\"async\"
+:true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/3731h1foz99dy.js\",\"as
+ync\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L11\",null,{\"children\":[\"$\",\"$12\",null,{\"name\":\"Next.Metadata
+Outlet\",\"children\":\"$@13\"}]}]]}]\n14:[]\n7:\"$W14\"\n8:[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$L15\",nul
+l,{\"children\":\"$L16\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L17\",null,{\"children\":[\"$\",
+\"$12\",null,{\"name\":\"Next.Metadata\",\"children\":\"$L18\"}]}]}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\
+",\"content\":\"\"}]]}]\n"])</script><script>self.__next_f.push([1,"d:[\"$\",\"p\",null,{\"className\":\"text-sm 
+text-white/50\",\"children\":[\"© \",2026,\" DIE LIBERTÄREN e.V. Alle Rechte 
+vorbehalten.\"]}]\ne:[\"$\",\"nav\",null,{\"aria-label\":\"Rechtliche Hinweise\",\"className\":\"flex flex-wrap 
+justify-center gap-x-4 gap-y-2 
+md:justify-start\",\"children\":[[\"$\",\"$Lc\",null,{\"href\":\"/impressum\",\"className\":\"text-sm text-white/60 
+transition-colors hover:text-primary\",\"children\":\"Impressum\"}],[\"$\",\"$Lc\",null,{\"href\":\"/datenschutz\",\"cl
+assName\":\"text-sm text-white/60 transition-colors hover:text-primary\",\"children\":\"Datenschutz\"}]]}]\n"])</script
+><script>self.__next_f.push([1,"f:[\"$\",\"div\",null,{\"className\":\"flex flex-wrap justify-center gap-4\",\"children
+\":[[\"$\",\"a\",\"Telegram\",{\"href\":\"https://t.me/DIE_LIBERTAEREN_INFO\",\"target\":\"_blank\",\"rel\":\"noopener 
+noreferrer\",\"className\":\"text-sm text-white/60 transition-colors hover:text-primary\",\"aria-label\":\"Telegram\",\
+"children\":\"Telegram\"}],[\"$\",\"a\",\"X\",{\"href\":\"https://twitter.com/Die_Libertaeren\",\"target\":\"_blank\",\
+"rel\":\"noopener noreferrer\",\"className\":\"text-sm text-white/60 transition-colors hover:text-primary\",\"aria-labe
+l\":\"X\",\"children\":\"X\"}],[\"$\",\"a\",\"Facebook\",{\"href\":\"https://www.facebook.com/ParteiDieLibertaeren\",\"
+target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"text-sm text-white/60 transition-colors hover:text-
+primary\",\"aria-label\":\"Facebook\",\"children\":\"Facebook\"}],[\"$\",\"a\",\"Instagram\",{\"href\":\"https://www.in
+stagram.com/die_libertaeren/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"text-sm 
+text-white/60 transition-colors hover:text-primary\",\"aria-label\":\"Instagram\",\"children\":\"Instagram\"}],[\"$\",\
+"a\",\"YouTube\",{\"href\":\"https://www.youtube.com/channel/UCQKceupSNziCYDB5hqN4vHQ\",\"target\":\"_blank\",\"rel\":\
+"noopener noreferrer\",\"className\":\"text-sm text-white/60 transition-colors hover:text-primary\",\"aria-label\":\"Yo
+uTube\",\"children\":\"YouTube\"}],[\"$\",\"a\",\"TikTok\",{\"href\":\"https://www.tiktok.com/@die_libertaeren\",\"targ
+et\":\"_blank\",\"rel\":\"noopener noreferrer\",\"className\":\"text-sm text-white/60 transition-colors hover:text-prim
+ary\",\"aria-label\":\"TikTok\",\"children\":\"TikTok\"}]]}]\n"])</script><script>self.__next_f.push([1,"16:[[\"$\",\"m
+eta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, ini
+tial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"19:I[27201,[\"/_next/static/chunks/2yl1jv4w6po1z.js\",\"/
+_next/static/chunks/1ntn7efqc-iiw.js\"],\"IconMark\"]\n13:null\n"])</script><script>self.__next_f.push([1,"18:[[\"$\",\
+"title\",\"0\",{\"children\":\"Libertäre Partei für Freiheit, Eigentum \u0026 freien 
+Markt\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"DIE LIBERTÄREN: Deutschlands konsequente 
+libertäre Partei für individuelle Freiheit, Nichtaggressionsprinzip, Eigentumsschutz, Minimalstaat und freie 
+Marktwirtschaft – freiheitlich aus Prinzip.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"author\",\"href\":\"https://die-libe
+rtaeren-webpage.vercel.app\"}],[\"$\",\"meta\",\"3\",{\"name\":\"author\",\"content\":\"DIE 
+LIBERTÄREN\"}],[\"$\",\"meta\",\"4\",{\"name\":\"keywords\",\"content\":\"Libertarismus,Freiheit,liberale Partei 
+Deutschland,Minimalstaat,Nichtaggressionsprinzip,Eigentum,freier Markt,libertäre 
+Partei\"}],[\"$\",\"meta\",\"5\",{\"name\":\"creator\",\"content\":\"DIE 
+LIBERTÄREN\"}],[\"$\",\"meta\",\"6\",{\"name\":\"publisher\",\"content\":\"DIE 
+LIBERTÄREN\"}],[\"$\",\"meta\",\"7\",{\"name\":\"robots\",\"content\":\"index, 
+follow\"}],[\"$\",\"meta\",\"8\",{\"name\":\"googlebot\",\"content\":\"index, follow\"}],[\"$\",\"meta\",\"9\",{\"name\
+":\"category\",\"content\":\"Politik\"}],[\"$\",\"link\",\"10\",{\"rel\":\"canonical\",\"href\":\"https://die-libertaer
+en-webpage.vercel.app\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:title\",\"content\":\"Libertäre Partei für 
+Freiheit, Eigentum \u0026 freien Markt | DIE 
+LIBERTÄREN\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:description\",\"content\":\"DIE LIBERTÄREN: Deutschlands 
+konsequente libertäre Partei für individuelle Freiheit, Nichtaggressionsprinzip, Eigentumsschutz, Minimalstaat und 
+freie Marktwirtschaft – freiheitlich aus Prinzip.\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:url\",\"content\":\"h
+ttps://die-libertaeren-webpage.vercel.app\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:site_name\",\"content\":\"DIE L
+IBERTÄREN\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:locale\",\"content\":\"de_DE\"}],[\"$\",\"meta\",\"16\",{\"pro
+perty\":\"og:image\",\"content\":\"https://die-libertaeren-webpage.vercel.app/images/logo-dark.png\"}],[\"$\",\"meta\",
+\"17\",{\"property\":\"og:image:width\",\"content\":\"1200\"}],[\"$\",\"meta\",\"18\",{\"property\":\"og:image:height\"
+,\"content\":\"630\"}],[\"$\",\"meta\",\"19\",{\"property\":\"og:image:alt\",\"content\":\"DIE LIBERTÄREN – 
+FREIHEITLICH – AUS PRINZIP\"}],[\"$\",\"meta\",\"20\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"me
+ta\",\"21\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"22\",{\"name\":\"twitter
+:title\",\"content\":\"Libertäre Partei für Freiheit, Eigentum \u0026 freien Markt | DIE 
+LIBERTÄREN\"}],[\"$\",\"meta\",\"23\",{\"name\":\"twitter:description\",\"content\":\"DIE LIBERTÄREN: Deutschlands 
+konsequente libertäre Partei für individuelle Freiheit, Nichtaggressionsprinzip, Eigentumsschutz, Minimalstaat und 
+freie Marktwirtschaft – freiheitlich aus Prinzip.\"}],[\"$\",\"meta\",\"24\",{\"name\":\"twitter:image\",\"content\":
+\"https://die-libertaeren-webpage.vercel.app/images/logo-dark.png\"}],[\"$\",\"link\",\"25\",{\"rel\":\"icon\",\"href\"
+:\"/images/favicon.ico\"}],[\"$\",\"link\",\"26\",{\"rel\":\"apple-touch-icon\",\"href\":\"/images/logo.png\"}],[\"$\",
+\"$L19\",\"27\",{}]]\n"])</script><script>self.__next_f.push([1,"1a:I[322504,[\"/_next/static/chunks/1co1lrqxz3761.js\"
+,\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"/_next/static/chunks/179ej4e72znmi.js\",\"/_next/static/chunks/3731h1foz99
+dy.js\"],\"Hero\"]\n1c:I[702078,[\"/_next/static/chunks/1co1lrqxz3761.js\",\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"
+/_next/static/chunks/179ej4e72znmi.js\",\"/_next/static/chunks/3731h1foz99dy.js\"],\"QuoteRotator\"]\n1f:I[505014,[\"/_
+next/static/chunks/1co1lrqxz3761.js\",\"/_next/static/chunks/3k0ryh65wh-r1.js\",\"/_next/static/chunks/179ej4e72znmi.js
+\",\"/_next/static/chunks/3731h1foz99dy.js\"],\"default\"]\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"$L1
+a\",null,{}],\"$L1b\",[\"$\",\"div\",null,{\"className\":\"light-section-texture relative 
+isolate\",\"children\":[[\"$\",\"$L1c\",null,{\"quotes\":[{\"id\":\"7\",\"text\":\"Die kleinste Minderheit ist das 
+Individuum. Ihre Rechte sind nicht verhandelbar.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"8\",\"text\":\"Aufklärung bedeutet: aus der selbstverschuldeten Unmündigkeit 
+heraustreten. Libertarismus ist die politische Form der Vernunft.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"2\",\"text\":\"Steuern sind Raub. Wer das bestreitet, soll mir erklären, warum Gewalt 
+beim Geldeinsammeln plötzlich moralisch sei.\",\"authorName\":\"Mathias Hummel\",\"authorTitle\":\"Bundesvorsitzender 
+DIE LIBERTÄREN\",\"source\":\"X: @hummel_mathias\"},{\"id\":\"9\",\"text\":\"Wer Freiheit nur für sich will, ist 
+kein Libertärer. Wer Freiheit für alle will, ist es aus Prinzip.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"1\",\"text\":\"Freiheit ist kein Geschenk des Staates. Sie ist das Naturrecht jedes 
+Individuums – und jeder, der sie einschränkt, muss das beweisen, nicht umgekehrt.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"10\",\"text\":\"Der Markt ist kein System – er ist das Ergebnis freier Menschen, die 
+miteinander handeln. Ohne Zwang.\",\"authorName\":\"Mathias Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE 
+LIBERTÄREN\",\"source\":\"X: @hummel_mathias\"},{\"id\":\"4\",\"text\":\"Niemand hat das Recht, über einen anderen 
+zu herrschen. Das gilt auch für 51% der Wähler.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"3\",\"text\":\"Der Staat ist nicht die Lösung. Er ist das Problem – und Politik ist 
+sein Marketing.\",\"authorName\":\"Mathias Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE 
+LIBERTÄREN\",\"source\":\"X: @hummel_mathias\"},{\"id\":\"5\",\"text\":\"Eigentum ist die Verlängerung der 
+individuellen Freiheit in die materielle Welt. Wer Eigentum besteuert, besteuert Freiheit.\",\"authorName\":\"Mathias 
+Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"},{\"id\":\"6\",\"text\":\"Freiwillige Kooperation schafft Wohlstand. Zwang schafft Mangel – und 
+Bürokratie.\",\"authorName\":\"Mathias Hummel\",\"authorTitle\":\"Bundesvorsitzender DIE 
+LIBERTÄREN\",\"source\":\"X: 
+@hummel_mathias\"}]}],\"$L1d\",\"$L1e\",[\"$\",\"section\",null,{\"id\":\"$undefined\",\"className\":\"py-24 md:py-32 
+border-t border-black/10 bg-transparent\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto max-w-7xl px-6 
+lg:px-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-16 
+text-center\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"font-display text-3xl font-bold tracking-tight 
+md:text-4xl lg:text-5xl text-foreground\",\"children\":\"Für einen praktischen 
+Libertarismus\"}],[\"$\",\"p\",null,{\"className\":\"mt-4 max-w-3xl text-lg leading-relaxed text-muted-foreground 
+mx-auto\",\"children\":\"Libertarismus ist keine bloße Theorie – es ist eine 
+Lebensphilosophie.\"}]]}],[\"$\",\"div\",null,{\"className\":\"grid gap-8 sm:grid-cols-2 lg:grid-cols-4 
+md:gap-10\",\"children\":[[\"$\",\"div\",\"Aktionismus\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card transition-shadow 
+hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex flex-col space-y-2 
+p-8\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M11 6a13 13 0 0 0 
+8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 
+2-2z\",\"key\":\"q8bfy3\"}],[\"path\",{\"d\":\"M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 
+14\",\"key\":\"1853fq\"}],[\"path\",{\"d\":\"M8 6v8\",\"key\":\"15ugcq\"}]],\"className\":\"lucide-megaphone mx-auto 
+h-10 w-10 text-primary\"}],\"$L20\"]}],\"$L21\"]}],\"$L22\",\"$L23\",\"$L24\"]}]]}]}]]}],\"$L25\",\"$L26\",\"$L27\"]\n"
+])</script><script>self.__next_f.push([1,"28:I[568603,[\"/_next/static/chunks/1co1lrqxz3761.js\",\"/_next/static/chunks
+/3k0ryh65wh-r1.js\",\"/_next/static/chunks/179ej4e72znmi.js\",\"/_next/static/chunks/3731h1foz99dy.js\"],\"StatsSection
+\"]\n20:[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight text-center 
+text-lg\",\"children\":\"Aktionismus\"}]\n21:[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 
+pt-0\",\"children\":[\"$\",\"p\",null,{\"className\":\"text-center text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Wir bringen den Libertarismus in die öffentliche Debatte und auf die 
+Straße.\"}]}]\n22:[\"$\",\"div\",\"Parteiarbeit\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card transition-shadow 
+hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex flex-col space-y-2 
+p-8\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M6 22a2 2 0 0 
+1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 
+2z\",\"key\":\"1oefj6\"}],[\"path\",{\"d\":\"M14 2v5a1 1 0 0 0 1 1h5\",\"key\":\"wfsgrz\"}],[\"path\",{\"d\":\"M10 
+9H8\",\"key\":\"b1mrlr\"}],[\"path\",{\"d\":\"M16 13H8\",\"key\":\"t4e002\"}],[\"path\",{\"d\":\"M16 
+17H8\",\"key\":\"z1uh3a\"}]],\"className\":\"lucide-file-text mx-auto h-10 w-10 
+text-primary\"}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight text-center 
+text-lg\",\"children\":\"Parteiarbeit\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 
+pt-0\",\"children\":[\"$\",\"p\",null,{\"className\":\"text-center text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Wir stellen Positionspapiere und Programme auf, um den Rahmen für mehr 
+gesellschaftliche Freiheit zu 
+schaffen.\"}]}]]}]\n23:[\"$\",\"div\",\"Modellierung\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card transition-shadow 
+hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex flex-col space-y-2 
+p-8\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M16 21v-2a4 4 0 0 
+0-4-4H6a4 4 0 0 0-4 4v2\",\"key\":\"1yyitq\"}],[\"path\",{\"d\":\"M16 3.128a4 4 0 0 1 0 
+7.744\",\"key\":\"16gr8j\"}],[\"path\",{\"d\":\"M22 21v-2a4 4 0 0 0-3-3.87\",\"key\":\"kshegd\"}],[\"circle\",{\"cx\":\
+"9\",\"cy\":\"7\",\"r\":\"4\",\"key\":\"nufk8\"}]],\"className\":\"lucide-users mx-auto h-10 w-10 
+text-primary\"}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight text-center 
+text-lg\",\"children\":\"Modellierung\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 
+pt-0\",\"children\":[\"$\",\"p\",null,{\"className\":\"text-center text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Wir transformieren die Lehre in praktische Modelle und unterstützen 
+freiheitliche 
+Organisationen.\"}]}]]}]\n24:[\"$\",\"div\",\"Vernetzung\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card transition-shadow 
+hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex flex-col space-y-2 p-8
+\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"rect\",{\"x\":\"16\",\"y\":\"16\",\"widt
+h\":\"6\",\"height\":\"6\",\"rx\":\"1\",\"key\":\"4q2zg0\"}],[\"rect\",{\"x\":\"2\",\"y\":\"16\",\"width\":\"6\",\"heig
+ht\":\"6\",\"rx\":\"1\",\"key\":\"8cvhb9\"}],[\"rect\",{\"x\":\"9\",\"y\":\"2\",\"width\":\"6\",\"height\":\"6\",\"rx\"
+:\"1\",\"key\":\"1egb70\"}],[\"path\",{\"d\":\"M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 
+1v3\",\"key\":\"1jsf9p\"}],[\"path\",{\"d\":\"M12 12V8\",\"key\":\"2874zd\"}]],\"className\":\"lucide-network mx-auto 
+h-10 w-10 text-primary\"}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+text-center text-lg\",\"children\":\"Vernetzung\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 
+pt-0\",\"children\":[\"$\",\"p\",null,{\"className\":\"text-center text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Wir vernetzen uns in der Wissenschaft und in der Zivilgesellschaft.\"}]}]]}]\n"]
+)</script><script>self.__next_f.push([1,"25:[\"$\",\"section\",null,{\"className\":\"relative overflow-hidden py-24 
+border-t border-slate-700/50 bg-secondary 
+shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"pointer-events-none 
+absolute inset-0 libertarian-stripe-pattern 
+opacity-[0.05]\",\"aria-hidden\":true}],[\"$\",\"div\",null,{\"className\":\"relative mx-auto max-w-4xl px-6 
+text-center lg:px-8\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"font-display text-3xl font-bold tracking-tight 
+md:text-4xl text-white\",\"children\":\"Freiheit ist kein Geschenk, sondern dein 
+Recht!\"}],[\"$\",\"p\",null,{\"className\":\"mx-auto mt-6 max-w-2xl text-lg leading-relaxed 
+text-white/70\",\"children\":\"Für uns ist Freiheit nicht nur ein Begriff, sondern ein Prinzip. Werde der Patron 
+einer wahren Freiheitsbewegung!\"}],[\"$\",\"div\",null,{\"className\":\"mt-10 flex flex-col items-center 
+justify-center gap-4 
+sm:flex-row\",\"children\":[[\"$\",\"$Lc\",null,{\"href\":\"/spenden\",\"children\":\"Unterstütze 
+uns\",\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold 
+transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none 
+[\u0026_svg]:size-4 [\u0026_svg]:shrink-0 bg-primary text-secondary hover:bg-primary/90 hover:shadow-lg 
+hover:shadow-primary/25 h-14 px-10 
+text-base\",\"ref\":null}],[\"$\",\"$Lc\",null,{\"href\":\"/werde-mitglied\",\"children\":\"Werde 
+Mitglied\",\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold 
+transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none 
+[\u0026_svg]:size-4 [\u0026_svg]:shrink-0 border-2 bg-transparent h-14 px-10 text-base border-white text-white 
+hover:bg-white hover:text-secondary\",\"ref\":null}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"26:[\"$\",\"s
+ection\",null,{\"className\":\"border-t border-black/10 bg-muted/20 py-16 
+md:py-20\",\"aria-labelledby\":\"seo-intro-heading\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto 
+max-w-4xl px-6 text-center 
+lg:px-8\",\"children\":[[\"$\",\"h2\",null,{\"id\":\"seo-intro-heading\",\"className\":\"font-display text-2xl 
+font-bold tracking-tight text-foreground md:text-3xl\",\"children\":\"Libertarismus, Freiheit und Eigentum – aus 
+Prinzip\"}],[\"$\",\"p\",null,{\"className\":\"mt-6 text-base leading-relaxed text-muted-foreground 
+md:text-lg\",\"children\":[[\"$\",\"strong\",null,{\"className\":\"font-semibold text-foreground\",\"children\":\"DIE 
+LIBERTÄREN\"}],\" sind die konsequente libertäre Partei in Deutschland: Wir stehen für individuelle Freiheit, das 
+\",[\"$\",\"strong\",null,{\"className\":\"font-semibold 
+text-foreground\",\"children\":\"Nichtaggressionsprinzip\"}],\", unverletzliches 
+\",[\"$\",\"strong\",null,{\"className\":\"font-semibold text-foreground\",\"children\":\"Eigentum\"}],\" und einen 
+\",[\"$\",\"strong\",null,{\"className\":\"font-semibold text-foreground\",\"children\":\"Minimalstaat\"}],\", der 
+Rechte schützt statt sie zu beschneiden. Wir setzen auf den\",\" 
+\",[\"$\",\"strong\",null,{\"className\":\"font-semibold text-foreground\",\"children\":\"freien Markt\"}],\", 
+freiwillige Kooperation und – wo nötig – das Recht auf\",\" 
+\",[\"$\",\"strong\",null,{\"className\":\"font-semibold text-foreground\",\"children\":\"Sezession\"}],\" als 
+friedliches Mittel gegen Zentralismus.\"]}],[\"$\",\"nav\",null,{\"aria-label\":\"Wichtige 
+Themen\",\"className\":\"mt-8\",\"children\":[\"$\",\"ul\",null,{\"className\":\"flex flex-wrap justify-center gap-3\",
+\"children\":[[\"$\",\"li\",\"/unsere-prinzipien\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/unsere-prinzipien\",\
+"className\":\"inline-flex rounded-full border border-primary/25 bg-white px-4 py-2 text-sm font-medium 
+text-foreground transition-colors hover:border-primary hover:text-primary\",\"children\":\"Nichtaggressionsprinzip 
+\u0026 Prinzipien\"}]}],[\"$\",\"li\",\"/programm\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/programm\",\"classNa
+me\":\"inline-flex rounded-full border border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground 
+transition-colors hover:border-primary hover:text-primary\",\"children\":\"Programm \u0026 Minimalstaat\"}]}],[\"$\",\"
+li\",\"/blog\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/blog\",\"className\":\"inline-flex rounded-full border 
+border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary 
+hover:text-primary\",\"children\":\"Blog zu Freiheit \u0026 Eigentum\"}]}],[\"$\",\"li\",\"/stimmst-du-mit-uns-ueberein
+\",{\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/stimmst-du-mit-uns-ueberein\",\"className\":\"inline-flex 
+rounded-full border border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors 
+hover:border-primary hover:text-primary\",\"children\":\"Wahl-O-Mat libertär\"}]}],[\"$\",\"li\",\"/werde-mitglied\",{
+\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/werde-mitglied\",\"className\":\"inline-flex rounded-full border 
+border-primary/25 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-primary 
+hover:text-primary\",\"children\":\"Mitglied werden\"}]}]]}]}]]}]}]\n"])</script><script>self.__next_f.push([1,"27:[\"$
+\",\"$L28\",null,{}]\n"])</script><script>self.__next_f.push([1,"1d:[\"$\",\"section\",null,{\"id\":\"$undefined\",\"cl
+assName\":\"py-24 md:py-32 border-t border-black/10\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto 
+max-w-7xl px-6 lg:px-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-16\",\"children\":[[\"$\",\"h2\",null,{\
+"className\":\"font-display text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl 
+text-foreground\",\"children\":\"Tagesaktuelle libertäre Impulse\"}],[\"$\",\"p\",null,{\"className\":\"mt-4 
+max-w-3xl text-lg leading-relaxed text-muted-foreground\",\"children\":\"Kurznews mit libertärer Einordnung – 
+pflegbar im CMS unter „Tagesimpulse“.\"}]]}],[\"$\",\"div\",null,{\"className\":\"grid gap-8 md:grid-cols-3 
+md:gap-10\",\"children\":[[\"$\",\"div\",\"1\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card group flex flex-col 
+transition-shadow hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex 
+flex-col space-y-2 p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-3 flex items-center 
+justify-between\",\"children\":[\"$\",\"span\",null,{\"className\":\"text-xs font-medium 
+text-muted-foreground\",\"children\":\"29. Juni 
+2026\"}]}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+group-hover:text-primary text-lg transition-colors\",\"children\":[\"$\",\"$Lc\",null,{\"href\":\"https://www.scotusblo
+g.com/2026/06/court-allows-trump-to-fire-ftc-commissioner-and-overturns-major-restraint-on-presidential-power/\",\"clas
+sName\":\"flex items-start 
+gap-2\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M15 14c.2-1 .7-1.7 
+1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 
+2.5\",\"key\":\"1gvzjb\"}],[\"path\",{\"d\":\"M9 18h6\",\"key\":\"x1upvd\"}],[\"path\",{\"d\":\"M10 
+22h4\",\"key\":\"ceow96\"}]],\"className\":\"lucide-lightbulb mt-1 h-5 w-5 shrink-0 
+text-primary\"}],[\"$\",\"span\",null,{\"children\":\"US Supreme Court: Präsidialmacht vs. unabhängige 
+Behörden\"}]]}]}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 
+mt-auto\",\"children\":[[\"$\",\"p\",null,{\"className\":\"mb-3 text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Der Supreme Court erlaubte der US-Regierung, einen FTC-Kommissar zu entlassen 
+– ein Einschnitt in die Grenzen exekutiver Macht und die Unabhängigkeit von 
+Regulierungsbehörden.\"}],[\"$\",\"p\",null,{\"className\":\"mb-4 rounded-lg border border-primary/15 bg-primary/5 
+px-3 py-2 text-sm leading-relaxed text-foreground\",\"children\":[[\"$\",\"span\",null,{\"className\":\"font-semibold 
+text-primary\",\"children\":\"Libertäre Sicht: \"}],\"Libertäre kritisieren beides: willkürliche Macht ohne klare 
+Regeln und den Regulierungsstaat an sich. Freiheit braucht feste Eigentums- und Vertragsrechte – nicht immer mehr Beh
+ördenkompetenz.\"]}],[\"$\",\"$Lc\",null,{\"href\":\"https://www.scotusblog.com/2026/06/court-allows-trump-to-fire-ftc
+-commissioner-and-overturns-major-restraint-on-presidential-power/\",\"className\":\"inline-flex items-center gap-1 
+text-sm font-semibold text-primary transition-colors hover:underline\",\"children\":[\"Weiterlesen\",[\"$\",\"$L1f\",nu
+ll,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M7 7h10v10\",\"key\":\"1tivn9\"}],[\"path\",{\"d\":\"M7 17 
+17 7\",\"key\":\"1vkiza\"}]],\"className\":\"lucide-arrow-up-right h-4 
+w-4\"}]]}]]}]]}],[\"$\",\"div\",\"2\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border border-border bg-card 
+text-foreground shadow-sm duration-300 texture-surface-card group flex flex-col transition-shadow 
+hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex flex-col space-y-2 
+p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-3 flex items-center 
+justify-between\",\"children\":[\"$\",\"span\",null,{\"className\":\"text-xs font-medium 
+text-muted-foreground\",\"children\":\"29. Juni 
+2026\"}]}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+group-hover:text-primary text-lg transition-colors\",\"children\":[\"$\",\"$Lc\",null,{\"href\":\"https://www.reuters.c
+om/world/asia-pacific/us-carries-out-fresh-strikes-against-iran-after-tanker-struck-hormuz-escalating-2026-06-27/\",\"c
+lassName\":\"flex items-start gap-2\",\"children\":[\"$L29\",\"$L2a\"]}]}]]}],\"$L2b\"]}],\"$L2c\"]}]]}]}]\n"])</script
+><script>self.__next_f.push([1,"29:[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1d:props:children:props
+:children:1:props:children:0:props:children:0:props:children:1:props:children:props:children:0:props:iconNode\",\"class
+Name\":\"lucide-lightbulb mt-1 h-5 w-5 shrink-0 text-primary\"}]\n2a:[\"$\",\"span\",null,{\"children\":\"Persischer 
+Golf: Handelswege und Eskalation im Fokus\"}]\n2b:[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 
+mt-auto\",\"children\":[[\"$\",\"p\",null,{\"className\":\"mb-3 text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Neue Spannungen rund um den Straßen von Hormuz belasten internationale 
+Lieferketten und treiben Energie- und Versicherungskosten.\"}],[\"$\",\"p\",null,{\"className\":\"mb-4 rounded-lg 
+border border-primary/15 bg-primary/5 px-3 py-2 text-sm leading-relaxed 
+text-foreground\",\"children\":[[\"$\",\"span\",null,{\"className\":\"font-semibold 
+text-primary\",\"children\":\"Libertäre Sicht: \"}],\"Freier Welthandel scheitert an Kriegsrhetorik und 
+Interventionismus. Libertäre plädieren für offene Märkte und Zurückhaltung – nicht für die Verstaatlichung 
+globaler Risiken.\"]}],[\"$\",\"$Lc\",null,{\"href\":\"https://www.reuters.com/world/asia-pacific/us-carries-out-fresh-
+strikes-against-iran-after-tanker-struck-hormuz-escalating-2026-06-27/\",\"className\":\"inline-flex items-center 
+gap-1 text-sm font-semibold text-primary transition-colors hover:underline\",\"children\":[\"Weiterlesen\",[\"$\",\"$L1
+f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1d:props:children:props:children:1:props:children:0:props:children:1:p
+rops:children:2:props:children:1:props:iconNode\",\"className\":\"lucide-arrow-up-right h-4 w-4\"}]]}]]}]\n"])</script>
+<script>self.__next_f.push([1,"2c:[\"$\",\"div\",\"3\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card group flex flex-col 
+transition-shadow hover:shadow-lg\",\"children\":[[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex 
+flex-col space-y-2 p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-3 flex items-center 
+justify-between\",\"children\":[\"$\",\"span\",null,{\"className\":\"text-xs font-medium 
+text-muted-foreground\",\"children\":\"29. Juni 
+2026\"}]}],[\"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+group-hover:text-primary text-lg transition-colors\",\"children\":[\"$\",\"$Lc\",null,{\"href\":\"https://www.cnbc.com/
+2026/06/26/stock-market-next-week-outlook-for-june-29-july-3-2026.html\",\"className\":\"flex items-start gap-2\",\"chi
+ldren\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1d:props:children:props:children:1:props:children
+:0:props:children:0:props:children:1:props:children:props:children:0:props:iconNode\",\"className\":\"lucide-lightbulb 
+mt-1 h-5 w-5 shrink-0 text-primary\"}],[\"$\",\"span\",null,{\"children\":\"EZB und Märkte: Geldpolitik unter dem 
+Sommer-Druck\"}]]}]}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 
+mt-auto\",\"children\":[[\"$\",\"p\",null,{\"className\":\"mb-3 text-sm leading-relaxed 
+text-muted-foreground\",\"children\":\"Vor dem neuen Handelsmonat richten Anleger den Blick erneut auf 
+Zinsentscheidungen und Inflationsdaten in Europa.\"}],[\"$\",\"p\",null,{\"className\":\"mb-4 rounded-lg border 
+border-primary/15 bg-primary/5 px-3 py-2 text-sm leading-relaxed 
+text-foreground\",\"children\":[[\"$\",\"span\",null,{\"className\":\"font-semibold 
+text-primary\",\"children\":\"Libertäre Sicht: \"}],\"Inflation ist Folge von Kreditexpansion und Staatsfinanzierung. 
+Sound Money und strikte Haushaltsdisziplin sind die libertäre Antwort – nicht neue Geldschöpfung als politisches We
+rkzeug.\"]}],[\"$\",\"$Lc\",null,{\"href\":\"https://www.cnbc.com/2026/06/26/stock-market-next-week-outlook-for-june-29
+-july-3-2026.html\",\"className\":\"inline-flex items-center gap-1 text-sm font-semibold text-primary 
+transition-colors hover:underline\",\"children\":[\"Weiterlesen\",[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNo
+de\":\"$1d:props:children:props:children:1:props:children:0:props:children:1:props:children:2:props:children:1:props:ic
+onNode\",\"className\":\"lucide-arrow-up-right h-4 
+w-4\"}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"1b:[\"$\",\"section\",null,{\"className\":\"relative 
+overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 
+to-white\",\"children\":[[\"$\",\"div\",null,{\"className\":\"pointer-events-none absolute 
+inset-0\",\"aria-hidden\":true,\"children\":[[\"$\",\"div\",null,{\"className\":\"absolute -right-40 top-0 h-96 w-96 
+rounded-full bg-primary/[0.06] blur-3xl\"}],[\"$\",\"div\",null,{\"className\":\"absolute -left-40 bottom-20 h-72 w-72 
+rounded-full bg-slate-200/80 blur-3xl\"}]]}],[\"$\",\"div\",null,{\"className\":\"relative mx-auto max-w-7xl px-6 
+py-16 md:py-24 lg:px-8 lg:py-28\",\"children\":[[\"$\",\"header\",null,{\"className\":\"mb-10 text-center 
+md:mb-14\",\"children\":[[\"$\",\"p\",null,{\"className\":\"mb-3 text-sm font-semibold uppercase tracking-[0.25em] 
+text-primary\",\"children\":\"Highlight\"}],[\"$\",\"h2\",null,{\"className\":\"font-display text-3xl font-bold 
+tracking-tight text-foreground md:text-4xl lg:text-5xl\",\"children\":\"Aktuell bei DIE 
+LIBERTÄREN\"}],[\"$\",\"p\",null,{\"className\":\"mx-auto mt-4 max-w-2xl text-lg 
+text-muted-foreground\",\"children\":\"Was uns gerade bewegt – und wo du mitmachen kannst.\"}]]}],[\"$\",\"div\",null
+,{\"className\":\"space-y-10\",\"children\":[[\"$\",\"article\",\"afuera-fest-2026\",{\"className\":\"group 
+overflow-hidden rounded-3xl bg-slate-900 shadow-2xl shadow-slate-900/25 ring-1 
+ring-slate-800\",\"children\":[\"$\",\"div\",null,{\"className\":\"grid lg:min-h-[480px] 
+lg:grid-cols-[1.1fr_0.9fr]\",\"children\":[[\"$\",\"div\",null,{\"className\":\"relative flex flex-col justify-center 
+p-8 md:p-12 lg:p-14\",\"children\":[[\"$\",\"div\",null,{\"className\":\"pointer-events-none absolute inset-0 
+libertarian-stripe-pattern opacity-[0.08]\",\"aria-hidden\":true}],[\"$\",\"div\",null,{\"className\":\"relative\",\"ch
+ildren\":[[\"$\",\"div\",null,{\"className\":\"mb-5 inline-flex w-fit items-center gap-2 rounded-full border 
+border-primary/60 bg-primary/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider 
+text-primary\",\"children\":[[\"$\",\"span\",null,{\"className\":\"h-1.5 w-1.5 animate-pulse rounded-full 
+bg-primary\"}],\"Jetzt aktuell\"]}],[\"$\",\"h3\",null,{\"className\":\"font-display text-3xl font-bold leading-[1.08] 
+tracking-tight text-white md:text-4xl lg:text-5xl\",\"children\":\"Afuera Fest 
+2026\"}],[\"$\",\"p\",null,{\"className\":\"mt-5 max-w-xl text-base leading-relaxed text-slate-200 
+md:text-lg\",\"children\":\"Das größte libertäre Fest im deutschsprachigen Raum. Wir brauchen deine Unterstützung 
+vor Ort!\"}],\"$undefined\",[\"$\",\"div\",null,{\"className\":\"mt-10\",\"children\":[\"$\",\"$Lc\",null,{\"href\":\"h
+ttps://afuerafest.de/\",\"target\":\"_blank\",\"rel\":\"noopener noreferrer\",\"children\":[\"Mehr erfahren\",[\"$\",\"
+$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1d:props:children:props:children:1:props:children:0:props:children:
+1:props:children:2:props:children:1:props:iconNode\",\"className\":\"lucide-arrow-up-right ml-1 h-5 
+w-5\"}]],\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full transition-all 
+duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 
+disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none [\u0026_svg]:size-4 
+[\u0026_svg]:shrink-0 h-14 bg-primary px-10 text-base font-bold text-secondary shadow-lg shadow-primary/35 
+hover:bg-primary/95 hover:shadow-xl 
+hover:shadow-primary/45\",\"ref\":null}]}]]}]]}],[\"$\",\"div\",null,{\"className\":\"relative min-h-[280px] 
+lg:min-h-full\",\"children\":[[\"$\",\"$Lb\",null,{\"src\":\"/images/afuera-fest-hero.jpg\",\"alt\":\"Afuera Fest 
+2026\",\"fill\":true,\"className\":\"object-cover transition-transform duration-700 
+group-hover:scale-[1.03]\",\"sizes\":\"(max-width: 1024px) 100vw, 
+640px\",\"quality\":90,\"priority\":true}],[\"$\",\"div\",null,{\"className\":\"absolute inset-0 bg-gradient-to-t 
+from-slate-900/80 via-slate-900/10 to-transparent lg:bg-gradient-to-l lg:from-slate-900/90 lg:via-slate-900/20 lg:to-tr
+ansparent\"}]]}]]}]}]]}]]}]]}]\n"])</script><script>self.__next_f.push([1,"1e:[\"$\",\"section\",null,{\"id\":\"$undefi
+ned\",\"className\":\"py-24 md:py-32 border-t 
+border-black/10\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto max-w-7xl px-6 lg:px-8\",\"children\":[[\"$
+\",\"div\",null,{\"className\":\"mb-16\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"font-display text-3xl 
+font-bold tracking-tight md:text-4xl lg:text-5xl 
+text-foreground\",\"children\":\"Veranstaltungen\"}],[\"$\",\"p\",null,{\"className\":\"mt-4 max-w-3xl text-lg 
+leading-relaxed text-muted-foreground\",\"children\":\"Triff uns auf unseren Veranstaltungen oder lerne uns auf Events 
+der Community kennen.\"}]]}],[\"$\",\"div\",null,{\"className\":\"grid gap-8 md:grid-cols-3 
+md:gap-10\",\"children\":[[\"$\",\"div\",\"2\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl border 
+border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden transition-shadow 
+hover:shadow-lg\",\"children\":[\"$undefined\",[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex 
+flex-col space-y-2 p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center 
+gap-2\",\"children\":[\"$\",\"div\",null,{\"className\":\"inline-flex items-center rounded-full border px-3 py-1 
+text-xs font-medium transition-colors border-transparent bg-primary text-secondary\",\"children\":\"Stammtisch\"}]}],[\
+"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+text-lg\",\"children\":\"Libertärer Stammtisch 
+Hamburg\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 space-y-3 text-sm 
+text-muted-foreground\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center 
+gap-2\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M8 
+2v4\",\"key\":\"1cmpym\"}],[\"path\",{\"d\":\"M16 2v4\",\"key\":\"4m81vk\"}],[\"rect\",{\"width\":\"18\",\"height\":\"1
+8\",\"x\":\"3\",\"y\":\"4\",\"rx\":\"2\",\"key\":\"1hopcy\"}],[\"path\",{\"d\":\"M3 
+10h18\",\"key\":\"8toen8\"}]],\"className\":\"lucide-calendar h-4 w-4 text-primary\"}],\"1. Juli 
+2026\"]}],[\"$\",\"div\",null,{\"className\":\"flex items-center 
+gap-2\",\"children\":[[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":[[\"path\",{\"d\":\"M20 10c0 
+4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\",\"key\":\"1r0f0z\"}],[\"c
+ircle\",{\"cx\":\"12\",\"cy\":\"10\",\"r\":\"3\",\"key\":\"ilqhr7\"}]],\"className\":\"lucide-map-pin h-4 w-4 text-prim
+ary\"}],\"Hamburg\"]}],\"$undefined\"]}]]}],[\"$\",\"div\",\"3\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl 
+border border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden 
+transition-shadow 
+hover:shadow-lg\",\"children\":[\"$undefined\",[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex 
+flex-col space-y-2 p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center 
+gap-2\",\"children\":[\"$\",\"div\",null,{\"className\":\"inline-flex items-center rounded-full border px-3 py-1 
+text-xs font-medium transition-colors border-transparent bg-primary text-secondary\",\"children\":\"Stammtisch\"}]}],[\
+"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+text-lg\",\"children\":\"Libertärer Stammtisch 
+Göppingen/Esslingen\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 space-y-3 text-sm 
+text-muted-foreground\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2\",\"children\":[[\"$
+\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1e:props:children:props:children:1:props:children:0:props:chil
+dren:2:props:children:0:props:children:0:props:iconNode\",\"className\":\"lucide-calendar h-4 w-4 
+text-primary\"}],\"2. Juli 2026\"]}],[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2\",\"children\":[[\"$\
+",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1e:props:children:props:children:1:props:children:0:props:child
+ren:2:props:children:1:props:children:0:props:iconNode\",\"className\":\"lucide-map-pin h-4 w-4 text-primary\"}],\"Göp
+pingen/Esslingen\"]}],\"$undefined\"]}]]}],[\"$\",\"div\",\"4\",{\"ref\":\"$undefined\",\"className\":\"rounded-2xl 
+border border-border bg-card text-foreground shadow-sm duration-300 texture-surface-card overflow-hidden 
+transition-shadow 
+hover:shadow-lg\",\"children\":[\"$undefined\",[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"flex 
+flex-col space-y-2 p-8\",\"children\":[[\"$\",\"div\",null,{\"className\":\"mb-2 flex items-center 
+gap-2\",\"children\":[\"$\",\"div\",null,{\"className\":\"inline-flex items-center rounded-full border px-3 py-1 
+text-xs font-medium transition-colors border-transparent bg-primary text-secondary\",\"children\":\"Stammtisch\"}]}],[\
+"$\",\"h3\",null,{\"ref\":\"$undefined\",\"className\":\"font-semibold tracking-tight 
+text-lg\",\"children\":\"Libertärer Stammtisch Frankfurt am 
+Main\"}]]}],[\"$\",\"div\",null,{\"ref\":\"$undefined\",\"className\":\"p-8 pt-0 space-y-3 text-sm 
+text-muted-foreground\",\"children\":[[\"$\",\"div\",null,{\"className\":\"flex items-center 
+gap-2\",\"children\":[\"$L2d\",\"24. Juli 2026\"]}],\"$L2e\",\"$undefined\"]}]]}]]}],\"$L2f\"]}]}]\n"])</script><script
+>self.__next_f.push([1,"2d:[\"$\",\"$L1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1e:props:children:props:childre
+n:1:props:children:0:props:children:2:props:children:0:props:children:0:props:iconNode\",\"className\":\"lucide-calenda
+r h-4 w-4 text-primary\"}]\n2e:[\"$\",\"div\",null,{\"className\":\"flex items-center gap-2\",\"children\":[[\"$\",\"$L
+1f\",null,{\"ref\":\"$undefined\",\"iconNode\":\"$1e:props:children:props:children:1:props:children:0:props:children:2:
+props:children:1:props:children:0:props:iconNode\",\"className\":\"lucide-map-pin h-4 w-4 text-primary\"}],\"Frankfurt 
+am Main\"]}]\n2f:[\"$\",\"div\",null,{\"className\":\"mt-12 
+text-center\",\"children\":[\"$\",\"$Lc\",null,{\"href\":\"/events\",\"children\":\"Zu allen 
+Terminen\",\"className\":\"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold 
+transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary 
+focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [\u0026_svg]:pointer-events-none 
+[\u0026_svg]:size-4 [\u0026_svg]:shrink-0 bg-primary text-secondary hover:bg-primary/90 hover:shadow-lg 
+hover:shadow-primary/25 h-14 px-10 text-base\",\"ref\":null}]}]\n"])</script></body></html>
+

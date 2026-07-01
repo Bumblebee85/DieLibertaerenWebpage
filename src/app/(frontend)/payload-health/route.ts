@@ -4,6 +4,7 @@ import {
   readSeedSecretFromRequest,
   verifySeedOrPayloadSecret,
 } from "@/lib/seed/auth";
+import { runCmsSeed } from "@/lib/seed/run-cms";
 import { runSeedContent } from "@/lib/seed/run-content";
 
 export const runtime = "nodejs";
@@ -48,6 +49,25 @@ export async function GET() {
     const { getPayload } = await import("payload");
 
     const payload = await getPayload({ config });
+
+    const eventsNeedBackfill = await payload.find({
+      collection: "events",
+      where: {
+        or: [
+          { slug: { exists: false } },
+          { venue: { exists: false } },
+          { startTime: { exists: false } },
+        ],
+      },
+      limit: 1,
+    });
+
+    let eventsBackfilled = 0;
+    if (eventsNeedBackfill.totalDocs > 0) {
+      const cmsStats = await runCmsSeed(payload);
+      eventsBackfilled = cmsStats.eventsUpdated + cmsStats.events;
+    }
+
     const [users, quotes, impulses, weeklyEssays, prompts, events, eventCategories, eventLocations] =
       await Promise.all([
         payload.find({ collection: "users", limit: 0 }),
@@ -76,6 +96,7 @@ export async function GET() {
       eventCategoryCount: eventCategories.totalDocs,
       eventLocationCount: eventLocations.totalDocs,
       eventsReady: eventCategories.totalDocs >= 4 && events.totalDocs > 0,
+      eventsBackfilled,
       editorialReady,
       seedHint:
         !editorialReady || quotes.totalDocs < 10

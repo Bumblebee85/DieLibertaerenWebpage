@@ -73,12 +73,12 @@ export const seoPages = {
     ],
   },
   wahlomat: {
-    title: "Wahlkompass – Stimmst du mit uns überein?",
+    title: "Libertärer Kompass – Stimmst du mit uns überein?",
     description:
-      "Vergleiche deine Positionen mit DIE LIBERTÄREN: 80 Thesen zu Freiheit, Eigentum, Minimalstaat und freiem Markt – plus interaktiver Schnell-Check im Wahlkompass.",
+      "Vergleiche deine Positionen mit DIE LIBERTÄREN: 80 Thesen zu Freiheit, Eigentum, Minimalstaat und freiem Markt – plus interaktiver Schnell-Check im Libertären Kompass.",
     path: "/stimmst-du-mit-uns-ueberein",
     keywords: [
-      "Wahlkompass libertär",
+      "Libertärer Kompass",
       "libertäre Positionen",
       "Freiheit Test",
       "DIE LIBERTÄREN Thesen",

@@ -2,18 +2,18 @@ import type { CollectionConfig } from "payload";
 import { slugify } from "@/lib/cms/slugify";
 
 /**
- * Wahlkompass-Wahlen mit Thesen, Kategorien und Positionen.
+ * Libertärer Kompass – Wahlen mit Thesen, Kategorien und Positionen.
  */
 export const WahlomatElections: CollectionConfig = {
   slug: "wahlomat-elections",
   labels: {
-    singular: "Wahlkompass-Einheit",
-    plural: "Wahlkompass-Einheiten",
+    singular: "Kompass-Einheit",
+    plural: "Kompass-Einheiten",
   },
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "region", "year", "isDefault", "published"],
-    group: "Wahlkompass",
+    group: "Libertärer Kompass",
     description:
       "Positionen zur Wahl pro Wahlereignis (z. B. Sachsen-Anhalt 2026). Eine Einheit als Standard markieren.",
   },
@@ -75,7 +75,7 @@ export const WahlomatElections: CollectionConfig = {
       name: "source",
       type: "text",
       label: "Quelle",
-      defaultValue: "Wahlkompass",
+      defaultValue: "Libertärer Kompass",
     },
     {
       name: "isDefault",
@@ -83,7 +83,7 @@ export const WahlomatElections: CollectionConfig = {
       label: "Standard-Wahl",
       defaultValue: false,
       admin: {
-        description: "Wird auf der Wahlkompass-Seite vorausgewählt.",
+        description: "Wird auf der Libertärer-Kompass-Seite vorausgewählt.",
       },
     },
     {

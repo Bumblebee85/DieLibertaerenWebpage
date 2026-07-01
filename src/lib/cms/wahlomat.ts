@@ -48,7 +48,7 @@ function mapElection(doc: WahlomatElection): WahlomatElectionDisplay {
     subtitle: doc.subtitle ?? "Positionen von DIE LIBERTÄREN",
     region: doc.region,
     year: doc.year,
-    source: doc.source ?? "Wahlkompass",
+    source: doc.source ?? "Libertärer Kompass",
     thesen,
     categories: Array.from(new Set(thesen.map((t) => t.category))).sort(),
   };

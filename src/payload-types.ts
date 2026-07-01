@@ -179,12 +179,21 @@ export interface User {
   collection: 'users';
 }
 /**
+ * Bilder hochladen (JPG, PNG, WebP) und in Veranstaltungen, Beirat oder Programm verknüpfen.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
  */
 export interface Media {
   id: string;
+  /**
+   * Kurze Bildbeschreibung für Barrierefreiheit und SEO.
+   */
   alt: string;
+  /**
+   * z. B. „Libertärer Stammtisch Hamburg, Juni 2026“
+   */
+  caption?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -196,6 +205,32 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    hero?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
 }
 /**
  * Aktuelle Meldungen und Kampagnen – z. B. Afuera Fest. Maximal ein bis zwei gleichzeitig aktiv halten.
@@ -273,7 +308,7 @@ export interface Quote {
   createdAt: string;
 }
 /**
- * Termine, Stammtische und Feste – erscheinen auf der Startseite und unter /events.
+ * Termine, Stammtische und Feste – Kalender auf /events, Teaser auf der Startseite. Bilder über Medien hochladen und verknüpfen.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events".
@@ -287,14 +322,21 @@ export interface Event {
    */
   endDate?: string | null;
   /**
+   * z. B. „19:00 – 22:00"
+   */
+  time?: string | null;
+  /**
    * Stadt oder Venue, z. B. „Hamburg" oder „Camping Strandbad Gerlebogk".
    */
   location: string;
   category: 'stammtisch' | 'fest' | 'parteitag' | 'veranstaltung' | 'workshop' | 'sonstiges';
   /**
-   * Kurze Info zum Event – optional, wird auf der Events-Seite angezeigt.
+   * Kurze Info zum Event – wird im Kalender und auf der Events-Seite angezeigt.
    */
   description?: string | null;
+  /**
+   * Stammtisch-Foto oder Event-Banner – zuerst unter Medien hochladen.
+   */
   image?: (string | null) | Media;
   /**
    * Optional: Anmeldung oder externe Infoseite. Standard: /events
@@ -389,7 +431,7 @@ export interface WahlomatElection {
   year: number;
   source?: string | null;
   /**
-   * Wird auf der Wahlkompass-Seite vorausgewählt.
+   * Wird auf der Libertärer-Kompass-Seite vorausgewählt.
    */
   isDefault?: boolean | null;
   thesen?:
@@ -706,6 +748,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  caption?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -717,6 +760,40 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        card?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        hero?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -756,6 +833,7 @@ export interface EventsSelect<T extends boolean = true> {
   title?: T;
   startDate?: T;
   endDate?: T;
+  time?: T;
   location?: T;
   category?: T;
   description?: T;

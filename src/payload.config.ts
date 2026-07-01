@@ -1,5 +1,6 @@
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import path from "path";
 import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
@@ -23,6 +24,10 @@ import { Beirat } from "./globals/Beirat";
 import { Freiheitsbewegung } from "./globals/Freiheitsbewegung";
 import { Hero } from "./globals/Hero";
 import { Program } from "./globals/Program";
+import { runCmsSeed } from "./lib/seed/run-cms";
+import { needsEditorialSeed, runEditorialSeed } from "./lib/seed/run-editorial";
+import { runSeedImpulses } from "./lib/seed/impulses";
+import { runSeedQuotes } from "./lib/seed/quotes";
 import {
   getDatabaseUrl,
   getPayloadSecret,
@@ -35,8 +40,20 @@ const dirname = path.dirname(filename);
 
 const serverURL = getServerURL();
 const trustedOrigins = getTrustedOrigins();
+const blobToken = process.env["BLOB_READ_WRITE_TOKEN"]?.trim();
+
+const plugins = blobToken
+  ? [
+      vercelBlobStorage({
+        collections: { media: true },
+        token: blobToken,
+        clientUploads: true,
+      }),
+    ]
+  : [];
 
 export default buildConfig({
+  plugins,
   admin: {
     user: Users.slug,
     meta: {
@@ -91,5 +108,29 @@ export default buildConfig({
   },
   onInit: async (payload) => {
     payload.logger.info(`Payload CMS initialized – ${serverURL}/admin`);
+
+    if (process.env["AUTO_SEED_ON_INIT"] === "false") return;
+
+    try {
+      const [needsEditorial, quotes] = await Promise.all([
+        needsEditorialSeed(payload),
+        payload.find({ collection: "quotes", limit: 1 }),
+      ]);
+
+      if (!needsEditorial && quotes.totalDocs > 0) return;
+
+      payload.logger.info("Auto-seeding CMS content (idempotent)…");
+      await runEditorialSeed(payload);
+      await runCmsSeed(payload);
+      if (quotes.totalDocs === 0) await runSeedQuotes(payload);
+
+      const impulses = await payload.find({ collection: "daily-impulses", limit: 1 });
+      if (impulses.totalDocs === 0) await runSeedImpulses(payload);
+
+      payload.logger.info("Auto-seed completed.");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      payload.logger.error(`Auto-seed failed: ${message}`);
+    }
   },
 });

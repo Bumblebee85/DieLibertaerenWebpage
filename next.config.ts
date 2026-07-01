@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         hostname: "die-libertaeren.de",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+        pathname: "/**",
+      },
     ],
     localPatterns: [
       {

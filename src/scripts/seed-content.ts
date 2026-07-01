@@ -3,8 +3,8 @@ import { getDatabaseHost, getDatabaseName, getPayloadEnvStatus } from "@/lib/pay
 import { runSeedContent } from "@/lib/seed/run-content";
 
 /**
- * Führt Quotes- und DailyImpulses-Seeds lokal aus.
- * Auf Vercel stattdessen: GET/POST /seed-content mit SEED_SECRET
+ * Vollständiger Content-Seed: Zitate, Impulse, Editorial, CMS.
+ * Auf Vercel: GET/POST /seed-content mit SEED_SECRET
  */
 async function seed() {
   const env = getPayloadEnvStatus();
@@ -17,10 +17,16 @@ async function seed() {
 
   const result = await runSeedContent();
 
-  console.log("\n✓ Content-Seed abgeschlossen");
-  console.log(`  Zitate: neu ${result.quotes.created}, aktualisiert ${result.quotes.updated}, übersprungen ${result.quotes.skipped}`);
-  console.log(`  Impulse: neu ${result.impulses.created}, aktualisiert ${result.impulses.updated}, übersprungen ${result.impulses.skipped}`);
-  console.log(`  In MongoDB: ${result.totalsInDb.quotes} Zitate, ${result.totalsInDb.dailyImpulses} Impulse`);
+  console.log("\n✓ Vollständiger Content-Seed abgeschlossen");
+  console.log(
+    `  Zitate: neu ${result.quotes.created}, aktualisiert ${result.quotes.updated}, übersprungen ${result.quotes.skipped}`
+  );
+  console.log(
+    `  Impulse: neu ${result.impulses.created}, aktualisiert ${result.impulses.updated}, übersprungen ${result.impulses.skipped}`
+  );
+  console.log(`  Editorial: ${JSON.stringify(result.editorial)}`);
+  console.log(`  CMS: ${JSON.stringify(result.cms)}`);
+  console.log(`  In MongoDB: ${JSON.stringify(result.totalsInDb)}`);
   console.log(`  Dauer: ${result.durationMs}ms`);
   console.log(`  Admin: ${result.adminUrl}`);
   process.exit(0);

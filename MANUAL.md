@@ -11,7 +11,7 @@ Zentrale Referenz für Menschen und KI-Assistenten. Lies diese Datei zuerst, bev
 
 Moderne, hochwertige Website für **DIE LIBERTÄREN** – Deutschlands konsequent libertäre Partei. Die Seite soll:
 
-- politische Positionen klar und premium präsentieren (Thesenpapier, Prinzipien, Wahlkompass),
+- politische Positionen klar und premium präsentieren (Thesenpapier, Prinzipien, Libertärer Kompass),
 - redaktionelle Inhalte automatisieren (Tagesimpulse, Wochen-Blog via Grok),
 - Inhalte über Payload CMS pflegbar machen (ohne Code-Deploy für Texte),
 - auf Vercel Free/Hobby-Tier lauffähig bleiben (kein separates Backend nötig).
@@ -67,7 +67,7 @@ Next.js App Router (src/app/)
 │   │   ├── home/             ← Hero, Highlights, Zitate, Impulse, Events
 │   │   ├── layout/           ← Header, Footer
 │   │   ├── programm/         ← Thesen-Viewer
-│   │   ├── wahlomat/         ← Wahlkompass Quiz
+│   │   ├── wahlomat/         ← Libertärer Kompass Quiz
 │   │   ├── blog/             ← Blog-Grid, aktueller Beitrag
 │   │   ├── shared/           ← CTA, Section, Backgrounds
 │   │   └── ui/               ← shadcn/ui (Button, Card, …)
@@ -97,7 +97,7 @@ Next.js App Router (src/app/)
 | `/bundesvorstand` | Statisch | Vorstand |
 | `/beirat` | Global `beirat` + Collection `beirat-members` | Beirat |
 | `/freiheitsbewegung` | Global `freiheitsbewegung` | Geschichte, Österr. Schule |
-| `/stimmst-du-mit-uns-ueberein` | Collection `wahlomat-elections` | Wahlkompass |
+| `/stimmst-du-mit-uns-ueberein` | Collection `wahlomat-elections` | Libertärer Kompass |
 | `/mitmachen`, `/werde-mitglied`, `/spenden`, `/werde-unterstuetzer` | Statisch + `site-config.json` | Engagement |
 | `/netzwerk`, `/kontakt` | Statisch | Vernetzung, Kontaktformular |
 | `/impressum`, `/datenschutz` | Statisch | Rechtliches |
@@ -174,7 +174,7 @@ Jede CMS-Domain hat eine Datei unter `src/lib/cms/`:
 | `freiheitsbewegung.json` | Freiheitsbewegung-Fallback |
 | `beirat.json` | Beirat-Fallback |
 | `blog-posts.json`, `weekly-essays.json` | Blog-Fallback |
-| `wahlomat-thesen.json` | Wahlkompass-Fallback |
+| `wahlomat-thesen.json` | Libertärer Kompass-Fallback |
 | `site-config.json` | Kontakt, Social, Newsletter-URLs |
 | `daily-news.json` | Legacy News (wird durch Impulse ersetzt) |
 
@@ -204,6 +204,10 @@ Optional / Automatisierung:
 
 Prüfen: `npm run check:payload`
 
+**Auto-Seed:** Beim ersten Payload-Start (Vercel Cold Start) werden fehlende Editorial-Inhalte automatisch befüllt (`onInit`). Deaktivieren: `AUTO_SEED_ON_INIT=false`.
+
+**Medien auf Vercel:** `BLOB_READ_WRITE_TOKEN` in Vercel setzen (Storage → Blob). Upload unter `/admin` → Medien; in Veranstaltungen verknüpfen.
+
 ---
 
 ## 8. NPM-Skripte
@@ -216,7 +220,8 @@ Prüfen: `npm run check:payload`
 | `npm run generate:types` | `payload-types.ts` neu erzeugen |
 | `npm run seed:admin` | Ersten CMS-User anlegen |
 | `npm run seed:cms` | Highlights + Hero + Basis-Events |
-| `npm run seed:content` | Zitate + Impulse (volle Bibliothek) |
+| `npm run seed:content` | Vollständiger Seed: Zitate, Impulse, Editorial, CMS |
+| `npm run seed:editorial` | Nur Editorial (Programm, Kompass, Blog, Beiträge, Beirat, Prompts) |
 | `npm run seed:quotes` / `seed:impulses` / `seed:highlights` | Einzelne Collections |
 | `npm run generate:daily` | 3 Tagesimpulse via Grok (lokal) |
 | `npm run generate:weekly` | Wochen-Blog via Grok (lokal) |

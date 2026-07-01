@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { label: "Prinzipien", href: "/unsere-prinzipien" },
   { label: "Programm", href: "/programm" },
-  { label: "Wahlkompass", href: "/stimmst-du-mit-uns-ueberein" },
+  { label: "Libertärer Kompass", href: "/stimmst-du-mit-uns-ueberein" },
   { label: "Events", href: "/events" },
   { label: "Blog", href: "/blog" },
   {

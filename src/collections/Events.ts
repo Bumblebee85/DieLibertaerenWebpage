@@ -10,7 +10,7 @@ const categoryOptions = [
 ] as const;
 
 /**
- * Veranstaltungen für Startseite-Teaser und /events.
+ * Veranstaltungen für Kalender, Startseite-Teaser und /events.
  */
 export const Events: CollectionConfig = {
   slug: "events",
@@ -21,8 +21,9 @@ export const Events: CollectionConfig = {
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "startDate", "location", "category", "published"],
-    group: "Startseite",
-    description: "Termine, Stammtische und Feste – erscheinen auf der Startseite und unter /events.",
+    group: "Veranstaltungen",
+    description:
+      "Termine, Stammtische und Feste – Kalender auf /events, Teaser auf der Startseite. Bilder über Medien hochladen und verknüpfen.",
   },
   access: {
     read: () => true,
@@ -77,6 +78,14 @@ export const Events: CollectionConfig = {
       ],
     },
     {
+      name: "time",
+      type: "text",
+      label: "Uhrzeit (optional)",
+      admin: {
+        description: 'z. B. „19:00 – 22:00"',
+      },
+    },
+    {
       name: "location",
       type: "text",
       label: "Ort",
@@ -98,7 +107,7 @@ export const Events: CollectionConfig = {
       type: "textarea",
       label: "Beschreibung",
       admin: {
-        description: "Kurze Info zum Event – optional, wird auf der Events-Seite angezeigt.",
+        description: "Kurze Info zum Event – wird im Kalender und auf der Events-Seite angezeigt.",
       },
     },
     {
@@ -106,6 +115,9 @@ export const Events: CollectionConfig = {
       type: "upload",
       label: "Bild (optional)",
       relationTo: "media",
+      admin: {
+        description: "Stammtisch-Foto oder Event-Banner – zuerst unter Medien hochladen.",
+      },
     },
     {
       name: "link",

@@ -48,11 +48,18 @@ export async function GET() {
     const { getPayload } = await import("payload");
 
     const payload = await getPayload({ config });
-    const [users, quotes, impulses] = await Promise.all([
-      payload.find({ collection: "users", limit: 1 }),
-      payload.find({ collection: "quotes", limit: 1 }),
-      payload.find({ collection: "daily-impulses", limit: 1 }),
-    ]);
+    const [users, quotes, impulses, weeklyEssays, prompts, events] =
+      await Promise.all([
+        payload.find({ collection: "users", limit: 0 }),
+        payload.find({ collection: "quotes", limit: 0 }),
+        payload.find({ collection: "daily-impulses", limit: 0 }),
+        payload.find({ collection: "weekly-essays", limit: 0 }),
+        payload.find({ collection: "prompt-templates", limit: 0 }),
+        payload.find({ collection: "events", limit: 0 }),
+      ]);
+
+    const editorialReady =
+      weeklyEssays.totalDocs > 0 && prompts.totalDocs >= 2;
 
     return NextResponse.json({
       ok: true,
@@ -61,9 +68,13 @@ export async function GET() {
       userCount: users.totalDocs,
       quoteCount: quotes.totalDocs,
       dailyImpulseCount: impulses.totalDocs,
+      weeklyEssayCount: weeklyEssays.totalDocs,
+      promptTemplateCount: prompts.totalDocs,
+      eventCount: events.totalDocs,
+      editorialReady,
       seedHint:
-        quotes.totalDocs < 10
-          ? "Run npm run seed:content locally or POST /seed-content with SEED_SECRET"
+        !editorialReady || quotes.totalDocs < 10
+          ? "Auto-seed runs on init, or POST /seed-content with SEED_SECRET"
           : undefined,
       adminUrl: `${status.serverURL}/admin`,
       ...status,

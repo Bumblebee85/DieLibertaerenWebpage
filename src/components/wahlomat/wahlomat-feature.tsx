@@ -68,7 +68,7 @@ export function WahlomatFeature({
           <div ref={overviewRef}>
             <SectionHeader
               title="Unsere Thesen"
-              subtitle={`Alle ${election.thesen.length} Positionen von DIE LIBERTÄREN im Wahlkompass ${election.region} – mit Begründung und Kategorien.`}
+              subtitle={`Alle ${election.thesen.length} Positionen von DIE LIBERTÄREN im Libertären Kompass ${election.region} – mit Begründung und Kategorien.`}
             />
             <ThesenOverview
               thesen={election.thesen}

@@ -4,7 +4,7 @@ const topicLinks = [
   { href: "/unsere-prinzipien", label: "Nichtaggressionsprinzip & Prinzipien" },
   { href: "/programm", label: "Programm & Minimalstaat" },
   { href: "/blog", label: "Blog zu Freiheit & Eigentum" },
-  { href: "/stimmst-du-mit-uns-ueberein", label: "Wahlkompass libertär" },
+  { href: "/stimmst-du-mit-uns-ueberein", label: "Libertärer Kompass" },
   { href: "/werde-mitglied", label: "Mitglied werden" },
 ];
 

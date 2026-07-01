@@ -1,20 +1,20 @@
 import type { CollectionConfig } from "payload";
 
 /**
- * Libertärer Aufsatz der Woche – ein Essay pro Kalenderwoche.
+ * Aktueller libertärer Beitrag – ein Beitrag pro Kalenderwoche.
  */
 export const WeeklyEssays: CollectionConfig = {
   slug: "weekly-essays",
   labels: {
-    singular: "Wochenaufsatz",
-    plural: "Wochenaufsätze",
+    singular: "Libertärer Beitrag",
+    plural: "Libertäre Beiträge",
   },
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "week", "published"],
     group: "Blog",
     description:
-      "Libertärer Aufsatz der Woche – wird nach Kalenderwoche auf Blog und Startseite angezeigt.",
+      "Aktueller libertärer Beitrag – wird nach Kalenderwoche auf Blog und Startseite angezeigt.",
   },
   access: {
     read: () => true,

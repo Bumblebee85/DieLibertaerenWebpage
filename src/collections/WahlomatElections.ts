@@ -2,20 +2,20 @@ import type { CollectionConfig } from "payload";
 import { slugify } from "@/lib/cms/slugify";
 
 /**
- * Wahl-O-Mat-Wahlen mit Thesen, Kategorien und Positionen.
+ * Wahlkompass-Wahlen mit Thesen, Kategorien und Positionen.
  */
 export const WahlomatElections: CollectionConfig = {
   slug: "wahlomat-elections",
   labels: {
-    singular: "Wahl-O-Mat Wahl",
-    plural: "Wahl-O-Mat Wahlen",
+    singular: "Wahlkompass-Einheit",
+    plural: "Wahlkompass-Einheiten",
   },
   admin: {
     useAsTitle: "title",
     defaultColumns: ["title", "region", "year", "isDefault", "published"],
-    group: "Wahl-O-Mat",
+    group: "Wahlkompass",
     description:
-      "Wahl-O-Mat-Thesen pro Wahl (z. B. Sachsen-Anhalt 2026). Eine Wahl als Standard markieren.",
+      "Positionen zur Wahl pro Wahlereignis (z. B. Sachsen-Anhalt 2026). Eine Einheit als Standard markieren.",
   },
   access: {
     read: () => true,
@@ -75,7 +75,7 @@ export const WahlomatElections: CollectionConfig = {
       name: "source",
       type: "text",
       label: "Quelle",
-      defaultValue: "Wahl-O-Mat",
+      defaultValue: "Wahlkompass",
     },
     {
       name: "isDefault",
@@ -83,7 +83,7 @@ export const WahlomatElections: CollectionConfig = {
       label: "Standard-Wahl",
       defaultValue: false,
       admin: {
-        description: "Wird auf der Wahl-O-Mat-Seite vorausgewählt.",
+        description: "Wird auf der Wahlkompass-Seite vorausgewählt.",
       },
     },
     {

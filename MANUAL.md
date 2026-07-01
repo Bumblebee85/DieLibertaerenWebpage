@@ -11,7 +11,7 @@ Zentrale Referenz für Menschen und KI-Assistenten. Lies diese Datei zuerst, bev
 
 Moderne, hochwertige Website für **DIE LIBERTÄREN** – Deutschlands konsequent libertäre Partei. Die Seite soll:
 
-- politische Positionen klar und premium präsentieren (Thesenpapier, Prinzipien, Wahl-O-Mat),
+- politische Positionen klar und premium präsentieren (Thesenpapier, Prinzipien, Wahlkompass),
 - redaktionelle Inhalte automatisieren (Tagesimpulse, Wochen-Blog via Grok),
 - Inhalte über Payload CMS pflegbar machen (ohne Code-Deploy für Texte),
 - auf Vercel Free/Hobby-Tier lauffähig bleiben (kein separates Backend nötig).
@@ -67,8 +67,8 @@ Next.js App Router (src/app/)
 │   │   ├── home/             ← Hero, Highlights, Zitate, Impulse, Events
 │   │   ├── layout/           ← Header, Footer
 │   │   ├── programm/         ← Thesen-Viewer
-│   │   ├── wahlomat/         ← Wahl-O-Mat Quiz
-│   │   ├── blog/             ← Blog-Grid, Wochenaufsatz
+│   │   ├── wahlomat/         ← Wahlkompass Quiz
+│   │   ├── blog/             ← Blog-Grid, aktueller Beitrag
 │   │   ├── shared/           ← CTA, Section, Backgrounds
 │   │   └── ui/               ← shadcn/ui (Button, Card, …)
 │   ├── data/                 ← JSON-Fallbacks (siehe Abschnitt 6)
@@ -93,11 +93,11 @@ Next.js App Router (src/app/)
 | `/programm` | Global `program` + Collection `program-topic-categories` | Thesenpapier v4 |
 | `/thesen` | Redirect | → `/programm` |
 | `/events` | Collection `events` | Veranstaltungen |
-| `/blog`, `/blog/[slug]` | Collections `blog-posts`, `weekly-essays` | Blog + Wochenaufsatz |
+| `/blog`, `/blog/[slug]` | Collections `blog-posts`, `weekly-essays` | Blog + aktueller libertärer Beitrag |
 | `/bundesvorstand` | Statisch | Vorstand |
 | `/beirat` | Global `beirat` + Collection `beirat-members` | Beirat |
 | `/freiheitsbewegung` | Global `freiheitsbewegung` | Geschichte, Österr. Schule |
-| `/stimmst-du-mit-uns-ueberein` | Collection `wahlomat-elections` | Wahl-O-Mat |
+| `/stimmst-du-mit-uns-ueberein` | Collection `wahlomat-elections` | Wahlkompass |
 | `/mitmachen`, `/werde-mitglied`, `/spenden`, `/werde-unterstuetzer` | Statisch + `site-config.json` | Engagement |
 | `/netzwerk`, `/kontakt` | Statisch | Vernetzung, Kontaktformular |
 | `/impressum`, `/datenschutz` | Statisch | Rechtliches |
@@ -133,7 +133,7 @@ Next.js App Router (src/app/)
 | `quotes` | Zitat-Rotation (`published: true`) |
 | `events` | Veranstaltungen |
 | `daily-impulses` | Tagesaktuelle Impulse (max. 3 pro Tag sichtbar) |
-| `weekly-essays` | Libertärer Aufsatz der Woche |
+| `weekly-essays` | Aktueller libertärer Beitrag |
 | `blog-posts` | Blog-Artikel |
 | `prompt-templates` | Grok System-Prompts (Slug `daily-impulses-system`) |
 
@@ -174,7 +174,7 @@ Jede CMS-Domain hat eine Datei unter `src/lib/cms/`:
 | `freiheitsbewegung.json` | Freiheitsbewegung-Fallback |
 | `beirat.json` | Beirat-Fallback |
 | `blog-posts.json`, `weekly-essays.json` | Blog-Fallback |
-| `wahlomat-thesen.json` | Wahl-O-Mat-Fallback |
+| `wahlomat-thesen.json` | Wahlkompass-Fallback |
 | `site-config.json` | Kontakt, Social, Newsletter-URLs |
 | `daily-news.json` | Legacy News (wird durch Impulse ersetzt) |
 

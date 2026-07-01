@@ -17,8 +17,8 @@ function formatEventDate(startDate: string, endDate?: string): string {
 }
 
 /**
- * Aktuelle Veranstaltungen + Libertärer Aufsatz der Woche.
- * Sektion bleibt sichtbar (mindestens Wochenaufsatz), auch ohne kommende Termine.
+ * Aktuelle Veranstaltungen + aktueller libertärer Beitrag.
+ * Sektion bleibt sichtbar (mindestens Beitrag), auch ohne kommende Termine.
  */
 export async function EventsTeaser() {
   const upcoming = await getUpcomingEvents(3);
@@ -27,7 +27,7 @@ export async function EventsTeaser() {
     <Section className="border-t border-black/10">
       <SectionHeader
         title="Aktuelle Veranstaltungen"
-        subtitle="Triff uns auf unseren Veranstaltungen – und lies den libertären Aufsatz der Woche."
+        subtitle="Triff uns auf unseren Veranstaltungen – und lies den aktuellen libertären Beitrag."
       />
 
       {upcoming.length > 0 && (

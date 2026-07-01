@@ -47,7 +47,7 @@ export const PromptTemplates: CollectionConfig = {
           value: PROMPT_TEMPLATE_KEYS.DAILY_IMPULSES_SYSTEM,
         },
         {
-          label: "Wochenaufsatz – System-Prompt",
+          label: "Libertärer Beitrag – System-Prompt",
           value: PROMPT_TEMPLATE_KEYS.WEEKLY_ESSAY_SYSTEM,
         },
       ],

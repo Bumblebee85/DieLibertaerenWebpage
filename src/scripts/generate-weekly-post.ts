@@ -6,19 +6,19 @@ async function main() {
   const payload = await getPayloadForScript();
 
   console.log(`Parteikonto: ${PARTY_ACCOUNT.name} (Grok via GROK_API_KEY)`);
-  console.log("Generiere Wocheninhalt …");
+  console.log("Generiere aktuellen libertären Beitrag …");
 
   const result = await runGenerateWeekly(payload);
 
   if (result.skipped) {
     console.log(
-      `– Wocheninhalt für KW ${result.weekNumber} („${result.slug}“) existiert bereits. Nichts zu tun.`
+      `– Libertärer Beitrag für KW ${result.weekNumber} („${result.slug}“) existiert bereits. Nichts zu tun.`
     );
     process.exit(0);
   }
 
   if (result.createdEssay) {
-    console.log(`✓ Wochenaufsatz angelegt: ${result.title} (KW ${result.weekNumber})`);
+    console.log(`✓ Libertärer Beitrag angelegt: ${result.title} (KW ${result.weekNumber})`);
   }
   if (result.createdPost) {
     console.log(`✓ Blog-Post angelegt: ${result.title} (/blog/${result.slug})`);

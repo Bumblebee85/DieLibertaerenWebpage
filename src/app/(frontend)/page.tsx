@@ -50,7 +50,7 @@ export default async function HomePage() {
       <Hero content={hero} />
       <HighlightsSection />
 
-      {/* Textur-Zone: Zitat → Impulse → Veranstaltungen + Wochenaufsatz → Prinzipien */}
+      {/* Textur-Zone: Zitat → Impulse → Veranstaltungen + aktueller Beitrag → Prinzipien */}
       <LightSectionBackground>
         {quotes.length > 0 && <QuoteRotator quotes={quotes} />}
         <DailyImpulsesSection />

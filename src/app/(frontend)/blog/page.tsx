@@ -24,7 +24,7 @@ export default async function BlogPage() {
       <Breadcrumbs items={[{ label: "Blog" }]} />
       <PageHeader
         title="Blog"
-        subtitle="Grundsätzliche und aktuelle Themen – plus der Libertäre Aufsatz der Woche."
+        subtitle="Grundsätzliche und aktuelle Themen – plus der aktuelle libertäre Beitrag."
       />
 
       <Section>

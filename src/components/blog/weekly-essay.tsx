@@ -13,12 +13,12 @@ export function WeeklyEssay({ essay, weekNumber }: WeeklyEssayProps) {
 
   return (
     <Card
-      id="aufsatz-der-woche"
+      id="aktueller-beitrag"
       className="scroll-mt-28 border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-transparent"
     >
       <CardHeader>
         <div className="mb-2 flex flex-wrap items-center gap-2">
-          <Badge>Libertärer Aufsatz der Woche</Badge>
+          <Badge>Aktueller libertärer Beitrag</Badge>
           <Badge variant="muted">KW {weekNumber}</Badge>
         </div>
         <CardTitle className="text-2xl md:text-3xl">{essay.title}</CardTitle>

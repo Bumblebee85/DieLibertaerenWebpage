@@ -372,7 +372,7 @@ export interface ProgramTopicCategory {
   createdAt: string;
 }
 /**
- * Wahl-O-Mat-Thesen pro Wahl (z. B. Sachsen-Anhalt 2026). Eine Wahl als Standard markieren.
+ * Positionen zur Wahl pro Wahlereignis (z. B. Sachsen-Anhalt 2026). Eine Einheit als Standard markieren.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "wahlomat-elections".
@@ -389,7 +389,7 @@ export interface WahlomatElection {
   year: number;
   source?: string | null;
   /**
-   * Wird auf der Wahl-O-Mat-Seite vorausgewählt.
+   * Wird auf der Wahlkompass-Seite vorausgewählt.
    */
   isDefault?: boolean | null;
   thesen?:
@@ -458,7 +458,7 @@ export interface BlogPost {
   createdAt: string;
 }
 /**
- * Libertärer Aufsatz der Woche – wird nach Kalenderwoche auf Blog und Startseite angezeigt.
+ * Aktueller libertärer Beitrag – wird nach Kalenderwoche auf Blog und Startseite angezeigt.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "weekly-essays".

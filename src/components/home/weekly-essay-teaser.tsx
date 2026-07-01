@@ -18,7 +18,7 @@ export async function WeeklyEssayTeaser() {
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <Badge className="gap-1">
               <BookOpen className="h-3.5 w-3.5" />
-              Libertärer Aufsatz der Woche
+              Aktueller libertärer Beitrag
             </Badge>
             <Badge variant="muted">KW {weekNumber}</Badge>
           </div>
@@ -42,8 +42,8 @@ export async function WeeklyEssayTeaser() {
         </CardContent>
         <div className="flex items-end border-t border-border/60 p-6 lg:border-l lg:border-t-0">
           <Button size="lg" className="w-full lg:w-auto" asChild>
-            <Link href="/blog#aufsatz-der-woche">
-              Aufsatz lesen
+            <Link href="/blog#aktueller-beitrag">
+              Beitrag lesen
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

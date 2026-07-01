@@ -73,12 +73,12 @@ export const seoPages = {
     ],
   },
   wahlomat: {
-    title: "Wahl-O-Mat – Stimmst du mit uns überein?",
+    title: "Wahlkompass – Stimmst du mit uns überein?",
     description:
-      "Vergleiche deine Positionen mit DIE LIBERTÄREN: 80 Wahl-O-Mat-Thesen zu Freiheit, Eigentum, Minimalstaat und freiem Markt – plus interaktiver Schnell-Check.",
+      "Vergleiche deine Positionen mit DIE LIBERTÄREN: 80 Thesen zu Freiheit, Eigentum, Minimalstaat und freiem Markt – plus interaktiver Schnell-Check im Wahlkompass.",
     path: "/stimmst-du-mit-uns-ueberein",
     keywords: [
-      "Wahl-O-Mat libertär",
+      "Wahlkompass libertär",
       "libertäre Positionen",
       "Freiheit Test",
       "DIE LIBERTÄREN Thesen",

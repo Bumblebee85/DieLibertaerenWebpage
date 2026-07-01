@@ -93,7 +93,7 @@ export async function runGenerateWeekly(payload: Payload): Promise<RunWeeklyResu
       {
         role: "user",
         content:
-          `Schreibe den Libertären Aufsatz der Woche für Kalenderwoche ${weekNumber}. ` +
+          `Schreibe den aktuellen libertären Beitrag für Kalenderwoche ${weekNumber}. ` +
           "Wähle ein aktuelles oder zeitloses Thema aus Politik, Wirtschaft oder Gesellschaft und ordne es libertär ein (NAP, Eigentum, Minimalstaat, freier Markt). " +
           "Ca. 500 Wörter natürlicher Fließtext in content (Absätze mit \\n\\n). " +
           'JSON: {"title":"...","excerpt":"...","content":"...","tags":["..."],"category":"Grundlagen|Politik|Wirtschaft|Gesellschaft"}. ' +

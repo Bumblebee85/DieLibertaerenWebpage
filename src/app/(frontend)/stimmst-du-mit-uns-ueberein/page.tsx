@@ -29,7 +29,7 @@ export default async function StimmstDuMitUnsUebereinPage({
 
   return (
     <>
-      <Breadcrumbs items={[{ label: "Wahl-O-Mat" }]} />
+      <Breadcrumbs items={[{ label: "Wahlkompass" }]} />
       <PageHeader
         title="Stimmst du mit uns überein?"
         subtitle={`Finde in wenigen Minuten heraus, wie stark deine Positionen mit DIE LIBERTÄREN übereinstimmen – oder lies alle ${election.thesen.length} Thesen mit unseren Begründungen.`}

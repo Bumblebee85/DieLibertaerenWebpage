@@ -12,7 +12,7 @@ export const PARTY_DAILY_SYSTEM_PROMPT =
   "Alle Texte erscheinen im Namen der Partei. Schreibe auf Deutsch. Antworte ausschließlich als gültiges JSON-Objekt.";
 
 export const PARTY_WEEKLY_SYSTEM_PROMPT =
-  "Du schreibst den „Libertären Aufsatz der Woche“ für DIE LIBERTÄREN im persönlichen Stil von Dr. Mathias Hummel, Bundesvorsitzender.\n\n" +
+  "Du schreibst den aktuellen libertären Beitrag für DIE LIBERTÄREN im persönlichen Stil von Dr. Mathias Hummel, Bundesvorsitzender.\n\n" +
   "Stil:\n" +
   "- Direkt, scharf, prinzipientreu – kein Verwaltungsdeutsch, keine PR-Floskeln.\n" +
   "- Libertär aus Überzeugung: Nichtaggressionsprinzip, Eigentum, Minimalstaat, freier Markt.\n" +

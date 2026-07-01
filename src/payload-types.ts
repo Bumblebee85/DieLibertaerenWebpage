@@ -71,6 +71,9 @@ export interface Config {
     media: Media;
     highlights: Highlight;
     quotes: Quote;
+    'event-categories': EventCategory;
+    'event-locations': EventLocation;
+    'event-organizers': EventOrganizer;
     events: Event;
     'daily-impulses': DailyImpulse;
     documents: Document;
@@ -92,6 +95,9 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     highlights: HighlightsSelect<false> | HighlightsSelect<true>;
     quotes: QuotesSelect<false> | QuotesSelect<true>;
+    'event-categories': EventCategoriesSelect<false> | EventCategoriesSelect<true>;
+    'event-locations': EventLocationsSelect<false> | EventLocationsSelect<true>;
+    'event-organizers': EventOrganizersSelect<false> | EventOrganizersSelect<true>;
     events: EventsSelect<false> | EventsSelect<true>;
     'daily-impulses': DailyImpulsesSelect<false> | DailyImpulsesSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
@@ -308,7 +314,64 @@ export interface Quote {
   createdAt: string;
 }
 /**
- * Termine, Stammtische und Feste – Kalender auf /events, Teaser auf der Startseite. Bilder über Medien hochladen und verknüpfen.
+ * Kategorien wie „Libertärer Stammtisch" oder „Online" – mehrere pro Event möglich.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-categories".
+ */
+export interface EventCategory {
+  id: string;
+  name: string;
+  slug?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Orte einmal anlegen (Name, Adresse, Karte) – danach bei jeder Veranstaltung auswählen.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-locations".
+ */
+export interface EventLocation {
+  id: string;
+  /**
+   * z. B. „Torschenke im Bayertor" oder „Camping Strandbad Gerlebogk"
+   */
+  name: string;
+  slug?: string | null;
+  /**
+   * Straße und Hausnummer
+   */
+  address?: string | null;
+  postalCode?: string | null;
+  city?: string | null;
+  /**
+   * Google Maps oder OpenStreetMap URL
+   */
+  mapUrl?: string | null;
+  showMap?: boolean | null;
+  showMapLink?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Wer organisiert die Veranstaltung? Standard: Die Libertären.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-organizers".
+ */
+export interface EventOrganizer {
+  id: string;
+  name: string;
+  /**
+   * Optional: Webseite des Veranstalters
+   */
+  website?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Termine, Stammtische und Feste. Kalender auf /events, Teaser auf der Startseite. Wiederkehrende Stammtische über „Wiederholung" einrichten.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events".
@@ -316,33 +379,130 @@ export interface Quote {
 export interface Event {
   id: string;
   title: string;
-  startDate: string;
   /**
-   * Für mehrtägige Events. Leer lassen bei eintägigen Terminen.
+   * Wird automatisch aus dem Titel erzeugt. Erscheint unter /events/…
    */
-  endDate?: string | null;
+  slug?: string | null;
   /**
-   * z. B. „19:00 – 22:00"
+   * Ausführliche Event-Beschreibung mit Formatierung.
    */
-  time?: string | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   /**
-   * Stadt oder Venue, z. B. „Hamburg" oder „Camping Strandbad Gerlebogk".
+   * Kurze Zusammenfassung für Kalender und Teaser (2–3 Sätze).
    */
-  location: string;
-  category: 'stammtisch' | 'fest' | 'parteitag' | 'veranstaltung' | 'workshop' | 'sonstiges';
+  excerpt?: string | null;
   /**
-   * Kurze Info zum Event – wird im Kalender und auf der Events-Seite angezeigt.
-   */
-  description?: string | null;
-  /**
-   * Stammtisch-Foto oder Event-Banner – zuerst unter Medien hochladen.
+   * Event-Foto oder Banner – zuerst unter Medien hochladen.
    */
   image?: (string | null) | Media;
   /**
-   * Optional: Anmeldung oder externe Infoseite. Standard: /events
+   * Mehrere Kategorien möglich, z. B. „Die Libertären" + „Libertärer Stammtisch".
+   */
+  categories?: (string | EventCategory)[] | null;
+  /**
+   * Stichwörter durch Komma getrennt eingeben (z. B. libertarismus, Dresden).
+   */
+  tags?:
+    | {
+        tag: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Optional: Name der Serie bei wiederkehrenden Events (z. B. „Libertärer Stammtisch Frankfurt").
+   */
+  seriesName?: string | null;
+  published?: boolean | null;
+  /**
+   * QR-Code auf der Event-Detailseite zum Teilen des Termins.
+   */
+  showQrCode?: boolean | null;
+  allDay?: boolean | null;
+  startDate: string;
+  /**
+   * Für mehrtägige Events. Bei Einzeltagen leer lassen.
+   */
+  endDate?: string | null;
+  /**
+   * z. B. 19:00
+   */
+  startTime?: string | null;
+  /**
+   * z. B. 22:00
+   */
+  endTime?: string | null;
+  timezone?: ('Europe/Berlin' | 'Europe/Vienna' | 'Europe/Zurich') | null;
+  /**
+   * Für regelmäßige Stammtische: Häufigkeit und Enddatum festlegen. Ausnahmen für einzelne abgesagte Termine unten eintragen.
+   */
+  recurrence?: {
+    enabled?: boolean | null;
+    frequency?: ('weekly' | 'monthly' | 'yearly') | null;
+    /**
+     * z. B. alle 2 Wochen = Intervall 2
+     */
+    interval?: number | null;
+    /**
+     * z. B. „Erster Mittwoch" → Erster + Mittwoch
+     */
+    weekOfMonth?: ('first' | 'second' | 'third' | 'fourth' | 'last') | null;
+    weekday?: ('1' | '2' | '3' | '4' | '5' | '6' | '0') | null;
+    /**
+     * Letzter Termin der Serie (z. B. 2031-06-02 für monatliche Stammtische).
+     */
+    endDate?: string | null;
+    /**
+     * Einzelne Termine auslassen (z. B. Feiertage oder Absagen).
+     */
+    exceptions?:
+      | {
+          date: string;
+          reason?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+  };
+  /**
+   * Ort auswählen oder unter Veranstaltungsorte neu anlegen. Bei Online-Events leer lassen.
+   */
+  venue?: (string | null) | EventLocation;
+  /**
+   * Anzeigename wenn kein Veranstaltungsort gewählt, z. B. „Online" oder „Hamburg".
+   */
+  locationLabel?: string | null;
+  isVirtual?: boolean | null;
+  /**
+   * Zoom-, Jitsi- oder YouTube-Link
+   */
+  virtualUrl?: string | null;
+  organizers?: (string | EventOrganizer)[] | null;
+  /**
+   * Externe Infoseite oder Anmeldung
+   */
+  website?: string | null;
+  /**
+   * 0 oder leer = kostenlos / Feld ausblenden
+   */
+  admissionFee?: string | null;
+  admissionCurrency?: string | null;
+  /**
+   * Optional: Anmeldung oder externe Seite. Standard: Event-Detailseite
    */
   link?: string | null;
-  published?: boolean | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -637,6 +797,18 @@ export interface PayloadLockedDocument {
         value: string | Quote;
       } | null)
     | ({
+        relationTo: 'event-categories';
+        value: string | EventCategory;
+      } | null)
+    | ({
+        relationTo: 'event-locations';
+        value: string | EventLocation;
+      } | null)
+    | ({
+        relationTo: 'event-organizers';
+        value: string | EventOrganizer;
+      } | null)
+    | ({
         relationTo: 'events';
         value: string | Event;
       } | null)
@@ -827,19 +999,92 @@ export interface QuotesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-categories_select".
+ */
+export interface EventCategoriesSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-locations_select".
+ */
+export interface EventLocationsSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  address?: T;
+  postalCode?: T;
+  city?: T;
+  mapUrl?: T;
+  showMap?: T;
+  showMapLink?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event-organizers_select".
+ */
+export interface EventOrganizersSelect<T extends boolean = true> {
+  name?: T;
+  website?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "events_select".
  */
 export interface EventsSelect<T extends boolean = true> {
   title?: T;
+  slug?: T;
+  content?: T;
+  excerpt?: T;
+  image?: T;
+  categories?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  seriesName?: T;
+  published?: T;
+  showQrCode?: T;
+  allDay?: T;
   startDate?: T;
   endDate?: T;
-  time?: T;
-  location?: T;
-  category?: T;
-  description?: T;
-  image?: T;
+  startTime?: T;
+  endTime?: T;
+  timezone?: T;
+  recurrence?:
+    | T
+    | {
+        enabled?: T;
+        frequency?: T;
+        interval?: T;
+        weekOfMonth?: T;
+        weekday?: T;
+        endDate?: T;
+        exceptions?:
+          | T
+          | {
+              date?: T;
+              reason?: T;
+              id?: T;
+            };
+      };
+  venue?: T;
+  locationLabel?: T;
+  isVirtual?: T;
+  virtualUrl?: T;
+  organizers?: T;
+  website?: T;
+  admissionFee?: T;
+  admissionCurrency?: T;
   link?: T;
-  published?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -3,7 +3,15 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Calendar, Clock, MapPin } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Calendar,
+  Clock,
+  MapPin,
+  Repeat,
+  QrCode,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,11 +32,6 @@ function toIsoDate(year: number, month: number, day: number): string {
   return `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
-function eventOnDay(event: EventDisplay, isoDate: string): boolean {
-  const end = event.endDate ?? event.startDate;
-  return event.startDate <= isoDate && end >= isoDate;
-}
-
 function formatEventDate(startDate: string, endDate?: string): string {
   const start = new Date(startDate);
   const options: Intl.DateTimeFormatOptions = {
@@ -41,6 +44,13 @@ function formatEventDate(startDate: string, endDate?: string): string {
     return `${start.toLocaleDateString("de-DE", options)} – ${end.toLocaleDateString("de-DE", options)}`;
   }
   return start.toLocaleDateString("de-DE", options);
+}
+
+function eventDetailHref(event: EventDisplay): string {
+  if (event.slug && event.slug !== event.eventId) {
+    return `/events/${event.slug}`;
+  }
+  return event.link || "/events";
 }
 
 export function EventsCalendar({ events }: EventsCalendarProps) {
@@ -144,7 +154,7 @@ export function EventsCalendar({ events }: EventsCalendarProps) {
               return (
                 <div
                   key={`empty-${index}`}
-                  className="min-h-[4.5rem] border-b border-r border-border/60 bg-muted/10 md:min-h-[5.5rem]"
+                  className="min-h-[6rem] border-b border-r border-border/60 bg-muted/10 md:min-h-[8rem]"
                 />
               );
             }
@@ -160,7 +170,7 @@ export function EventsCalendar({ events }: EventsCalendarProps) {
                 type="button"
                 onClick={() => setSelectedDate(iso)}
                 className={cn(
-                  "relative min-h-[4.5rem] border-b border-r border-border/60 p-2 text-left transition-colors hover:bg-primary/5 md:min-h-[5.5rem]",
+                  "relative min-h-[6rem] border-b border-r border-border/60 p-1.5 text-left transition-colors hover:bg-primary/5 md:min-h-[8rem] md:p-2",
                   isSelected && "bg-primary/10 ring-2 ring-inset ring-primary/40",
                   isToday && !isSelected && "bg-primary/5"
                 )}
@@ -173,22 +183,39 @@ export function EventsCalendar({ events }: EventsCalendarProps) {
                 >
                   {cell.day}
                 </span>
-                {dayEvents.length > 0 && (
-                  <div className="mt-1 flex flex-wrap gap-1">
-                    {dayEvents.slice(0, 2).map((event) => (
-                      <span
-                        key={event.id}
-                        className="block h-1.5 w-1.5 rounded-full bg-primary"
-                        title={event.title}
-                      />
-                    ))}
-                    {dayEvents.length > 2 && (
-                      <span className="text-[10px] text-muted-foreground">
-                        +{dayEvents.length - 2}
+
+                <div className="mt-1 space-y-1">
+                  {dayEvents.slice(0, 2).map((event) => (
+                    <Link
+                      key={event.id}
+                      href={eventDetailHref(event)}
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center gap-1 rounded-md bg-white/90 p-1 shadow-sm ring-1 ring-border/50 transition hover:ring-primary/40"
+                    >
+                      {event.imageUrl ? (
+                        <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded">
+                          <Image
+                            src={event.imageUrl}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="24px"
+                          />
+                        </span>
+                      ) : (
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      )}
+                      <span className="line-clamp-2 text-[10px] font-medium leading-tight text-foreground md:text-xs">
+                        {event.title}
                       </span>
-                    )}
-                  </div>
-                )}
+                    </Link>
+                  ))}
+                  {dayEvents.length > 2 && (
+                    <span className="block text-[10px] text-muted-foreground">
+                      +{dayEvents.length - 2} weitere
+                    </span>
+                  )}
+                </div>
               </button>
             );
           })}
@@ -228,9 +255,29 @@ export function EventsCalendar({ events }: EventsCalendarProps) {
                   <div className="flex-1">
                     <CardHeader>
                       <div className="flex flex-wrap gap-2">
-                        <Badge>{event.category}</Badge>
+                        {event.categories.map((category) => (
+                          <Badge key={category}>{category}</Badge>
+                        ))}
+                        {event.isRecurring && (
+                          <Badge variant="outline" className="gap-1">
+                            <Repeat className="h-3 w-3" />
+                            {event.recurrenceLabel ?? "Wiederkehrend"}
+                          </Badge>
+                        )}
                       </div>
-                      <CardTitle className="text-xl">{event.title}</CardTitle>
+                      <CardTitle className="text-xl">
+                        <Link
+                          href={eventDetailHref(event)}
+                          className="hover:text-primary"
+                        >
+                          {event.title}
+                        </Link>
+                      </CardTitle>
+                      {event.seriesName && (
+                        <p className="text-sm text-muted-foreground">
+                          Serie: {event.seriesName}
+                        </p>
+                      )}
                     </CardHeader>
                     <CardContent className="space-y-2 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
@@ -248,21 +295,30 @@ export function EventsCalendar({ events }: EventsCalendarProps) {
                         {event.location}
                       </div>
                       {event.description && <p>{event.description}</p>}
-                      {event.link && event.link !== "/events" && (
-                        <Button variant="outline" size="sm" className="mt-2" asChild>
-                          <Link
-                            href={event.link}
-                            target={event.link.startsWith("http") ? "_blank" : undefined}
-                            rel={
-                              event.link.startsWith("http")
-                                ? "noopener noreferrer"
-                                : undefined
-                            }
-                          >
-                            Mehr Infos
-                          </Link>
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        <Button variant="outline" size="sm" asChild>
+                          <Link href={eventDetailHref(event)}>Details ansehen</Link>
                         </Button>
-                      )}
+                        {event.website && (
+                          <Button variant="outline" size="sm" asChild>
+                            <a
+                              href={event.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Website
+                            </a>
+                          </Button>
+                        )}
+                        {event.showQrCode && event.qrCodeUrl && (
+                          <Button variant="ghost" size="sm" asChild>
+                            <Link href={eventDetailHref(event)} className="gap-1">
+                              <QrCode className="h-4 w-4" />
+                              QR-Code
+                            </Link>
+                          </Button>
+                        )}
+                      </div>
                     </CardContent>
                   </div>
                 </div>

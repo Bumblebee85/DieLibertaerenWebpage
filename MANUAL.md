@@ -92,7 +92,8 @@ Next.js App Router (src/app/)
 | `/unsere-prinzipien` | Statisch | Drei Säulen der Freiheit |
 | `/programm` | Global `program` + Collection `program-topic-categories` | Thesenpapier v4 |
 | `/thesen` | Redirect | → `/programm` |
-| `/events` | Collection `events` | Veranstaltungen |
+| `/events` | Collections `events`, `event-locations`, `event-categories` | Kalender + Veranstaltungen |
+| `/events/[slug]` | Collection `events` | Event-Detail mit QR-Code |
 | `/blog`, `/blog/[slug]` | Collections `blog-posts`, `weekly-essays` | Blog + aktueller libertärer Beitrag |
 | `/bundesvorstand` | Statisch | Vorstand |
 | `/beirat` | Global `beirat` + Collection `beirat-members` | Beirat |
@@ -131,7 +132,10 @@ Next.js App Router (src/app/)
 |------|-------|
 | `highlights` | „Aktuell bei DIE LIBERTÄREN“ – `isActive` + `activeUntil` |
 | `quotes` | Zitat-Rotation (`published: true`) |
-| `events` | Veranstaltungen |
+| `events` | Veranstaltungen (Kalender, Wiederholungen, QR) |
+| `event-locations` | Veranstaltungsorte |
+| `event-categories` | Veranstaltungs-Kategorien |
+| `event-organizers` | Veranstalter |
 | `daily-impulses` | Tagesaktuelle Impulse (max. 3 pro Tag sichtbar) |
 | `weekly-essays` | Aktueller libertärer Beitrag |
 | `blog-posts` | Blog-Artikel |
@@ -352,4 +356,68 @@ Wenn du als KI an diesem Projekt arbeitest:
 
 ---
 
-*Zuletzt aktualisiert: Juli 2026 – Hero CMS-Global, MANUAL.md initial.*
+## 16. Veranstaltungen verwalten (für Chris)
+
+**Admin:** `/admin` → Gruppe **Veranstaltungen**
+
+Das Events-System ersetzt das WordPress-Plugin „The Events Calendar". Alles ist in vier Bereiche aufgeteilt – einmal anlegen, dann bei jedem Termin auswählen.
+
+### Schritt-für-Schritt: Neuen Termin anlegen
+
+1. **Veranstaltungsorte** (einmalig pro Location)
+   - Admin → Veranstaltungsorte → „Neu erstellen"
+   - Name, Adresse, PLZ, Stadt, optional Kartenlink
+   - „Karte anzeigen" / „Kartenlink anzeigen" aktivieren
+
+2. **Veranstaltung anlegen**
+   - Admin → Veranstaltungen → „Neu erstellen"
+   - **Tab „Allgemein":** Titel, Beschreibung, Bild, Kategorien (mehrere möglich), Schlagwörter
+   - **Tab „Datum & Zeit":** Start/Ende, Uhrzeiten, Zeitzone; bei Stammtischen **Wiederholung aktivieren**
+   - **Tab „Ort & Details":** Veranstaltungsort auswählen, Veranstalter, Website, Eintritt
+
+3. **Veröffentlichen** – Häkchen „Veröffentlicht" setzen → Termin erscheint auf `/events`
+
+### Wiederkehrende Stammtische
+
+Für monatliche Stammtische (z. B. „jeden ersten Mittwoch"):
+
+| Feld | Beispiel |
+|------|----------|
+| Wiederholung aktivieren | ✓ |
+| Häufigkeit | Monatlich |
+| Woche im Monat | Erster |
+| Wochentag | Mittwoch |
+| Wiederholung endet am | 2031-06-01 |
+
+**Ausnahmeregelungen:** Einzelne Termine auslassen (Feiertag, Absage) – Datum in der Ausnahmen-Liste eintragen.
+
+### QR-Code
+
+Jede Veranstaltung hat auf der Detailseite (`/events/<slug>`) einen QR-Code zum Teilen. Deaktivieren: Häkchen „QR-Code anzeigen" entfernen.
+
+### Frontend
+
+| URL | Inhalt |
+|-----|--------|
+| `/events` | Monatskalender + Terminliste (wie WordPress-Kalender) |
+| `/events/<slug>` | Detailseite mit Beschreibung, Karte, QR-Code |
+
+### Collections (Admin-Gruppe „Veranstaltungen")
+
+| Slug | Zweck |
+|------|-------|
+| `events` | Termine |
+| `event-locations` | Orte / Venues |
+| `event-categories` | Kategorien (Stammtisch, Online, …) |
+| `event-organizers` | Veranstalter |
+
+### Technik (für Entwickler)
+
+- Wiederholungs-Logik: `src/lib/cms/event-recurrence.ts`
+- Datenabruf: `src/lib/cms/events.ts`
+- QR-API: `/api/events/<slug>/qr`
+- Seed: `npm run seed:cms` (Kategorien, Orte, Beispiel-Stammtische)
+
+---
+
+*Zuletzt aktualisiert: Juli 2026 – Events/Calendar-System, Veranstaltungen-Handbuch.*

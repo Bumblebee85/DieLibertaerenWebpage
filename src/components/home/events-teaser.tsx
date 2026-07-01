@@ -50,8 +50,10 @@ export async function EventsTeaser() {
                   </div>
                 )}
                 <CardHeader>
-                  <div className="mb-2 flex items-center gap-2">
-                    <Badge>{event.category}</Badge>
+                  <div className="mb-2 flex flex-wrap gap-2">
+                    {event.categories.slice(0, 2).map((category) => (
+                      <Badge key={category}>{category}</Badge>
+                    ))}
                   </div>
                   <CardTitle className="text-lg">{event.title}</CardTitle>
                 </CardHeader>

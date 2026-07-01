@@ -48,7 +48,7 @@ export async function GET() {
     const { getPayload } = await import("payload");
 
     const payload = await getPayload({ config });
-    const [users, quotes, impulses, weeklyEssays, prompts, events] =
+    const [users, quotes, impulses, weeklyEssays, prompts, events, eventCategories, eventLocations] =
       await Promise.all([
         payload.find({ collection: "users", limit: 0 }),
         payload.find({ collection: "quotes", limit: 0 }),
@@ -56,6 +56,8 @@ export async function GET() {
         payload.find({ collection: "weekly-essays", limit: 0 }),
         payload.find({ collection: "prompt-templates", limit: 0 }),
         payload.find({ collection: "events", limit: 0 }),
+        payload.find({ collection: "event-categories", limit: 0 }),
+        payload.find({ collection: "event-locations", limit: 0 }),
       ]);
 
     const editorialReady =
@@ -71,6 +73,9 @@ export async function GET() {
       weeklyEssayCount: weeklyEssays.totalDocs,
       promptTemplateCount: prompts.totalDocs,
       eventCount: events.totalDocs,
+      eventCategoryCount: eventCategories.totalDocs,
+      eventLocationCount: eventLocations.totalDocs,
+      eventsReady: eventCategories.totalDocs >= 4 && events.totalDocs > 0,
       editorialReady,
       seedHint:
         !editorialReady || quotes.totalDocs < 10

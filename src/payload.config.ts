@@ -11,6 +11,9 @@ import { BlogCategories } from "./collections/BlogCategories";
 import { BlogPosts } from "./collections/BlogPosts";
 import { DailyImpulses } from "./collections/DailyImpulses";
 import { Documents } from "./collections/Documents";
+import { EventCategories } from "./collections/EventCategories";
+import { EventLocations } from "./collections/EventLocations";
+import { EventOrganizers } from "./collections/EventOrganizers";
 import { Events } from "./collections/Events";
 import { Highlights } from "./collections/Highlights";
 import { Media } from "./collections/Media";
@@ -68,6 +71,9 @@ export default buildConfig({
     Media,
     Highlights,
     Quotes,
+    EventCategories,
+    EventLocations,
+    EventOrganizers,
     Events,
     DailyImpulses,
     Documents,
@@ -112,12 +118,15 @@ export default buildConfig({
     if (process.env["AUTO_SEED_ON_INIT"] === "false") return;
 
     try {
-      const [needsEditorial, quotes] = await Promise.all([
+      const [needsEditorial, quotes, eventCategories] = await Promise.all([
         needsEditorialSeed(payload),
         payload.find({ collection: "quotes", limit: 1 }),
+        payload.find({ collection: "event-categories", limit: 1 }),
       ]);
 
-      if (!needsEditorial && quotes.totalDocs > 0) return;
+      if (!needsEditorial && quotes.totalDocs > 0 && eventCategories.totalDocs > 0) {
+        return;
+      }
 
       payload.logger.info("Auto-seeding CMS content (idempotent)…");
       await runEditorialSeed(payload);

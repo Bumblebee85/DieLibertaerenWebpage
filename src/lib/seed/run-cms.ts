@@ -292,6 +292,7 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
           collection: "events",
           id: doc.id,
           data: eventData,
+          overrideAccess: true,
         });
         stats.eventsUpdated++;
       }
@@ -301,6 +302,7 @@ export async function runCmsSeed(payload: Payload): Promise<CmsSeedStats> {
     await payload.create({
       collection: "events",
       data: eventData,
+      overrideAccess: true,
     });
     stats.events++;
   }

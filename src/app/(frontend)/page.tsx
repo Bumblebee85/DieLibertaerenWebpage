@@ -10,6 +10,7 @@ import { HighlightsSection } from "@/components/home/highlights-section";
 import { QuoteRotator } from "@/components/home/quote-rotator";
 import { DailyImpulsesSection } from "@/components/home/daily-impulses";
 import { EventsTeaser } from "@/components/home/events-teaser";
+import { getHeroContent } from "@/lib/cms/hero";
 import { getPublishedQuotes } from "@/lib/cms/quotes";
 import { StatsSection } from "@/components/home/stats-section";
 import { CTASection } from "@/components/shared/cta-section";
@@ -42,11 +43,11 @@ const pillars = [
 ];
 
 export default async function HomePage() {
-  const quotes = await getPublishedQuotes();
+  const [hero, quotes] = await Promise.all([getHeroContent(), getPublishedQuotes()]);
 
   return (
     <>
-      <Hero />
+      <Hero content={hero} />
       <HighlightsSection />
 
       {/* Textur-Zone: Zitat → Impulse → Veranstaltungen + Wochenaufsatz → Prinzipien */}

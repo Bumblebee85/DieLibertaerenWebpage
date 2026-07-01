@@ -21,6 +21,7 @@ import { WahlomatElections } from "./collections/WahlomatElections";
 import { WeeklyEssays } from "./collections/WeeklyEssays";
 import { Beirat } from "./globals/Beirat";
 import { Freiheitsbewegung } from "./globals/Freiheitsbewegung";
+import { Hero } from "./globals/Hero";
 import { Program } from "./globals/Program";
 import {
   getDatabaseUrl,
@@ -61,7 +62,7 @@ export default buildConfig({
     BeiratMembers,
     PromptTemplates,
   ],
-  globals: [Program, Beirat, Freiheitsbewegung],
+  globals: [Hero, Program, Beirat, Freiheitsbewegung],
   editor: lexicalEditor(),
   secret: getPayloadSecret(),
   serverURL,

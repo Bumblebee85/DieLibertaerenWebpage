@@ -1,4 +1,5 @@
 import "./load-env";
+import heroData from "@/data/hero.json";
 import { getPayload } from "payload";
 import config from "@payload-config";
 
@@ -10,6 +11,18 @@ import config from "@payload-config";
  */
 async function seed() {
   const payload = await getPayload({ config });
+
+  // --- Hero (Startseite) ---
+  const existingHero = await payload.findGlobal({ slug: "hero", depth: 0 });
+  if (!existingHero?.headline) {
+    await payload.updateGlobal({
+      slug: "hero",
+      data: heroData,
+    });
+    console.log("✓ Hero-Global mit Standardtexten angelegt");
+  } else {
+    console.log("– Hero-Global existiert bereits");
+  }
 
   // --- Highlights ---
   const existingHighlight = await payload.find({

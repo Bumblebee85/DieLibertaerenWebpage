@@ -112,11 +112,13 @@ export interface Config {
   };
   fallbackLocale: ('false' | 'none' | 'null') | false | null | 'de' | 'de'[];
   globals: {
+    hero: Hero;
     program: Program;
     beirat: Beirat;
     freiheitsbewegung: Freiheitsbewegung;
   };
   globalsSelect: {
+    hero: HeroSelect<false> | HeroSelect<true>;
     program: ProgramSelect<false> | ProgramSelect<true>;
     beirat: BeiratSelect<false> | BeiratSelect<true>;
     freiheitsbewegung: FreiheitsbewegungSelect<false> | FreiheitsbewegungSelect<true>;
@@ -961,6 +963,33 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
+ * Überschrift, Tagline und Fließtext im oberen Bereich der Startseite.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "hero".
+ */
+export interface Hero {
+  id: string;
+  eyebrow?: string | null;
+  headline: string;
+  /**
+   * Ersetzt den früheren Untertitel „libertäre Partei für Freiheit“. Leer lassen, um nur den Haupttitel zu zeigen.
+   */
+  headlineAccent?: string | null;
+  tagline?: string | null;
+  description: string;
+  primaryCta: {
+    label: string;
+    href: string;
+  };
+  secondaryCta: {
+    label: string;
+    href: string;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * Titel, Leitbild, Grundthese und erste Maßnahmen des Thesenpapiers.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1128,6 +1157,32 @@ export interface Freiheitsbewegung {
   };
   updatedAt?: string | null;
   createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "hero_select".
+ */
+export interface HeroSelect<T extends boolean = true> {
+  eyebrow?: T;
+  headline?: T;
+  headlineAccent?: T;
+  tagline?: T;
+  description?: T;
+  primaryCta?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+      };
+  secondaryCta?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
